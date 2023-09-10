@@ -1,0 +1,79 @@
+
+/*---------------------------------------------------------------------------content for language-----------------------------------------------------------------------*/
+.content-list {
+  max-height: 100%;
+  max-width: 100%;
+  background-color: white;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  position: relative;
+  gap: 0em;
+  margin-bottom: 10px;
+  overflow-y: visible;
+  gap: 0em;
+}
+.content-1 {
+  min-height: 100%;
+  min-width: 70%;
+  background-color: goldenrod;
+  border: 2px solid grey;
+  color: black;
+  position: relative;
+}
+.upper-card {
+  height: 100%;
+  max-width: 100%;
+  background-color: white;
+  padding: 5px;
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 1px;
+  justify-content: space-between;
+  cursor: pointer;
+  position: relative;
+}
+.upper-card p {
+  color: black;
+  margin: 10px;
+  font-weight: 700;
+}
+.upper-card i {
+  cursor: pointer;
+  font-size: 30px;
+  color: white;
+  background-color: black;
+  padding: 5px;
+}
+.lower-card {
+  height: 100%;
+  width: 100%;
+  background-color: goldenrod;
+  text-align: left;
+  padding: 0px;
+  display: none;
+  align-items: center;
+  transition: 0.5s ease-in-out;
+  justify-content: flex-start;
+  position: relative;
+}
+.lower-card li {
+  list-style: decimal;
+  text-emphasis-color: red;
+  font-variant: small-caps;
+  font-size: 20px;
+  text-transform: capitalize;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bolder;
+  margin: 5px;
+}
+#up {
+  display: none;
+}
+
+#up-1 {
+  display: none;
+}

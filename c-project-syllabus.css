@@ -1,0 +1,9 @@
+
+  header {
+    min-height: 100vh;
+    max-width: 100%;
+    background-color: rebeccapurple;
+  }
+  embed{
+    min-height:100vh;width: 100%;
+  }

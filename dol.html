@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset some default styles */
+        body,
+        h1,
+        h2,
+        p,
+        ul,
+        li,
+        label,
+        select,
+        input {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /* Style the header */
+        header {
+            background-color: lightpink;
+            color: darkslateblue;
+            text-align: center;
+            overflow-x: hidden;
+            padding: 20px;
+            max-width: 100%;
+        }
+
+        /* Style the movie section */
+        .movie {
+            min-height: 400px;
+            max-width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px;
+            background-color: lightcyan;
+            flex-direction: row;
+        }
+
+        @media(max-width:1000px) {
+            .movie {
+                display: flex;
+                gap: 1em;
+                flex-direction: column;
+            }
+        }
+
+        .movie img {
+            max-width: 100px;
+        }
+
+        /* Style the booking form */
+        .booking-form {
+            background-color: lightcyan;
+            text-align: center;
+            margin: 20px;
+        }
+
+        form {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label,
+        select,
+        input {
+            margin: 10px 0;
+        }
+
+        /* Style the footer */
+        footer {
+            background-color: white;
+            color: blue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            min-width: 400px;
+            min-height: 200px;
+        }
+
+        .trailer {
+            margin-right: 1em;
+            font-weight: 1000;
+            letter-spacing: 1.5px;
+            border-radius: 20px;
+            padding: 10px 20px;
+            text-decoration: none;
+            background: #000;
+            transition: .5s;
+            color: white;
+        }
+
+        .trailer:hover {
+            transform: scale(1.1);
+            background: aqua;
+            color: #000;
+        }
+
+        .total img {
+            height: 400px;
+            width: 50px;
+            animation: dol 1s infinite;
+        }
+
+        @keyframes dol {
+            from {
+                transform: scale(0.5);
+            }
+
+            to {
+                transform: scale(1.1);
+            }
+
+        }
+
+        .total img:hover {
+            transform: scale(1.1)
+        }
+
+        .total {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: row-reverse;
+        }
+
+        @media(max-width: 768px) {
+            .total {
+                flex-direction: column;
+            }
+        }
+
+        #sub {
+            cursor: pointer;
+            transition: .5s;
+            padding: 10px 20px;
+            text-transform: capitalize;
+            font-weight: 1000;
+            border: 2px solid black;
+        }
+
+        #sub:hover {
+            transform: scale(1.1);
+            background: aqua;
+            color: rgb(0, 0, 0);
+            border-radius: 20px;
+        }
+
+        form {
+            min-height: 300px;
+            background: rgb(104, 68, 68);
+            min-width: 400px;
+            color: white;
+            border-radius: 10px;
+            padding: 10px;
+            animation: doll .1s infinite;
+        }
+
+        @keyframes doll {
+            from {
+                background: rgb(104, 68, 68);
+            }
+
+            to {
+                background: rgb(216, 102, 102);
+            }
+
+        }
+
+
+        input {
+            border-radius: 20px;
+            padding: 10px 20px;
+            color: black;
+            font-weight: 600;
+        }
+
+        footer {
+            color: white;
+            font-size: 20px;
+            background: #000;
+        }
+
+        .booking-form {
+            padding: 20px;
+        }
+
+        .booking-form h2 {
+            font-weight: 1000;
+            margin-bottom: 1em;
+            letter-spacing: 1px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Movie Booking</h1>
+    </header>
+
+    <main>
+        <section class="movie">
+            <img
+                src="https://www.koimoi.com/wp-content/new-galleries/2023/08/kushi-vijay-deverakonda-was-ready-to-wait-for-samantha-for-10-years-to-finish-the-film-we-were-not-in-a-hurry-we-know-how-much-she-contributes.jpg" />
+            <div class="movie-info">
+                <h2>Kushi</h2>
+                <p>Genre: Family Entertainer</p>
+                <p>Duration: 2h 15m</p>
+                <p>Showtimes:</p>
+                <ul>
+                    <li><a href="#">10:00 AM</a></li>
+                    <li><a href="#">1:00 PM</a></li>
+                    <li><a href="#">4:00 PM</a></li>
+                    <li><a href="#">9.00 PM</a></li>
+                </ul>
+            </div>
+            <a class="trailer" href="https://youtu.be/6tflEBIa_us?si=klTi8xfhhwUCrbR3">Watch Trailer</a>
+
+        </section>
+        <section class="movie">
+            <img src="https://static.toiimg.com/thumb/102192701/rocky.jpg?width=1200&height=900" />
+            <div class="movie-info">
+                <h2>Rocky Aur Rani Ki Prem Kahani</h2>
+                <p>Genre: Love & Family Entertainer</p>
+                <p>Duration: 2h 15m</p>
+                <p>Showtimes:</p>
+                <ul>
+                    <li><a href="#">10:00 AM</a></li>
+                    <li><a href="#">1:00 PM</a></li>
+                    <li><a href="#">4:00 PM</a></li>
+                    <li><a href="#">9.00 PM</a></li>
+                </ul>
+            </div>
+            <a class="trailer" href="https://youtu.be/6mdxy3zohEk?si=cYT2P8psgJ86WnOd">Watch Trailer</a>
+
+        </section>
+        <section class="movie">
+            <img src="https://images.kinorium.com/movie/poster/9839486/w1500_51835393.jpg" />
+            <div class="movie-info">
+                <h2>My Fault</h2>
+                <p>Genre: Romance</p>
+                <p>Duration: 2h 15m</p>
+                <p>Showtimes:</p>
+                <ul>
+                    <li><a href="#">10:00 AM</a></li>
+                    <li><a href="#">1:00 PM</a></li>
+                    <li><a href="#">4:00 PM</a></li>
+                    <li><a href="#">9.00 PM</a></li>
+                </ul>
+            </div> <a class="trailer" href="https://youtu.be/6tflEBIa_us?si=klTi8xfhhwUCrbR3">Watch Trailer</a>
+
+        </section>
+        <section class="movie">
+            <img
+                src="https://m.economictimes.com/thumb/msid-99863624,width-1200,height-900,resizemode-4,imgsize-116756/adipurush-prabhas-reveals-new-poster-featuring-kriti-sanon-as-janaki-on-sita-navami-2023-see-here.jpg" />
+            <div class="movie-info">
+                <h2>Adipurush</h2>
+                <p>Genre: Mythological Action</p>
+                <p>Duration: 2h 15m</p>
+                <p>Showtimes:</p>
+                <ul>
+                    <li><a href="#">10:00 AM</a></li>
+                    <li><a href="#">1:00 PM</a></li>
+                    <li><a href="#">4:00 PM</a></li>
+                    <li><a href="#">9.00 PM</a></li>
+                </ul>
+            </div> <a class="trailer" href="https://youtu.be/6tflEBIa_us?si=klTi8xfhhwUCrbR3">Watch Trailer</a>
+
+        </section>
+        <section class="movie">
+            <img src="https://lehren.com/wp-content/uploads/2023/05/tu-jhoothi-main-makkar-ott-release-date.jpg" />
+            <div class="movie-info">
+                <h2>Tu Jhoothi Main Makkar</h2>
+                <p>Genre: Love/Romance</p>
+                <p>Duration: 2h 15m</p>
+                <p>Showtimes:</p>
+                <ul>
+                    <li><a href="#">10:00 AM</a></li>
+                    <li><a href="#">1:00 PM</a></li>
+                    <li><a href="#">4:00 PM</a></li>
+                    <li><a href="#">9.00 PM</a></li>
+                </ul>
+            </div> <a class="trailer" href="https://youtu.be/6tflEBIa_us?si=klTi8xfhhwUCrbR3">Watch Trailer</a>
+
+        </section>
+        <section class="movie">
+            <img
+                src="https://img.etimg.com/thumb/width-1200,height-900,imgsize-51636,resizemode-75,msid-93713458/magazines/panache/buzz/rajinikanth-begins-shoot-for-his-upcoming-film-jailer-check-first-look.jpg" />
+            <div class="movie-info">
+                <h2>Jailer</h2>
+                <p>Genre: Action</p>
+                <p>Duration: 2h 15m</p>
+                <p>Showtimes:</p>
+                <ul>
+                    <li><a href="#">10:00 AM</a></li>
+                    <li><a href="#">1:00 PM</a></li>
+                    <li><a href="#">4:00 PM</a></li>
+                    <li><a href="#">9.00 PM</a></li>
+                </ul>
+            </div> <a class="trailer" href="https://youtu.be/6tflEBIa_us?si=klTi8xfhhwUCrbR3">Watch Trailer</a>
+
+        </section>
+        <section class="movie">
+            <img
+                src="https://etvbharatimages.akamaized.net/etvbharat/prod-images/27-07-2023/1200-900-19109511-thumbnail-16x9-baby.jpg" />
+            <div class="movie-info">
+                <h2>Baby</h2>
+                <p>Genre: Love</p>
+                <p>Duration: 2h 15m</p>
+                <p>Showtimes:</p>
+                <ul>
+                    <li><a href="#">10:00 AM</a></li>
+                    <li><a href="#">1:00 PM</a></li>
+                    <li><a href="#">4:00 PM</a></li>
+                    <li><a href="#">9.00 PM</a></li>
+                </ul>
+            </div> <a class="trailer" href="https://youtu.be/6tflEBIa_us?si=klTi8xfhhwUCrbR3">Watch Trailer</a>
+
+        </section>
+        <section class="movie">
+            <img
+                src="https://m.economictimes.com/thumb/msid-97168435,width-1200,height-900,resizemode-4,imgsize-110152/pathaan.jpg" />
+            <div class="movie-info">
+                <h2>Pathaan</h2>
+                <p>Genre: Action</p>
+                <p>Duration: 2h 15m</p>
+                <p>Showtimes:</p>
+                <ul>
+                    <li><a href="#">10:00 AM</a></li>
+                    <li><a href="#">1:00 PM</a></li>
+                    <li><a href="#">4:00 PM</a></li>
+                    <li><a href="#">9.00 PM</a></li>
+                </ul>
+            </div> <a class="trailer" href="https://youtu.be/6tflEBIa_us?si=klTi8xfhhwUCrbR3">Watch Trailer</a>
+
+        </section>
+
+        <section class="booking-form">
+            <h2><strong>Book Tickets</strong></h2>
+            <div class="total">
+                <form action="confirmation.html" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="showtime">Select Showtime:</label>
+                    <select id="showtime" name="showtime" required>
+                        <option value="10:00 AM">10:00 AM</option>
+                        <option value="1:00 PM">1:00 PM</option>
+                        <option value="4:00 PM">4:00 PM</option>
+                    </select>
+
+                    <input type="submit" value="Book Tickets" id="sub">
+                </form>
+
+                <img
+                    src="https://o.remove.bg/downloads/b704cea7-154f-410d-9670-60fe2f3c218b/1000_F_131441842_qlPyzWZY08sL9SBfWKrstFVprARCd1PK-removebg-preview.png" />
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Movie Booking Website || Designed By Kalla Pavani</p>
+    </footer>
+</body>
+
+</html>

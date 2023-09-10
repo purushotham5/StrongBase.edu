@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- font-awensome only one which is working properly-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGk     g+p"
+        crossorigin="anonymous" />
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+    <!--------google fonts for website --------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+
+    <!------------------------team css------------------------------- -->
+    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="team-responsive.css">
+    <!-- -------------------------testimonial css----------------------------------- -->
+    <link rel="stylesheet" href="testimonial.css">
+    <!-- ------------------------------------------------------------------------------------- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- <link rel="stylesheet" href="header-section.css"> -->
+
+    <link rel="stylesheet" href="nav.css">
+    <!-- -------------------------------contact css -->
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+
+     <!-- font-awensome only one which is working properly-->
+     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGk     g+p" crossorigin="anonymous" />
+     <!-- Add icon library -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body id="total">
+    <!------------------------------------------------------------------Demo Video-------------------------------------------------------------------->
+    <div class="demo-video" id="video-1">
+        <div class="container-fluid">
+            <div class="video-btn">
+                <button type="button" onclick="Play()">Play</button>
+            </div>
+            <div class="btnn">
+                <i class="fa fa-close" onclick="VideoClose()" id="close"></i>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <video controls id="video-id" width="100%" height="100vh">
+                        <source style="width:100%;height:100vh;" src="c++intro.mp4" />
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-----------------------------------------------------dropdown comtac-box----------------->
+    <div class="contact-box">
+        <div class="container-fluid" id="contact-page">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contac-menu-btn">
+                        <i class="fa fa-close" onclick="CloseContactPage()"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h2>Contact</h2>
+                        <span>Contact to this bellow details if you have any quries</span>
+                        <!----  <div class="contact-icons">
+                            <i class="fa fa-phone " aria-hidden="true "></i>
+                            <i class="fa fa-instagram " aria-hidden="true "></i>
+                            <i class="fa fa-envelope " aria-hidden="true "></i>
+                    </div>                            ---->
+                    </div>
+                    <div>
+                        <p> <i class="fa fa-phone " aria-hidden="true "></i><a style="text-decoration:none;"
+                                href="tel:+91 7993854229">+91 7993854229</a></p>
+                        <p> <i class="fa fa-phone " aria-hidden="true "></i><a style="text-decoration:none;"
+                                href="tel:+91 9676169579">+91 9676169579</a> </p>
+                        <p> <i class="fa fa-phone " aria-hidden="true "></i><a style="text-decoration:none;"
+                                href="tel:+91 6301728516">+91 6301728516</a> </p>
+                    </div>
+                    <div>
+                        <p> <i class="fa fa-envelope " aria-hidden="true "></i> <a
+                                href="mailto:purushothamkandheri@gmail.com ">strongbase55@gmail.com</a>
+
+                        </p>
+                        <p> <i class="fa fa-envelope " aria-hidden="true "></i> <a
+                                href="mailto:purushothamkandheri@gmail.com ">purushothamkandheri@gmail.com</a>
+                        </p>
+
+                        <br>
+                        <p> <i class="fa fa-instagram" aria-hidden="true "></i>
+                            <a
+                                href="https://www.instagram.com/strongcodebase/">https://www.instagram.com/strongcodebase/</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img class="logo" src="StrongBase-hat.png" alt="" /></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#courses">COURSE</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+
+                    <li>
+                        <form id="searchForm" class="d-flex">
+                            <input class="form-control me-2" type="text" id="searchInput"
+                                placeholder="Search for a course..." aria-label="Search">
+                            <button class="btn btn-danger" type="submit">Search</button>
+                        </form>
+                    </li>                    <li class="btn btn-primary"><a href="index.html">LOGOUT</a></li>
+
+                </ul>
+            </div>
+            <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Afford Your Code Dreams Here</h1>
+            <p>
+                Code is the key that unlocks endless opportunities in our digital age.It's the bridge to affordable
+                education and empowers students to explore, learn, and build a brighter future through our
+                platform's
+                rich programming courses.
+            </p>
+            <div class="home-page-btns" id="main-btns">
+                <a href="#about"class="me-5">Visit Us to Know More</a>
+                <a href="#" class="me-5" id="explore-buttonn" onclick="OpenContactPage()">Enquiry
+                    Contact</a>
+                <a href="#home" class="me-5" id="explore-buttonn" onclick="VideoOpen()">Watch Video <i
+                        class="fa fa-play-circle"></i>
+                </a> <a href="#courses" class="me-5" id="explore-buttonn">Courses</a>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="about" id="about">
+        <div class=" container">
+            <div class="col-md-5"> <img src="about-img.png" />
+            </div>
+            <div class="col-md-6">
+                <h1> Who we are
+                    <span2>.</span2>
+                    <span3>.</span3>
+                    <span4>.</span4>
+                    <span5>.</span5>
+                    <span6>.</span6> ?
+                </h1>
+                <content>
+                    <p> <strong>Our History</strong><br>When we started StrongBase, our goal was to give anyone in the
+                        world the ability to learn the skills they’d need to succeed in the 21st century. We set out to
+                        create a new, interactive way of learning
+                        — making it engaging, flexible, and accessible for as many people as possible. Since then, we
+                        have helped millions of people worldwide unlock modern technical skills and reach their full
+                        potential through code. ✨ <br>
+                    </p>
+                    <p>
+                        <hr><strong>Our Mission</strong> <br> We want to create a world where anyone can build something
+                        meaningful with technology, and everyone has the learning tools, resources, and opportunities to
+                        do so. Code contains a world of possibilities
+                        — all that’s required is the curiosity and drive to learn. At StrongBase, we are committed to
+                        empowering all people, regardless of where they are in their coding journeys, to continue to
+                        learn, grow, and make an impact on the world
+                        around them.
+                    </p>
+                </content>
+                <div class="showing-buttons">
+                    <a href="#about" onclick="OpenContactPage()">Get In Touch</a>
+                    <a href="#courses ">Enroll Course</a>
+                </div>
+                <div class="design ">
+                    <h1>
+                        <span2>.</span2>
+                        <span3>.</span3>
+                        <span4>.</span4>
+                        <span5>.</span5>
+                        <span6>.</span6>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="courses" id="courses">
+        <div class="container ">
+            <div class="coursses-title">
+                <h1>Courses We Offer
+                </h1>
+            </div>
+            <div class="main-card" data-aos-duration="1500">
+
+                <div class="card-1" data-aos="zoom-in-up" data-aos-duration="1500">
+                    <a href="c.html"><img
+                            src="https://online.crbtech.in/wp-content/uploads/2019/03/C-programming-1024x530.png "
+                            title="C Programing Language" /></a>
+                </div>
+                <div class="card-1 " data-aos="zoom-in-up" data-aos-duration="1600">
+                    <a href="java.html"> <img src="https://dev.java/assets/images/java-logo-vert-blk.png "
+                            title="Java Programing Language " /></a>
+                </div>
+                <div class="card-1 " data-aos="zoom-in-up" data-aos-duration="1700">
+                    <a href="python.html"> <img
+                            src="https://www.mytaskpanel.com/wp-content/uploads/2021/05/2021-05-14-1.webp "
+                            title="Python Programing Language " /></a>
+                </div>
+                <div class="card-1 " data-aos="zoom-in-up" data-aos-duration="1800">
+                    <a href="c++.html"> <img
+                            src="https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1551437392/img/co_img_1539_1633434090.png"
+                            title="C++ Programing Language " /></a>
+                </div>
+            </div>
+            <div class="main-card ">
+                <div class="card-1 " data-aos="zoom-in" data-aos-duration="1900">
+                    <a href="frontend.html"><img src="https://asianewsonly.com/wp-content/uploads/2022/05/cover.jpg "
+                            title="Web Development " /></a>
+                </div>
+                <div class="card-1 " data-aos="zoom-in" data-aos-duration="2000">
+                    <a href="css.html"> <img src="https://acadray.com/images/course/css.png "
+                            title="CSS Programing Language " /></a>
+                </div>
+                <div class="card-1 " data-aos="zoom-in" data-aos-duration="1100">
+                    <a href="html.html"> <img
+                            src="https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw "
+                            title="HTML Programing Language " /></a>
+                </div>
+                <div class="card-1 " data-aos="zoom-in" data-aos-duration="1200">
+                    <a href="js.html"> <img src="https://miro.medium.com/max/800/1*M_GDn6RXZSZC66kvrMHh5Q.png "
+                            title="JavaScript Programing Language " /></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!------------------------ sercviice we aree providing section--------------------- -->
+    <section class="services">
+        <!--heading---------------->
+        <div class="s-heading">
+            <h1>Ser
+                <font color="#4a90e2">vic</font>es
+            </h1>
+            <p>We Provide The Best In Class Servies For Our Customers</p>
+        </div>
+        <!--services-box-container------------------->
+        <div class="s-box-container">
+            <!--service-box-1---------------->
+            <div class="s-box aos-init" data-aos="zoom-in-down" data-aos-duration="1500">
+                <!--top-bar-------->
+                <div class="bar "></div>
+                <!--img---------->
+                <img alt="1 "
+                    src="https://img.freepik.com/premium-vector/24-7-support-abstract-style-white-background-customer-service-online-support-call-center_123447-1208.jpg?w=2000">
+                <!--servies-name---------->
+                <h1>Service provide</h1>
+                <!--details------>
+                <p>Contact Us if you have any quries and for Enquiry</p>
+                <!--btn---------->
+            </div>
+            <!--service-box-2---------------->
+            <div class="s-box aos-init" data-aos="zoom-in-down" data-aos-duration="2000">
+                <!--top-bar-------->
+                <div class="bar "></div>
+                <!--img---------->
+                <img alt="2 "
+                    src="https://licreativetechnologies.com/wp-content/uploads/2019/12/Creative-Web-designing.jpg ">
+                <!--servies-name---------->
+                <h1>Quality Courses</h1>
+                <!--details------>
+                <p>We are providng Quality courses at very low price</p>
+                <!--btn---------->
+            </div>
+            <!--service-box-3---------------->
+            <div class="s-box aos-init" data-aos="zoom-in-down" data-aos-duration="2500">
+                <!--top-bar-------->
+                <div class="bar "></div>
+                <!--img---------->
+                <img alt="3 "
+                    src="https://media.istockphoto.com/id/1216827402/vector/online-distance-education-teacher-explain-the-topic-of-the-lesson.jpg?b=1&amp;s=612x612&amp;w=0&amp;k=20&amp;c=hickqyBQnbtqd278yQAogwPCkXcp02yeXFY3bPaiZBU=">
+                <!--servies-name---------->
+                <h1>Best Mentors</h1>
+                <!--details------>
+                <p>Mentors are well experienced and they holding good practical knowledge</p>
+                <!--btn---------->
+            </div>
+            <!--service-box-4---------------->
+            <div class="s-box aos-init" data-aos="zoom-in-down" data-aos-duration="3000">
+                <!--top-bar-------->
+                <div class="bar "></div>
+                <!--img---------->
+                <img alt="3 "
+                    src="https://thumbs.dreamstime.com/b/article-isolated-icon-simple-element-illustration-programming-concept-icons-editable-logo-sign-symbol-design-white-142291162.jpg">
+                <!--servies-name---------->
+                <h1>Easy Article</h1>
+                <!--details------>
+                <p>Articles are designed by the experts,with easy content</p>
+                <!--btn---------->
+            </div>
+            <!--service-box-5---------------->
+            <div class="s-box aos-init" data-aos="zoom-in-down" data-aos-duration="2000">
+                <!--top-bar-------->
+                <div class="bar"></div>
+                <!--img---------->
+                <img alt="3"
+                    src="https://resources.mojomedialabs.com/hubfs/SW-mojo-blog-header-Tutorial-%20How%20to%20Resize%20a%20Photo%20for%20Your%20Website.jpg ">
+                <!--servies-name---------->
+                <h1>Quality Video</h1>
+                <!--details------>
+                <p>We are providing quality video class in many ways to Make You Relax And Crazy</p>
+                <!--btn---------->
+            </div>
+        </div>
+    </section>
+    <!-- 
+    <section class="testimonials" id="testimonial">
+        <div class="container" data-aos="zoom-in" data-aos-duration="1500">
+            <h2>
+                <span2>.</span2>
+                <span3>.</span3>
+                <span4>.</span4>
+                <span5>.</span5>
+                <span6>.</span6> Testimonials
+                <span2>.</span2>
+                <span3>.</span3>
+                <span4>.</span4>
+                <span5>.</span5>
+                <span6>.</span6>
+            </h2>
+            <div class="testi-card " id="test-1">
+                <div class="card-11 "> <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm5CBfhYQ0yIjdems5_II2aks4LPCeSNVtKA&usqp=CAU" />
+                </div>
+
+                <div class="card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : Ankush</h1>
+                        <h1>Language :Front-end-dev</h1>
+                        <div class="ratting ">
+                            <h1> Ratting :
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span cla ss="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">01</div>
+                    </div>
+                    <div class="review-content ">
+                        <p> I had always been interested in software development, but never knew where to start. Through
+                            StrongBase, I was able to learn how to code with literally no technical knowledge! After
+                            learning web development, I helped with the Ellation
+                            web redesign, which is now being used by millions of people. It’s been incredibly fulfilling
+                            to see the impact of my projects at work.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card " id="test-2">
+                <div class="card-11 "> <img
+                        src="https://qph.cf2.quoracdn.net/main-qimg-407c4b6f60302d6e9c55695adef129e0-pjlq" />
+                </div>
+                <div class="card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : harish</h1>
+                        <h1>Language :Java-Programming</h1>
+                        <div class="ratting ">
+                            <h1> Ratting : <span class="fa fa-star checked "></span> <span
+                                    class="fa fa-star checked "></span> <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">02</div>
+                    </div>
+                    <div class="review-content ">
+                        <p>Not only did this experience teach me the proper techniques of technical Coding and the
+                            process of document construction as promised, but it also taught me how to learn
+                            independently, how to stick with a problem and find ways of
+                            solving it, and perhaps most significantly, the experience taught me the skills that will
+                            enable me to continue to develop my technical coding skills beyond the electronic classroom.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card " id="test-3">
+                <div class="card-11 "> <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfUCwh6uK40E9WBfFdgPDdtxiOqG_ZGfpt_Q&usqp=CAU" />
+                </div>
+                <div class="card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : varun</h1>
+                        <h1>Language :C-Programming</h1>
+                        <div class="ratting ">
+                            <h1> Ratting : <span class="fa fa-star checked "></span> <span
+                                    class="fa fa-star checked "></span> <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">03</div>
+                    </div>
+                    <div class="review-content ">
+                        <p>Course materials were good, the mentoring approach was good, and working with other people
+                            via the Internet was good. The instructor did a good job of communicating and making it a
+                            more intimate arrangement. A lot of online courses
+                            fail because of the isolation. C is very good and I think it’s a very solid course. I
+                            learned a lot.You prepare people to carry out skills in the real world. Keep up the good
+                            work. What I have learned in this course, I will
+                            be able to apply in the real world.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card " id="test-4">
+                <div class="card-11 "> <img
+                        src="https://cdn.pixabay.com/photo/2021/01/02/18/49/indian-5882625__340.jpg" />
+                </div>
+                <div class="card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : naveen</h1>
+                        <h1>Language :Python-Programming</h1>
+                        <div class="ratting ">
+                            <h1> Ratting : <span class="fa fa-star checked "></span> <span
+                                    class="fa fa-star checked "></span> <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">04</div>
+                    </div>
+                    <div class="review-content ">
+                        <p>I have taken many online courses. None have offered teleconference as part of the course. It
+                            enabled conversational interaction with other students and the instructor which enriched the
+                            learning environment. It enabled us as students
+                            to see and discuss each others work and share in the feedback interactively.The instructor’s
+                            clear and consistent focus on the four basic principles of web design (contrast, repetition,
+                            alignment, and proximity) kept the course
+                            very focused and efficient. The reading material was clear and well presented.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card " id="test-5">
+                <div class="card-11 "> <img
+                        src="https://qph.cf2.quoracdn.net/main-thumb-23934851-200-zlmgpmkmpbxtcuxfnbipikmenlxpwalh.jpeg" />
+                </div>
+                <div class="card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : rupesh</h1>
+                        <h1>Language :JavaScript-Programming</h1>
+                        <div class="ratting ">
+                            <h1> Ratting : <span class="fa fa-star checked "></span> <span
+                                    class="fa fa-star checked "></span> <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">05</div>
+                    </div>
+                    <div class="review-content ">
+                        <p> Instructor feedback was excellent, and his knowledge of not just the course material, but
+                            related subjects as well. This course [User Interface Analysis] is very applicable to many
+                            aspects of user relations, not just building applications.
+                            I really enjoyed this course, and look forward to taking the next course.Real bonus to speak
+                            with a highly experienced professional in the field. As good as a face-to-face
+                            tutorial/lecture. I feel I have been on a real course.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card " id="test-6">
+                <div class="card-11 "> <img
+                        src="https://chessgurukul.com/wp-content/uploads/2022/03/chinmay-827x1024.jpg" />
+                </div>
+                <div class=" card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : vamsi</h1>
+                        <h1>Language :C-Programming</h1>
+                        <div class="ratting ">
+                            <h1> Ratting : <span class="fa fa-star checked "></span> <span
+                                    class="fa fa-star checked "></span> <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">06</div>
+                    </div>
+                    <div class="review-content ">
+                        <p> A thorough course that enables the student to learn at their own pace, have access to their
+                            instructor when needed, and have tools that they can continue their education and build upon
+                            what they have learned. You receive more than
+                            just a piece of the puzzle and wonder how to incorporate it into your work, you receive the
+                            skills to start a project at inception and see it to completion! Great Course! I am a
+                            currently a stay-at-home mom, and I really appreciated
+                            the flexibility to study when it fitted MY schedule. I enjoyed doing something that I have
+                            never done, on a topic I knew nothing of !! Well done, what a great course.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card " id="test-7">
+                <div class="card-11 "> <img
+                        src="https://qph.cf2.quoracdn.net/main-thumb-156826558-200-orbehnauwhpwqqyiygdsanzreoyyqqib.jpeg" />
+                </div>
+                <div class=" card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : rupevasanthsh</h1>
+                        <h1>Language :C++-Programming</h1>
+                        <div class="ratting ">
+                            <h1> Ratting : <span class="fa fa-star checked "></span> <span
+                                    class="fa fa-star checked "></span> <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">07</div>
+                    </div>
+                    <div class="review-content ">
+                        <p>Overall, I thought the course was great. I did get tons of useful experience from the course
+                            and the instructor Vinay was great. It was a pleasure being a part of your course. I will
+                            use the valuable feedback you provided to improve
+                            my skills.I found your explanations so much clearer than any book I’ve come across in trying
+                            to learn C++.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card " id="test-8">
+                <div class="card-11 "> <img
+                        src="https://qph.cf2.quoracdn.net/main-thumb-142189096-200-ettwpqctvnyhkeupzmagscxmndoughed.jpeg " />
+                </div>
+                <div class="card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : faord</h1>
+                        <h1>Language :Front-end-dev</h1>
+                        <div class="ratting ">
+                            <h1> Ratting : <span class="fa fa-star checked "></span> <span
+                                    class="fa fa-star checked "></span> <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">08</div>
+                    </div>
+                    <div class="review-content ">
+                        <p> I thoroughly enjoyed this course and hope to expand on my gained knowledge about building
+                            websites. The course was well presented, easy to follow and engaging. The interactive
+                            examples make the course material easier to grasp.
+                            I definitely recommend this course to anyone who wishes to learn about HTML or CSS. I took
+                            an Intro to HTML class (through a different site) back in the fall, and while it has given
+                            me a good background and basic understanding
+                            that has helped me in starting this course, I feel that this course already has provided me
+                            with so much more information just in understanding the history of HTML, etc.
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card " id="test-9">
+                <div class="card-11 "> <img
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1Jcu9H04LmvlehyN9VmkvwrS3Fgdc3TQ2VViWPDesyT4ob2-ZQumNvbtCgB_qyyb-DuQ&usqp=CAU" />
+                </div>
+                <div class="card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : benzh</h1>
+                        <h1>Language :Python-Programming</h1>
+                        <div class="ratting ">
+                            <h1> Ratting : <span class="fa fa-star checked "></span> <span
+                                    class="fa fa-star checked "></span> <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">09</div>
+                    </div>
+                    <div class="review-content ">
+                        <p>It was a pleasure being a part of your course. I will use the valuable feedback you provided
+                            to improve my skills as an python dev. Overall, I thought the course was great. I did get
+                            tons of useful experience from the course and
+                            the instructor keerthi was great.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card " id="test-10">
+                <div class="card-11 "> <img
+                        src="https://qph.cf2.quoracdn.net/main-thumb-1294071598-200-ctrppmhvsxgylerdipfevdpuoyxmozic.jpeg" />
+                </div>
+                <div class="card-12 ">
+                    <div class="name-ratting ">
+                        <h1>Name : audi</h1>
+                        <h1>Language :Java-Programming</h1>
+                        <div class="ratting ">
+                            <h1> Ratting : <span class="fa fa-star checked "></span> <span
+                                    class="fa fa-star checked "></span> <span class="fa fa-star checked "></span>
+                                <span class="fa fa-star "></span> <span class="fa fa-star "></span>
+                            </h1>
+                        </div>
+                        <div class="page-no ">10</div>
+                    </div>
+                    <div class="review-content ">
+                        <p> Well designed, gives a great and useful opening to user-centered design. Thank you very
+                            much. It was a great experience for me. Real bonus to speak with a highly experienced
+                            professional in the field. As good as a face-to-face
+                            tutorial/lecture. I feel I have been on a real course.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="number-buttons ">
+                <h1>
+                    <span type="button " onclick="ONE() " id="one-1 ">01</span>
+                    <span type="button " onclick="TWO() " id="two-2 ">02</span>
+                    <span type="button " onclick="THREE() " id="three-3 ">03</span>
+                    <span type="button " onclick="FOUR() " id="four-4 ">04</span>
+                    <span type="button " onclick="FIVE() " id="five-5 ">05</span>
+                    <span type="button " onclick="SIX() " id="six-6 ">06</span>
+                    <span type="button " onclick="SEVEN() " id="seven-7 ">07</span>
+                    <span type="button " onclick="EIGHT() " id="eight-8 ">08</span>
+                    <span type="button " onclick="NINE() " id="nine-9 ">09</span>
+                    <span type="button " onclick="TEN() " id="ten-10 ">10</span>
+                </h1>
+
+            </div>
+        </div>
+    </section> -->
+    <!-----
+    <div class="team">
+        <div class="container-fluid">
+            <h2>Our Team</h2>
+            <div class="row">
+                <div class="card">
+                    <img src="profile-2.jpg" alt="arjun" style="width:100%">
+                    <h1>Purushotham K</h1>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="https://www.instagram.com/strongcodebase/">Follow</a></p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>Purushotham M</h1>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFuJTIwZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>Purushotham B</h1>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+                <div class="card">
+                    <img src="https://www.shutterstock.com/image-photo/closeup-portrait-yong-woman-casual-260nw-1554086789.jpg  " alt="John" style="width:100%">
+                    <h1 style="letter-spacing:4px">Sai Keerthi K</h1>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+            </div>
+            --->
+    <!-------
+            <div class="row">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFuJTIwZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+                <div class="card">
+                    <img src="https://live.staticflickr.com/8724/16976740485_fe1579c5a5_b.jpg" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFuJTIwZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+                <div class="card">
+                    <img src="https://live.staticflickr.com/8724/16976740485_fe1579c5a5_b.jpg" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><a href="">Follow</a></p>
+                </div>
+            </div>---->
+    <!-- </div>
+    </div> -->
+    <!-----
+    <div class="team">
+        <div class="container-fluid">
+            <div class="row">
+                <h2>Our Team</h2>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1595152452543-e5fc28ebc2b8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbiUyMGZhY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8bWFuJTIwZmFjZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div>
+                <div class="card">
+                    <img src="https://live.staticflickr.com/8724/16976740485_fe1579c5a5_b.jpg" alt="John" style="width:100%">
+                    <h1>John Doe</h1>
+                    <p class="title">CEO & Founder, Example</p>
+                    <p>Harvard University</p>
+                    <div style="margin: 24px 0;">
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                    </div>
+                    <p><button>Contact</button></p>
+                </div>
+            </div>
+        </div>
+    </div>---->
+    <!-- -----------------------testimonial section-------------------------------- -->
+    <!-- <div class="outerdiv">
+        <h1>Our TestimonialS</h1>
+        <div class="innerdiv">
+            <div class="div1 eachdiv">
+                <div class="userdetails">
+                    <div class="imgbox">
+                        <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-daniel.jpg"
+                            alt="">
+                    </div>
+                    <div class="detbox">
+                        <p class="name">Daniel Clifford</p>
+                        <p class="designation">Verified Graduate</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <h4>I received a job offer mid-course, and the subjects I learned were current, if not more so, in
+                        the company I joined. I honestly feel I got every penny’s worth.</h4>
+                    <p>“ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
+                        transition and have heard some people who had an amazing experience here. I signed up for the
+                        free intro course and found it incredibly fun! I enrolled shortly thereafter. The next 12 weeks
+                        was the best - and most grueling - time of my life. Since completing the course.”</p>
+                </div>
+            </div>
+            <div class="div2 eachdiv">
+                <div class="userdetails">
+                    <div class="imgbox">
+                        <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-jonathan.jpg"
+                            alt="">
+                    </div>
+                    <div class="detbox">
+                        <p class="name">Jonathan Walters</p>
+                        <p class="designation">Verified Graduate</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <h4>The team was very supportive and kept me motivated</h4>
+                    <p>“ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
+                        for a big company. This was one of the best investments I’ve made in myself. ”</p>
+                </div>
+            </div>
+            <div class="div3 eachdiv">
+                <div class="userdetails">
+                    <div class="imgbox">
+                        <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-kira.jpg"
+                            alt="">
+                    </div>
+                    <div class="detbox">
+                        <p class="name dark">Kira Whittle</p>
+                        <p class="designation dark">Verified Graduate</p>
+                    </div>
+                </div>
+                <div class="review dark">
+                    <h4>Such a life-changing experience. Highly recommended!</h4>
+                    <p>“ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
+                        professionals who can help me learn programming step by step. I was encouraged to enroll by a
+                        former student of theirs who can only say wonderful things about the program. The entire
+                        curriculum and staff did not disappoint. They were very hands-on and I never had to wait long
+                        for assistance. The agile team project, in particular, was outstanding. It took my learning to
+                        the next level in a way that no tutorial could ever have. In fact</p>
+                </div>
+            </div>
+            <div class="div4 eachdiv">
+                <div class="userdetails">
+                    <div class="imgbox">
+                        <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-jeanette.jpg"
+                            alt="">
+                    </div>
+                    <div class="detbox">
+                        <p class="name dark">Jeanette Harmon</p>
+                        <p class="designation dark">Verified Graduate</p>
+                    </div>
+                </div>
+                <div class="review dark">
+                    <h4>An overall wonderful and rewarding experience</h4>
+                    <p>“ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good living
+                        while doing something I love. ”</p>
+                </div>
+            </div>
+            <div class="div5 eachdiv">
+                <div class="userdetails">
+                    <div class="imgbox">
+                        <img src="https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/image-patrick.jpg"
+                            alt="">
+                    </div>
+                    <div class="detbox">
+                        <p class="name">Patrick Abrams</p>
+                        <p class="designation">Verified Graduate</p>
+                    </div>
+                </div>
+                <div class="review">
+                    <h4>Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them
+                        and learning from their experiences was easy.</h4>
+                    <p>“ The staff seem genuinely concerned about my progress which I find really refreshing. The
+                        program gave me the confidence necessary to be able to go out in the world and present myself as
+                        a capable junior developer. The standard is above the rest. You will get the personal attention
+                        you need from an incredible community of smart and amazing people. ”</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- ---------------------testimonial section--------------------------------------------------- -->
+    <section class="testimonial-section">
+        <h1>Our TestimonialS</h1>
+        <div class="entire-testimonial">
+            <figure class="snip1390">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTm5CBfhYQ0yIjdems5_II2aks4LPCeSNVtKA&usqp=CAU"
+                    alt="profile-sample3" class="profile" />
+                <figcaption>
+                    <h2>Arjun</h2>
+                    <h4>Python</h4>
+                    <blockquote style="text-align: justify;">
+                        <strong>Rating:</strong>
+                        <stars style="color:gold;font-size: 20px;position: relative;top: 2px;">★★★★★</stars><br>
+                        <strong>Review:</strong> <br>
+                        I was a complete beginner when I started the Python course on StrongBase, and I can't believe
+                        how much I've learned in just one month. The instructors are fantastic, and the course structure
+                        is well-paced. They covered everything from basic syntax to advanced topics like object-oriented
+                        programming and web development with Flask. I feel confident enough to start my own Python
+                        projects now. Highly recommended!
+                    </blockquote>
+                </figcaption>
+            </figure>
+            <figure class="snip1390 hover"><img
+                    src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/331810/profile-sample5.jpg" alt="profile-sample5"
+                    class="profile" />
+                <figcaption>
+                    <h2>Poorna Chandhra</h2>
+                    <h4>C++</h4>
+                    <blockquote style="text-align: justify;">
+                        <strong>Rating:</strong>
+                        <stars style="color:gold;font-size: 20px;position: relative;top: 2px;">★★★★★</stars><br>
+                        <strong>Review:</strong> <br>
+                        StrongBase's C++ course was a valuable experience for me as a programming enthusiast. The course
+                        content was well-structured, and the explanations were clear. While I appreciated the thorough
+                        coverage of C++ fundamentals, I think including more content on C++ libraries and frameworks
+                        would make the course even better. Nonetheless, it's a solid course for those looking to dive
+                        into C++.
+                    </blockquote>
+                </figcaption>
+            </figure>
+            <figure class="snip1390"><img src="https://cdn.pixabay.com/photo/2021/01/02/18/49/indian-5882625__340.jpg"
+                    alt="profile-sample6" class="profile" />
+                <figcaption>
+                    <h2>Vijay</h2>
+                    <h4>Java</h4>
+                    <blockquote style="text-align: justify;">
+                        <strong>Rating:</strong>
+                        <stars style="color:gold;font-size: 20px;position: relative;top: 2px;">★★★★★</stars><br>
+                        <strong>Review:</strong> <br>
+                        StrongBase's Java course exceeded my expectations. The material was well-structured, and the
+                        instructors were responsive to questions. The weekly quizzes and final project were valuable in
+                        reinforcing the concepts. What I liked most was how they explained the principles behind Java
+                        programming, not just the syntax. It's a fantastic course for beginners and those looking to
+                        deepen their Java knowledge.
+                    </blockquote>
+                </figcaption>
+            </figure>
+            <figure class="snip1390"><img src="https://www.edroots.com/uploads/media/Amandeep%20Bhogal6065b29fb724f.png"
+                    alt="profile-sample6" class="profile" />
+                <figcaption>
+                    <h2>Sneha Rani</h2>
+                    <h4>Front-end web development</h4>
+                    <blockquote style="text-align: justify;">
+                        <strong>Rating:</strong>
+                        <stars style="color:gold;font-size: 20px;position: relative;top: 2px;">★★★★★</stars><br>
+                        <strong>Review:</strong> <br>
+                        I can't say enough good things about this course. StrongBase's front-end web development program
+                        is perfect for beginners. The instructors made complex concepts seem simple and provided ample
+                        opportunities to practice coding. The final project, where we built a dynamic web application,
+                        was the icing on the cake. I feel confident in my front-end skills and am eager to dive into
+                        more advanced topics.
+                    </blockquote>
+                </figcaption>
+            </figure>
+            <figure class="snip1390"><img
+                    src="https://www.isquareit.edu.in/wp-content/uploads/2019/02/Rakhi-Agrawal-150x150.jpg"
+                    alt="profile-sample6" class="profile" />
+                <figcaption>
+                    <h2>Ramya Royal</h2>
+                    <h4>Python</h4>
+                    <blockquote style="text-align: justify;">
+                        <strong>Rating:</strong>
+                        <stars style="color:gold;font-size: 20px;position: relative;top: 2px;">★★★★★</stars><br>
+                        <strong>Review:</strong> <br>
+                        As someone with some prior coding experience, I found this Python course on StrongBase to be a
+                        great refresher and an opportunity to fill in gaps in my knowledge. The instructors were patient
+                        and supportive, and the course materials were comprehensive. I would have loved more in-depth
+                        coverage of data science libraries like NumPy and Pandas, but overall, it's a valuable course
+                    </blockquote>
+                </figcaption>
+            </figure>
+            <figure class="snip1390"><img src="https://chessgurukul.com/wp-content/uploads/2022/03/chinmay-827x1024.jpg"
+                    alt="profile-sample6" class="profile" />
+                <figcaption>
+                    <h2>Pavan Veeraju</h2>
+                    <h4>Java</h4>
+                    <blockquote style="text-align: justify;">
+                        <strong>Rating:</strong>
+                        <stars style="color:gold;font-size: 20px;position: relative;top: 2px;">★★★★★</stars><br>
+                        <strong>Review:</strong> <br>
+                        I can't express how impressed I am with this Java course on StrongBase. The instructors are
+                        excellent at breaking down complex Java concepts into understandable pieces. I loved the
+                        emphasis on problem-solving and coding challenges. By the end of the course, I felt confident in
+                        building Java applications. I'm grateful for the knowledge I gained here!
+                    </blockquote>
+                </figcaption>
+            </figure>
+            <figure class="snip1390"><img
+                    src="https://renaissancelawcollege.com/wp-content/uploads/2022/04/New-Project-7.jpg"
+                    alt="profile-sample6" class="profile" />
+                <figcaption>
+                    <h2>Sruthi Batya</h2>
+                    <h4>Front-End Development</h4>
+                    <blockquote style="text-align: justify;">
+                        <strong>Rating:</strong>
+                        <stars style="color:gold;font-size: 20px;position: relative;top: 2px;">★★★★★</stars><br>
+                        <strong>Review:</strong> <br>
+                        StrongBase's one-month front-end web development course exceeded my expectations. I came in with
+                        zero experience, but the instructors made the learning curve manageable. They covered HTML, CSS,
+                        and JavaScript thoroughly, and the hands-on projects were incredibly instructive. The highlight
+                        was building my own responsive website.Plus, the free LinkedIn optimization and Git course for
+                        enrolled students is a fantastic perk!
+                    </blockquote>
+                </figcaption>
+            </figure>
+            <figure class="snip1390"><img
+                    src="https://qph.cf2.quoracdn.net/main-thumb-1294071598-200-ctrppmhvsxgylerdipfevdpuoyxmozic.jpeg"
+                    alt="profile-sample6" class="profile" />
+                <figcaption>
+                    <h2>Leela Krishna</h2>
+                    <h4>LinkedIn</h4>
+                    <blockquote style="text-align: justify;">
+                        <strong>Rating:</strong>
+                        <stars style="color:gold;font-size: 20px;position: relative;top: 2px;">★★★★★</stars><br>
+                        <strong>Review:</strong> <br>
+                        StrongBase's free LinkedIn Optimization course is a valuable resource. It offers expert guidance
+                        on optimizing your profile, networking effectively, and enhancing your professional presence on
+                        LinkedIn. Don't miss this opportunity to boost your career for free!
+                    </blockquote>
+                </figcaption>
+            </figure>
+            <figure class="snip1390"><img
+                    src="https://www.isquareit.edu.in/wp-content/uploads/2019/02/Nidhi-Dev-150x150.jpg"
+                    alt="profile-sample6" class="profile" />
+                <figcaption>
+                    <h2>Renuka</h2>
+                    <h4>LinkedIn & Git</h4>
+                    <blockquote style="text-align: justify;">
+                        <strong>Rating:</strong>
+                        <stars style="color:gold;font-size: 20px;position: relative;top: 2px;">★★★★★</stars><br>
+                        <strong>Review:</strong> <br>
+                        StrongBase's free LinkedIn Optimization and Git courses are hidden gems. The LinkedIn
+                        Optimization course equips you with essential skills for building a standout professional
+                        profile, while the Git course provides a solid foundation for version control and collaborative
+                        coding. The best part? They're both absolutely free, making these courses an unbeatable value
+                        for career and coding enthusiasts.
+                    </blockquote>
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+    <!----------------------team section--------------------------------------------- -->
+    <section class="entire-team-section">
+
+        <p class="text-blk team-head-text">
+            Our Team
+        </p>
+        <div class="responsive-container-block container">
+
+            <div class="responsive-container-block">
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert1.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.15.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/expert2.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 card-container">
+                    <div class="card">
+                        <div class="team-image-wrapper">
+                            <img class="team-member-image"
+                                src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/ET7.14.png">
+                        </div>
+                        <p class="text-blk name">
+                            Davis George
+                        </p>
+                        <p class="text-blk position">
+                            CEO
+                        </p>
+                        <p class="text-blk feature-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </p>
+                        <div class="social-icons">
+                            <a href="https://www.twitter.com" target="_blank">
+                                <img class="twitter-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon.svg">
+                            </a>
+                            <a href="https://www.facebook.com" target="_blank">
+                                <img class="facebook-icon"
+                                    src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/Icon-1.svg">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!----------------------------------------------------faq pages------------------------------------->
+    <section class="faq" id="faq">
+        <h1>
+            <!-- <span2>.</span2>
+                <span3>.</span3>
+                <span4>.</span4>
+                <span5>.</span5>
+                <span6>.</span6> -->
+            FAQ
+            <!-- <span2>.</span2>
+            <span3>.</span3>
+            <span4>.</span4>
+            <span5>.</span5>
+            <span6>.</span6> -->
+        </h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 " id="qus">
+                    <p>1. How can I enroll the course.....?</p> <button type="text " class="qus-but "
+                        onclick="qusOpen() " id="qus_but "> Open </button>
+                </div>
+                <div class="col-md-6 " id="ans">
+                    <p> 1. Click on the course image that will atomatically redirect you to the particular course page
+                    </p>
+                    <button type="text " class="ans-but " onclick="ansOpen() " id="ans_but "> Close </button>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-6 " id="qus1">
+                    <p>2. What is the course duration.....?</p> <button type="text " class="qus-but "
+                        onclick="qusOpen1() " id="qus_but1 "> Open </button>
+                </div>
+                <div class="col-md-6 " id="ans1">
+                    <p> 2. 4 weaks</p>
+                    <button type="text " class="ans-but " onclick="ansOpen1() " id="ans_but1 "> Close </button>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-6 " id="qus2">
+                    <p>3. what can i gain by learning this course.....?</p> <button type="text " class="qus-but "
+                        onclick="qusOpen2() " id="qus_but2 "> Open </button>
+                </div>
+                <div class="col-md-6 " id="ans2">
+                    <p> 3. By learning this courses you can develop your own applications</p>
+                    <button type="text " class="ans-but " onclick="ansOpen2() " id="ans_but2 "> Close </button>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-6 " id="qus3">
+                    <p>4.Does the mentors are holding good experience.....?</p> <button type="text " class="qus-but "
+                        onclick="qusOpen3() " id="qus_but3 "> Open </button>
+                </div>
+                <div class="col-md-6 " id="ans3">
+                    <p>4. They are very well experienced and they hold good practical knowledge as well as theoritical
+                        knowledge </p>
+                    <button type="text " class="ans-but " onclick="ansOpen3() " id="ans_but3 "> Close </button>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-6 " id="qus4">
+                    <p>5. Do you provide course related documents.....?</p> <button type="text " class="qus-but "
+                        onclick="qusOpen4() " id="qus_but4 "> Open </button>
+                </div>
+                <div class="col-md-6 " id="ans4">
+                    <p> 5. Yes we are providing the documents for all the courses </p>
+                    <button type="text " class="ans-but " onclick="ansOpen4() " id="ans_but4 "> Close </button>
+                </div>
+            </div>
+            <div class="row ">
+                <div class="col-md-6 " id="qus5">
+                    <p>6. Is there any option to learn the courses for free..?</p> <button type="text " class="qus-but "
+                        onclick="qusOpen5() " id="qus_but5 "> Open </button>
+                </div>
+                <div class="col-md-6 " id="ans5">
+                    <p> 6. No,this one is completely paid courses </p>
+                    <button type="text " class="ans-but " onclick="ansOpen5() " id="ans_but5"> Close </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <div class="contact-page">
+        <h1>Contact </h1>
+        <h2>Please feel free to ask a questions . . . . .</h2>
+        <div class="split-contact-details">
+            <div class="pnumber"> -->
+    <!-- <img src="https://t4.ftcdn.net/jpg/04/63/63/59/360_F_463635935_IweuYhCqZRtHp3SLguQL8svOVroVXvvZ.jpg"
+                    alt="numbers" class="ph-img"> -->
+    <!-- <hold-num>
+                    <a href="tel:+91 7993854229">+91 7993854229</a>
+                    <a href="tel:+91 9676169579">+91 9676169579</a>
+                    <a href="tel:++91 6301728516">+91 6301728516</a> -->
+    <!-- <a href="tel:+91 7993854229">+91 7993854229</a>
+                    <a href="tel:+91 9676169579">+91 9676169579</a>
+                    <a href="tel:++91 6301728516">+91 6301728516</a> -->
+    <!-- </hold-num> -->
+    <!-- </div>
+            <div class="pmails">
+                <hold-emails>
+                    <a href="mailto:purushothamkandheri@gmail.com">purushothamkandheri@gmail.com</a>
+                    <a href="mailto:purushothamkandheri@gmail.com">purushothamkandheri@gmail.com</a>
+                    <a href="mailto:purushothamkandheri@gmail.com">purushothamkandheri@gmail.com</a>
+                </hold-emails>
+
+            </div>
+        </div>
+    </div> -->
+
+
+
+
+    <!-- <div class="box">
+
+        <div class="text">
+            <h1>Contact <span class="red">Us</span></h1>
+            <div class="redline"></div>
+            <p>Have Questions ? We have answers ( may be )</p>
+        </div>
+    </div> -->
+
+    <!-- ------------------------------------contact -box---------------------------------------------------------- -->
+    <div class="container fill" id="contact">
+        <div class="text">
+            <h1>Contact <span class="red">Us</span></h1>
+            <div class="redline"></div>
+            <p>Have Questions ? We have answers ( may be )</p>
+        </div>
+        <div class="forthis">
+
+            <form action="https://mail.google.com/mail/u/0/#inbox?compose=new" method="POST" name="contact-form"
+                id="contact-form" onsubmit="return validateForm();">
+                <div class="form-row two2">
+                    <div class="form-group col-md-6 column">
+                        <input type="text" class="form-control input" id="firstname" name="firstname" placeholder=" ">
+                        <label for="firstname" class="">First Name</label>
+                        <div class="underline">
+                        </div>
+                    </div>
+                    <div class="form-group col-md-6 column">
+                        <input type="text" class="form-control input" id="lastname" name="lastname" placeholder=" ">
+                        <label for="lastname" class="">Last Name</label>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <div class="form-row one1">
+                    <div class="form-group col-lg-6 column">
+                        <input type="text" class="form-control input" id="email" name="email" placeholder=" ">
+                        <label for="email" class="">Email</label>
+                        <div class="underline"></div>
+                    </div>
+                    <div class="form-group col-lg-6 column">
+                        <input type="text" class="form-control input" id="phone" name="phone" placeholder=" ">
+                        <label for="number" class="">Phone Number</label>
+                        <div class="underline"></div>
+                    </div>
+                </div>
+                <!-- <div class="form-row">
+                    <div class="form-group column">
+                        <input type="text" class="form-control input" name="subject" id="subject" placeholder=" ">
+                        <label for="subject" class="">Subject</label>
+                        <div class="underline extra"></div>
+                    </div>
+                </div>
+                <div class="form-row size">
+                    <div class="form-group column">
+                        <textarea type="text" class="form-control input" name="message" id="message" rows="5"
+                            placeholder=" "></textarea>
+                        <label for="message" class="">Message</label>
+                        <div class="underline extra gap"></div>
+                    </div>
+                </div> -->
+                <div class="btn-sm">
+                    <input type="submit" value="SEND MESSAGE" class="sm-button" id="submit-btn">
+                    <a href="#" id="clear" class="sm-button" onclick="clearFunc()">Reset</a>
+                </div>
+            </form>
+        </div>
+        <div class="container address">
+            <div class="row add-row">
+                <div class="col-sm-6">
+                    <h3>Our Address</h3>
+                    <div class="redline-address"></div>
+                    <p>Tirupati</p>
+                    <p>Balaji</p>
+                    <p>Tirupati,</p>
+                    <p>Andhra Pradesh - 517507</p>
+                    <div class="phone-e">
+                        <p><span class="glyphicon glyphicon-envelope"> </span> strongbase55@gmail.com</p>
+                        <p><span class="glyphicon glyphicon-phone"></span> +91-7993854229</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 map-padd">
+                    <!-- -map- -->
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.419333624676!2d79.40930907464195!3d13.632237200051273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d4b1b029b5e3f%3A0x546fb6491f0969a5!2sVenkateswara%20Swamy%20Temple!5e0!3m2!1sen!2sin!4v1694308256084!5m2!1sen!2sin"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- address -->
+
+
+
+    <!-- ---------------------------------google forms-------------------------------------------------------- -->
+    <!-- <iframe
+        src="https://docs.google.com/forms/d/e/1FAIpQLSdrhYbPhb7UfHLk0YIZaUCh11o5ujyNndTB_xDRwrQrYBLhxQ/viewform?embedded=true"
+        width="2000" height="821" frameborder="0" marginheight="0" marginwidth="0">Loading…
+    </iframe> -->
+    <!-- footer started -->
+    <div class="fourth-section-footer " id="footer-details ">
+        <footer class="footer-distributed ">
+
+            <div class="footer-left ">
+                <img src="StrongBase-hat.png">
+                <h3>About<span>StrongBase</span></h3>
+
+                <p class="footer-links ">
+                    <a href="">Home</a>
+                    |
+                    <a href="#about">About</a>
+                    |
+                    <a href="#services">services</a>
+                    |
+                    <a href="#contacts-details">Contact</a>
+                    |
+                    <a href="#faq">FAQ</a>
+                    |
+                    <a href="#courses">Course</a>
+
+
+                </p>
+
+                <p class="footer-company-name ">© 2022 StrongBase Learning Solutions</p>
+            </div>
+
+            <div class="footer-center ">
+                <div><i class="fa fa-map-marker " aria-hidden="true "></i>
+                    <p><span>309 - Rupa Solitaire,
+                            Bldg. No. A - 1, Sector - 1</span> Balaji, Tirupati</p>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone " aria-hidden="true "></i>
+                    <p>+91 7993854229</p>
+                </div>
+                <div>
+                    <i class="fa fa-envelope " aria-hidden="true "></i>
+                    <p><a href="mailto:strongbase55@gmail.com">strongbase55@gmail.com</a></p>
+                </div>
+            </div>
+            <div class="footer-right ">
+                <p class="footer-company-about ">
+                    <span>About the company</span> We offer training and skill building courses across Technology,
+                    Design
+                </p>
+                <div class="footer-icons ">
+                    <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
+                    <a href="   # "><i class="fa fa-twitter " aria-hidden="true "></i></a>
+                    <a href="https://www.instagram.com/strongcodebase/"><i class="fa fa-instagram "
+                            aria-hidden="true "></i></a>
+                    <a href="# "><i class="fa fa-linkedin " aria-hidden="true "></i></a>
+                    <a href="# "><i class="fa fa-youtube " aria-hidden="true "></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- ------------------------------loader-------------------------------- -->
+    <!-- <div class="loader-container">
+        <img src="finger-tapping-loading-animation.gif" alt="">
+    </div> -->
+    <div class="loading-videos">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/o3wY5oPu4g4?si=oBQLYENAwqAAnluJ"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe><iframe width="560" height="315"
+            src="https://www.youtube.com/embed/o3wY5oPu4g4?si=oBQLYENAwqAAnluJ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe><iframe width="560" height="315"
+            src="https://www.youtube.com/embed/o3wY5oPu4g4?si=oBQLYENAwqAAnluJ" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+
+
+    </div>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="index.js"></script>
+    <script>
+        AOS.init({
+            disable: function () {
+                var maxWidth = 800;
+                return window.innerWidth < maxWidth;
+            }
+        })
+    </script>
+
+    <script src="payments.js"></script>
+    <script src="videoPayment.js"></script>
+    <script src="allvideo.js"></script>
+    <script src="testimonial.js"></script>
+    <script src="nav.js"></script>
+
+
+    <script>
+
+        function validateForm() {
+            const firstname = document.getElementById("firstname");
+            const lastname = document.getElementById("lastname");
+            const email = document.getElementById("email");
+            const phone = document.getElementById("phone");
+            const subject = document.getElementById("subject");
+            const message = document.getElementById("message");
+            let alphabets = /^[A-Za-z]+$/;
+            if (firstname.value.trim().length === 0 && lastname.value.trim().length === 0 && email.value.trim().length === 0 && phone.value.trim().length === 0 && subject.value.trim().length === 0 && message.value.trim().length === 0) {
+                swal("Oops...", "Please! Enter the credentials first .", "error");
+                return false;
+            }
+            if (firstname.value.trim().length === 0) {
+                swal("Oops...", "Please! Enter your first name .", "error");
+                return false;
+            }
+            if (!firstname.value.trim().match(alphabets)) {
+                swal("Oops...", "Please! Enter a valid first name.", "error");
+                return false;
+            }
+            if (lastname.value.trim().length > 0) {
+                if (!lastname.value.trim().match(alphabets)) {
+                    swal("Oops...", "Please! Enter a valid last name.", "error");
+                    return false;
+                }
+            }
+            if (email.value.trim().length === 0) {
+                swal("Oops...", "Please! Enter your email address.", "error");
+                return false;
+            }
+            if (!email.value.trim().includes("@gmail.com")) {
+                swal("Oops...", "Please! Enter a valid email address.", "error");
+                return false;
+            }
+            if (phone.value.trim().length != 10 || isNaN(phone.value.trim())) {
+                swal("Oops...", "Phone number should be 10 digits. ", "error");
+                return false;
+            }
+            if (subject.value.trim().length === 0) {
+                swal("Oops...", "Please! Enter the subject.", "error");
+                return false;
+            }
+            if (message.value.trim().length === 0) {
+                swal("Oops...", "Please! Enter the message.", "error");
+                return false;
+            }
+            swal("Congrats!", "Message was delivered successfully! Thanks for your Submission", "success");
+            return true;
+        }
+
+        document.getElementById("submit-btn").addEventListener("click", validateForm);
+
+        function clearFunc() {
+            document.getElementById("firstname").value = "";
+            document.getElementById("lastname").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("subject").value = "";
+            document.getElementById("message").value = "";
+        }
+
+    </script>
+
+    <script>
+        function logout() {
+            window.location.replace("login.html");
+        }
+    </script>
+
+    <!-- ------------------loader----------------------------- -->
+    <script>
+
+        function loader() {
+            document.querySelector('.loader-container').classList.add('fade-out');
+        }
+
+        function fadeOut() {
+            setInterval(loader, 1000);
+        }
+
+        window.onload = fadeOut;
+    </script>
+
+
+
+<script src="search.js"></script>
+</body>
+
+</html>

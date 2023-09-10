@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html Language</title>
+    <link rel="stylesheet" href="html.css" />
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- font-awensome only one which is working properly-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGk
+            g+p" crossorigin="anonymous" />
+    <!-- Add icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <!--------google fonts for website --------->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="icon" href="favicon.png" type="image/png" sizes="16x16">
+
+
+    <link rel="stylesheet" href="search.css">
+</head>
+
+<body>
+    <!-----------------------------------------------------dropdown comtac-box----------------->
+    <div class="contact-box">
+        <div class="container-fluid" id="contact-page">
+            <div class="row">
+                <div class="col-md-5">
+                    <div class="contac-menu-btn">
+                        <i class="fa fa-close" onclick="CloseContactPage()"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h2>Contact</h2>
+                        <span class="mb-4">Contact to this bellow details after enrolled the course succesfully</span>
+                        <!----  <div class="contact-icons">
+                        <i class="fa fa-phone " aria-hidden="true "></i>
+                        <i class="fa fa-instagram " aria-hidden="true "></i>
+                        <i class="fa fa-envelope " aria-hidden="true "></i>
+                </div>                            ---->
+
+                    </div>
+                    <div>
+                        <p> <i class="fa fa-phone " aria-hidden="true "></i><a style="text-decoration:none;"
+                                href="tel:+91 7993854229">+91 7993854229</a></p>
+                        <p> <i class="fa fa-phone " aria-hidden="true "></i><a style="text-decoration:none;"
+                                href="tel:+91 9676169579">+91 9676169579</a> </p>
+                        <p> <i class="fa fa-phone " aria-hidden="true "></i><a style="text-decoration:none;"
+                                href="tel:+91 6301728516">+91 6301728516</a> </p>
+                    </div>
+                    <div>
+                        <p> <i class="fa fa-envelope" aria-hidden="true "></i> <a
+                                href="mailto:purushothamkandheri@gmail.com ">strongbase55@gmail.com</a>
+
+                        </p>
+                        <p> <i class="fa fa-envelope" aria-hidden="true "></i> <a
+                                href="mailto:purushothamkandheri@gmail.com ">purushothamkandheri@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="pay-btn">
+                        <div class="razorpay-embed-btn" data-url="https://pages.razorpay.com/pl_Kf3iSXnsoliL3i/view"
+                            data-text="Pay Now" data-color="#528FF0" data-size="medium">
+                            <script>
+                                (function () {
+                                    var d = document;
+                                    var x = !d.getElementById('razorpay-embed-btn-js')
+                                    if (x) {
+                                        var s = d.createElement('script');
+                                        s.defer = !0;
+                                        s.id = 'razorpay-embed-btn-js';
+                                        s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                                        d.body.appendChild(s);
+                                    } else {
+                                        var rzp = window['__rzp__'];
+                                        rzp && rzp.init && rzp.init()
+                                    }
+                                })();
+                            </script>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!------------------------------------------------------------------Demo Video-------------------------------------------------------------------->
+    <div class="demo-video" id="video-1">
+        <div class="container-fluid">
+            <div class="video-btn">
+                <button type="button" onclick="Play()">Play</button>
+            </div>
+            <div class="btnn">
+                <i class="fa fa-close" onclick="VideoClose()"></i>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <video controls id="video-id">
+                        <source width="100% " height="100% " src="c++intro.mp4">
+                    </video>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- -------------------------------------------------------------------Page Will Start------------------------------------------------------------------------------>
+    <div id="total">
+        <header id="home">
+            <nav-bg>
+                <div class="btn ">
+                    <i class="fa fa-bars " onclick="OpenMenuPage()" id="menu-icon"></i>
+                </div>
+
+                <a href="javascript:void(0)" class="logo">StrongBase</a>
+            </nav-bg>
+            <navgiation id="nav-id">
+                <a href="javascript:void(0)" class="logo">StrongBase</a>
+                <nav>
+                    <div class="btnn">
+                        <i class="fa fa-close" onclick="CloseMenuPage()"></i>
+                    </div>
+                    <ul>
+                        <!-- <li><a href="#home " class="active ">Home</a></li>
+                        <li><a href="c.html">C Language</a></li>
+                        <li><a href="c++.html">C++</a></li>
+                        <li><a href="python.html">Python</a></li>
+                        <li><a href="java.html">Java</a></li>
+                        <li><a href="frontend.html">Front-End-Dev</a></li>
+                        <li><a href="js.html">JavaScript</a></li>
+                        <li><a href="css.html">CSS</a></li> -->
+
+                        <li>
+                            <form id="searchForm" class="d-flex">
+                                <input class="form-control me-2" type="text" id="searchInput"
+                                    placeholder="Search for a course..." aria-label="Search">
+                                <button class="btn btn-danger" type="submit" style="position:relative;">Search</button>
+                            </form>
+                        </li>
+                    </ul>
+                </nav>
+            </navgiation>
+
+            <div class="container-start ">
+                <div class="row ">
+                    <div class="col-8 " data-aos="fade-right " data-aos-duration="1500 ">
+                        <div class="total-content-in-this-container ">
+                            <div class="welcome-message-to-the-users ">
+                                <h1>Hi
+                                    <span>There!</span>
+                                </h1>
+                            </div>
+                            <div class="content-start ">
+                                <h2>Welcome to our
+                                    <span>" HTML " Language</span>
+                                </h2>
+                                <p>Learn HTML Language: The Complete HTML Programming Course Learn A-Z everything about
+                                    HTML , from the basics, to advanced topics.
+                                </p>
+                                <div class="buttons-and-mails ">
+                                    <a href="#courses " class="me-5 " id="explore-buttonn"
+                                        onclick="OpenContactPage() ">Enroll Courses</a>
+                                    <a href="index.html " class="me-5 " id="explore-button">
+                                        <i class="fa fa-mail-reply-all "></i> Back
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-4" data-aos="fade-left " data-aos-duration="1500 ">
+                        <div class="poster">
+                            <img name="slider">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="course-details ">
+            <div class="container-fluid ">
+                <div class="row ">
+                    <div class="col-md-8 ">
+                        <div class="row1 ">
+                            <div class="details-card ">
+                                <h3>What you'll learn</h1>
+                                    <items>
+                                        <li>
+                                            Create their own Python Programs
+                                        </li>
+                                        <li>
+                                            Become an experienced Python Programmer
+                                        </li>
+                                        <li>
+                                            Parse the Web and Create their own Games
+                                        </li>
+                                        <li>
+                                            Parse the Web and Create their own Games
+                                        </li>
+                                    </items>
+                            </div>
+                        </div>
+                        <div class="row1 ">
+                            <div class="details-box ">
+                                <h3>This courses includes:</h3>
+                                <div class="all-box ">
+                                    <div class="box ">
+                                        <i class="fa fa-bolt "></i>
+                                        <h4>
+                                            4-weaks duration
+                                        </h4>
+                                    </div>
+                                    <div class="box ">
+                                        <i class="fa fa-play-circle "></i>
+                                        <h4>
+                                            01 hour per day
+                                        </h4>
+                                    </div>
+                                    <div class="box ">
+                                        <i class="fa fa-file-code-o "></i>
+                                        <h4>
+                                            4 articles + resources
+                                        </h4>
+                                    </div>
+                                    <div class="box ">
+                                        <i class="fa fa-desktop "></i>
+                                        <h4>
+                                            weakly one project
+                                        </h4>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row2 ">
+                            <div class="course-content ">
+                                <h3>Course Content</h3>
+                                <div class="course-syllabus ">
+                                    <a href="file:///C:/Users/M%20DINESH/Desktop/classweb/web/ALL%20pdf/frontend/FrontEndSyllabusDesign.pdf"
+                                        download><img
+                                            src="https://3.bp.blogspot.com/-lp4zcwZAB3Y/WH3bbHCX3BI/AAAAAAAAYxw/btq-auxKQcMImizxJy59EOdGR2g3k66fACLcB/s1600/Syllabus%2BLogo.png "></a>
+                                    <a href="file:///C:/Users/M%20DINESH/Desktop/classweb/web/ALL%20pdf/frontend/FrontEndSyllabusDesign.pdf"
+                                        style="height: 100; " download><img
+                                            src="https://tse2.mm.bing.net/th?id=OIP.Va7YCiJ7QUfHVY9Q8wReRwHaFj&pid=Api&P=0 "></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row1 "
+                            style="width:100%;border:2px solid rebeccapurple;padding:10px;overflow-y: visible; ">
+                            <div class="discription ">
+                                <h3>Description</h3>
+                                <h5>Do you want to become a programmer? Do you want to learn how to create games,
+                                    automate your browser, visualize data, and much more?</h5>
+                                <p>
+                                    If you’re looking to learn Python for the very first time or need a quick brush-up,
+                                    this is the course for you! Python has rapidly become one of the most popular
+                                    programming languages around the world. Compared to other languages such as Java or
+                                    C++,
+                                    Python consistently outranks and outperforms these languages in demand from
+                                    businesses and job availability. The average Python developer makes over $100,000 -
+                                    this number is only going to grow in the coming years.
+                                    The best part? Python is one of the easiest coding languages to learn right now. It
+                                    doesn’t matter if you have no programming experience or are unfamiliar with the
+                                    syntax of Python. By the time you finish this course,
+                                    you'll be an absolute pro at programming!
+                                </p>
+                                <li>The fundamentals of Python programming</li>
+                                <li>Writing and Reading to Files</li>
+                                <li>Automation of Word and Excel Files</li>
+                                <li>Web scraping with BeautifulSoup4</li>
+                                <li>And much more!</li>
+
+                                <h2>Who this course is for:</h2>
+                                <li>
+                                    Even if you haven't touched coding before, it won't matter. The easy step-to-step
+                                    lectures will quickly guide you through everything you'll need to know about coding,
+                                    mainly Python. This course is here for you to get accustomed and familiar with
+                                    Python
+                                    and its syntax. And above all, Python is one of the easiest coding languages to
+                                    learn, and there's a lot you can do with it.
+                                </li>
+                            </div>
+                        </div>
+                        <div class="row2 ">
+                            <div class="Instructors ">
+                                <h3>Instructors</h3>
+                                <h4>PurushothamKandheri</h4>
+                                <h5>Teaching 1000+ Students how to code</h5>
+                                <div class="profile-card ">
+                                    <div class="profile-photo ">
+                                        <img src="profile-2.jpg">
+                                    </div>
+                                    <div class="profile-details ">
+                                        <honner>
+                                            <li>
+                                                <span class="fa fa-star checked "></span> 4.4 Instructor Rating
+                                            </li>
+                                            <li>
+                                                <span class="fa fa-signal "></span> 1,345 Reviews
+                                            </li>
+                                            <li>
+                                                <span class="fa fa-group "></span> 1200 Students
+                                            </li>
+                                            <li>
+                                                <span class="fa fa-play-circle "></span> 5 Courses
+                                            </li>
+                                        </honner>
+                                    </div>
+                                </div>
+                                <div class="profile-discription ">
+                                    <p>
+                                        Avinash Jain is currently a senior at UC Berkeley majoring in Electrical
+                                        Engineering and Computer Science. He's the CEO and Founder of TheCodex, an
+                                        online educational platform focused on bringing the best programming content to
+                                        hundreds of thousands of
+                                        students around the world. His programming journey began at the age of 10,
+                                        starting off with simple Python scripts to crawl the weather. Since then, he's
+                                        worked at numerous companies and is professionally experienced
+                                        in Python, iOS Development and Web Development. He's launched a plethora of
+                                        applications in the App Store amassing thousands of downloads. Additionaly, he's
+                                        competed and won in several hackathons around the world
+                                        including PennApps and NWHacks. Avinash has a passion to teach - his enthusiasm
+                                        and love for programming is evident in every video. For the past 7 years he's
+                                        been an instructor on Udemy and he loves motivating and
+                                        enabling others to pursue their programming dreams. He hopes to help students
+                                        realize the power of programming and jumpstart their careers through his
+                                        courses. Checkout TheCodex for all of his courses, fantastic
+                                        discounts, and any guidance or help.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row2 ">
+                            <h3>
+                                <span class="fa fa-star checked " style="color:orange; "></span> 4.3 course rating . 4K
+                                ratings
+                            </h3>
+                            <div class="teach-ratting ">
+                                <div class="ratting-card ">
+                                    <div class="card-opt ">
+                                        <h1>PA</h1>
+                                        <div class="name-ratting ">
+                                            <h2>Praveen A</h2>
+                                            <div class="rate ">
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>The course is good no doubt, the pace is fabulous as well. However it'll be nice
+                                        if the content is updated as per the recent changes especially with regards to
+                                        the the lectures where we have to scrub the data off of
+                                        a URL since the source code(s) have now been changed.</p>
+                                </div>
+
+
+                                <div class="ratting-card ">
+                                    <div class="card-opt ">
+                                        <h1>BA</h1>
+                                        <div class="name-ratting ">
+                                            <h2>Balu A</h2>
+                                            <div class="rate ">
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>damn basic for beginners. will help you to clear out your all concepts with great
+                                        examples.It was well presented and easy to follow and understand.
+                                    </p>
+                                </div>
+
+                                <div class="ratting-card ">
+                                    <div class="card-opt ">
+                                        <h1>JU</h1>
+                                        <div class="name-ratting ">
+                                            <h2>Janu U</h2>
+                                            <div class="rate ">
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>It was well presented and easy to follow and understand.In depth concepts of
+                                        python have been clearly explained. Good chemistry between student and
+                                        instructor. Fantastic course. Completed every vid and had lot of fun
+
+                                    </p>
+                                </div>
+                                <div class="ratting-card ">
+
+                                    <div class="card-opt ">
+                                        <h1>VV</h1>
+                                        <div class="name-ratting ">
+                                            <h2>Vanitha V</h2>
+                                            <div class="rate ">
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>i can't say as i have not taken that many classes yet but so far it is good.
+                                        edited( so yeah it was a journey for me many things happen but i am glad they
+                                        did and also grateful to the person who is guiding me and thanks
+                                        udemy for these courses really appreciate it !!!)</p>
+                                </div>
+                                <div class="ratting-card ">
+                                    <div class="card-opt ">
+                                        <h1>SN</h1>
+                                        <div class="name-ratting ">
+                                            <h2>Sreenu N</h2>
+                                            <div class="rate ">
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                                <span class="fa fa-star checked " style="color:orange "></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p>course is well above expected. there are so many interesting things to learn, we
+                                        get to learn right from basic to advanced. I had no prior knowledge about python
+                                        when I started with the course, but now I am understanding
+                                        the things very well.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <img class="gud-img" style="height: 95%;width: 48%;position: absolute;float: right;right: 0 "
+                            src="lap.gif">
+                        <div class="demo-box ">
+                            <div class="video-icon ">
+                                <i class="fa fa-play-circle " onclick="VideoOpen() "></i>
+                                <h5>Course Demo</h5>
+                            </div>
+                        </div>
+                        <div class="description-box ">
+                            <h5 class="prize"><del>₹199</del> ₹50</h5>
+                            <button type="button " onclick="OpenContactPage() " class="buy-btn ">Buy Now</button>
+                        </div>
+                        <!----   <hr style="background: black;height:2px;box-shadow:0 1px 5px 0.5px black ">--->
+                        <div class="user-information ">
+                            <div class=" user-ratting ">
+                                <span1>User Ratting</span1>
+                                <span>
+                                    <i class="fa fa-star "></i>
+                                </span>
+                                <span>
+                                    <i class="fa fa-star "></i>
+                                </span>
+                                <span>
+                                    <i class="fa fa-star "></i>
+                                </span>
+                                <span>
+                                    <i class="fa fa-star "></i>
+                                </span>
+                                <span>
+                                    <i class="fas fa-star-half-alt " style="color:red; "></i>
+                                </span>
+                            </div>
+                            <div class="user-graph ">
+                                <div class="container ">
+                                    <div class="col-sm-12 ">
+                                        <span2>5 Star</span2>
+                                        <div class="progress text-center ">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success "
+                                                style="width:95%; "></div>
+                                        </div>
+                                        <span3>11k Star</span3>
+                                    </div>
+                                    <div class="col-sm-12 ">
+                                        <span2>4 Star</span2>
+                                        <div class="progress text-center ">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-info "
+                                                style="width:80%; "></div>
+                                        </div>
+                                        <span3>10K Star</span3>
+                                    </div>
+                                    <div class="col-sm-12 ">
+                                        <span2>3 Star</span2>
+                                        <div class="progress text-center ">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning "
+                                                style="width:45%; "></div>
+                                        </div>
+                                        <span3>200 Star</span3>
+                                    </div>
+                                    <div class="col-sm-12 ">
+                                        <span2>2 Star</span2>
+                                        <div class="progress text-center ">
+                                            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger "
+                                                style="width:15%; "></div>
+                                        </div>
+                                        <span3>40 Star</span3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- footer started -->
+        <div class="fourth-section-footer " id="footer-details ">
+            <footer class="footer-distributed ">
+
+                <div class="footer-left ">
+                    <img src="favicon.png ">
+                    <h3>About<span>StrongBase</span></h3>
+
+                    <p class="footer-links ">
+                        <a href="#home ">Home</a>
+                        <a href="#about ">About</a>
+                        <a href="#services ">services</a>
+                        <a href="#contacts-details ">Contact</a>
+                    </p>
+
+                    <p class="footer-company-name ">© 2022 StrongBase Learning Solutions Pvt. Ltd.</p>
+                </div>
+
+                <div class="footer-center ">
+                    <div><i class="fa fa-map-marker " aria-hidden="true "></i>
+                        <p><span>309 - Rupa Solitaire,
+                                Bldg. No. A - 1, Sector - 1</span> Mahape, Navi Mumbai - 400710</p>
+                    </div>
+
+                    <div>
+                        <i class="fa fa-phone " aria-hidden="true "></i>
+                        <p>+91 7993854229</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-envelope " aria-hidden="true "></i>
+                        <p><a href="mailto:strongbase55@gmail.com">strongbase55@gmail.com</a></p>
+                    </div>
+                </div>
+                <div class="footer-right ">
+                    <p class="footer-company-about ">
+                        <span>About the company</span> We offer training and skill building courses across Technology,
+                        Design, Management, Science and Humanities.
+                    </p>
+                    <div class="footer-icons ">
+                        <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
+                        <a href="# "><i class="fa fa-twitter " aria-hidden="true "></i></a>
+                        <a href="# "><i class="fa fa-instagram " aria-hidden="true "></i></a>
+                        <a href="# "><i class="fa fa-linkedin " aria-hidden="true "></i></a>
+                        <a href="# "><i class="fa fa-youtube " aria-hidden="true "></i></a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <script src="html.js"></script>
+    <script src="videoPayment.js"></script>
+    <script src="allvideo.js"></script>
+    <script src="search.js"></script>
+
+</body>
+
+</html>
