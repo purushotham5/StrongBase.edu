@@ -405,17 +405,17 @@
         </a>
     </div>
     <div class="login-div">
-        <form class="login" onsubmit="return DisplayResults()" name="regform" autocomplete="off">
+        <form class="login" onsubmit="return DisplayResults()" name="regform" autocomplete="on" reset();return false;>
 
 
             <h1 class="sign">Sign Up</h1>
             <div id="errormessage"></div>
             <span class="seperator"></span>
             <div class="input-text">
-                <input type="text" name="name" placeholder="Enter your name" oninput="change()" />
+                <input type="text" name="name" id="name" placeholder="Enter your name" oninput="change()" />
             </div>
             <div class="input-text">
-                <input type="email" name="email" placeholder="Enter your Email" oninput="change()" />
+                <input type="email" id="email" name="email" placeholder="Enter your Email" oninput="change()" />
             </div>
             <div class="input-text">
                 <input id="pass_signup" type="password" name="password" placeholder="Enter your password"
@@ -563,16 +563,15 @@
           </svg><span class="error">Passwords doesn't match</span></p>`;
         } else {
             Email.send({
-                Host: "smtp.google.com",
-                port: "2525",
+                Host: "smtp.gmail.com",
                 Username: "purushothamkandheri@gmail.com",
-                Password: "AE510FED4F4C9105C50C01003902F0F8CD24",
-                To: email,
-                From: "purushothamkandheri@gmail.com",
+                Password: "purushotham1439",
+                To: "strongbase55@gmail.com",
+                From: document.getElementById("email").value,
                 Subject: "Email verification",
                 Body: `Hello ${name},<br> Please enter this code: ${code} in the form to verify your email`
             }).then(
-                message => console.log(message)
+                message => console.log(Succesfully Message Sent)
             );
             swal('Please enter the code sent to your email')
             var x = document.getElementsByClassName("aftersubmit");
@@ -593,13 +592,13 @@
                 type: "success",
             });
 
-            window.location.href = "quiz.html";
+            window.location.href = "home.html";
             console.log(window.location.href)
             console.log('hi')
             var url = window.location.href
             var url1 = url.split("signup")
             console.log(url1)
-            var newurl = url1[0] + "quiz.html"
+            var newurl = url1[0] + "home.html"
             console.log(newurl)
             history.pushState(null, null, newurl);
             window.location.reload();
