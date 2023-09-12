@@ -2723,7 +2723,7 @@ hold-emails {
   .text-blk.description {
     text-align: center;
     font-size: 18px;
-    line-height: 27px;
+    line-height: 27px;text-align:justify;
   }
 
   .allText {
@@ -2818,7 +2818,7 @@ hold-emails {
     padding-right: 0px;
     padding-bottom: 0px;
     padding-left: 0px;
-    width: 100%;
+    width: 100%;text-align:justify;
   }
 
   .responsive-container-block.bigContainer {
