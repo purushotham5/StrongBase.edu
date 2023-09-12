@@ -1391,7 +1391,7 @@ Our Instructors        </p>
     <!-- ------------------------------------contact -box---------------------------------------------------------- -->
    <div class="contact_us_6">
   <div class="responsive-container-block container">
-    <form class="form-box">
+    <form class="form-box"onclick="sendEmail();reset();return false;>
       <div class="container-block form-wrapper">
         <div class="mob-text">
           <p class="text-blk contactus-head">
@@ -1426,7 +1426,7 @@ We will get back to you in 24 hours          </p>
             <textarea class="textinput" id="i5vyy-3" placeholder="Please enter query..."></textarea>
           </div>
         </div>
-        <button class="submit-btn" id="w-c-s-bgc_p-1-dm-id-2">
+        <button class="submit-btn" type="submit" id="w-c-s-bgc_p-1-dm-id-2">
           Submit
         </button>
       </div>
@@ -1654,9 +1654,26 @@ We will get back to you in 24 hours          </p>
         window.onload = fadeOut;
     </script>
 
-
-
 <script src="search.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+    <script>
+        function sendEmail(){
+  Email.send({
+    Host : "smtp.gmail.com",
+    Username : "purushothamkandheri@gmail.com",
+    Password : "purushotham1439",
+    To : 'strongbase55@gmail.com',
+    From : "document.getElementById('ipmgh-3').value",
+    Subject : "This is the subject",
+    Body : "Name :"+document.getElementById('ijowk-3').value"+"<br> Email :"+document.getElementById('ipmgh-3').value"+"<br>Number :"+document.getElementById("imgis-3")
++"<br>Message :"+document.getElementById("i5vyy-3"),
+}).then(}).then(
+  message => alert(succesfully mail sent)
+);
+
+}
+    </script>
 </body>
 
 </html>
