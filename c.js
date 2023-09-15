@@ -2,7 +2,7 @@ let images = [];
 let time = 3000;
 let i = 0;
 images[0] =
-    "https://scontent.fhyd1-3.fna.fbcdn.net/v/t1.18169-9/10526177_316910601825826_919284051902042497_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9267fe&_nc_ohc=8QY65l82cvUAX9pZ10I&_nc_ht=scontent.fhyd1-3.fna&oh=00_AfAhialacn6sTu_vX25aY9zhoe7Xw5g60zJ1-YBVDKZXhA&oe=638AD488";
+    "http://2.bp.blogspot.com/-E8FP7852bzc/UKi0TGnux7I/AAAAAAAAASE/DR5pA9x1yJk/s640/dennis_ritchie1.jpg";
 images[1] =
     "http://2.bp.blogspot.com/-E8FP7852bzc/UKi0TGnux7I/AAAAAAAAASE/DR5pA9x1yJk/s640/dennis_ritchie1.jpg";
 

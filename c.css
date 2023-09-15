@@ -3,6 +3,7 @@
   border: 0;
   padding: 0;
 }
+
 ::-webkit-scrollbar {
   width: 1px;
 }
@@ -10,9 +11,11 @@
 body {
   overflow-x: hidden;
   font-size: larger;
-  overflow-y: scroll;  border: 2px solid aqua;
+  overflow-y: scroll;
+  border: 2px solid aqua;
 
 }
+
 header {
   min-height: 100vh;
   margin: 0;
@@ -33,11 +36,13 @@ header {
   margin-top: 4em;
   position: relative;
 }
+
 @media (max-width: 768px) {
   .container-start {
     margin-left: 0;
   }
 }
+
 .row {
   min-height: 90vh;
   max-width: 100%;
@@ -46,6 +51,8 @@ header {
   justify-content: center;
   flex-direction: row-reverse;
 }
+
+.all-box {}
 
 @media (max-width: 768px) {
   .row {
@@ -120,9 +127,11 @@ header {
   .welcome-message-to-the-users h1 {
     font-size: 30px;
   }
+
   .content-start h2 {
     font-size: 30px;
   }
+
   .content-start p {
     font-size: 100%;
     width: 100%;
@@ -149,14 +158,17 @@ header {
   backdrop-filter: saturate(20px);
   filter: saturate(3);
 }
+
 @media (max-width: 768px) {
   .col-8 {
     min-width: 100%;
     margin: auto;
   }
+
   .col-4 {
     min-width: 100%;
   }
+
   .col-4 .poster {
     min-height: 90vh;
     min-width: 100%;
@@ -165,6 +177,7 @@ header {
     align-items: center;
     justify-content: center;
   }
+
   .poster img {
     height: 90%;
     width: 100%;
@@ -214,7 +227,7 @@ header {
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
   -ms-transition: all ease 0.5s;
-  -o-transition: all ease 0.5s; 
+  -o-transition: all ease 0.5s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,8 +319,11 @@ header {
   margin: 10px;
   position: relative;
   top: 0;
-  left: 0;position: absolute;left:10px;
+  left: 0;
+  position: absolute;
+  left: 10px;
 }
+
 nav-bg {
   min-height: 70px;
   min-width: 100%;
@@ -326,6 +342,7 @@ nav-bg {
   z-index: 999;
   overflow-x: visible;
 }
+
 navgiation {
   min-height: 100vh;
   min-width: 100%;
@@ -345,14 +362,17 @@ navgiation {
   transition: 0.5s ease-in-out;
   z-index: 1000;
 }
+
 nav ul {
   display: flex;
   flex-direction: column;
   flex: wrap;
 }
+
 nav li {
   list-style: none;
 }
+
 nav a {
   text-decoration: none;
   color: white;
@@ -360,6 +380,7 @@ nav a {
   font-weight: 100;
   letter-spacing: 1.5px;
 }
+
 .logos {
   position: fixed;
   left: 10px;
@@ -378,10 +399,12 @@ nav a {
   z-index: 999;
   animation: logo 1s linear infinite;
 }
+
 @keyframes logoo {
   from {
     transform: scale(1);
   }
+
   to {
     transform: scale(1.1);
   }
@@ -394,6 +417,7 @@ nav a {
   background-color: #000;
   z-index: 999;
 }
+
 .btn i {
   font-size: 30px;
   padding: 10px;
@@ -402,11 +426,13 @@ nav a {
   transition: 0.5s;
   color: white;
 }
+
 .btn i:hover {
   background-color: pink;
   color: black;
   /* transform: scale(1.1); */
 }
+
 .btnn {
   position: absolute;
   cursor: pointer;
@@ -415,11 +441,13 @@ nav a {
   background-color: blue;
   margin: 10px;
 }
+
 .btnn i {
   font-size: 30px;
   padding: 10px;
   background-color: deeppink;
 }
+
 .buttons-for-user {
   min-height: 20px;
   min-width: 100%;
@@ -428,6 +456,7 @@ nav a {
   align-items: center;
   margin-top: 1em;
 }
+
 .buttons-for-user a {
   letter-spacing: 1.5px;
   padding: 10px 40px;
@@ -441,9 +470,11 @@ nav a {
   border-radius: 30px;
   margin: 20px;
 }
+
 .buttons-for-user a:hover {
   background-color: #000;
 }
+
 @media (max-width: 768px) {
   .buttons-for-user a {
     padding: 10px;
@@ -535,6 +566,7 @@ nav a {
     margin-top: 1em;
     font: bolder 25px "Cookie", cursive;
   }
+
   @media (max-width: 260px) {
     .footer-distributed h3 {
       margin-top: 1em;
@@ -689,6 +721,7 @@ nav a {
 /* You can remove below code if you don't want Footer to be responsive */
 
 @media (max-width: 880px) {
+
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
   .footer-distributed .footer-right {
@@ -697,10 +730,12 @@ nav a {
     margin-bottom: 40px;
     text-align: center;
   }
+
   .footer-distributed .footer-center i {
     margin-left: 0;
   }
 }
+
 /*-------------------------------------------------------------------courses details section started------------------------------------------ */
 
 /*courses details in details*/
@@ -721,6 +756,7 @@ nav a {
   padding-bottom: 10px;
   padding-top: 0px;
 }
+
 .course-details .row {
   min-height: 100vh;
   min-width: 100%;
@@ -731,6 +767,7 @@ nav a {
   align-items: center;
   position: relative;
 }
+
 @media (max-width: 768px) {
   .course-details .row {
     display: flex;
@@ -738,6 +775,7 @@ nav a {
     flex-direction: column-reverse;
   }
 }
+
 /*----------------------------------------------------------------------------------------------COL-MD-8----------------------------------------------------------------------*/
 .course-details .container-fluid .row .col-md-8 {
   min-height: 100vh;
@@ -754,6 +792,7 @@ nav a {
   padding-bottom: 0px;
   margin-bottom: 0px;
 }
+
 .row1 {
   min-height: 100px;
   max-width: 100%;
@@ -763,23 +802,27 @@ nav a {
   justify-content: flex-start;
   margin-top: 1em;
 }
+
 .details-card {
   min-height: 100%;
   min-width: 100%;
   padding: 15px 20px;
   border: 2px solid rebeccapurple;
 }
+
 @media (max-width: 768px) {
   .details-card {
     margin-top: 10px;
     min-width: 100%;
   }
 }
+
 .details-card h3 {
   font-family: "Courier New", Courier, monospace;
   font-weight: bolder;
   letter-spacing: 1px;
 }
+
 items {
   flex-direction: row;
   gap: 1em;
@@ -787,28 +830,37 @@ items {
   justify-content: space-between;
   align-items: center;
 }
+
 items li {
   text-align: center;
   list-style: circle;
   font-weight: bold;
 }
+
 .details-box {
   min-height: 100%;
-  max-width: 100%;
+  width: 900px;
   padding: 05px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
 }
+
 .row1 h3 {
   font-weight: bolder;
   font-family: "Courier New", Courier, monospace;
 }
+
 .all-box {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 25px;
 }
+
 @media (max-width: 768px) {
   items {
     flex-direction: column;
@@ -817,17 +869,19 @@ items li {
     display: flex;
     gap: 01em;
   }
+
   items li {
     list-style: decimal;
   }
 }
+
 .box {
   min-height: 150px;
   margin: 5px;
   padding: 10px 30px;
   background-color: none;
   border: 2px solid black;
-  max-width: 100%;
+  max-width: 150px;
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -835,23 +889,27 @@ items li {
   position: relative;
   color: rebeccapurple;
 }
+
 .box i {
   font-size: 30px;
   position: absolute;
   top: 10px;
   left: 10px;
 }
+
 .box h4 {
   font-size: 17px;
   position: relative;
   mask-type: luminance;
   margin-top: 4em;
 }
+
 .box:hover {
   background-color: black;
   color: white;
   box-shadow: 1px 2px 5px 1px black;
 }
+
 .course-content {
   background-color: none;
   min-height: 100%;
@@ -862,6 +920,7 @@ items li {
   flex-direction: column;
   margin-left: 0em;
 }
+
 .course-syllabus {
   min-height: 200px;
   max-width: 400px;
@@ -873,17 +932,20 @@ items li {
   gap: 50px;
   padding: 10px;
 }
+
 @media (max-width: 400px) {
   .course-syllabus {
     display: flex;
     flex-direction: column;
   }
 }
+
 .course-syllabus a img {
   height: 150px;
   width: 150px;
   position: relative;
 }
+
 /*----------------------------------------------------------------------------------------------COL-MD-4----------------------------------------------------------------------*/
 .col-md-4 {
   min-height: 80vh;
@@ -896,11 +958,13 @@ items li {
   margin-top: 10px;
   position: relative;
 }
+
 @media (max-width: 768px) {
   .gud-img {
     display: none;
   }
 }
+
 @media (max-width: 862px) {
   .col-md-4 {
     min-height: 95vh;
@@ -910,14 +974,13 @@ items li {
     margin-bottom: 10px;
   }
 }
+
 .demo-box {
   min-height: 38vh;
   max-width: 50%;
   position: relative;
-  background-image: linear-gradient(
-      rgba(225, 225, 225, 0.5),
-      rgba(225, 225, 225, 0.1)
-    ),
+  background-image: linear-gradient(rgba(225, 225, 225, 0.5),
+      rgba(225, 225, 225, 0.1)),
     url("https://tse4.mm.bing.net/th?id=OIP.0jQ95pDsZC2o6Yo_nLaSaQHaEH&pid=Api&P=0");
   margin-top: 1em;
   background-repeat: repeat;
@@ -927,6 +990,7 @@ items li {
   justify-content: center;
   flex-direction: column;
 }
+
 @media (max-width: 768px) {
   .demo-box {
     background-size: contain;
@@ -935,6 +999,7 @@ items li {
     background-repeat: repeat;
   }
 }
+
 @media (max-width: 300px) {
   .demo-box {
     background-size: contain;
@@ -943,6 +1008,7 @@ items li {
     background-repeat: no-repeat;
   }
 }
+
 .video-icon {
   max-height: 28vh;
   max-width: 100%;
@@ -954,14 +1020,17 @@ items li {
   cursor: pointer;
   transition: 0.5s all linear;
 }
+
 .video-icon h5 {
   color: white;
 }
+
 .video-icon i {
   font-size: 80px;
   border-radius: 50%;
   color: white;
 }
+
 .video-icon:hover {
   background-color: rgba(225, 225, 225, 0.1);
   min-height: 35vh;
@@ -969,6 +1038,7 @@ items li {
   transform: scale(1.1);
   color: rgba(225, 225, 225, 0.2);
 }
+
 .description-box {
   min-height: 30px;
   max-width: 50%;
@@ -981,17 +1051,20 @@ items li {
   text-align: center;
   margin-top: 1em;
 }
+
 @media (max-width: 768px) {
   .description-box {
     max-width: 100%;
   }
 }
+
 .description-box .prize {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 1000;
   letter-spacing: 1px;
   margin-left: 1em;
 }
+
 .description-box .buy-btn {
   padding: 8px 30px;
   text-align: center;
@@ -1004,11 +1077,13 @@ items li {
   transition: 0.5s;
   margin-right: 1em;
 }
+
 .description-box .buy-btn:hover {
   background-color: blueviolet;
   transform: perspective(100);
   color: #000;
 }
+
 /*--------------------------------------------------------------------------------------star ratting graph start--------------------------------------------------------------------------------------*/
 
 .user-information {
@@ -1023,12 +1098,14 @@ items li {
   overflow: hidden;
   margin-top: 1em;
 }
+
 @media (max-width: 768px) {
   .user-information {
     min-width: 100%;
     background-color: #ececec;
   }
 }
+
 .user-ratting {
   width: auto;
   height: 30px;
@@ -1101,6 +1178,7 @@ items li {
     font-size: 15px;
     letter-spacing: 0.5px;
   }
+
   .user-graph .container .col-sm-12 span3 {
     font-size: 15px;
     letter-spacing: 0.5px;
@@ -1124,6 +1202,7 @@ items li {
     height: 15px;
   }
 }
+
 /*-----------------------------------------------------------------------------row--2------------------------------------------------------------------------------**/
 .discription {
   min-height: 100%;
@@ -1133,6 +1212,7 @@ items li {
   padding-right: 20px;
   padding-left: 20px;
 }
+
 .discription h3 {
   color: #000;
   font-size: 40px;
@@ -1140,14 +1220,17 @@ items li {
   font-family: "Courier New", Courier, monospace;
   font-weight: 1000;
 }
+
 .discription p {
   text-align: justify;
   min-width: 100%;
   padding: 5px;
 }
+
 .discription h2 {
   margin-top: 0.5em;
 }
+
 .discription li {
   list-style: circle;
   text-align: left;
@@ -1158,13 +1241,16 @@ items li {
   .discription h3 {
     font-size: 30px;
   }
+
   .discription h5 {
     font-size: medium;
   }
+
   .discription li {
     list-style: circle;
   }
 }
+
 .row2 {
   margin-bottom: 10px;
   position: relative;
@@ -1183,20 +1269,24 @@ items li {
   margin-top: 0%;
   padding-right: 0%;
 }
+
 @media (max-width: 400px) {
   .Instructors {
     margin-left: 0;
   }
 }
+
 .Instructors h3 {
   font-family: "Courier New", Courier, monospace;
   font-weight: 1000;
   font-size: 30px;
   letter-spacing: 0.5px;
 }
+
 .Instructors h4 {
   text-decoration: underline;
 }
+
 .profile-card {
   min-height: 30vh;
   max-width: 100%;
@@ -1217,19 +1307,23 @@ items li {
     flex-direction: column;
   }
 }
+
 .profile-photo img {
   height: 150px;
   width: 150px;
   border-radius: 50%;
 }
+
 honner li {
   line-height: 30px;
   list-style: none;
 }
+
 .profile-discription {
   margin-top: 1em;
   text-align: justify;
 }
+
 /*--------------------------------------------------------------------------------------------------user ratting------------------------------------------------------------------*/
 
 .teach-ratting {
@@ -1241,15 +1335,18 @@ honner li {
   flex-wrap: wrap;
   gap: 10px;
 }
+
 .ratting-card {
   border: 2px solid black;
   padding: 10px;
   min-width: 90%;
 }
+
 .ratting-card:hover {
   background-color: black;
   color: white;
 }
+
 .card-opt {
   min-height: 100px;
   max-width: 100%;
@@ -1259,6 +1356,7 @@ honner li {
   align-items: flex-start;
   justify-content: flex-start;
 }
+
 .card-opt h1 {
   font-weight: 1000;
   font-size: normal;
@@ -1267,6 +1365,7 @@ honner li {
   border-radius: 50%;
   padding: 10px;
 }
+
 .ratting-card p {
   text-align: justify;
   position: relative;
@@ -1282,6 +1381,7 @@ honner li {
   background-color: red;
   display: none;
 }
+
 .demo-video .container-fluid {
   min-height: 100vh;
   max-width: 100%;
@@ -1290,6 +1390,7 @@ honner li {
   align-items: center;
   justify-content: center;
 }
+
 .demo-video .row {
   min-height: 100vh;
   min-width: 100%;
@@ -1297,6 +1398,7 @@ honner li {
   align-items: center;
   justify-content: center;
 }
+
 .demo-video .col-md-9 {
   min-height: 90vh;
   max-width: 100%;
@@ -1306,33 +1408,39 @@ honner li {
   align-items: center;
   justify-content: center;
 }
+
 @media (max-width: 768px) {
   .demo-video .col-md-9 {
     margin-top: 4em;
   }
 }
+
 .demo-video .container-fluid video {
   position: relative;
   height: 90%;
   position: absolute;
   width: 100%;
 }
+
 .video-btn {
   position: absolute;
   top: 10px;
   left: 10px;
   padding: 5px 10px;
 }
+
 .video-btn button {
   padding: 5px 20px;
   background-color: black;
   color: white;
   font-weight: 900;
   letter-spacing: 1px;
-}#video-id{
-  outline:none;
 }
-  
+
+#video-id {
+  outline: none;
+}
+
 /*-------------------------------------------------------dropdown-contact-box-------------------------------------------------------------------*/
 
 .contact-box .container-fluid {
@@ -1348,6 +1456,7 @@ honner li {
   opacity: 5;
   transition: 0.5s ease-out;
 }
+
 .contact-box .row {
   background-color: transparent;
   min-height: 100vh;
@@ -1357,6 +1466,7 @@ honner li {
   justify-content: center;
   margin-left: 0%;
 }
+
 .contact-box .container-fluid .col-md-5 {
   min-height: 50vh;
   max-width: 50%;
@@ -1367,6 +1477,7 @@ honner li {
   flex-direction: column;
   position: relative;
 }
+
 @media (max-width: 768px) {
   .contact-box .container-fluid .col-md-5 {
     min-height: 50vh;
@@ -1380,6 +1491,7 @@ honner li {
     gap: 2em;
   }
 }
+
 .contac-menu-btn {
   position: absolute;
   top: 0;
@@ -1387,19 +1499,23 @@ honner li {
   padding: 10px;
   background-color: wheat;
 }
+
 .contac-menu-btn:hover {
   color: black;
   background-color: aquamarine;
   cursor: pointer;
 }
+
 .contac-menu-btn i {
   color: black;
   font-size: 30px;
   font-weight: 1000;
 }
+
 .contac-menu-btn:hover i {
   color: rebeccapurple;
 }
+
 .contact-details {
   min-height: 50px;
   min-width: 100%;
@@ -1410,6 +1526,7 @@ honner li {
   flex-direction: column;
   gap: 2em;
 }
+
 .contact-box h2 {
   font-family: Oxygen, Ubuntu, Cantarell;
   font-weight: 800;
@@ -1418,6 +1535,7 @@ honner li {
   margin-top: 20px;
   color: black;
 }
+
 .contact-icons {
   min-height: 100%;
   min-width: 20%;
@@ -1431,6 +1549,7 @@ honner li {
   float: left;
   left: 0;
 }
+
 @media (max-width: 400px) {
   .contact-icons {
     position: relative;
@@ -1442,6 +1561,7 @@ honner li {
     flex-wrap: wrap;
   }
 }
+
 .contact-icons i {
   padding: 10px;
   border: 2px solid aqua;
@@ -1453,6 +1573,7 @@ honner li {
   transition: 0.3s;
   cursor: pointer;
 }
+
 .contact-icons i:hover {
   background-color: wheat;
   border: 2px solid wheat;
@@ -1460,9 +1581,8 @@ honner li {
   box-shadow: 1px 1px 1px 1px wheat;
   transform: translateX(5px);
 }
+
 .contact-box p {
   color: black;
-  
+
 }
-
-
