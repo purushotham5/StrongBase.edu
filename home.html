@@ -26,6 +26,21 @@
     <link rel="icon" href="StrongBase-hat.png" type="image/png" sizes="16x16">
 
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- FontAwesome CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
     <!------------------------team css------------------------------- -->
     <link rel="stylesheet" href="team.css">
     <link rel="stylesheet" href="team-responsive.css">
@@ -67,7 +82,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
-<!-- -----------------------------all cse files---------------------------------------------------------------------- -->
+    <!-- -----------------------------all cse files---------------------------------------------------------------------- -->
 
     <link rel="stylesheet" href="index.css" />
     <link rel="stylesheet" href="nav.css">
@@ -77,7 +92,8 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="service.css">
-
+    <link rel="stylesheet" href="faq.css">
+    <link rel="stylesheet" href="courses.css">
 </head>
 
 <body id="total">
@@ -126,19 +142,18 @@
                                 href="tel:+91 6301728516">+91 6301728516</a> </p>
                     </div>
                     <div>
-                        <p> <i class="fa fa-envelope " aria-hidden="true "></i> <a
-                                href="mailto:purushothamkandheri@gmail.com ">strongbase55@gmail.com</a>
+                        <p> <i class="fa fa-envelope" aria-hidden="true"></i> <a
+                                href="mailto:strongbase55@gmail.com">strongbase55@gmail.com</a>
 
                         </p>
-                        <p> <i class="fa fa-envelope " aria-hidden="true "></i> <a
+                        <!-- <p> <i class="fa fa-envelope " aria-hidden="true "></i> <a
                                 href="mailto:purushothamkandheri@gmail.com ">purushothamkandheri@gmail.com</a>
-                        </p>
+                        </p> -->
 
-                        <br>
+                        <!-- <br>
                         <p> <i class="fa fa-instagram" aria-hidden="true "></i>
-                            <a
-                                href="https://www.instagram.com/strongcodebase/">https://www.instagram.com/strongcodebase/</a>
-                        </p>
+                            <a href="https://www.instagram.com/strongcodebase/"></a>
+                        </p> -->
                     </div>
                 </div>
             </div>
@@ -151,8 +166,8 @@
                 <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
                 <ul>
                     <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#courses">COURSE</a></li>
-                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#courses">COURSES</a></li>
+                    <li><a href="#maincontent">FAQ</a></li>
                     <li><a href="#contact">CONTACT</a></li>
 
                     <li>
@@ -208,9 +223,9 @@
                         education.
                     </p>
                     <a>
-                        <button class="explore">
-                            View More
-                        </button>
+                        <a href="#courses" class="explore">
+                            Explore
+                        </a>
                     </a>
                 </div>
                 <div class="videoContainer">
@@ -223,60 +238,255 @@
             </div>
         </div>
     </section>
-
-    <section class="courses" id="courses">
+    <div class="course-section" id="courses">
         <div class="container">
-            <div class="coursses-title">
-                <h1>Courses We Offer
-                </h1>
-            </div>
-            <div class="main-card" data-aos-duration="1500">
 
-                <div class="card-1" data-aos="zoom-in-up" data-aos-duration="1500">
-                    <a href="c.html"><img
-                            src="https://online.crbtech.in/wp-content/uploads/2019/03/C-programming-1024x530.png "
-                            title="C Programing Language" /></a>
+            <h1 class="heading">Our Courses</h1>
+
+            <div class="box-container">
+
+                <div class="box">
+                    <img src="https://media.licdn.com/dms/image/D5612AQEZDCDbq8DKEQ/article-cover_image-shrink_600_2000/0/1683863373095?e=2147483647&v=beta&t=K2NKtvEyjQmCz-S6wXUr1GPL8yHvYAsvFkqBfrvoTZM"
+                        alt="">
+                    <h3>C Language</h3>
+                    <p>Embark on a coding journey with our C Programming course and unlock your full programming
+                        potential
+                    </p>
+                    <div class="rate">
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                    </div>
+                    <div class="pay-know">
+                        <a href="c.html" class="btn">Know more</a>
+                        <div class="pay-btn">
+                            <div class="razorpay-embed-btn" data-url="https://rzp.io/l/CLanguage"
+                                data-text="₹ 99 Buy Now" data-color="#528FF0" data-size="small">
+                                <script>
+                                    (function () {
+                                        var d = document;
+                                        var x = !d.getElementById('razorpay-embed-btn-js')
+                                        if (x) {
+                                            var s = d.createElement('script');
+                                            s.defer = !0;
+                                            s.id = 'razorpay-embed-btn-js';
+                                            s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                                            d.body.appendChild(s);
+                                        } else {
+                                            var rzp = window['__rzp__'];
+                                            rzp && rzp.init && rzp.init()
+                                        }
+                                    })();
+                                </script>
+                            </div>
+
+                        </div>
+
+                    </div>
                 </div>
-                <div class="card-1 " data-aos="zoom-in-up" data-aos-duration="1600">
-                    <a href="java.html"> <img src="https://dev.java/assets/images/java-logo-vert-blk.png "
-                            title="Java Programing Language " /></a>
+
+                <div class="box">
+                    <img src="https://sparc.org.in/wp-content/uploads/2018/12/best-C-programming-course-in-gtb-nagar-sparc-academy.png"
+                        alt="">
+                    <h3>C++ Language</h3>
+                    <p>Elevate your coding prowess with our dynamic C++ course – where innovation meets programming.
+                    </p>
+                    <div class="rate">
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star-half-full" style="color:orange;"></span>
+                    </div>
+                    <div class="pay-know">
+                        <a href="c++.html" class="btn">Know more</a>
+                        <div class="pay-btn">
+                            <div class="razorpay-embed-btn" data-url="https://rzp.io/l/1UVer4NY"
+                                data-text="₹ 99 Buy Now" data-color="#528FF0" data-size="small">
+                                <script>
+                                    (function () {
+                                        var d = document;
+                                        var x = !d.getElementById('razorpay-embed-btn-js')
+                                        if (x) {
+                                            var s = d.createElement('script');
+                                            s.defer = !0;
+                                            s.id = 'razorpay-embed-btn-js';
+                                            s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                                            d.body.appendChild(s);
+                                        } else {
+                                            var rzp = window['__rzp__'];
+                                            rzp && rzp.init && rzp.init()
+                                        }
+                                    })();
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="card-1 " data-aos="zoom-in-up" data-aos-duration="1700">
-                    <a href="python.html"> <img
-                            src="https://www.mytaskpanel.com/wp-content/uploads/2021/05/2021-05-14-1.webp "
-                            title="Python Programing Language " /></a>
+
+                <div class="box">
+                    <img src="https://contentstatic.techgig.com/photo/83117460.cms" alt="">
+                    <h3>Java Language</h3>
+                    <p>Unlock the world of possibilities with our Java course – your gateway to building powerful,
+                        cross-platform applications</p>
+                    <div class="rate">
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                    </div>
+                    <div class="pay-know">
+                        <a href="java.html" class="btn">Know more</a>
+                        <div class="pay-btn">
+                            <div class="razorpay-embed-btn" data-url="https://rzp.io/l/JavaLanguage"
+                                data-text="₹ 99 Buy Now" data-text="Buy Now" data-color="#528FF0" data-size="small">
+                                <script>
+                                    (function () {
+                                        var d = document;
+                                        var x = !d.getElementById('razorpay-embed-btn-js')
+                                        if (x) {
+                                            var s = d.createElement('script');
+                                            s.defer = !0;
+                                            s.id = 'razorpay-embed-btn-js';
+                                            s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                                            d.body.appendChild(s);
+                                        } else {
+                                            var rzp = window['__rzp__'];
+                                            rzp && rzp.init && rzp.init()
+                                        }
+                                    })();
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="card-1 " data-aos="zoom-in-up" data-aos-duration="1800">
-                    <a href="c++.html"> <img
-                            src="https://d1jnx9ba8s6j9r.cloudfront.net/imgver.1551437392/img/co_img_1539_1633434090.png"
-                            title="C++ Programing Language " /></a>
+
+                <div class="box">
+                    <img src="https://1000logos.net/wp-content/uploads/2020/08/Python-Logo.png" alt="">
+                    <h3>Python Language</h3>
+                    <p>Unleash your creativity and become a coding virtuoso with Python – the language of innovation and
+                        endless possibilities</p>
+                    <div class="rate">
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star-half-full" style="color:orange;"></span>
+                    </div>
+                    <div class="pay-know">
+                        <a href="python.html" class="btn">Know more</a>
+                        <div class="pay-btn">
+                            <div class="razorpay-embed-btn" data-url="https://rzp.io/l/python-language"
+                                data-text="₹ 99 Buy Now" data-text="Buy Now" data-color="#528FF0" data-size="small">
+                                <script>
+                                    (function () {
+                                        var d = document;
+                                        var x = !d.getElementById('razorpay-embed-btn-js')
+                                        if (x) {
+                                            var s = d.createElement('script');
+                                            s.defer = !0;
+                                            s.id = 'razorpay-embed-btn-js';
+                                            s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                                            d.body.appendChild(s);
+                                        } else {
+                                            var rzp = window['__rzp__'];
+                                            rzp && rzp.init && rzp.init()
+                                        }
+                                    })();
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="card-1 " data-aos="zoom-in" data-aos-duration="1900">
-                    <a href="frontend.html"><img src="https://asianewsonly.com/wp-content/uploads/2022/05/cover.jpg "
-                            title="Web Development " /></a>
+
+                <div class="box">
+                    <img src="https://tekraze.com/wp-content/uploads/2018/02/html-css-js-768x427.png" alt="">
+                    <h3>Front-End-Dev</h3>
+                    <p>Step into the world of Front-End Development and learn how to create web experiences that are not
+                        just modern but pioneers of the future</p>
+                    <div class="rate">
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                    </div>
+                    <div class="pay-know">
+                        <a href="frontend.html" class="btn">Know more</a>
+                        <div class="pay-btn">
+                            <div class="razorpay-embed-btn" data-url="https://rzp.io/l/front-end-dev"
+                                data-text="₹ 99 Buy Now" data-text="Buy Now" data-color="#528FF0" data-size="small">
+                                <script>
+                                    (function () {
+                                        var d = document;
+                                        var x = !d.getElementById('razorpay-embed-btn-js')
+                                        if (x) {
+                                            var s = d.createElement('script');
+                                            s.defer = !0;
+                                            s.id = 'razorpay-embed-btn-js';
+                                            s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                                            d.body.appendChild(s);
+                                        } else {
+                                            var rzp = window['__rzp__'];
+                                            rzp && rzp.init && rzp.init()
+                                        }
+                                    })();
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
+
+                <div class="box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Sql_data_base_with_logo.png" alt="">
+                    <h3>SQL</h3>
+                    <p>Unlock the realm of data mastery with our SQL course – where you'll transform raw data into a
+                        symphony of insights</p>
+                    <div class="rate">
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star checked " style="color:orange "></span>
+                        <span class="fa fa-star-half-full" style="color:orange;"></span>
+                    </div>
+                    <div class="pay-know">
+                        <a href="sql.html" class="btn">Know more</a>
+                        <div class="pay-btn">
+                            <div class="razorpay-embed-btn" data-url="https://rzp.io/l/CLanguage"
+                                data-text="₹ 99 Buy Now" data-text="Buy Now" data-color="#528FF0" data-size="small">
+                                <script>
+                                    (function () {
+                                        var d = document;
+                                        var x = !d.getElementById('razorpay-embed-btn-js')
+                                        if (x) {
+                                            var s = d.createElement('script');
+                                            s.defer = !0;
+                                            s.id = 'razorpay-embed-btn-js';
+                                            s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                                            d.body.appendChild(s);
+                                        } else {
+                                            var rzp = window['__rzp__'];
+                                            rzp && rzp.init && rzp.init()
+                                        }
+                                    })();
+                                </script>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <!-- <div class="main-card ">
-                <div class="card-1 " data-aos="zoom-in" data-aos-duration="1900">
-                    <a href="frontend.html"><img src="https://asianewsonly.com/wp-content/uploads/2022/05/cover.jpg "
-                            title="Web Development " /></a>
-                </div>
-                <div class="card-1 " data-aos="zoom-in" data-aos-duration="2000">
-                    <a href="css.html"> <img src="https://acadray.com/images/course/css.png "
-                            title="CSS Programing Language " /></a>
-                </div>
-                <div class="card-1 " data-aos="zoom-in" data-aos-duration="1100">
-                    <a href="html.html"> <img
-                            src="https://play-lh.googleusercontent.com/85WnuKkqDY4gf6tndeL4_Ng5vgRk7PTfmpI4vHMIosyq6XQ7ZGDXNtYG2s0b09kJMw "
-                            title="HTML Programing Language " /></a>
-                </div>
-                <div class="card-1 " data-aos="zoom-in" data-aos-duration="1200">
-                    <a href="js.html"> <img src="https://miro.medium.com/max/800/1*M_GDn6RXZSZC66kvrMHh5Q.png "
-                            title="JavaScript Programing Language " /></a>
-                </div>
-            </div> -->
+
         </div>
-    </section>
+    </div>
     <!------------------------ sercviice we aree providing section--------------------- -->
     <section class="service-grid pb-5 pt-5">
         <div class="container">
@@ -308,7 +518,7 @@
                             <i class="far fa-chart-bar"></i>
                         </div>
                         <h4>Tailored Guidance from Coding Experts</h4>
-                        <p>Our trainers bring over 2 years of real-world, practical experience to provide you with
+                        <p>Our trainers bring over 7+ years of real-world, practical experience to provide you with
                             expert guidance and knowledge....</p>
                         <!-- <a href="#">Read More</a> -->
                     </div>
@@ -319,8 +529,8 @@
                             <i class="fas fa-database"></i>
                         </div>
                         <h4>Interactive Learning Services</h4><br>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-                            been the industry...</p>
+                        <p>Discover a dynamic learning experience with our interactive services, designed to boost your
+                            skills and knowledge...</p>
                         <!-- <a href="#">Read More</a> -->
                     </div>
                 </div>
@@ -539,9 +749,9 @@
                         </p>
                     </div>
                     <div class="d-flex justify-content-evenly">
-                        <i class="bi bi-linkedin"></i>
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-envelope-check-fill"></i>
+                        <a href="https://www.linkedin.com/in/purushotham-kandheri/"> <i class="bi bi-linkedin"></i></a>
+                        <a href=""> <i class="bi bi-instagram"></i></a>
+                        <a href="mailto:purushothamkandheri@gmail.com"> <i class="bi bi-envelope-check-fill"></i></a>
                     </div>
                 </div>
             </div>
@@ -593,10 +803,9 @@
 
         <div class="team-content">
             <div class="box-content">
-                <img
-                    src="https://img.freepik.com/free-photo/young-male-entrepreneur-making-eye-contact-against-blue-background_662251-739.jpg?w=2000">
+                <img src="li (12) (2).png">
                 <h3>Purushotham</h3>
-                <h5>C Instructor</h5>
+                <h5>C & Front-End-Dev Instructor</h5>
                 <!-- <div class="icons">
                     <a href="#"><i class="ri-twitter-fill"></i></a>
                     <a href="#"><i class="ri-facebook-box-fill"></i></a>
@@ -606,140 +815,262 @@
             </div>
 
             <div class="box-content">
-                <img src="https://t3.ftcdn.net/jpg/02/69/98/98/360_F_269989865_mMfRFRN4mtDOtnHA0RFXcURX4n761zwd.jpg">
-                <h3>Steph Jobs</h3>
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8q6IphkmXgE6k6lvmwID5eSKOnJkM6PimYA&usqp=CAU">
+                <h3>Arya</h3>
                 <h5>C++ Instructor</h5>
                 <!-- <div class="icons">
                     <a href="#"><i class="ri-twitter-fill"></i></a>
                     <a href="#"><i class="ri-facebook-box-fill"></i></a>
                     <a href="#"><i class="ri-instagram-fill"></i></a>
                 </div> -->
-                <a href="">Visit To Know More</a>
+                <a href="c++ instructor.html">Visit To Know More</a>
 
             </div>
 
             <div class="box-content">
-                <img
-                    src="https://ath2.unileverservices.com/wp-content/uploads/sites/3/2017/09/professional-mens-hairstyles-light-styling-min.jpg">
-                <h3>Steph Jobs</h3>
+                <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg">
+                <h3>Mastan Vali
+                </h3>
                 <h5>Python Instructor</h5>
                 <!-- <div class="icons">
                     <a href="#"><i class="ri-twitter-fill"></i></a>
                     <a href="#"><i class="ri-facebook-box-fill"></i></a>
                     <a href="#"><i class="ri-instagram-fill"></i></a>
                 </div> -->
-                <a href="">Visit To Know More</a>
+                <a href="python instructor.html">Visit To Know More</a>
 
             </div>
 
             <div class="box-content">
-                <img
-                    src="https://www.menshairstylesnow.com/wp-content/uploads/2022/08/Professional-Business-Haircuts-For-Men.jpg">
-                <h3>Steph Jobs</h3>
+                <img src="https://img.freepik.com/free-photo/medium-shot-smiley-man-posing_23-2149915892.jpg?w=2000">
+                <h3> Jayachandra Reddy
+                </h3>
                 <h5>Java Instructor</h5>
                 <!-- <div class="icons">
                     <a href="#"><i class="ri-twitter-fill"></i></a>
                     <a href="#"><i class="ri-facebook-box-fill"></i></a>
                     <a href="#"><i class="ri-instagram-fill"></i></a>
-                </div> --> <a href="">Visit To Know More</a>
+                </div> --> <a href="java instructor.html">Visit To Know More</a>
 
             </div>
-            <div class="box-content">
-                <img
-                    src="https://www.menshairstylesnow.com/wp-content/uploads/2022/08/Professional-Business-Haircuts-For-Men.jpg">
-                <h3>Purushotham</h3>
-                <h5>Front-End-Dev Instructor</h5>
-                <!-- <div class="icons">
-                    <a href="#"><i class="ri-twitter-fill"></i></a>
-                    <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-fill"></i></a>
-                </div> --> <a href="frontend instructor.html">Visit To Know More</a>
-            </div>
+
 
         </div>
     </section>
 
-    <!----------------------------------------------------faq pages------------------------------------->
-    <section class="faq" id="faq">
-        <h1>
-            <!-- <span2>.</span2>
-                <span3>.</span3>
-                <span4>.</span4>
-                <span5>.</span5>
-                <span6>.</span6> -->
-            FAQ
-            <!-- <span2>.</span2>
-            <span3>.</span3>
-            <span4>.</span4>
-            <span5>.</span5>
-            <span6>.</span6> -->
-        </h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 " id="qus">
-                    <p>1. How can I enroll the course.....?</p> <button type="text " class="qus-but "
-                        onclick="qusOpen() " id="qus_but "> Open </button>
+    <section class="container my-5" id="maincontent">
+        <div class="text-center">
+            <h2 class="mt-5 mb-5">FAQ</h2>
+        </div>
+        <section id="accordion">
+            <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top"
+                aria-controls="faq-17" aria-expanded="false" data-toggle="collapse" href="#faq-17" role="button">
+                <div class=".position-relative">
+                    <h2 class="h4 m-0 ">
+                        1. What sets StrongBase apart from other online programming platforms?
+                    </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
                 </div>
-                <div class="col-md-6 " id="ans">
-                    <p> 1. Click on the course image that will atomatically redirect you to the particular course page
+            </a>
+            <div class="collapse" id="faq-17">
+                <div class="card card-body border-0 p-0">
+                    <p>A: StrongBase stands out with its high-quality courses at an exceptionally low price point of 99
+                        Rupees, making top-notch programming education accessible to all.
+
                     </p>
-                    <button type="text " class="ans-but " onclick="ansOpen() " id="ans_but "> Close </button>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-md-6 " id="qus1">
-                    <p>2. What is the course duration.....?</p> <button type="text " class="qus-but "
-                        onclick="qusOpen1() " id="qus_but1 "> Open </button>
-                </div>
-                <div class="col-md-6 " id="ans1">
-                    <p> 2. 4 weaks</p>
-                    <button type="text " class="ans-but " onclick="ansOpen1() " id="ans_but1 "> Close </button>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-md-6 " id="qus2">
-                    <p>3. what can i gain by learning this course.....?</p> <button type="text " class="qus-but "
-                        onclick="qusOpen2() " id="qus_but2 "> Open </button>
-                </div>
-                <div class="col-md-6 " id="ans2">
-                    <p> 3. By learning this courses you can develop your own applications</p>
-                    <button type="text " class="ans-but " onclick="ansOpen2() " id="ans_but2 "> Close </button>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-md-6 " id="qus3">
-                    <p>4.Does the mentors are holding good experience.....?</p> <button type="text " class="qus-but "
-                        onclick="qusOpen3() " id="qus_but3 "> Open </button>
-                </div>
-                <div class="col-md-6 " id="ans3">
-                    <p>4. They are very well experienced and they hold good practical knowledge as well as theoritical
-                        knowledge </p>
-                    <button type="text " class="ans-but " onclick="ansOpen3() " id="ans_but3 "> Close </button>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-md-6 " id="qus4">
-                    <p>5. Do you provide course related documents.....?</p> <button type="text " class="qus-but "
-                        onclick="qusOpen4() " id="qus_but4 "> Open </button>
-                </div>
-                <div class="col-md-6 " id="ans4">
-                    <p> 5. Yes we are providing the documents for all the courses </p>
-                    <button type="text " class="ans-but " onclick="ansOpen4() " id="ans_but4 "> Close </button>
-                </div>
-            </div>
-            <div class="row ">
-                <div class="col-md-6 " id="qus5">
-                    <p>6. Is there any option to learn the courses for free..?</p> <button type="text " class="qus-but "
-                        onclick="qusOpen5() " id="qus_but5 "> Open </button>
-                </div>
-                <div class="col-md-6 " id="ans5">
-                    <p> 6. No,this one is completely paid courses </p>
-                    <button type="text " class="ans-but " onclick="ansOpen5() " id="ans_but5"> Close </button>
-                </div>
-            </div>
-        </div>
-    </section>
 
+                </div>
+            </div>
+
+            <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top"
+                aria-controls="faq-18" aria-expanded="false" data-toggle="collapse" href="#faq-18" role="button">
+                <div class="position-relative">
+                    <h2 class="h4 m-0 pr-3">
+                        2. How can I be sure that StrongBase's courses are of high quality?
+                    </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="collapse" id="faq-18">
+                <div class="card card-body border-0 p-0">
+                    <p>A: Our courses are developed by industry experts with
+                        extensive experience, and we continuously update our content to ensure relevance and quality. We
+                        also encourage you to check out reviews and testimonials from our satisfied students.
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+
+            <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary border-top"
+                aria-controls="faq-19" aria-expanded="false" data-toggle="collapse" href="#faq-19" role="button">
+                <div class="position-relative">
+                    <h2 class="h4 m-0 pr-3">
+                        3. What programming languages are covered in the courses? </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="collapse" id="faq-19" style="">
+                <div class="card card-body border-0 p-0">
+                    <p>A: We offer courses covering a wide range of programming languages, from Python and Java to
+                        HTML/CSS and more.
+
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+
+            <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top"
+                aria-controls="faq-20" aria-expanded="false" data-toggle="collapse" href="#faq-20" role="button">
+                <div class="position-relative">
+                    <h2 class="h4 m-0 pr-3">
+                        4. Can I upgrade to a more advanced course after completing an introductory one?
+                    </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="collapse" id="faq-20">
+                <div class="card card-body border-0 p-0">
+                    <p>A: Yes, we offer a variety of courses to suit different skill levels, and you can certainly
+                        enroll in more advanced courses as you progress in your learning journey.
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+
+            <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top"
+                aria-controls="faq-21" aria-expanded="false" data-toggle="collapse" href="#faq-21" role="button">
+                <div class="position-relative">
+                    <h2 class="h4 m-0 pr-3">
+                        5. How do I enroll in a course, and what payment methods are accepted?
+
+                    </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="collapse" id="faq-21">
+                <div class="card card-body border-0 p-0">
+                    <p>A: Enrolling in a course is easy through our website. We accept various payment methods,
+                        including credit/debit cards and digital wallets.
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+
+            <a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top"
+                aria-controls="faq-22" aria-expanded="false" data-toggle="collapse" href="#faq-22" role="button">
+                <div class="position-relative">
+                    <h2 class="h4 m-0 pr-3">
+                        6. What is the success rate of students who complete StrongBase courses?
+
+                    </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="collapse" id="faq-22">
+                <div class="card card-body border-0 p-0">
+                    <p>A: We're proud of our students' success stories, but individual outcomes may vary based on
+                        dedication and effort. We provide the resources and support; your success depends on your
+                        commitment to learning.
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div><a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top"
+                aria-controls="faq-22" aria-expanded="false" data-toggle="collapse" href="#faq-23" role="button">
+                <div class="position-relative">
+                    <h2 class="h4 m-0 pr-3">
+                        7. How often are new courses and content added to StrongBase?
+                    </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="collapse" id="faq-23">
+                <div class="card card-body border-0 p-0">
+                    <p>A: We regularly update our course offerings with new content and stay up-to-date with the latest
+                        programming trends.</p>
+                    <p>
+                    </p>
+                </div>
+            </div><a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top"
+                aria-controls="faq-22" aria-expanded="false" data-toggle="collapse" href="#faq-24" role="button">
+                <div class="position-relative">
+                    <h2 class="h4 m-0 pr-3">
+                        8. Are there any prerequisites for enrolling in the 'Introduction to Advanced Programming'
+                        course? </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="collapse" id="faq-24">
+                <div class="card card-body border-0 p-0">
+                    <p>A: While it's designed for beginners, having a basic understanding of programming concepts can be
+                        helpful. However, it's not mandatory.
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div><a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top"
+                aria-controls="faq-22" aria-expanded="false" data-toggle="collapse" href="#faq-25" role="button">
+                <div class="position-relative">
+                    <h2 class="h4 m-0 pr-3">
+                        9. How many projects will I work on during the course?
+                    </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="collapse" id="faq-25">
+                <div class="card card-body border-0 p-0">
+                    <p>A: You will have the opportunity to complete four projects as part of your learning experience,
+                        allowing you to apply your knowledge to practical scenarios.
+
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div><a class="py-3 d-block h-100 w-100 position-relative z-index-1 pr-1 text-secondary  border-top"
+                aria-controls="faq-22" aria-expanded="false" data-toggle="collapse" href="#faq-26" role="button">
+                <div class="position-relative">
+                    <h2 class="h4 m-0 pr-3">
+                        10. Is StrongBase accredited or recognized by industry organizations?
+                    </h2>
+                    <div class="position-absolute top-0 right-0 h-100 d-flex align-items-center">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                </div>
+            </a>
+            <div class="collapse" id="faq-26">
+                <div class="card card-body border-0 p-0">
+                    <p>A: While we are not accredited, our courses are developed by experts with real-world industry
+                        experience, making the knowledge gained highly valuable in the job market.
+                    </p>
+                    <p>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </section>
     <!-- -----------------------------contact section----------------------------------------- -->
 
 
@@ -759,8 +1090,6 @@
                     </p>
                 </div>
                 <div class="footer-icons">
-                    <a href="# "><i class="fa fa-facebook " aria-hidden="true "></i></a>
-                    <a href="   # "><i class="fa fa-twitter " aria-hidden="true "></i></a>
                     <a href="https://www.instagram.com/strongcodebase/"><i class="fa fa-instagram "
                             aria-hidden="true "></i></a>
                     <a href="# "><i class="fa fa-linkedin " aria-hidden="true "></i></a>
@@ -768,9 +1097,12 @@
                 </div>
             </div>
             <div class="col-md-6 border-left py-3" id="hello-6">
-                <div class="form-group">
+                <!-- <div class="form-group">
                     <h5 for="name">Name</h5>
                     <input type="text" class="form-control" id="name" placeholder="Enter name" />
+                </div><div class="form-group">
+                    <h5 for="number">Number</h5>
+                    <input type="tel" class="form-control" id="number" placeholder="Enter number" />
                 </div>
                 <div class="form-group">
                     <h5 for="email">Email</h5>
@@ -780,7 +1112,31 @@
                     <h5 for="message">Message</h5>
                     <textarea class="form-control" id="message" rows="3"></textarea>
                 </div>
-                <button class="btn btn-dark" onclick="sendMail()" id="btn">Submit</button>
+                <button class="btn btn-dark" onclick="sendMail()" id="btn">Submit</button> -->
+                <form id="form">
+                    <div class="field">
+                        <label for="name">name</label>
+                        <input type="text" name="name" id="name">
+                    </div>
+                    <div class="field">
+                        <label for="number">number</label>
+                        <input type="text" name="number" id="number">
+                    </div>
+                    <div class="field">
+                        <label for="email">email</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="field">
+                        <label for="message">message</label>
+                        <input type="text" name="message" id="message">
+                    </div>
+                    <!--  <div class="field">
+                      <label for="reply_to">reply_to</label>
+                      <input type="text" name="reply_to" id="reply_to">
+                    </div> -->
+
+                    <input type="submit" id="button" value="Send Email">
+                </form>
             </div>
         </div>
     </div>
@@ -791,17 +1147,22 @@
         <footer class="footer-distributed ">
 
             <div class="footer-left ">
-                <img src="Strongbase-hat.png ">
+                <img src="StrongBase-hat.png ">
                 <h3>About<span>StrongBase</span></h3>
 
                 <p class="footer-links ">
-                    <a href="#home ">Home</a>
+                    <a href="index.html">Home</a>
                     |
-                    <a href="#about ">About</a>
+                    <a href="about.html">About</a>
                     |
-                    <a href="#services ">services</a>
+                    <a href="contact.html">Contact</a>
                     |
-                    <a href="#contacts-details ">Contact</a>
+                    <a href="testimonial.html">Testimonial</a>
+                    |
+                    <a href="courses.html">Courses</a>
+                    |
+                    <a href="faq.html">FAQ</a>
+
                 </p>
 
                 <p class="footer-company-name ">© 2022 StrongBase Learning Solutions</p>
@@ -973,11 +1334,17 @@
 
     <script src="contact.js"></script>
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("FV3ksZUc9HuKzlzPd");
         })();
+    </script> -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('FV3ksZUc9HuKzlzPd')
     </script>
 
 </body>

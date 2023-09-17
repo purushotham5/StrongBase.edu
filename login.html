@@ -559,7 +559,7 @@
 
     function onSignIn(googleUser) {
 
-      document.location.href = 'https://qazimaazarshad.github.io/Movie-Streaming-Website/home.html'
+      document.location.href = '/home.html'
 
     }
 
@@ -569,7 +569,7 @@
 
     var emailerror = false;
     var passworderror = false;
-    var strongPass = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*])(?=.{6,})");
+    var strongPass = new RegExp("^(?=.*[a-z])");
     const mailformat = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     function DisplayResults(e) {

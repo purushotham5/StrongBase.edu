@@ -1,55 +1,55 @@
-#btn {
-    margin-top: 1em;
+.discription strong {
+  color: pink;
+}
+.field {
+  margin-bottom: 10px;
 }
 
-.container {
-    margin-bottom: 1em;
+.field label {
+  display: block;
+  font-size: 12px;
+  color: #777;
 }
 
-.container .footer-icons {
-    display: flex;
-    align-items: center;
+.field input {
+  display: block;
+  min-width: 250px;
+  color: black;
+  line-height: 1.5;
+  font-size: 14px;
+  width: 100%;
+  outline: none;
+  border-bottom: 0.5px solid black;
+  padding: 10px;
+  border-top: 0px solid black;
+  border-right: 0px;
+  border-left: 0px solid #000;
 }
 
-.container .footer-icons a i {
-    margin: 12px;
-    background: #000;
-    padding: 10px;
-    transition: .5s;
-    font-size: 20px;
-    border-radius: 50%;
+input[type="submit"] {
+  display: block;
+  padding: 6px 30px;
+  font-size: 14px;
+  background-color: #4460aa;
+  color: #fff;
+  border: none;
 }
+#contact .footer-icons i {
+  background:aqua;color: black;
 
-.container .footer-icons i:hover {
-    background: #000;
-    color: aqua;
-    transform: translateY(-10px);
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}#contact .footer-icons i:hover{
+  background:rgb(0, 0, 0);color: rgb(0, 255, 162);
 }
-
-.col-md-6 {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1em;
-}
-
-.discription {
-    text-align: justify;
-}
-
-span {
-    color: wheat;
-    font-size: 20px;
-}
-
-strong {
-    color: pink;
-}
-
-.discription p {
-    margin-top: 1em;
-}
-#hello-6 h5{
-    color: #000;position: relative;float: left;left: 01em;
+@media (max-width: 768px) {
+  #contact .footer-icons i {
+    margin: 5px;
+  }
 }
