@@ -1981,12 +1981,15 @@ hold-emails {
   height: 100%;
   width: 100%;
   z-index: 10000;
-  background: #000;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;transition: .5s;
 }
 
 .loader-container img {
-  width: 100%;
-  height: 100vh;
+  width: 400px;
+  height: 400px;
 }
 
 .loader-container.fade-out {
@@ -2183,7 +2186,8 @@ hold-emails {
 }
 
 .mainVideo {
-  width: 85%;background:white;
+  width: 85%;
+  background: white;
   height: 250px;
   margin-top: -30px;
   margin-right: 0px;
