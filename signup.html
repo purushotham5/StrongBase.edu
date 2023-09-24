@@ -394,7 +394,12 @@
             }
         }
     </style>
-      <link rel="shortcut icon" href="images/StrongBase-hat.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/StrongBase-hat.png" type="image/x-icon">
+    <meta name="google-signin-client_id"
+        content="371460794939-4vlsu6k8s0qi3r5ue22iud9lor974sv5.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 </head>
 
@@ -428,28 +433,32 @@
             <input class="signin-button" type="submit" value="Sign Up" />
             <div class="remember-flex">
                 <div>
+                    <div class="or">OR</div>
+                    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark" data-width="250" data-height="50"
+                        data-longtitle="true"></div>
+                </div>
 
-                </div>
-                <div class="help">
-                    <a class="color_text" href="https://www.google.com/gmail/">Need help?</a>
-                </div>
             </div>
-        </form>
-        <div class="protection color_link help" style="margin: 0px 30%;">
-            This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a>
+            <div class="help">
+                <a class="color_text" href="https://www.google.com/gmail/">Need help?</a>
+            </div>
+    </div>
+    </form>
+    <div class="protection color_link help" style="margin: 0px 30%;">
+        This page is protected by Google reCAPTCHA to ensure you're not a bot. <a href="#">Learn more.</a>
+    </div>
+    <span class="seperator"></span>
+    <form style="opacity: 0;" class="aftersubmit" onsubmit="return FinalResults()" name="verificationform"
+        autocomplete="off">
+        <hr>
+        <div class="input-text">
+            <input type="password" name="code" placeholder="Enter code" oninput="change()" />
         </div>
-        <span class="seperator"></span>
-        <form style="opacity: 0;" class="aftersubmit" onsubmit="return FinalResults()" name="verificationform"
-            autocomplete="off">
-            <hr>
-            <div class="input-text">
-                <input type="password" name="code" placeholder="Enter code" oninput="change()" />
-            </div>
-            <input class="signin-button" type="submit" value="Register" />
-        </form>
+        <input class="signin-button" type="submit" value="Register" />
+    </form>
 
-        <br>
-        <br>
+    <br>
+    <br>
 
     </div>
     <div class="bottom">
@@ -571,7 +580,7 @@
                 Subject: "Email verification",
                 Body: `Hello ${name},<br> Please enter this code: ${code} in the form to verify your email`
             }).then(
-                message => console.log(Succesfully Message Sent)
+                message => console.log('Succesfully Message Sent')
             );
             swal('Please enter the code sent to your email')
             var x = document.getElementsByClassName("aftersubmit");
