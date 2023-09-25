@@ -31,7 +31,7 @@
         }
 
   body {
-    background: rgba(72, 86, 1, 0.1);
+    background: pink;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -170,7 +170,7 @@
  
 @media only screen and (max-width: 600px) {
   .text-container h1 {
-    color: #fff;
+    color: #000;
     font-size: 2.5rem;
   }
   .container-2 {
@@ -180,7 +180,7 @@
 
 @media only screen and (max-width: 400px) {
   .text-container h1 {
-    color: #fff;
+    color: #000;
     font-size: 2rem;
   }
   .container-2 {
