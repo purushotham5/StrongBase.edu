@@ -79,7 +79,7 @@
     .nav-links {
       position: absolute;
       /* background: #f44336; */background:rgb(0,0,0);
-      height: 100vh;
+      height: 41vh;
       width: 100%;
       top: -1000px;
       right: 0px;
