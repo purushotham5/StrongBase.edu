@@ -10,7 +10,7 @@ document
     // Define a mapping of search queries to destination pages
     const courseMapping = {
       "purushotham kandheri": "purushotham-kandheri.pdf",
-      py22501: "Purushotham-Kandheri.pdf",
+      py22501: "purushotham-kandheri.pdf",
 
       // Add more mappings as needed
     };
