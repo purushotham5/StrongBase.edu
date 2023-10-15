@@ -107,7 +107,7 @@ input:focus {
   outline: none;
 }
 #text {
-  margin-right: 1em;
+  margin-right: 2em;
   color: black;
   text-align: center;
 }
