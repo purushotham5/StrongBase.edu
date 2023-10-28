@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQL</title>
+    <title>Angular</title>
 
     <!-- googel addsense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6833260298799261"
@@ -45,9 +45,9 @@
     <div class="container">
         <h1>Up Comming Courses...........................</h1>
 
-        <iframe
+        <!-- <iframe
             src="https://docs.google.com/forms/d/e/1FAIpQLSc8T9Zsn9MbrUvNCBSJPDqSQ3Ne7XCu7_Ww69EymjrprOR0-w/viewform?embedded=true"
-            width="640" height="1065" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+            width="640" height="1065" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
 
         <a href="course.html">Back</a>
     </div>

@@ -30,7 +30,7 @@ document.getElementById('form')
 
    btn.value = 'Sending...';
 
-   const serviceID = 'default_service';
+   const serviceID = 'service_yntigur';
    const templateID = 'template_igoxysg';
 
    emailjs.sendForm(serviceID, templateID, this)
