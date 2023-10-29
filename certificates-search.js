@@ -9,8 +9,8 @@ document
 
     // Define a mapping of search queries to destination pages
     const courseMapping = {
-      "A R Rajammal": "A R Rajammal.pdf",
-      FED019001: "R Rajammal.pdf",
+      "A R Rajammal": "C:\Users\HP\Desktop\StrongBase.edu\front-end certificates\A R Rajammal.pdf",
+      FED019001: "C:\Users\HP\Desktop\StrongBase.edu\front-end certificates\A R Rajammal.pdf",
 
       // Add more mappings as needed
     };
