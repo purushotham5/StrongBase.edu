@@ -9,8 +9,20 @@ document
 
     // Define a mapping of search queries to destination pages
     const courseMapping = {
-      "A R Rajammal": "C:\Users\HP\Desktop\StrongBase.edu\front-end certificates\A R Rajammal.pdf",
-      FED019001: "C:\Users\HP\Desktop\StrongBase.edu\front-end certificates\A R Rajammal.pdf",
+     'a r rajammal': "A R Rajammal.pdf",
+     'aswini enukonda': "Aswini Enukonda.pdf",
+     'chandana prasuna': "Athuru Chandana prasuna.pdf",
+     'a r rajammal': "A R Rajammal.pdf",
+     'a r rajammal': "A R Rajammal.pdf",
+     'a r rajammal': "A R Rajammal.pdf",
+     'a r rajammal': "A R Rajammal.pdf",
+     'a r rajammal': "A R Rajammal.pdf",
+     'a r rajammal': "A R Rajammal.pdf",
+     'a r rajammal': "A R Rajammal.pdf",
+
+      fed019001: "A R Rajammal.pdf",
+      fed019002: "Aswini Enukonda.pdf",
+     
 
       // Add more mappings as needed
     };
@@ -20,6 +32,6 @@ document
       const destinationPage = courseMapping[searchInput];
       window.location.href = destinationPage; // Redirect to the destination page
     } else {
-      alert("Student not found"); // Show an alert if the course is not found
+      alert("Course not found"); // Show an alert if the course is not found
     }
   });

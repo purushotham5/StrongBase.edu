@@ -21,12 +21,16 @@
             js.async = 1; fjs.parentNode.insertBefore(js, fjs);
         }(window, document, 'script', 'trustmary-embed', 'tmary'));
     </script>
+    <!-- googel addsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6833260298799261"
+        crossorigin="anonymous"></script>
+    <!-- google addsensece ended -->
     <script src="https://widget.trustmary.com/uOpKrzVcm"></script>
 
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>certificates Verification </title>
+    <title>Home Page</title>
     <!-- bootstrap cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
@@ -44,7 +48,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" href="green-logo.jpg" type="image/jpg" sizes="16x16">
+
+    <link rel="icon" href="StrongBase-hat.png" type="image/png" sizes="16x16">
 
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -63,7 +68,11 @@
         crossorigin="anonymous"></script>
 
     <!------------------------team css------------------------------- -->
-
+    <link rel="stylesheet" href="team.css">
+    <link rel="stylesheet" href="team-responsive.css">
+    <!-- -------------------------testimonial css----------------------------------- -->
+    <link rel="stylesheet" href="testimonial.css">
+    <!-- ------------------------------------------------------------------------------------- -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap"
@@ -110,17 +119,28 @@
     <link rel="stylesheet" href="service.css">
     <link rel="stylesheet" href="faq.css">
     <link rel="stylesheet" href="courses.css">
-    <link rel="stylesheet" href="certificates.css">
-    <link rel="stylesheet" href="team.css">
-    <link rel="stylesheet" href="team-responsive.css">
-    <link rel="stylesheet" href="testimonial.css">
-
-    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
-
 </head>
 
-<body id="total" style="background:#022524;">
+<body id="total">
+    <!------------------------------------------------------------------Demo Video-------------------------------------------------------------------->
+    <div class="demo-video" id="video-1">
+        <div class="container-fluid">
+            <div class="video-btn">
+                <button type="button" onclick="Play()">Play</button>
+            </div>
+            <div class="btnn">
+                <i class="fa fa-close" onclick="VideoClose()" id="close"></i>
+            </div>
+            <div class="row">
+                <div class="col-md-9">
+                    <video id="video-id" width="100%" height="100vh" controls>
+                        <source style="width:100%;height:100vh;color:black" src="profile-video.mp4" />
+                    </video>
+                </div>
+            </div>
 
+        </div>
+    </div>
     <!-----------------------------------------------------dropdown comtac-box----------------->
     <div class="contact-box">
         <div class="container-fluid" id="contact-page">
@@ -148,7 +168,7 @@
                     </div>
                     <div>
                         <p> <i class="fa fa-envelope" aria-hidden="true"></i> <a
-                                href="mailto:tech@progmaster.in">tech@progmaster.in/a>
+                                href="mailto:tech@progmaster.in">tech@progmaster.in</a>
 
                         </p>
                         <!-- <p> <i class="fa fa-envelope " aria-hidden="true "></i> <a
@@ -166,7 +186,7 @@
     </div>
     <section class="header">
         <nav>
-            <a href="index.html"><img class="logo" src='progmaster-nav.png' alt="" /></a>
+            <a href="index.html"><img class="logo" src="StrongBase-hat.png" alt="" /></a>
             <div class="nav-links" id="navLinks">
                 <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
                 <ul>
@@ -174,11 +194,12 @@
                     <li><a href="#courses">COURSES</a></li>
                     <li><a href="#maincontent">FAQ</a></li>
                     <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="certificates.html">CERTIFICATES</a></li>
 
                     <li>
                         <form id="searchForm" class="d-flex">
                             <input class="form-control me-2" type="text" id="searchInput"
-                                placeholder="Search for a certificates..." aria-label="Search">
+                                placeholder="Search for a course..." aria-label="Search">
                             <button class="btn btn-danger" type="submit">Search</button>
                         </form>
                     </li>
