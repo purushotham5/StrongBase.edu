@@ -9,20 +9,46 @@ document
 
     // Define a mapping of search queries to destination pages
     const courseMapping = {
-     'a r rajammal': "A R Rajammal.pdf",
-     'aswini enukonda': "Aswini Enukonda.pdf",
-     'chandana prasuna': "Athuru Chandana prasuna.pdf",
-     'a r rajammal': "A R Rajammal.pdf",
-     'a r rajammal': "A R Rajammal.pdf",
-     'a r rajammal': "A R Rajammal.pdf",
-     'a r rajammal': "A R Rajammal.pdf",
-     'a r rajammal': "A R Rajammal.pdf",
-     'a r rajammal': "A R Rajammal.pdf",
-     'a r rajammal': "A R Rajammal.pdf",
+
+
+      // front-end certificates
+
+      "a r rajammal": "A R Rajammal.pdf",
+      "aswini enukonda": "Aswini Enukonda.pdf",
+      "athuru chandana prasuna": "Athuru Chandana prasuna.pdf",
+      "avvaru guru saranya": "Avvaru Guru Saranya.pdf",
+      "bindhu duggineni": "DUGGINENI BINDHU.pdf",
+      "arkonam chaitanya": "Arkonam  chaitanya.pdf",
+      "chandu": "P.chandu.pdf",
+      "tejaswini ": "C Tejaswini.pdf",
+      "dasu sobhana": "DASU SOBHANA.pdf",
+      "deepika": "A.V.Deepika.pdf",
+      "boosireddy deesritha ": "Boosireddy Deesritha.pdf",
+      "kondapuram devi sree": "KONDAPURAM DEVI SREE.pdf",
+      "eswari dimple": "R Eswari Dimple.pdf",
+      "budigi divya": "Budigi Divya.pdf",
+      "muni bala ganesh ": "P Muni bala ganesh.pdf",
+      "geethalakshmi": "P.chandu.pdfk.Geethalakshmi.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+      "chandu": "P.chandu.pdf",
+
+      
 
       fed019001: "A R Rajammal.pdf",
       fed019002: "Aswini Enukonda.pdf",
-     
 
       // Add more mappings as needed
     };
