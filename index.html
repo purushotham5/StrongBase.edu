@@ -10,9 +10,14 @@
         body {
             margin: 0;
             color: #6a6f8c;
-            background: #000000;
             font: 600 16px/18px "Open Sans", sans-serif;
             overflow-x: hidden;
+            background: #000;
+            background: rgb(238, 174, 202);
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 0.5298494397759104) 100%);
+            background: rgb(238, 174, 202);
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(203, 148, 233, 0.4318102240896359) 100%);
+            background-image: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(203, 148, 233, 0.4318102240896359) 100%), url(https://images.unsplash.com/photo-1550439062-609e1531270e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
         }
 
         *,
@@ -32,9 +37,14 @@
             display: block;
         }
 
+        label {
+            color: #000;
+        }
+
         a {
             color: inherit;
             text-decoration: none;
+            color: #000;
         }
 
         .login-wrap {
@@ -44,27 +54,31 @@
             max-width: 525px;
             min-height: 510px;
             position: relative;
-            background: rgb(0, 0, 0);margin-top: 5%;
+
+            margin-top: 5%;
             overflow-x: hidden;
             overflow: hidden;
             padding: 10px;
             padding-bottom: 1em;
         }
-@media(max-width:768px){
-    .login-wrap{
-        margin-top: 50%;
 
-        max-width: 525px;
-        min-height: 520px;
-    }
-}
+        @media(max-width:768px) {
+            .login-wrap {
+                margin-top: 50%;
+
+                max-width: 525px;
+                min-height: 520px;
+            }
+        }
+
         .login-html {
             min-width: 90%;
             overflow-x: hidden;
             height: 100%;
             position: absolute;
             padding: 90px 70px 50px 70px;
-            background: rgba(16, 19, 22, 0.9);
+            background: rgb(238, 174, 202);
+            background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 0.5298494397759104) 100%);
             margin-left: .5em;
             overflow: hidden;
 
@@ -145,7 +159,7 @@
         }
 
         .login-form .group .label {
-            color: #aaa;
+            color: #000000;
             font-size: 12px;
         }
 
@@ -224,6 +238,15 @@
         .foot-lnk {
             text-align: center;
         }
+
+        #login,
+        #register {
+            cursor: pointer;
+            color: black;
+            font-size: 20px;
+            letter-spacing: 1.5px;
+            font-weight: 1000;
+        }
     </style>
 </head>
 
@@ -239,8 +262,8 @@
                 <div class="sign-in-htm">
                     <div class="group">
                         <label for="pass" class="label">Email Address</label>
-                        <input type="text" class="input" name="login_email" id="login_email" class="form-control"
-                            placeholder="Enter your email">
+                        <input type="email" class="input" name="login_email" id="login_email" class="form-control"
+                            autocomplete="off" placeholder="Enter your email">
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Password</label>
@@ -258,6 +281,11 @@
                     <div class="foot-lnk">
                         <a href="#forgot">Forgot Password?</a>
                     </div> -->
+                    <div class="group">
+                        <button type="button" id="google-signin" name="google-signin" class="btn btn-danger">Sign In
+                            with
+                            Google</button>
+                    </div>
                 </div>
                 <div class="sign-up-htm">
                     <!-- <div class="group">
@@ -266,8 +294,8 @@
                     </div> -->
                     <div class="group">
                         <label for="pass" class="label">Email Address</label>
-                        <input type="text" class="input" name="email" id="email" class="form-control"
-                            placeholder="Enter your email">
+                        <input type="email" class="input" name="email" id="email" class="form-control"
+                            autocomplete="off" placeholder="Enter your email">
                     </div>
                     <div class="group">
                         <label for="pass" class="label">Password</label>
@@ -286,7 +314,8 @@
                     </div>
                     <div class="hr"></div>
                     <div class="foot-lnk">
-                        <label for="tab-1">Already Member?</a>
+                        <label for="tab-1"
+                            style="margin-bottom: 1em;position:relative;bottom:2em;cursor:pointer">Already Member?</a>
                     </div>
                 </div>
             </div>
