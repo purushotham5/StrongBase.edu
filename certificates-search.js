@@ -144,6 +144,8 @@ document
       jv0110075: "TIRUKALA HARI KRISHNA.pdf",
       jv0110076: "Pudi Vasavi.pdf",
       jv0110077: "THANDLA VINAY.pdf",
+      jv0110078: "A.Vishnu Vardhan Reddy.pdf",
+      jv0110079: "S P Vinitha.pdf",
 
 
       // front-end 
@@ -198,7 +200,7 @@ document
       fed019049: "Mulapakula.Deepa.pdf",
       fed019050: "Dugginenni Rajyalakshmi.pdf",
       fed019051: "RUDRARAJU RAMYA SREE.pdf",
-      fed019052: "Geetha Lakshmi.K.pdf",
+      fed019052: "P Pavan sai.pdf",
       fed019053: "Malagondla Rupa.pdf",
       fed019054: "Saribali Chandana.pdf",
       fed019055: "S Shyam.pdf",
@@ -219,6 +221,8 @@ document
       fed019070: "V sushmitha.pdf",
       fed019071: "PULI RAMADEVI.pdf",
       fed019072: "AJJUGUNTI NIVEDITHA.pdf",
+      fed019073:'Sri sowmika.pdf',
+      fed019074:'Devi Sree.pdf',
       // Add more mappings as needed
 
 
@@ -376,6 +380,9 @@ document
       py0122152: "POLI VINITHA.pdf",
       py0122153: "KONIDALA VISHNU.pdf",
       py0122154: "Vishva Nagendra.pdf",
+      py0122155: "RamyaSree M.pdf",
+      py0122156: "M Gowtham.pdf",
+      py0122157: "S Sandhya.pdf",
 
 
 
