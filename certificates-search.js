@@ -386,6 +386,6 @@ document
       const destinationPage = courseMapping[searchInput];
       window.location.href = destinationPage; // Redirect to the destination page
     } else {
-      alert("Course not found"); // Show an alert if the course is not found
+      alert("Certificate not found"); // Show an alert if the course is not found
     }
   });
