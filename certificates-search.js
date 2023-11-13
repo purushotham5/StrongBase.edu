@@ -146,6 +146,7 @@ document
       jv0110077: "THANDLA VINAY.pdf",
       jv0110078: "A.Vishnu Vardhan Reddy.pdf",
       jv0110079: "S P Vinitha.pdf",
+      jv0110080: "Mallepati Bharath.pdf",
 
 
       // front-end 
