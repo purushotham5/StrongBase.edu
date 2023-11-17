@@ -202,7 +202,7 @@ document
       fed019050: "Dugginenni Rajyalakshmi.pdf",
       fed019051: "RUDRARAJU RAMYA SREE.pdf",
       fed019052: "P Pavan sai.pdf",
-      fed019053: "Malagondla Rupa.pdf",
+      fed019053: "Malagondla Rupa.pdf.pdf",
       fed019054: "Saribali Chandana.pdf",
       fed019055: "S Shyam.pdf",
       fed019056: "sashank.pdf",
@@ -224,6 +224,8 @@ document
       fed019072: "AJJUGUNTI NIVEDITHA.pdf",
       fed019073:'Sri sowmika.pdf',
       fed019074:'Devi Sree.pdf',
+      fed019075:'Cingiri Reshma.pdf',
+      fed019076:'Hari.pdf',
       // Add more mappings as needed
 
 
@@ -386,6 +388,7 @@ document
       py0122157: "S Sandhya.pdf",
       py0122158: "Nellepalli Keerthi.pdf",
       py0122159: "P Sai Srinivas.pdf",
+      py0122160: "Dasari Chandra.pdf",
 
 
 
