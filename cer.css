@@ -1,75 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
-    margin: 0;
     padding: 0;
-    border: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-.certificates-section {
-    min-height: 100vh;
-    max-width: 100%;
-    background: #022524;
+.row {
     display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
-    padding:10px;
-}
-.all-students{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;flex-wrap: wrap;
-}
-.Certificatess-title h1 {
-    color: rgb(255, 255, 255);
+    flex-direction: row;
 }
 
-.student-content {
-    min-height: 300px;
-    width: 300px;
-    background: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: column;
-    border: 1px solid rgb(255, 255, 255);
-    box-sizing: content-box;
-    box-shadow: 1px 1px 10px 1px black;
+@media(max-width:768px) {
+    row {
+        flex-direction: column;
+    }
 }
 
-.student-content img {
-    height: 250px;
-    width: 300px;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: rgb(34, 193, 195);
+    /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(48,45,253,1) 100%); */
+    background: white;
+    overflow: hidden;
+
 }
 
-.student-content h3 {
-    font-size: 30px;
-    font-variant: small-caps;
-    font-weight: 1000;
-    margin-top: 1em;
+.text-black {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+}
+
+.card-img-top {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    overflow: hidden;
+    margin: auto;
+
+}
+
+.card-title {
     color: black;
 }
 
-.student-content h5 {
-    font-size: 20px;
-    font-variant: small-caps;
-    font-weight: 1000;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: black;
+.card {
+    border-radius: 0;
+    padding: 20px;
+    overflow: hidden;
+    border: none;
+    transition: .5s;
+    background: white;
+    box-shadow: .5px .5px 00px 1px aqua;
 
 }
 
-.student-content a {
-    text-decoration: none;
-    padding: 10px 0px;
-    background: rgb(216, 166, 166);
-    min-width: 100%;
+.card:hover {
+    background: black;
+    box-shadow: 1px 1px 20px 1px rgb(0, 0, 0);
+    color: wheat;
+    transform: scale(1.01);
+    border-radius: 0px;
+}
+
+strong {
+    color: black;
+}
+
+.card:hover .card-title {
+    color: white;
+}
+
+.card:hover .card-text {
+    color: white;
+}
+
+.bi {
+    font-size: 25px;
+    color: rgb(255, 85, 0);
+    transition: .5s;
+
+}
+
+.bi:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    color: aqua;
+}
+
+.card-text {
+    text-align: justify;
+    color: black;
+}
+
+.center h1 {
     text-align: center;
-    color: rgb(0, 0, 0);
-    word-spacing: 10px;
-    letter-spacing: 1px;
-    font-size: 20px;
-    font-weight: bolder;
-    box-shadow: 0px .5px 1px 1px white;
+    padding-bottom: 15px;
+    color: #000000;
+    text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    font-size: 50px;
+}
+
+
+@media(max-width:500px) {
+    #text {
+        margin-top: 5em;
+        margin-right: 0;
+    }
+}
+
+.d-flex {
+    margin: 10px;
 }
