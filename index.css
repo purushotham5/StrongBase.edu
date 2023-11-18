@@ -51,9 +51,16 @@ spans {
 }
 
 @media(max-width:768px) {
-  .header{
-    background-image: none;
+  @keyframes bg {
+    /* 10% {
+      background-image: url('https://assets.materialup.com/uploads/cd3b3294-1c8b-462a-9229-4e905e4c6fe8/preview.gif');
+    } */
+  
+    20% {
+      background-image: none;
+    }
   }
+  
   spans {
     font-size: 40px;
     color: #e0ac1c;
