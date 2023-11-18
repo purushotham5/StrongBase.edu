@@ -3,11 +3,9 @@
   border: 0px;
   padding: 0px;
 }
-
 body {
   background: #000000;
 }
-
 h1 {
   text-align: center;
   margin-top: 1em;
@@ -17,36 +15,20 @@ h1 {
   font-variant: small-caps;
   font-size: 70px;
 }
-/* 
 .header {
-  
+  background-image: linear-gradient(
+      rgba(225, 225, 225, 0.9),
+      rgba(225, 225, 225, 0.8)
+    ),
+    url("students certificate.png");
   background-position: center;
   background-size: contain;
   background-repeat: repeat;
-} */
-
-.header {
-  min-height: 100vh;
-  max-width: 100%;
-  background-image: linear-gradient(rgba(225, 225, 225, 0.9),
-  rgba(225, 225, 225, 0.8)),
-url("students certificate.png");
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: bg 5s infinite;
 }
-
 .logo {
   height: 200px;
   width: 200px;
 }
-
 h2 {
   color: rgb(0, 0, 0);
   text-align: center;
@@ -57,7 +39,6 @@ h2 {
   font-variant: small-caps;
   font-size: 70px;
 }
-
 .certificates-container {
   min-height: 100vh;
   max-width: 100%;
@@ -68,7 +49,6 @@ h2 {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-
 .certificates-card {
   display: flex;
   flex-direction: column;
@@ -86,20 +66,17 @@ h2 {
   transition: 0.5s ease-in-out;
   position: relative;
 }
-
 .certificates-card:hover {
   transform: scale(1.02);
   background: #000;
   box-shadow: -4px 0.5px 1px 0px white;
 }
-
 .certificates-container img {
   position: relative;
   height: 150px;
   top: -10px;
   min-width: 150px;
 }
-
 .nav-links ul li a {
   font-weight: 1000;
   font-size: 15 px;
@@ -111,7 +88,6 @@ h2 {
     color: white;
   }
 }
-
 input {
   width: 0px;
   padding: 0px;
@@ -119,28 +95,22 @@ input {
   background-color: darksalmon;
   border: none;
 }
-
 nav .fa {
-  color: #000;
-  font-size: 30px;
+  color: #000;font-size:30px;
 }
-
 @media (max-width: 768px) {
   nav .fa {
     color: rgb(249, 163, 4);
   }
 }
-
 input:focus {
   outline: none;
 }
-
 #text {
   margin-right: 2em;
   color: black;
   text-align: center;
 }
-
 @media (max-width: 768px) {
   #text {
     font-size: 41px;
