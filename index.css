@@ -47,7 +47,7 @@ spans {
 
 .tite:first-letter {
   color: rgb(255, 255, 255);
-  font-size: 110px  ;
+  font-size: 110px;
 }
 
 @media(max-width:768px) {
@@ -55,12 +55,13 @@ spans {
     /* 10% {
       background-image: url('https://assets.materialup.com/uploads/cd3b3294-1c8b-462a-9229-4e905e4c6fe8/preview.gif');
     } */
-  
+
     20% {
-      background-image: none;
+      background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+        url("https://mixkit.imgix.net/videos/preview/mixkit-software-developer-working-while-drinks-coffee-1730-0.jpg?q=80&auto=format%2Ccompress   ");
     }
   }
-  
+
   spans {
     font-size: 40px;
     color: #e0ac1c;
@@ -2838,10 +2839,11 @@ hold-emails {
   background-repeat: no-repeat;
 } */
 
-.course-bg img{
-  width: 100%;height: 100vh;
+.course-bg img {
+  width: 100%;
+  height: 100vh;
 }
 
-.showing{
-  font-size: 30px ;
+.showing {
+  font-size: 30px;
 }
