@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&amp;display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Kenia&family=Nosifer&display=swap');
 
 * {
   font-family: "Noto Serif", serif;
@@ -24,13 +25,68 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: bg 5s infinite;
 }
 
-@media (max-width: 290px) {
+@keyframes bg {
+  /* 10% {
+    background-image: url('https://assets.materialup.com/uploads/cd3b3294-1c8b-462a-9229-4e905e4c6fe8/preview.gif');
+  } */
+
+  20% {
+    background-image: url('https://dz2cdn2.dzone.com/thumbnail?fid=16854006&w=600');
+  }
+}
+
+
+
+spans {
+  font-size: 110px;
+  color: #e0ac1c;
+}
+
+.tite:first-letter {
+  color: rgb(255, 255, 255);
+  font-size: 110px  ;
+}
+
+@media(max-width:768px) {
+  spans {
+    font-size: 40px;
+    color: #e0ac1c;
+  }
+
+  .tite:first-letter {
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 400px) {
   .header {
     padding-bottom: 50em;
   }
 }
+
+p img {
+  padding: 10px;
+  animation: nope .1s infinite;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+
+@keyframes nope {
+
+  from {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  to {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
 
 .text-box {
   position: absolute;
@@ -123,6 +179,7 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   overflow: hidden;
+  margin-top: 0em;
 }
 
 @media (max-width: 1010px) {
@@ -701,9 +758,11 @@ body {
   overflow: hidden;
   top: 0;
 }
+
 strong {
   color: #000;
 }
+
 .faq h1 {
   font-size: 48px;
   font-weight: 900;
@@ -1189,6 +1248,7 @@ bottom: 0;
 /* You can remove below code if you don't want Footer to be responsive */
 
 @media (max-width: 880px) {
+
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
   .footer-distributed .footer-right {
@@ -1984,7 +2044,8 @@ hold-emails {
   background: #fff;
   display: flex;
   align-items: center;
-  justify-content: center;transition: .5s;
+  justify-content: center;
+  transition: .5s;
 }
 
 .loader-container img {
@@ -2756,4 +2817,21 @@ hold-emails {
   .wk-mobile-12 {
     width: 100%;
   }
+}
+
+/* .course-bg {
+  height: 100vh;
+  width: 100%;
+  background-image: url(https://assets.materialup.com/uploads/cd3b3294-1c8b-462a-9229-4e905e4c6fe8/preview.gif);
+  background-size: contain;
+  background-position: left;
+  background-repeat: no-repeat;
+} */
+
+.course-bg img{
+  width: 100%;height: 100vh;
+}
+
+.showing{
+  font-size: 30px ;
 }
