@@ -51,6 +51,9 @@ spans {
 }
 
 @media(max-width:768px) {
+  .header{
+    background-image: none;
+  }
   spans {
     font-size: 40px;
     color: #e0ac1c;
