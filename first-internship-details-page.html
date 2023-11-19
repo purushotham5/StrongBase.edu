@@ -253,10 +253,28 @@
             <div class="discount">
                 <div class="one-month-internship-cost"><strong>1 Month Internship</strong> <del>₹1229</del> ₹999
                     <br>
-                    <form>
-                        <script src="https://checkout.razorpay.com/v1/payment-button.js"
-                            data-payment_button_id="pl_N2LSs2q4wEoOke" async> </script>
-                    </form>
+                    <div class="pay-btn">
+                        <div class="razorpay-embed-btn" data-url="https://rzp.io/l/CLanguage" data-text="1 Month Internship"
+                            data-color="#528FF0" data-size="medium">
+                            <script>
+                                (function () {
+                                    var d = document;
+                                    var x = !d.getElementById('razorpay-embed-btn-js')
+                                    if (x) {
+                                        var s = d.createElement('script');
+                                        s.defer = !0;
+                                        s.id = 'razorpay-embed-btn-js';
+                                        s.src = 'https://cdn.razorpay.com/static/embed_btn/bundle.js';
+                                        d.body.appendChild(s);
+                                    } else {
+                                        var rzp = window['__rzp__'];
+                                        rzp && rzp.init && rzp.init()
+                                    }
+                                })();
+                            </script>
+                        </div>
+
+                    </div>
                 </div>
                 <div class="two-months-internship-cost"><strong>2 Months Internship</strong> <del>₹1499</del> ₹1199
                     <br>
