@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="Google Sheet.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            font-family: 'poppins', sans-serif;
+            font-size: 18px;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+            overflow-y: scroll;
+        }
+
+        .container {
+            width: 500px;
+            min-height: 100vh;
+            padding: 30px;
+            border: 1px solid #eeeeee;
+            border-radius: 10px;
+            /*            background-color: #003b5b;*/
+            background: #000;
+            margin: 10px;
+
+        }
+
+        h4 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: white;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 5px;
+            /* Adjust the spacing between the radio button and label */
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 10px;
+        }
+
+        #submit {
+            border: none;
+            background-color: orangered;
+            color: white;
+            width: 200px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        #submit:hover {
+            background-color: #333333;
+        }
+
+        .content-about-intern p {
+            color: whitesmoke;
+            text-align: justify;
+        }
+
+        label {
+            color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="step">
+            <H1 style="color: white;">Step 2 0f 2</H1>
+        </div>
+        <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"
+                style="width:100%">
+                100%
+            </div>
+        </div>
+        <div class="content-about-intern">
+            <p>
+                This is <strong>1 & 2 months virtual internship program</strong> opportunity offered by <strong
+                    style="color: yellow;">PROGMASTER
+                    PVT LTD</strong>
+                <br><br>
+                By participating in this program, you will gain industrial experience and knowledge in your respective
+                domain.
+            </p>
+        </div>
+        <hr>
+        <form method="post" action="" name="contact-form" autocomplete="on">
+            <!-- <h4>Contact Us</h4> -->
+            <label for="">Name [ As Per SSC ]</label>
+            <input type="text" name="Name" placeholder="Name" required>
+            <label for="">Mobile [ Whatsapp Number ]</label>
+            <input type="text" name="Number" placeholder="Number" required>
+            <label for="">Email [ Check it once again ]</label>
+            <input type="email" name="Email" placeholder="Email" required>
+            <label for="">Gender</label><br>
+            <select name="Gender" id="" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Prefer Not To Say">Prefer Not To Say</option>
+            </select>
+            <label for="">Preferred Internship</label><br>
+            <select name="Domains" id="" required>
+                <option value="Web Development Internship">Web Development Internship</option>
+                <option value="Python Internship">Python Internship</option>
+                <option value="Java Internship">Java Internship</option>
+            </select>
+           
+            <!-- <label for="">Transition/UPI/Razorpay Id</label>
+            <input type="text" name="Transaction" id=""> -->
+
+            <label for="">From where did you hear us?</label><br>
+            <select name="Source" id="" value='select' required>
+                <option value="Whatsapp">Whatsapp </option>
+                <option value="LinkedIn">LinkedIn </option>
+                <option value="Website"> Website </option>
+                <option value="College"> College </option>
+                <option value="Instagram"> Instagram </option>
+                <option value="Friends"> Friends </option>
+            </select>
+           <label for="">Razorpay Transaction Id</label>
+           <input type="text" name="Transacation Number" id="">
+            <br>
+            <input type="submit" value="Submit" id="submit" onclick="step2()">
+        </form>
+    </div>
+
+
+    <!-- <script>
+
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwi73AnHAEVo1jFxUuIzTZNE8tb9vfEEsXBzGh3UXEwgubJjYerG1c93my78lJMteAd/exec'
+
+        const form = document.forms['contact-form']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thank you! your form is submitted successfully."))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+        })
+
+    </script> -->
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwi73AnHAEVo1jFxUuIzTZNE8tb9vfEEsXBzGh3UXEwgubJjYerG1c93my78lJMteAd/exec';
+
+        const form = document.forms['contact-form'];
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => response.json())
+                .then(data => {
+                    alert("Thank you! Your form is submitted successfully.");
+                    window.location.href = ''; // Redirect to the next page
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+
+</body>
+
+</html>
