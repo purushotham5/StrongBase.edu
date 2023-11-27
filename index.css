@@ -59,8 +59,8 @@ spans {
     20% {
       background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
         url("https://t3.ftcdn.net/jpg/02/42/77/22/360_F_242772256_PRwokoyoXkDCIISNjfj9N3If0TPFtje8.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
+      background-repeat: no-repeat;
+      background-size: cover;
     }
   }
 
@@ -2855,22 +2855,25 @@ hold-emails {
 
 /* -------------------------demo certificate------------------------ */
 
-.demo-certificates-showcase
-{
+.demo-certificates-showcase {
   min-height: 100vh;
   max-width: 100%;
   background: white;
 }
-.demo-certificates-showcase .page{
+
+.demo-certificates-showcase .page {
   height: 300px;
   width: 300px;
 
-}.demo-certificates-showcase .page h3{
+}
+
+.demo-certificates-showcase .page h3 {
   font-size: 20px;
   font-variant: small-caps;
 
 }
-.demo-certificates-showcase .page img{
+
+.demo-certificates-showcase .page img {
   height: 250px;
   width: 300px;
 }
