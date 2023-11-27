@@ -2862,6 +2862,7 @@ hold-emails {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .demo-certificates-showcase .page {
   height: 300px;
