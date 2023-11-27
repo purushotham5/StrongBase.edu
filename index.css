@@ -2863,11 +2863,19 @@ hold-emails {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 1em;
+  background: deeppink;
+}
+.demo-certificates-showcase h1{
+  color: black;
+  font-size: 30px;
+  text-transform: capitalize;
 }
 .demo-certificates-showcase .page {
   height: 300px;
   width: 300px;
+  margin: 1em;
 }
 
 .demo-certificates-showcase .page h3 {
