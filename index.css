@@ -2863,6 +2863,7 @@ hold-emails {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  gap: 1em;
 }
 .demo-certificates-showcase .page {
   height: 300px;
