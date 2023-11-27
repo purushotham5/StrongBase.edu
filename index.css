@@ -189,10 +189,11 @@ p img {
   background: none;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   overflow: hidden;
   margin-top: 0em;
+  gap: 1em;
 }
 
 @media (max-width: 1010px) {
