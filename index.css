@@ -2860,13 +2860,12 @@ hold-emails {
   max-width: 100%;
   background: white;
   background: rgb(175, 102, 141);
-  padding-bottom: 4em;
+  padding-bottom: 7em;
+  padding-top: 2em;
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-direction: column;
-
-
 }
 
 .demo-certificates-showcase .page-hold {
@@ -2897,7 +2896,7 @@ hold-emails {
 }
 @media(max-width:768px){
   .demo-certificates-showcase .page{
-    margin-top: 2em;
+    margin-top: 4em;
   }
 }
 .demo-certificates-showcase .page h3 {
