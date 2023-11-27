@@ -23,7 +23,6 @@ body {
   /* background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(48,45,253,1) 100%); */
   background: white;
   overflow-x: hidden;
-
 }
 
 .text-black {
@@ -38,7 +37,6 @@ body {
   object-fit: cover;
   overflow: hidden;
   margin: auto;
-
 }
 
 .card-title {
@@ -53,7 +51,6 @@ body {
   transition: .5s;
   background: white;
   box-shadow: .5px .5px 00px 1px aqua;
-
 }
 
 .card:hover {

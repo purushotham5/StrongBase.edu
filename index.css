@@ -1297,7 +1297,12 @@ bottom: 0;
   justify-content: space-around;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
-
+.team-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1em;
+}
 .team .card:hover {
   transform: translateY(-5px);
   background-color: aqua;
@@ -2851,3 +2856,6 @@ hold-emails {
 .showing {
   font-size: 30px;
 }
+
+
+/* -------------------------demo ------------------------ */
