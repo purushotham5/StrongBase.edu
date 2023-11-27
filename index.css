@@ -2859,13 +2859,16 @@ hold-emails {
   min-height: 100vh;
   max-width: 100%;
   background: white;
+ 
+}
+.demo-certificates-showcase .page-hold{
   display: flex;
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  flex-direction: column;
   gap: 4em;
   background: deeppink;
+  padding-bottom: 5em;
 }
 .demo-certificates-showcase h1{
   color: black;
