@@ -2869,6 +2869,10 @@ hold-emails {
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 3em;
+}@media(max-width:768px){
+  .demo-certificates-showcase.page-hold{
+    gap: 4em;
+  }
 }
 .demo-certificates-showcase h1{
   color: black;
