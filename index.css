@@ -194,6 +194,7 @@ p img {
   overflow: hidden;
   margin-top: 0em;
   gap: 1em;
+  margin-bottom: 2em;
 }
 
 @media (max-width: 1010px) {
