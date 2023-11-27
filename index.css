@@ -2860,6 +2860,7 @@ hold-emails {
   max-width: 100%;
   background: white;
   background: deeppink;
+  padding-bottom: 2em;
 
 }
 .demo-certificates-showcase .page-hold{
@@ -2867,6 +2868,7 @@ hold-emails {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
+  gap: 3em;
 }
 .demo-certificates-showcase h1{
   color: black;
