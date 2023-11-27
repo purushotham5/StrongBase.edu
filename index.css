@@ -2851,3 +2851,26 @@ hold-emails {
 .showing {
   font-size: 30px;
 }
+
+
+/* -------------------------demo certificate------------------------ */
+
+.demo-certificates-showcase
+{
+  min-height: 100vh;
+  max-width: 100%;
+  background: white;
+}
+.demo-certificates-showcase .page{
+  height: 300px;
+  width: 300px;
+
+}.demo-certificates-showcase .page h3{
+  font-size: 20px;
+  font-variant: small-caps;
+
+}
+.demo-certificates-showcase .page img{
+  height: 250px;
+  width: 300px;
+}
