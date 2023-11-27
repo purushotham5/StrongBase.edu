@@ -2864,7 +2864,7 @@ hold-emails {
   justify-content: space-around;
   flex-wrap: wrap;
   flex-direction: column;
-  gap: 1em;
+  gap: 4em;
   background: deeppink;
 }
 .demo-certificates-showcase h1{
