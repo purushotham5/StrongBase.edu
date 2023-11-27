@@ -1302,6 +1302,7 @@ bottom: 0;
   align-items: center;
   justify-content: space-around;
   gap: 1em;
+  overflow-x: scroll;
 }
 .team .card:hover {
   transform: translateY(-5px);
