@@ -19,9 +19,20 @@ const jobs = [
     link: "https://www.shine.com/jobs/software-engineer-fresher/covai-industrials-recruitment/12778956?utm_source=linkedin-feed&amp;utm_medium=referral&amp;utm_campaign=linkedin-feed&amp;auto_apply=true",
   },
 
+   {
+    title: "Software Engineer",
+    image: "software-engineer.svg",  
+      skills: "Skills:Java,SQL,Python,HTML,CSS,JS",
+    details:
+      "We are hiring for Freshers Java Net Android Web Developer Qualification B Tech B E M C A.",
+    openPositions: "3",
+    link: "https://www.linkedin.com/jobs/view/software-engineer-fresher-at-covai-industrials-recruitment-3751442332/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic&originalSubdomain=in",
+  },
+
   {
     title: "Python Developer",
     image: "project-manager.svg",
+    skills: "Skills:Python,SQL",
     details:
       "We are looking for a Python freshers to join our team and help us develop and maintain various software products.Freshers only need to apply Also providing placement assistence after internship period on the basis of performance of work.",
     openPositions: "1",
