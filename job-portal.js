@@ -107,7 +107,7 @@ const jobs = [
     skills:"Skills:-Coaching, Employee Training, Human Resources (HR), Marketing, Research Skills, Team Work ",
     details:
       "As a ParParticipate in 3 real time projects for a hands-on learning experience from the industrial experts......",
-      openPositions: "Part Time",
+      openPositions: "Internship",
       link: "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
   },
 ];
