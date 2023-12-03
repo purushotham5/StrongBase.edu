@@ -89,7 +89,7 @@ const jobs = [
   }, {
     title: "Web Development Intern",
     image: "product-manager.svg",
-    skills:'HTML,CSS,JS (Basics)',
+    skills:'Skills:-HTML,CSS,JS (Basics)',
     details:
       "We needs new age interns to become a good world generation",
       openPositions: "Internship",
@@ -104,7 +104,7 @@ const jobs = [
   },{
     title: "Winter Training and Internship with Projects",
     image: "software-engineer.svg",
-    skills:"Coaching, Employee Training, Human Resources (HR), Marketing, Research Skills, Team Work ",
+    skills:"Skills:-Coaching, Employee Training, Human Resources (HR), Marketing, Research Skills, Team Work ",
     details:
       "As a ParParticipate in 3 real time projects for a hands-on learning experience from the industrial experts......",
       openPositions: "Part Time",
