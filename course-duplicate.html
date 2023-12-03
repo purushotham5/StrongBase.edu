@@ -12,60 +12,27 @@
   transition: 0.2s linear;
 }
 
-
-html,
-body {
-  scroll-behavior: smooth;
-}
-
-::-webkit-scrollbar-corner {
-  color: yellow;
-  background: yellow;
-}
-
-::-webkit-scrollbar {
-  width: 1px;
-  height: 10px;
-  color: blue;
-  background: transparent;
-}
-
-::-webkit-scrollbar-button {
-  color: beige;
-}
-
-::-webkit-scrollbar-thumb {
-  color: #000;
-  background: rgba(111, 175, 111, 0.5);
-  width: 1px;
-  border-radius: 20px;
-}
-
 .course-section .container {
   /* background: linear-gradient(45deg, blueviolet, lightgreen); */
   background: #fff;
   padding-bottom: 100px;
-  padding: 15px 30px;
+  padding: 15px 9%;
   min-width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .course-section .container .heading {
   text-align: center;
   padding-bottom: 15px;
-  color: #000;
+  color: #000000;
   text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   font-size: 50px;
 }
 
 .course-section .container .box-container {
-
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 15px;
-  background: #fff;
-  width: 100%;
-  overflow-x: scroll;
-  display: flex;
-  padding: 10px;
 }
 
 .course-section .container .box-container .box {
@@ -79,12 +46,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 5px;
-  min-height: 300px;
-  min-width: 400px;
-  margin-top: 10px;
-
 }
-
 .pay-know {
   display: flex;
 }
@@ -114,14 +76,12 @@ body {
   .container {
     padding: 20px;
   }
-
   @media (max-width: 300px) {
     .container {
       padding-left: 0px;
     }
   }
 }
-
 .pay-know .btn {
   margin-top: 2.2em;
   background: #000;
@@ -136,15 +96,12 @@ body {
   padding-bottom: 0px;
   border-radius: 2px;
 }
-
 .pay-know .btn:hover {
   border-radius: 20px;
   letter-spacing: 0.1px;
   font-weight: 500;
-  background: rgb(3, 67, 67);
-  color: white;
+  background: rgb(3, 67, 67);color: white;
 }
-
 .course-details {
   display: flex;
   width: 100%;
@@ -156,30 +113,25 @@ body {
   position: relative;
   gap: 1em;
 }
-
 .pay-know {
   height: 50px;
   margin-bottom: 1.5em;
 }
-
 .course-details h5,
 h6 {
   font-size: 15px;
 }
-
 .rate {
   margin-top: 1em;
 }
-
 .rate span {
   font-size: 25px;
   margin: 1px;
 }
-
 .razorpay-embed-btn {
   margin-top: 1em;
 }
 
-::-webkit-scrollbar {
+::-webkit-scrollbar{
   width: 1px;
 }

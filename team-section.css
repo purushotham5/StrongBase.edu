@@ -78,18 +78,21 @@
     margin: 0 7px 7px 0;
     padding: 7px;
 }
-.team-section{
-    display: flex;flex-direction: column;justify-content: space-around;align-items: center;background: #00204a;gap: 1em;
-}
+
 .cards-holding {
     min-height: 100vh;
     max-width: 100%;
     background: #00204a;
-    display: flex;            align-items: center;
+    display: flex;
+    align-items: center;
     justify-content: center;
     gap: 1em;
     flex-wrap: wrap;
     overflow-x: auto;
     padding: 10px;
-    padding-bottom: 4em;
+    padding-bottom: 2em;
+}
+
+.team-section {
+    background: #00204a;
 }
