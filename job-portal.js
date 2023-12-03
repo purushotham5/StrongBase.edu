@@ -98,7 +98,7 @@ const jobs = [
     title: "Product Management Intern    ",
     image: "sales-representative.svg",    skills: "Skills: Team Leadership, Computer Literacy,Microsoft Excel, Analytical Skills, +8 more",
     details:
-      ". This is an internship role, and the selected candidate will work closely with the team and learn about product strategy, market research, and financial product management.....      ",
+      "This is an internship role, and the selected candidate will work closely with the team and learn about product strategy, market research, and financial product management.....      ",
       openPositions: "Internship",
       link: "https://www.linkedin.com/jobs/view/3773061191/?alternateChannel=search&refId=R6bi8F4Df4U%2BOQMQhycVig%3D%3D&trackingId=SAhvQuqgb9YnbG%2B%2BSfGQdg%3D%3D#HYM",
   },{
