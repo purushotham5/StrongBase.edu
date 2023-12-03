@@ -106,7 +106,7 @@ const jobs = [
     image: "software-engineer.svg",
     skills:"Coaching, Employee Training, Human Resources (HR), Marketing, Research Skills, Team Work ",
     details:
-      "As a ParParticipate in 3 real time projects(2 capstone and 1 major) for a hands-on learning experience from the industrial experts of top notch companies with 2 live sessions guidance.t-Time Python Developer at our Hyderabad-based organization, you will be a key player in designing and implementing scalable and efficient solutions using Python, with a focus on Flask and Django frameworks. Working closely with our development team, you will contribute to the delivery of high-quality software that meets the needs of our clients.",
+      "As a ParParticipate in 3 real time projects for a hands-on learning experience from the industrial experts......",
       openPositions: "Part Time",
       link: "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
   },
