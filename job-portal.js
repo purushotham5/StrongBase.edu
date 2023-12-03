@@ -2,29 +2,30 @@ const jobs = [
   {
     title: "Software Engineer",
     image: "software-engineer.svg",
-    skills: "Skills: C++,Java,Python",
+    skills: "Skills:Java Android,HTML,CSS,JS",
     details:
-      "Responsible for designing, developing and maintaining software systems and applications.",
+      "We are hiring for Freshers Java Net Android Web Developer Qualification B Tech B E M C A Experience 0 4Years Skills Fresher Java Android IOS Developer Javascript Jquery CSS HTML PHP Candidate Profile Candidate should have 1 Strong programming skills 2 Excellent problemsolving skills 3 Excellent communication skills 4 Good to have knowledge in Javascript Jquery CSS HTML PHP etc Contact Mr Vasanth hidden mobile",
     openPositions: "2",
-    link: "progmaster.in",
+    link: "https://in.jobrapido.com/jobpreview/261754190?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
   },
 
   {
-    title: "Data Scientist",
-    image: "data-scientist.svg",
+    title: "Software Engineer",
+    image: "software-engineer.svg",  
+      skills: "Skills:Java,SQL,Python,HTML,CSS,JS",
     details:
       "Responsible for collecting, analyzing and interpreting large data sets to help organizations make better decisions.",
     openPositions: "3",
-    link: "#",
+    link: "https://www.shine.com/jobs/software-engineer-fresher/covai-industrials-recruitment/12778956?utm_source=linkedin-feed&amp;utm_medium=referral&amp;utm_campaign=linkedin-feed&amp;auto_apply=true",
   },
 
   {
-    title: "Project Manager",
+    title: "Python Developer",
     image: "project-manager.svg",
     details:
-      "Responsible for planning, executing and closing projects on time and within budget.",
+      "We are looking for a Python freshers to join our team and help us develop and maintain various software products.Freshers only need to apply Also providing placement assistence after internship period on the basis of performance of work.",
     openPositions: "1",
-    link: "#",
+    link: "https://www.simplyhired.co.in/job/daKacOiPFIA11R3aJhnFZTDpdC4xn4VIeO13so0YAeih8Q8SqRprIQ?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
   },
 
   {
@@ -52,7 +53,8 @@ const jobs = [
       "Responsible for creating and executing marketing strategies to promote a company or product.",
     openPositions: "1",
     link: "#",
-  }, {
+  },
+  {
     title: "Front-End Developer",
     image: "sales-representative.svg",
     details:
@@ -98,15 +100,13 @@ const createJobListingCards = () => {
       title.innerHTML = job.title;
       title.classList.add("job-title");
 
-
-      let skills = document.createElement('div');
+      let skills = document.createElement("div");
       skills.innerHTML = job.skills;
       skills.classList.add("skills");
 
       let details = document.createElement("div");
       details.innerHTML = job.details;
       details.classList.add("details");
-
 
       let detailsBtn = document.createElement("a");
       detailsBtn.href = job.link;
