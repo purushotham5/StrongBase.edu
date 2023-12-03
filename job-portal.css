@@ -1,7 +1,38 @@
+
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-corner {
+  color: yellow;
+  background: yellow;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 10px;
+  color: blue;
+  background: transparent;
+}
+
+::-webkit-scrollbar-button {
+  color: beige;
+}
+
+::-webkit-scrollbar-thumb {
+  color: #000;
+  background: rgba(111, 175, 111, 0.5);
+  width: 1px;
+  border-radius: 20px;
+}
+
 .jobs-list-container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 20px auto;
   font-family: "Rubik", sans-serif;
+  overflow-x: hidden;
 }
 
 .jobs-list-container h2 {
@@ -11,9 +42,18 @@
 }
 
 .jobs-list-container .jobs {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 24px;
+  gap: 24px; */
+  min-height: 100%;
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  background: rgb(255, 255, 255);
+  flex-direction: column;
+  gap: 2em;
+  padding-left: 8px;
+  padding-top: 1em;box-sizing: border-box;padding-bottom: 2em;
 }
 
 .jobs-list-container .jobs img {
@@ -21,13 +61,18 @@
 }
 
 .jobs-list-container .job {
-  box-shadow: 0 4px 24px -8px rgba(2, 48, 71, 0.2);
-  padding: 24px;
-  border-radius: 16px;
-  position: relative;
   display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
   flex-direction: column;
-  transition: all 400ms ease;
+  gap: 1.5em;
+  box-shadow: 0 4px 5px 1px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  min-height: 300px;
+  background: rgb(255, 255, 255);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
 }
 
 .jobs-list-container .job:hover {
@@ -36,7 +81,7 @@
 
 .jobs-list-container .open-positions {
   position: absolute;
-  top: 40px;
+  top: 25px;
   right: 24px;
   color: #e63946;
 }
