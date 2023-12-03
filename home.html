@@ -125,7 +125,7 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6833260298799261"
         crossorigin="anonymous"></script>
-<!--     
+    <!--     
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6833260298799261"
         crossorigin="anonymous"></script>
     <ins class="adsbygoogle" style="display:block" data-ad-format="fluid" data-ad-layout-key="-5m+cm-1n-g6+157"
@@ -133,7 +133,7 @@
     <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
     </script> -->
- 
+
     <!-- -----------------------------all cse files---------------------------------------------------------------------- -->
 
     <link rel="stylesheet" href="index.css" />
@@ -146,6 +146,11 @@
     <link rel="stylesheet" href="service.css">
     <link rel="stylesheet" href="faq.css">
     <link rel="stylesheet" href="courses.css">
+    <link rel="stylesheet" href="header.scss">
+    <link rel="stylesheet" href="responsive-header.css">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="team-section.css">
 </head>
 
 <body id="total">
@@ -211,60 +216,272 @@
             </div>
         </div>
     </div>
-    <section class="header">
-        <nav>
-            <a href="index.html"><img class="logo" src="StrongBase-hat.png" alt="" /></a>
-            <div class="nav-links" id="navLinks">
-                <i class="fa-solid fa fa-xmark" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#courses">COURSES</a></li>
-                    <li><a href="#maincontent">FAQ</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
-                    <li><a href="roadmaps.html">ROAD-MAPS</a></li>
+    <div class="hero_area">
 
-                    <li>
-                        <form id="searchForm" class="d-flex">
-                            <input class="form-control me-2" type="text" id="searchInput"
-                                placeholder="Search for a course..." aria-label="Search">
-                            <button class="btn btn-danger" type="submit">Search</button>
-                        </form>
-                    </li>
-                    <!-- <li class="btn btn-primary"><a href="index.html">LOGOUT</a></li> -->
-
-                </ul>
-            </div>
-            <i class="fa-solid fa fa-bars" onclick="showMenu()"></i>
-        </nav>
-        <div class="text-box">
-            <div class="tite">
-                <spans>
-                    Prog<div2>M</div2>aster
-                </spans>
-                <br> Pvt Ltd
-                <br>
-                <div class="showing"> Training + Internships</div> <br> Approved By
-            </div>
-            <p>
-                <!-- Code is the key that unlocks endless opportunities in our digital age.It's the bridge to affordable
-                education and empowers students to explore, learn, and build a brighter future through our
-                platform's
-                rich programming courses. -->
-
-                <img src="aictelogo.png" alt="" class="aicte">
-            </p>
-            <div class="home-page-btns" id="main-btns">
-                <!-- <a href="StrongBase-Broucher.pdf" Download class="me-5">Download Brochure</a> -->
-                <a href="cer.html" class="me-5">Download Certificates</a>
-
-                <a href="#" class="me-5" id="explore-buttonn" onclick="OpenContactPage()">Enquiry Contact</a>
-                <!-- <a href="#home" class="me-5" id="explore-buttonn" onclick="VideoOpen()">Watch Video <i
-                        class="fa fa-play-circle"></i> -->
-                <a href="#courses" class="me-5" id="explore-buttonn">Courses</a>
-                <a href="internship-homepage.html" class="me-5" id="explore-buttonn">Internships</a>
+        <div class="hero_bg_box">
+            <div class="bg_img_box">
+                <img src="hero-bg.png" alt="">
+                <!-- <img src="https://static.vecteezy.com/system/resources/previews/012/847/554/large_2x/minimal-background-purple-color-with-two-overlapping-waves-suitable-for-design-needs-display-website-ui-and-others-free-photo.jpg" alt=""> -->
             </div>
         </div>
-    </section>
+
+        <!-- header section strats -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <span>
+                            <img src="logo-homepage.png">
+                        </span>
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav  ">
+                            <!-- <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  </li> -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="about.html"> About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="course.html">Courses</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="roadmaps.html">RoadMaps</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="faq.html">FAQ</a>
+                            </li>
+                            <li>
+                                <form id="searchForm" class="d-flex">
+                                    <input class="form-control me-2" type="text" id="searchInput"
+                                        placeholder="Search for a course..." aria-label="Search">
+                                    <button class="btn btn-danger" type="submit">Search</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- end header section -->
+        <!-- slider section -->
+        <section class="slider_section" style="position: relative;bottom:4em;">
+            <div id="customCarousel1" class="carousel slide pointer-event" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box">
+                                        <h1>
+                                            Approved By<br>
+                                            AICTE - Internship Portal </h1>
+                                        <p>
+                                            Delighted to share our AICTE approval, validating our commitment to quality
+                                            education. As an accredited institution, we ensure innovative programs that
+                                            meet rigorous standards, promising a future-ready learning experience.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="" class="btn1">
+                                                Internships
+                                            </a><a href="#courses" class="btn1">
+                                                Courses
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="https://pgims.org.in/images/affliation/1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box">
+                                        <h1>
+                                            15+ <br>
+                                            experience Instructors
+                                        </h1>
+                                        <p>
+                                            Fueling success with over 15 years of IT expertise, our seasoned
+                                            professionals bring a wealth of experience to the industry. From pioneering
+                                            innovations to navigating complex challenges, our journey is defined by a
+                                            legacy of excellence. Join us in harnessing this rich history as we continue
+                                            to shape the future of technology.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="course.html" class="btn1">
+                                                Enroll Now </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="instrutor-png-1.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- certificates section -->
+
+                    <div class="carousel-item">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box">
+                                        <h1>
+                                            Download <br>
+                                            Certificates Here </h1>
+                                        <p>
+                                            Embark on a transformative journey with our courses, crowned by prestigious
+                                            certificates upon successful completion. These accolades, recognized by
+                                            top-tier MNCs, come with a unique verification code—type 'fed019067' to
+                                            authenticate your achievement and confidently stride into a future of
+                                            professional excellence
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="course.html" class="btn1">
+                                                Download Certificate </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/certificate-4652499-3892851.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- perfect roadmaps  -->
+
+
+                    <div class="carousel-item" style="position: relative;bottom:0em;">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box">
+                                        <h1>
+                                            Perfect RoadMaps <br>
+                                            To reach you goals </h1>
+                                        <p>
+                                            Navigate the future with confidence through our meticulously crafted
+                                            roadmaps for over 10 technologies, curated by seasoned IIT experts. Our
+                                            unparalleled guides lead you seamlessly through the ever-evolving tech
+                                            landscape, ensuring a perfect journey to mastery and success.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="roadmaps.html" class="btn1">
+                                                Visit RoadMaps </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="roadmap-png.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- job section -->
+
+                    <div class="carousel-item" style="position: relative;bottom:0em;">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box">
+                                        <h1>
+                                            Land Your <br>
+                                            dream job here! </h1>
+                                        <p>
+                                            Transform aspirations into reality by landing your dream jobs and
+                                            internships with us. Explore a curated collection of opportunities regularly
+                                            updated for freshers. Your gateway to success begins here – search, apply,
+                                            and step confidently into a future of professional fulfillment.
+                                        </p>
+                                        <div class="btn-box">
+                                            <a href="roadmaps.html" class="btn1">
+                                                Try Your Luck </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/cute-boy-working-on-laptop-5481592-4577161.png"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="carousel-item active" style="position: relative;top:0em;">
+                        <div class="container ">
+                            <div class="row">
+                                <div class="col-md-6 ">
+                                    <div class="detail-box">
+                                        <h1>
+                                            ProgMaster <br>
+                                            Private Limited
+                                        </h1>
+                                        <p>
+                                            Welcome to ProgMaster, where we specialize in delivering cutting-edge
+                                            software solutions and world-class corporate training programs. Our mission
+                                            is to empower individuals and businesses to thrive in the digital era </p>
+                                        <div class="btn-box">
+                                            <a href="#about" class="btn1">
+                                                Know More
+                                            </a> <a href="#courses" class="btn1">
+                                                Courses
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="img-box">
+                                        <img src="slider-img.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#customCarousel1" data-slide-to="0" class=""></li>
+                    <li data-target="#customCarousel1" data-slide-to="1" class=""></li>
+                    <li data-target="#customCarousel1" data-slide-to="2" class=""></li>
+                    <li data-target="#customCarousel1" data-slide-to="3" class=""></li>
+                    <li data-target="#customCarousel1" data-slide-to="4" class=""></li>
+                    <li data-target="#customCarousel1" data-slide-to="5" class="active"></li>
+                </ol>
+            </div>
+
+        </section>
+        <!-- end slider section -->
+    </div>
 
     <section class="about" id="about">
         <div class="responsive-container-block bigContainer">
@@ -1344,134 +1561,329 @@
     </section>
     <!----------------------team section--------------------------------------------- -->
     <!-- ======= Team Section ======= -->
-    <div class="container text-center py-5">
-        <h2 class="text-black">Our Team</h2>
-        <!-- <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, pariatur!</p> -->
 
-        <div class="row row-cols-1 row-cols-md-3 g-4 py-5"
-            style="display:flex;align-items:center;justify-content:center">
-            <div class="col">
-                <div class="card">
-                    <img src="li (12) (2).png" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">Purushotham Kandheri </h3>
-                        <p class="text-muted">CEO & Founder</p>
-                        <p class="card-text">Empowering every individual with quality education is not just a goal;
-                            it's
-                            the foundation of a fair, prosperous, and inclusive world for all.
-                        </p>
+    <section class="team_section layout_padding">
+        <div class="container-fluid">
+            <div class="heading_container heading_center">
+                <h2 class="">
+                    Our <span> Team</span>
+                </h2>
+            </div>
+
+            <div class="team_container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="https://media.licdn.com/dms/image/D5603AQE_CpuE5hp8NQ/profile-displayphoto-shrink_200_200/0/1701491618196?e=1707350400&v=beta&t=vEvi1ufHKq7LmSi5l0dnqaDRRFGr5XRkl9GwjevwZpo"
+                                    class="img1" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Purushotham Kandheri
+                                </h5>
+                                <p>
+                                    Founder & CEO
+                                </p>
+                            </div>
+                            <div class="social_box">
+                                <!-- <a href="#">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a> -->
+                                <a href="https://twitter.com/kandheri_Purush">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/purushotham-kandheri/">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://www.instagram.com/progmaster_pvt_ltd/">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <!-- <a href="#">
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a> -->
+                            </div>
+                        </div>
                     </div>
-                    <div class="d-flex justify-content-evenly">
-                        <a href="https://www.linkedin.com/in/purushotham-kandheri/"> <i class="bi bi-linkedin"></i></a>
-                        <a href=""> <i class="bi bi-instagram"></i></a>
-                        <a href="mailto:purushothamkandheri@gmail.com"> <i class="bi bi-envelope-check-fill"></i></a>
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="https://progmaster.in/mp.jpg" class="img1" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                    Purushotham Reddy
+                                </h5>
+                                <p>
+                                    Co-Founder
+                                </p>
+                            </div>
+                            <div class="social_box">
+                                <!-- <a href="#">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a> -->
+                                <a href="#">
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                                </a>
+                                <!-- <a href="#">
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a> -->
+                            </div>
+                        </div>
                     </div>
+                    <!-- <div class="col-lg-3 col-sm-6">
+                <div class="box ">
+                  <div class="img-box">
+                    <img src="file:///C:/Users/HP/AppData/Local/Temp/Rar$EXa0.674/finexo-html/images/team-4.jpg" class="img1" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                      Josephine Allard
+                    </h5>
+                    <p>
+                      Marketing Head
+                    </p>
+                  </div>
+                  <div class="social_box">
+                    <a href="#">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div> -->
+                    <!-- <div class="col-lg-3 col-sm-6">
+                <div class="box ">
+                  <div class="img-box">
+                    <img src="file:///C:/Users/HP/AppData/Local/Temp/Rar$EXa0.674/finexo-html/images/team-4.jpg" class="img1" alt="">
+                  </div>
+                  <div class="detail-box">
+                    <h5>
+                      Josephine Allard
+                    </h5>
+                    <p>
+                      Marketing Head
+                    </p>
+                  </div>
+                  <div class="social_box">
+                    <a href="#">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-linkedin" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-instagram" aria-hidden="true"></i>
+                    </a>
+                    <a href="#">
+                      <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                    </a>
+                  </div>
+                </div>
+              </div> -->
                 </div>
             </div>
-            <div class="col">
-                <div class="card">
-                    <img src="mp.jpg" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">Purushotham Reddy</h3>
-                        <p class="text-muted">Co-founder</p>
-                        <p class="card-text">Quality education is a mandatory key, unlocking opportunities for all,
-                            especially those who need it most—the impoverished, the marginalized.
-                        </p>
-                    </div>
-                    <div class="d-flex justify-content-evenly">
-                        <i class="bi bi-linkedin"></i>
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-envelope-check-fill"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="col">
-                <div class="card">
-                    <img src="" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h3 class="card-title">Mohan</h3>
-                        <p class="text-muted">Co-founder</p>
-                        <p class="card-text">Even in the face of adversity, the dreams of the poor can soar to
-                            incredible heights, for their determination knows no bounds on the path to achieving
-                            their
-                            desired goals.
-                        </p>
-                    </div>
-                    <div class="d-flex justify-content-evenly">
-                        <i class="bi bi-linkedin"></i>
-                        <i class="bi bi-instagram"></i>
-                        <i class="bi bi-envelope-check-fill"></i>
-                    </div>
-                </div>
-            </div> -->
-
         </div>
-    </div>
+    </section>
     <!-- End Team Section -->
     <!-- ------------------------------------------------------instuctor section------------------------------------------------------------------------------------------------------------ -->
 
-    <section class="team">
-        <div class="center">
-            <h1>Our Instructor</h1>
+
+    <div class="team-section">
+        <div class="heading_container heading_center">
+            <h2 class="">
+                Our <span> Instructors</span>
+            </h2>
+        </div>
+        <div class="cards-holding">
+            <div class="card-container">
+                <span class="pro">PRO</span>
+                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                <h3>Ricky Park</h3>
+                <h6>New York</h6>
+                <p>User interface designer and <br /> front-end developer</p>
+                <div class="buttons">
+                    <button class="primary">
+                        Message
+                    </button>
+                    <button class="primary ghost">
+                        Following
+                    </button>
+                </div>
+                <div class="skills">
+                    <h6>Skills</h6>
+                    <ul>
+                        <li>UI / UX</li>
+                        <li>Front End Development</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-container">
+                <span class="pro">PRO</span>
+                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                <h3>Ricky Park</h3>
+                <h6>New York</h6>
+                <p>User interface designer and <br /> front-end developer</p>
+                <div class="buttons">
+                    <button class="primary">
+                        Message
+                    </button>
+                    <button class="primary ghost">
+                        Following
+                    </button>
+                </div>
+                <div class="skills">
+                    <h6>Skills</h6>
+                    <ul>
+                        <li>UI / UX</li>
+                        <li>Front End Development</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-container">
+                <span class="pro">PRO</span>
+                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                <h3>Ricky Park</h3>
+                <h6>New York</h6>
+                <p>User interface designer and <br /> front-end developer</p>
+                <div class="buttons">
+                    <button class="primary">
+                        Message
+                    </button>
+                    <button class="primary ghost">
+                        Following
+                    </button>
+                </div>
+                <div class="skills">
+                    <h6>Skills</h6>
+                    <ul>
+                        <li>UI / UX</li>
+                        <li>Front End Development</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-container">
+                <span class="pro">PRO</span>
+                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                <h3>Ricky Park</h3>
+                <h6>New York</h6>
+                <p>User interface designer and <br /> front-end developer</p>
+                <div class="buttons">
+                    <button class="primary">
+                        Message
+                    </button>
+                    <button class="primary ghost">
+                        Following
+                    </button>
+                </div>
+                <div class="skills">
+                    <h6>Skills</h6>
+                    <ul>
+                        <li>UI / UX</li>
+                        <li>Front End Development</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-container">
+                <span class="pro">PRO</span>
+                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                <h3>Ricky Park</h3>
+                <h6>New York</h6>
+                <p>User interface designer and <br /> front-end developer</p>
+                <div class="buttons">
+                    <button class="primary">
+                        Message
+                    </button>
+                    <button class="primary ghost">
+                        Following
+                    </button>
+                </div>
+                <div class="skills">
+                    <h6>Skills</h6>
+                    <ul>
+                        <li>UI / UX</li>
+                        <li>Front End Development</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-container">
+                <span class="pro">PRO</span>
+                <img class="round" src="https://randomuser.me/api/portraits/women/79.jpg" alt="user" />
+                <h3>Ricky Park</h3>
+                <h6>New York</h6>
+                <p>User interface designer and <br /> front-end developer</p>
+                <div class="buttons">
+                    <button class="primary">
+                        Message
+                    </button>
+                    <button class="primary ghost">
+                        Following
+                    </button>
+                </div>
+                <div class="skills">
+                    <h6>Skills</h6>
+                    <ul>
+                        <li>UI / UX</li>
+                        <li>Front End Development</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>React</li>
+                        <li>Node</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <div class="team-content">
-            <div class="box-content">
-                <img src="https://ph-files.imgix.net/c5bfc8eb-1109-43bd-b055-6f8bcddd595d.png?auto=format&fit=crop">
-                <h3>Purushotham</h3>
-                <h5>C & Front-End-Dev Instructor</h5>
-                <!-- <div class="icons">
-                    <a href="#"><i class="ri-twitter-fill"></i></a>
-                    <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-fill"></i></a>
-                </div> -->
-                <a href="c instructor.html">Visit To Know More</a>
-            </div>
+    </div>
 
+    <!-- insrtructorrs  ends -->
 
-            <div class="box-content">
-                <img src="https://english.cdn.zeenews.com/sites/default/files/2017/11/17/639329-indian-men.jpg">
-                <h3>Mastan Vali
-                </h3>
-                <h5>Python Instructor</h5>
-                <!-- <div class="icons">
-                    <a href="#"><i class="ri-twitter-fill"></i></a>
-                    <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-fill"></i></a>
-                </div> -->
-                <a href="python instructor.html">Visit To Know More</a>
-
-            </div>
-
-            <div class="box-content">
-                <img src="j.png">
-                <h3> Jayachandra Reddy
-                </h3>
-                <h5>Java Instructor</h5>
-                <!-- <div class="icons">
-                    <a href="#"><i class="ri-twitter-fill"></i></a>
-                    <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                    <a href="#"><i class="ri-instagram-fill"></i></a>
-                </div> --> <a href="java instructor.html">Visit To Know More</a>
-
-            </div>
-            <div class="box-content">
-                <img src="https://design.osu.edu/sites/default/files/styles/news_and_events_image/public/2022-10/image_natalia_rodigues.jpg?h=252f27fa&itok=O5WT1g7_"
-                    alt="">
-                <h3>Sathvika</h3>
-                <h5>C++ Instructor</h5><a href="soupc++.html">Visit To Know More</a>
-
-            </div>
-            <!-- <div class="box-content">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/006/784/333/small/indian-man-stock-photo.jpg"
-                    alt="">
-                <h3>Ritish</h3>
-                <h5>React Instructor</h5><a href="#">Visit To Know More</a>
-
-            </div> -->
-
-        </div>
-    </section>
 
     <section class="container my-5" id="maincontent">
         <div class="text-center">
@@ -1774,7 +2186,7 @@
 
 
     <script src="https://widget.trustmary.com/0DWzcXf1c"></script>
-    
+
     <!-- footer started -->
     <div class="fourth-section-footer " id="footer-details ">
         <footer class="footer-distributed ">
