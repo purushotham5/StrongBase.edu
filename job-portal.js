@@ -6,7 +6,8 @@ const jobs = [
     details:
       "We are hiring for Freshers Java Net Android Web Developer <br> Qualification B Tech B E M C A Experience 0 4Years Skills Fresher.",
     openPositions: "Fresher",
-    link: "https://in.jobrapido.com/jobpreview/261754190?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+    link:
+      "https://in.jobrapido.com/jobpreview/261754190?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
   },
 
   {
@@ -15,8 +16,9 @@ const jobs = [
     skills: "Skills:Java,SQL,Python,HTML,CSS,JS",
     details:
       "Responsible for collecting, analyzing and interpreting large data sets to help organizations make better decisions.",
-      openPositions: "Fresher",
-      link: "https://www.shine.com/jobs/software-engineer-fresher/covai-industrials-recruitment/12778956?utm_source=linkedin-feed&amp;utm_medium=referral&amp;utm_campaign=linkedin-feed&amp;auto_apply=true",
+    openPositions: "Fresher",
+    link:
+      "https://www.shine.com/jobs/software-engineer-fresher/covai-industrials-recruitment/12778956?utm_source=linkedin-feed&amp;utm_medium=referral&amp;utm_campaign=linkedin-feed&amp;auto_apply=true",
   },
 
   {
@@ -25,113 +27,127 @@ const jobs = [
     skills: "Skills:Java,SQL,Python,HTML,CSS,JS",
     details:
       "We are hiring for Freshers Java Net Android Web Developer Qualification B Tech B E M C A.",
-      openPositions: "Fresher",
-      link: "https://www.linkedin.com/jobs/view/software-engineer-fresher-at-covai-industrials-recruitment-3751442332/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic&originalSubdomain=in",
-  },
-
-  {
+    openPositions: "Fresher",
+    link:
+      "https://www.linkedin.com/jobs/view/software-engineer-fresher-at-covai-industrials-recruitment-3751442332/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic&originalSubdomain=in",
+  },  {
     title: "Python Developer",
     image: "project-manager.svg",
     skills: "Skills:Python,SQL",
     details:
       "We are looking for a Python freshers to join our team and help us develop and maintain various software products.Freshers only need to apply Also providing placement assistence after internship period on the basis of performance of work.",
-      openPositions: "Fresher",
-      link: "https://www.simplyhired.co.in/job/daKacOiPFIA11R3aJhnFZTDpdC4xn4VIeO13so0YAeih8Q8SqRprIQ?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
-  },
-
-  {
+    openPositions: "Fresher",
+    link:
+      "https://www.simplyhired.co.in/job/daKacOiPFIA11R3aJhnFZTDpdC4xn4VIeO13so0YAeih8Q8SqRprIQ?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+  }, {
     title: "HTML / XML Programmer",
     image: "product-manager.svg",
     skills: "Skills:HTML,XML",
     details:
       "ResponsWe are hiring HTML / XML Programmer in Tirupati with some basic exposer wring content online which can add value to the brand, ideal candidate should be graduated from UGC approved campus and ready to boost their career into development.",
-      openPositions: "Fresher",
-      link: "https://freshersjobsalert.com/career/fresher-html-xml-programmer-jobs-in-tirupati-andhra-pradesh?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+    openPositions: "Fresher",
+    link:
+      "https://freshersjobsalert.com/career/fresher-html-xml-programmer-jobs-in-tirupati-andhra-pradesh?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
   },
+ 
 
   {
     title: "Work From Home/Computer Operator work",
-    image: "sales-representative.svg",    skills: "Skills: Team Leadership, Computer Literacy",
+    image: "sales-representative.svg",
+    skills: "Skills: Team Leadership, Computer Literacy",
 
     details:
       "We are offering a part-time Permanent Job... urgently required candidates for data entry operators It's an global opportunity It is Part time work, full time work..anyone can apply Work from smartphone or laptop or by any gadgets can be done....      ",
-      openPositions: "Fresher",
-      link: "https://www.linkedin.com/jobs/view/work-from-home-computer-operator-work-fresher-experience-at-aspect-solution-3752097936/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic&originalSubdomain=in",
+    openPositions: "Fresher",
+    link:
+      "https://www.linkedin.com/jobs/view/work-from-home-computer-operator-work-fresher-experience-at-aspect-solution-3752097936/?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic&originalSubdomain=in",
   },
-
   {
     title: "Software Engineer I",
     image: "software-engineer.svg",
-    skills:"Java, JavaScript, NodeJs, SpringBoot, Angular, React",
+    skills: "Java, JavaScript, NodeJs, SpringBoot, Angular, React",
     details:
       "Programming knowledge of Java, JavaScript, NodeJs, SpringBoot, Angular, React, or competitive technologies",
-      openPositions: "Fresher",
-      link: "https://alliance.wd3.myworkdayjobs.com/en-US/nissanjobs/job/software-engineer-i_r00151957-1",
-  },
-  {
+    openPositions: "Fresher",
+    link:
+      "https://alliance.wd3.myworkdayjobs.com/en-US/nissanjobs/job/software-engineer-i_r00151957-1",
+  },  {
     title: "JAVA Developer Internship",
     image: "sales-representative.svg",
-    skills:'BSc in Computer Science, Engineering, or relevant field Understanding of Github version control',
+    skills:
+      "BSc in Computer Science, Engineering, or relevant field Understanding of Github version control",
     details:
       "Designing and developing high-volume, low-latency applications for mission-critical systems and delivering high-availability and performance. ",
-      openPositions: "Internship",
-      link: "https://www.linkedin.com/jobs/view/3667474965/?alternateChannel=search&refId=b4ed72a2-b021-499a-bb8f-fbfc95cdf26a&trackingId=lVFpV%2BduQj2bf0WdCNtTkw%3D%3D",
-  },
-
-  {
+    openPositions: "Internship",
+    link:
+      "https://www.linkedin.com/jobs/view/3667474965/?alternateChannel=search&refId=b4ed72a2-b021-499a-bb8f-fbfc95cdf26a&trackingId=lVFpV%2BduQj2bf0WdCNtTkw%3D%3D",
+  },  {
     title: "Java Programmer - Fresher",
     image: "marketing-manager.svg",
-    skills:"Strong Knowledge in Java,Fluent in English, Good Communication skills",
+    skills:
+      "Strong Knowledge in Java,Fluent in English, Good Communication skills",
     details:
       "developing high-volume, low-latency applications for mission-critical systems.....",
-      openPositions: "Fresher",
-      link: "https://www.simplyhired.co.in/job/6Zqg2_aeB8jIneXhXyyRH3T4lLV-LHTVefHgUuGVl1iNI3f0yH3j9g?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+    openPositions: "Fresher",
+    link:
+      "https://www.simplyhired.co.in/job/6Zqg2_aeB8jIneXhXyyRH3T4lLV-LHTVefHgUuGVl1iNI3f0yH3j9g?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
   }, {
     title: "Web Development Intern",
     image: "product-manager.svg",
-    skills:'Skills:-HTML,CSS,JS (Basics)',
+    skills: "Skills:-HTML,CSS,JS (Basics)",
     details:
       "Write well-designed, testable, efficient code by using the best software development practices, Create a website layout/user interface by using standard HTML/CSS practices",
-      openPositions: "Internship",
-      link: "https://internshala.com/internship/detail/web-development-part-time-job-internship-at-chennai-bangalore-in-dhanwantri-charity-trust1701398118",
-  },{
+    openPositions: "Internship",
+    link:
+      "https://internshala.com/internship/detail/web-development-part-time-job-internship-at-chennai-bangalore-in-dhanwantri-charity-trust1701398118",
+  }, 
+  {
     title: "Product Management Intern    ",
-    image: "sales-representative.svg",    skills: "Skills: Team Leadership, Computer Literacy,Microsoft Excel, Analytical Skills, +8 more",
+    image: "sales-representative.svg",
+    skills:
+      "Skills: Team Leadership, Computer Literacy,Microsoft Excel, Analytical Skills, +8 more",
     details:
       "This is an internship role, and the selected candidate will work closely with the team and learn about product strategy, market research, and financial product management.....      ",
-      openPositions: "Internship",
-      link: "https://www.linkedin.com/jobs/view/3773061191/?alternateChannel=search&refId=R6bi8F4Df4U%2BOQMQhycVig%3D%3D&trackingId=SAhvQuqgb9YnbG%2B%2BSfGQdg%3D%3D#HYM",
-  },{
+    openPositions: "Internship",
+    link:
+      "https://www.linkedin.com/jobs/view/3773061191/?alternateChannel=search&refId=R6bi8F4Df4U%2BOQMQhycVig%3D%3D&trackingId=SAhvQuqgb9YnbG%2B%2BSfGQdg%3D%3D#HYM",
+  },  {
     title: "Winter Training and Internship with Projects",
     image: "software-engineer.svg",
-    skills:"Skills:-Coaching, Employee Training, Human Resources (HR), Marketing, Research Skills, Team Work ",
+    skills:
+      "Skills:-Coaching, Employee Training, Human Resources (HR), Marketing, Research Skills, Team Work ",
     details:
       "As a ParParticipate in 3 real time projects for a hands-on learning experience from the industrial experts......",
-      openPositions: "Internship",
-      link: "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
-  },, {
+    openPositions: "Internship",
+    link:
+      "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
+  },{
     title: "Web Development Intern",
     image: "product-manager.svg",
-    skills:'Skills:-HTML,CSS,JS (Basics)',
+    skills: "Skills:-HTML,CSS,JS (Basics)",
     details:
       "Write well-designed, testable, efficient code by using the best software development practices ,Create a website layout/user interface by using standard HTML/CSS practices      ",
-      openPositions: "Internship",
-      link: "https://in.bebee.com/job/20231203-6667c09e1be5b6fb6d858e3872fa896c?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+    openPositions: "Internship",
+    link:
+      "https://in.bebee.com/job/20231203-6667c09e1be5b6fb6d858e3872fa896c?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
   },{
     title: "Python Development Intern    ",
-    image: "sales-representative.svg",    skills: "Skills: Web development SQL Python HTML5",
+    image: "sales-representative.svg",
+    skills: "Skills: Web development SQL Python HTML5",
     details:
       "We are seeking a motivated and skilled Python/HTML Developer Intern to join our dynamic development team.....      ",
-      openPositions: "Internship",
-      link: "https://www.simplyhired.co.in/job/ZubxhXG3HWoW5sAvrwNgeP5NSlBtMKVVihZp2Uldva_kj2JN0m9Mcw?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
-  },{
-    title: "Python Development Intern    ",
+    openPositions: "Internship",
+    link:
+      "https://www.simplyhired.co.in/job/ZubxhXG3HWoW5sAvrwNgeP5NSlBtMKVVihZp2Uldva_kj2JN0m9Mcw?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+  },  {
+    title: "Python Development Intern",
     image: "software-engineer.svg",
-    skills:"Skills:-Python,MySql ",
+    skills: "Skills:-Python,MySql",
     details:
       "3 Months conversion to regular employment based on performance......",
-      openPositions: "Internship",
-      link: "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
+    openPositions: "Internship",
+    link:
+      "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
   },
 ];
 
@@ -183,7 +199,6 @@ const createJobListingCards = () => {
       } else {
         openPositions.innerHTML = `${job.openPositions} `;
       }
-
       jobCard.appendChild(image);
       jobCard.appendChild(title);
       jobCard.appendChild(details);
