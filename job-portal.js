@@ -91,9 +91,9 @@ const jobs = [
     image: "product-manager.svg",
     skills:'Skills:-HTML,CSS,JS (Basics)',
     details:
-      "We needs new age interns to become a good world generation",
+      "Write well-designed, testable, efficient code by using the best software development practices, Create a website layout/user interface by using standard HTML/CSS practices",
       openPositions: "Internship",
-      link: "https://www.linkedin.com/jobs/view/3777298113/?alternateChannel=search&refId=hLOHAGy60CjKSjGFn%2B6LUg%3D%3D&trackingId=wkbmGm0y3skuc6iCFrwGkQ%3D%3D",
+      link: "https://internshala.com/internship/detail/web-development-part-time-job-internship-at-chennai-bangalore-in-dhanwantri-charity-trust1701398118",
   },{
     title: "Product Management Intern    ",
     image: "sales-representative.svg",    skills: "Skills: Team Leadership, Computer Literacy,Microsoft Excel, Analytical Skills, +8 more",
