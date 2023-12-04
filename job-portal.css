@@ -113,17 +113,18 @@ body {
 
 .jobs-list-container .details-btn {
   text-decoration: none;
-  border: 1px solid #023047;
-  color: #000;
+  border: 1px solid #000;
+  color: #fff;
   padding: 8px 16px;
   border-radius: 8px;
   text-align: center;
   margin-top: 20px;
   transition: all 400ms ease;
+  background: #143e53;
 }
 
 .jobs-list-container .details-btn:hover {
-  background: #023047;
+  background: #000000;
   color: #fff;
 }
 
