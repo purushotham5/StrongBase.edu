@@ -46,7 +46,8 @@ body {
   width: 700px;
   height: 100vh;
   text-align: center;
-  background-image: linear-gradient(to right top, #b29ccf, #ac9ed4, #a5a0d9, #9da3de, #94a5e2, #88aeeb, #79b6f3, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);}
+  background-image: linear-gradient(to right top, #b29ccf, #ac9ed4, #a5a0d9, #9da3de, #94a5e2, #88aeeb, #79b6f3, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+}
 
 .intro-container {
   width: 370px;
