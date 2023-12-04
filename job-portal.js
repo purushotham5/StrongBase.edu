@@ -109,6 +109,29 @@ const jobs = [
       "As a ParParticipate in 3 real time projects for a hands-on learning experience from the industrial experts......",
       openPositions: "Internship",
       link: "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
+  },, {
+    title: "Web Development Intern",
+    image: "product-manager.svg",
+    skills:'Skills:-HTML,CSS,JS (Basics)',
+    details:
+      "Write well-designed, testable, efficient code by using the best software development practices ,Create a website layout/user interface by using standard HTML/CSS practices      ",
+      openPositions: "Internship",
+      link: "https://in.bebee.com/job/20231203-6667c09e1be5b6fb6d858e3872fa896c?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+  },{
+    title: "Python Development Intern    ",
+    image: "sales-representative.svg",    skills: "Skills: Web development SQL Python HTML5",
+    details:
+      "We are seeking a motivated and skilled Python/HTML Developer Intern to join our dynamic development team.....      ",
+      openPositions: "Internship",
+      link: "https://www.simplyhired.co.in/job/ZubxhXG3HWoW5sAvrwNgeP5NSlBtMKVVihZp2Uldva_kj2JN0m9Mcw?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+  },{
+    title: "Python Development Intern    ",
+    image: "software-engineer.svg",
+    skills:"Skills:-Python,MySql ",
+    details:
+      "3 Months conversion to regular employment based on performance......",
+      openPositions: "Internship",
+      link: "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
   },
 ];
 
