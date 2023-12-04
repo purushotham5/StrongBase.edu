@@ -156,7 +156,7 @@ body {
 /* follow buttons for jobs */
 .follow-buttons-jobs {
   width: 100%;
-  background: #000;
+  background: rgb(0, 0, 0);
 }
 
 .follow-buttons-jobs a:nth-child(1) {
