@@ -187,7 +187,7 @@ const jobs = [
       "The role is responsible for software development /testing/deployment/debugging process. This is an operational role that may seek appropriate level of guidance and advice to ensure delivery of quality outcomes.",
     openPositions: "full time",
     link:
-      "https://www.google.com/about/careers/applications/jobs/results/100297584867713734-associate-product-manager-university-graduate-2024",
+      "https://jobs.tatacommunications.com/job/Chennai-Engineer-Software-&-Application-Development-%28Software-&-Application-Development%29-B2101_1/1095878900/",
   },
 ];
 
