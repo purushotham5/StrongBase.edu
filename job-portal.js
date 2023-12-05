@@ -1,13 +1,13 @@
 const jobs = [
   {
-    title: "Software Engineer",
+    title: "Accenture Associate Software Engineer",
     image: "software-engineer.svg",
-    skills: "Skills:Java Android,HTML,CSS,JS",
+    skills: "Skills:C/C++",
     details:
-      "We are hiring for Freshers Java Net Android Web Developer <br> Qualification B Tech B E M C A Experience 0 4Years Skills Fresher.",
+      "We are hiring for Freshers <br> Qualification B Tech B E M C A Experience 0-1 Years Skills Fresher.",
     openPositions: "Fresher",
     link:
-      "https://in.jobrapido.com/jobpreview/261754190?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic",
+      "https://indiacampus.accenture.com/register/accenture/allinl1/apply/?event=5551&job=2211",
   },
 
   {
