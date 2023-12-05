@@ -234,3 +234,31 @@ img {
     justify-content: space-around;
   }
 }
+
+.follow-buttons-jobs {
+  margin-top: 2em;
+}
+
+.follow-buttons-jobs a {
+  padding: 5px 10px;
+  border: 2px solid black;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.follow-buttons-jobs a:nth-child(1) {
+  background: rgb(42, 235, 113);
+  color: black;
+  font-weight: 1000;
+}
+
+.follow-buttons-jobs a:nth-child(2) {
+  background: #012233;
+  color: white;
+  font-weight: 800;
+
+}
+
+.follow-buttons-jobs a:nth-child(3) {
+  color: #ffff;background: #000;
+}
