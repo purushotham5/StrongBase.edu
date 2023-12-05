@@ -157,6 +157,16 @@ const jobs = [
     openPositions: "Internship",
     link:
       "https://boards.greenhouse.io/fortra/jobs/4303268006?gh_src=61ca785e6us",
+  }, {
+    title: "Associate Product Manager, University Graduate 2024    ",
+    image: "software-engineer.svg",
+    skills:
+      "Skills:-Internship or Teaching Assistant experience in software development or a related field, Marketing, Research Skills, Team Work ",
+    details:
+      "Currently enrolled in a Bachelor's or Master's degree in Computer Science or a related field",
+    openPositions: "Internship",
+    link:
+      "https://www.google.com/about/careers/applications/jobs/results/100297584867713734-associate-product-manager-university-graduate-2024",
   },
 ];
 
