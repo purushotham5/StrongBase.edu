@@ -244,6 +244,12 @@ img {
   border: 2px solid black;
   text-decoration: none;
   border-radius: 20px;
+  margin: 10px;
+  text-align: center;
+}
+
+.follow-buttons-jobs a:hover {
+  background: rgba(226, 19, 19, 0.5);
 }
 
 .follow-buttons-jobs a:nth-child(1) {
@@ -260,5 +266,6 @@ img {
 }
 
 .follow-buttons-jobs a:nth-child(3) {
-  color: #ffff;background: #000;
+  color: #ffff;
+  background: #000;
 }
