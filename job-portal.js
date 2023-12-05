@@ -148,6 +148,15 @@ const jobs = [
     openPositions: "Internship",
     link:
       "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
+  },{
+    title: "Software Engineer I    ",
+    image: "product-manager.svg",
+    skills: "Skills:-Comply with standards, version controls, and product release procedures.",
+    details:
+      "This position is responsible for enhancing and maintaining existing software products as well as developing new products.  The ideal candidate has a strong desire for excellence, with confidence in their expertise, and is a creative problem solver.",
+    openPositions: "Internship",
+    link:
+      "https://boards.greenhouse.io/fortra/jobs/4303268006?gh_src=61ca785e6us",
   },
 ];
 
