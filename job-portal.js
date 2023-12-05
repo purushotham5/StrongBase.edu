@@ -158,7 +158,7 @@ const jobs = [
       "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
   },
   {
-    title: "Software Engineer I ( Goolgle )  ",
+    title: "Software Engineer I ( Google )  ",
     image: "product-manager.svg",
     skills:
       "Skills:-Comply with standards, version controls, and product release procedures.",
