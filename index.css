@@ -29,17 +29,6 @@ body {
 
 }
 
-@keyframes bg {
-  /* 10% {
-    background-image: url('https://assets.materialup.com/uploads/cd3b3294-1c8b-462a-9229-4e905e4c6fe8/preview.gif');
-  } */
-
-  20% {
-    background-image: url('https://dz2cdn2.dzone.com/thumbnail?fid=16854006&w=600');
-  }
-}
-
-
 
 spans {
   font-size: 110px;
@@ -78,7 +67,7 @@ spans {
 
 @media (max-width: 600px) {
   .header {
-    min-height: 150vh;
+    min-height: 100vh;
 
   }
 }
