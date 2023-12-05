@@ -158,7 +158,7 @@ const jobs = [
       "https://www.linkedin.com/jobs/view/3777298526/?alternateChannel=search&refId=0ujnMUxlrEA%2BYWn7%2B6az6Q%3D%3D&trackingId=rlLWKWc7sC3ENR%2FDdWsdSw%3D%3D",
   },
   {
-    title: "Software Engineer I ( Google )  ",
+    title: "Software Engineer I  ",
     image: "product-manager.svg",
     skills:
       "Skills:-Comply with standards, version controls, and product release procedures.",
@@ -169,7 +169,7 @@ const jobs = [
       "https://boards.greenhouse.io/fortra/jobs/4303268006?gh_src=61ca785e6us",
   },
   {
-    title: "Associate Product Manager, University Graduate 2024    ",
+    title: "Associate Product Manager, University Graduate 2024 ( Google ) ",
     image: "software-engineer.svg",
     skills:
       "Skills:-Internship or Teaching Assistant experience in software development or a related field, Marketing, Research Skills, Team Work ",
