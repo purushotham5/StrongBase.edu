@@ -188,25 +188,49 @@ const jobs = [
     openPositions: "full time",
     link:
       "https://jobs.tatacommunications.com/job/Chennai-Engineer-Software-&-Application-Development-%28Software-&-Application-Development%29-B2101_1/1095878900/",
-  }, {
+  },
+  {
     title: "Labcorp Software Engineer   ",
-    image: "https://cdn.phenompeople.com/CareerConnectResources/COVAGLOBAL/images/labcorp-1623160691018.png",
+    image:
+      "https://cdn.phenompeople.com/CareerConnectResources/COVAGLOBAL/images/labcorp-1623160691018.png",
     skills: "Skills:-Good Knowledge on coding/testing environment,Team Work ",
     details:
       "As a UI Software Engineer, you will play a crucial role in shaping the user experience of our products and ensuring they are both visually appealing and highly functional.",
     openPositions: "full time",
     link:
       "https://careers.labcorp.com/global/en/job/COVAGLOBAL2361951EXTERNALENGLOBAL/UI-Software-Engineer",
-  }, {
+  },
+  {
     title: "Software Development Engineer",
-    image: "https://cdn.phenompeople.com/CareerConnectResources/ADOBUS/images/Header-1649064948136.png",
+    image:
+      "https://cdn.phenompeople.com/CareerConnectResources/ADOBUS/images/Header-1649064948136.png",
     skills: "Skills:-Good Knowledge on coding/testing environment,Team Work ",
     details:
       "We’re on a mission to hire the very best and are committed to creating exceptional employee experiences where everyone is respected and has access to equal opportunity.",
     openPositions: "full time",
     link:
-"https://careers.adobe.com/us/en/job/R139859/2024-University-Graduate-Software-Development-Engineer" 
- },
+      "https://careers.adobe.com/us/en/job/R139859/2024-University-Graduate-Software-Development-Engineer",
+  }, {
+    title: "Software Development Engineer",
+    image:
+      "https://cdn.phenompeople.com/CareerConnectResources/ADOBUS/images/Header-1649064948136.png",
+    skills: "Skills:-Good Knowledge on coding,Team Work ",
+    details:
+      "We’re on a mission to hire the very best and are committed to creating exceptional employee experiences where everyone is respected and has access to equal opportunity.",
+    openPositions: "full time",
+    link:
+      "https://careers.adobe.com/us/en/job/R139859/2024-University-Graduate-Software-Development-Engineer",
+  },{
+    title: "HR- JR- Operations    ",
+    image:
+      "https://hiringsolutions.blob.core.windows.net/company/eb4452c9-95ba-45e1-bae1-3524205c387a/Accolite%20Logo_300%20x%20300-01.png",
+    skills: "Skills:-Good Knowledge on coding or programming, Team Work ",
+    details:
+      "Accolite Digital is a leading digital transformation services provider that delivers design-led, complex digital transformation initiatives to Fortune 500 clients. ",
+    openPositions: "full time",
+    link:
+      "https://accolite.turbohire.co/dashboard?orgId=87045889-670e-45d4-b247-3929714a8abb&type=0",
+  },
 ];
 
 const jobsHeading = document.querySelector(".jobs-list-container h2");
