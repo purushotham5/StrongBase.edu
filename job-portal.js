@@ -188,6 +188,15 @@ const jobs = [
     openPositions: "full time",
     link:
       "https://jobs.tatacommunications.com/job/Chennai-Engineer-Software-&-Application-Development-%28Software-&-Application-Development%29-B2101_1/1095878900/",
+  }, {
+    title: "Labcorp Software Engineer   ",
+    image: "https://cdn.phenompeople.com/CareerConnectResources/COVAGLOBAL/images/labcorp-1623160691018.png",
+    skills: "Skills:-Good Knowledge on coding/testing environment,Team Work ",
+    details:
+      "As a UI Software Engineer, you will play a crucial role in shaping the user experience of our products and ensuring they are both visually appealing and highly functional.",
+    openPositions: "full time",
+    link:
+      "https://careers.labcorp.com/global/en/job/COVAGLOBAL2361951EXTERNALENGLOBAL/UI-Software-Engineer",
   },
 ];
 
