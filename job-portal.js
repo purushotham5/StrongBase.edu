@@ -223,7 +223,7 @@ const jobs = [
   },{
     title: "HR- JR- Operations    ",
     image:
-      "https://hiringsolutions.blob.core.windows.net/company/eb4452c9-95ba-45e1-bae1-3524205c387a/Accolite%20Logo_300%20x%20300-01.png",
+      "https://accolite.turbohire.co/careerpage/87045889-670e-45d4-b247-3929714a8abb",
     skills: "Skills:-Good Knowledge on coding or programming, Team Work ",
     details:
       "Accolite Digital is a leading digital transformation services provider that delivers design-led, complex digital transformation initiatives to Fortune 500 clients. ",
