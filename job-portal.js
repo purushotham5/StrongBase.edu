@@ -175,7 +175,7 @@ const jobs = [
     title: "Labcorp Software Engineer   ",
     image:
       "https://cdn.phenompeople.com/CareerConnectResources/COVAGLOBAL/images/labcorp-1623160691018.png",
-    skills: "Skills:-Good Knowledge on coding/testing environment,Team Work ",
+    skills: "Skills:-Good Knowledge on coding/testing environment,Communication ",
     details:
       "As a UI Software Engineer, you will play a crucial role in shaping the user experience of our products and ensuring they are both visually appealing and highly functional.",
     openPositions: "full time",
