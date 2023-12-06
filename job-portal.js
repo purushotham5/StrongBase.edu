@@ -223,6 +223,16 @@ const jobs = [
     openPositions: "full time",
     link:
       "https://accolite.turbohire.co/dashboard?orgId=87045889-670e-45d4-b247-3929714a8abb&type=0",
+  },{
+    title: "UI Design Intern (2023-2024)    ",
+    image:
+      "https://lever-client-logos.s3.us-west-2.amazonaws.com/eb7738e7-d908-42f5-97da-61b28e53ce73-1631634736627.png",
+    skills: "Skills:-HTML,CSS ",
+    details:
+      "As part of the internship, you will be solving complex customer issues, exploring and inventing simple solutions, optimizing's existing products or creating new products, collecting and analyzing customer insights",
+    openPositions: "Internship",
+    link:
+      "https://jobs.lever.co/upstox/b0a2b2aa-59ed-41b5-8220-2421b0215360",
   },
 ];
 
