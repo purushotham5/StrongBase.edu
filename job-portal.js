@@ -197,7 +197,16 @@ const jobs = [
     openPositions: "full time",
     link:
       "https://careers.labcorp.com/global/en/job/COVAGLOBAL2361951EXTERNALENGLOBAL/UI-Software-Engineer",
-  },
+  }, {
+    title: "Software Development Engineer",
+    image: "https://cdn.phenompeople.com/CareerConnectResources/ADOBUS/images/Header-1649064948136.png",
+    skills: "Skills:-Good Knowledge on coding/testing environment,Team Work ",
+    details:
+      "We’re on a mission to hire the very best and are committed to creating exceptional employee experiences where everyone is respected and has access to equal opportunity.",
+    openPositions: "full time",
+    link:
+"https://careers.adobe.com/us/en/job/R139859/2024-University-Graduate-Software-Development-Engineer" 
+ },
 ];
 
 const jobsHeading = document.querySelector(".jobs-list-container h2");
