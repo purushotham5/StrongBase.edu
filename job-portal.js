@@ -253,6 +253,16 @@ const jobs = [
     openPositions: "Full Time Job",
     link:
       "https://jobs.intel.com/en/job/bengaluru/soc-design-engineer/41147/58495481216",
+  },{
+    title: " Software Engineer    ",
+    image:
+      "https://alcon.wd5.myworkdayjobs.com/careers_alcon/assets/logo",
+    skills: "Skills:-Good collaboration and teamwork skills, Design,SoC",
+    details:
+      "Software Engineering work focuses on developing software for use in operating/controlling computer hardware, which provides a platform for running end user applications Systems software is written using lower-level programming languages and includes operating systems, device drivers, compilers, utilities, etc.",
+    openPositions: "Full Time Job",
+    link:
+      "https://alcon.wd5.myworkdayjobs.com/en-US/careers_alcon/job/Bangalore---AGS/Software-Engineer_R-2023-28142-2",
   },
 ];
 
