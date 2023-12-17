@@ -233,6 +233,16 @@ const jobs = [
     openPositions: "Internship",
     link:
       "https://jobs.lever.co/upstox/b0a2b2aa-59ed-41b5-8220-2421b0215360",
+  },{
+    title: "Associate Software Engineer     ",
+    image:
+      "https://recruiting.ultipro.com/ROP1001ROPER/JobBoard/affe9737-065b-476c-8e45-591a0a0d942a/Styles/GetLargeHeaderLogo?brandId=ce1b0524-4f3e-407c-9a36-d797f3c9f66e&m=638005704041830000",
+    skills: "Skills:- C, C++, and OOPS Concepts,Solid knowledge of scripting and object-oriented software development principles,Good collaboration and teamwork skills",
+    details:
+      "Develops software solutions across multiple subsystems within our applications, including collaboration with requirements definition, prototyping, architectural design, coding, testing and deployment",
+    openPositions: "Full Time Job",
+    link:
+      "https://recruiting.ultipro.com/ROP1001ROPER/JobBoard/affe9737-065b-476c-8e45-591a0a0d942a/OpportunityDetail?opportunityId=57e2d0c2-c8bb-4ec0-88b9-8d57113055a7",
   },
 ];
 
