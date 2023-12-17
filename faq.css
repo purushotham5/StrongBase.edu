@@ -10,7 +10,7 @@ h4 {
 }
 
 h2 {
-  color: #333;
+  color: #ffffff;
 }
 
 .fa,
@@ -70,7 +70,7 @@ a.text-secondary:hover {
 }
 .collapse .card p {
   margin-left: 1em;
-  color: black;
+  color: #00ff5a;
 }
 .collapse .card p:hover {
   color: black;
