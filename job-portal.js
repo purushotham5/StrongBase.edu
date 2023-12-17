@@ -246,13 +246,13 @@ const jobs = [
   },{
     title: "Associate Software Engineer     ",
     image:
-      "https://recruiting.ultipro.com/ROP1001ROPER/JobBoard/affe9737-065b-476c-8e45-591a0a0d942a/Styles/GetLargeHeaderLogo?brandId=ce1b0524-4f3e-407c-9a36-d797f3c9f66e&m=638005704041830000",
-    skills: "Skills:- C, C++, and OOPS Concepts,Solid knowledge of scripting and object-oriented software development principles,Good collaboration and teamwork skills",
+      "https://tbcdn.talentbrew.com/company/599/gst-v1_0/img/logo/logo-intel-blue.svg",
+    skills: "Skills:-Candidates with M.E/M.Tech/B.E/B.Tech in VLSI/ Electronics/ Computer Engineering or Computer Science Engineering. Position for 2024 graduates,Good collaboration and teamwork skills, Design,SoC",
     details:
-      "Develops software solutions across multiple subsystems within our applications, including collaboration with requirements definition, prototyping, architectural design, coding, testing and deployment",
+      "We are looking for a highly motivated 2024 Graduates in areas of RTL design, Design for Debug",
     openPositions: "Full Time Job",
     link:
-      "https://recruiting.ultipro.com/ROP1001ROPER/JobBoard/affe9737-065b-476c-8e45-591a0a0d942a/OpportunityDetail?opportunityId=57e2d0c2-c8bb-4ec0-88b9-8d57113055a7",
+      "https://jobs.intel.com/en/job/bengaluru/soc-design-engineer/41147/58495481216",
   },
 ];
 
