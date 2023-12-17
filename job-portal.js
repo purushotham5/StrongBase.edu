@@ -244,7 +244,7 @@ const jobs = [
     link:
       "https://recruiting.ultipro.com/ROP1001ROPER/JobBoard/affe9737-065b-476c-8e45-591a0a0d942a/OpportunityDetail?opportunityId=57e2d0c2-c8bb-4ec0-88b9-8d57113055a7",
   },{
-    title: "Associate Software Engineer     ",
+    title: "intel Software Engineer1 ",
     image:
       "https://tbcdn.talentbrew.com/company/599/gst-v1_0/img/logo/logo-intel-blue.svg",
     skills: "Skills:-Candidates with M.E/M.Tech/B.E/B.Tech in VLSI/ Electronics/ Computer Engineering or Computer Science Engineering. Position for 2024 graduates,Good collaboration and teamwork skills, Design,SoC",
