@@ -394,7 +394,9 @@ document
 
 
 py0122161:"M Sreenivasulu(2).pdf",
-      py0122162:"B.Lakshmi Kanth.pdf";
+      py0122162:"B.Lakshmi Kanth.pdf",
+
+      py01i01:"Raviteja Internship Certificate.pdf";
     };
 
     // Check if the search query has a corresponding destination page
