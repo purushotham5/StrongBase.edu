@@ -148,6 +148,8 @@ document
       jv0110079: "S P Vinitha.pdf",
       jv0110080: "Mallepati Bharath.pdf",
       jv0110081: "T Mani Kumar.pdf",
+      jvi0110082: "intern.pdf",
+      jvc0110081: "course.pdf",
 
 
       // front-end 
