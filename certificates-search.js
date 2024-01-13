@@ -393,12 +393,6 @@ document
       py0122158: "Nellepalli Keerthi.pdf",
       py0122159: "P Sai Srinivas.pdf",
       py0122160: "Dasari Chandra.pdf",
-
-
-py0122161:"M Sreenivasulu(2).pdf",
-      py0122162:"B.Lakshmi Kanth.pdf",
-
-      py01i01:"Raviteja Internship Certificate.pdf";
     };
 
     // Check if the search query has a corresponding destination page
