@@ -152,7 +152,7 @@ document
       jvi0110001: "intern.pdf",
       //Courses
       jvc0110001: "course.pdf",
-      jvc0110002: "python.pdf",
+      jvc0110002: "PYTHON.pdf",
 
       // front-end 
       fed019001: "A R Rajammal.pdf",
