@@ -148,9 +148,11 @@ document
       jv0110079: "S P Vinitha.pdf",
       jv0110080: "Mallepati Bharath.pdf",
       jv0110081: "T Mani Kumar.pdf",
-      jvi0110082: "intern.pdf",
-      jvc0110081: "course.pdf",
-      jvc0110082: "python.pdf",
+      //Internships
+      jvi0110001: "intern.pdf",
+      //Courses
+      jvc0110001: "course.pdf",
+      jvc0110002: "python.pdf",
 
       // front-end 
       fed019001: "A R Rajammal.pdf",
