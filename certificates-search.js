@@ -235,7 +235,7 @@ document
 
       //internships
       fedi0115001:'Abburi Thriveni.pdf',
-      fedi0115008:'fedi0115008.pdf',
+      fedi0115008:'FEDI0115008.pdf',
       // Add more mappings as needed
 
 
