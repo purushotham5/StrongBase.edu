@@ -234,8 +234,11 @@ document
       fed019077:'Kondini Bhavana.pdf',
 
       //internships
-      fedi0115001:'Abburi Thriveni.pdf',
-      fedi0115008:'FED0115008.pdf',
+      fed0115001:'Abburi Thriveni.pdf',
+      fed0115002:'',
+      fed0115003:'',
+     
+      fed0115008:'FED0115008.pdf',
       // Add more mappings as needed
 
 
