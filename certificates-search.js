@@ -232,6 +232,10 @@ document
       fed019075:'Cingiri Reshma.pdf',
       fed019076:'Hari.pdf',
       fed019077:'Kondini Bhavana.pdf',
+
+      //internships
+      fedi0115001:'Abburi Thriveni.pdf',
+      fedi0115008:'fedi0115008.pdf',
       // Add more mappings as needed
 
 
