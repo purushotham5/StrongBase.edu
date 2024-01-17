@@ -405,6 +405,9 @@ document
       py0122158: "Nellepalli Keerthi.pdf",
       py0122159: "P Sai Srinivas.pdf",
       py0122160: "Dasari Chandra.pdf",
+            
+      //internships 
+      pyi0115001: 'PYI0115001.pdf',
     };
 
     // Check if the search query has a corresponding destination page
