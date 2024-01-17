@@ -154,6 +154,9 @@ document
       jvc0110001: "course.pdf",
       jvc0110002: "PYTHON.pdf",
 
+      //main id
+      jvi016001:'JVI016001.pdf',
+
       // front-end 
       fed019001: "A R Rajammal.pdf",
       fed019002: "Aswini Enukonda.pdf",
