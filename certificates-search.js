@@ -425,6 +425,9 @@ fed01150137:'FED01150137.pdf',
 fed01150138:'FED01150138.pdf',
 fed01150139:'FED01150139.pdf',
 fed01150140:'FED01150140.pdf',
+fed01150141:'FED01150141.pdf',
+fed01150142:'FED01150142.pdf',
+fed01150143:'FED01150143.pdf',
       
       // Add more mappings as needed
 
@@ -726,6 +729,25 @@ pyi01150132:'PYI01150132.pdf',
 pyi01150133:'PYI01150133.pdf',
 pyi01150134:'PYI01150134.pdf',
 pyi01150135:'PYI01150135.pdf',
+pyi01150136:'PYI01150136.pdf',
+pyi01150137:'PYI01150137.pdf',
+
+//AWS 
+awsi011001:'AWSI011001.pdf',
+//AI 
+aii011001:'AII011001.pdf',
+aii011002:'AII011002.pdf',
+aii011003:'AII011003.pdf',
+aii011004:'AII011004.pdf',
+aii011005:'AII011005.pdf',
+//ML
+mli011001:'MLI011001.pdf',
+mli011002:'MLI011002.pdf',
+//CLOUD COMPUTING
+cci011001:'CCI011001.pdf',
+//EMBEDED SYSTEMS
+esi011001:'ESI011001.pdf',
+
     };
 
     // Check if the search query has a corresponding destination page
