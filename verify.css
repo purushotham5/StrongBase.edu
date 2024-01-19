@@ -16,7 +16,7 @@ body {
 
 @media(max-width:768px) {
     body {
-        height: 75vh;
+        height: 70vh;
     }
 }
 
@@ -34,7 +34,7 @@ body {
 
 @media(max-width:768px) {
     #certificates {
-        width: 85%;
+        width: 80%;
     }
 }
 
