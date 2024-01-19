@@ -32,7 +32,7 @@ const jobs = [
   },{
     title: "Front-End Developer",
     image:
-      "https://s3-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/547/300/resized/logo_version_Pe-01.png?1617611673",
+      "https://tbcdn.talentbrew.com/company/22545/v1_0/img/refresh/logo--full.svg",
     skills: "Skills:-HTML,CSS,JS & GIT.",
     details:
       "Design and maintain a dynamic websites....",
