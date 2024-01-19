@@ -33,7 +33,7 @@ body {
 }
 
 @media(max-width:768px) {
-    #certificates {
+    #certificate {
         width: 80%;
     }
 }
