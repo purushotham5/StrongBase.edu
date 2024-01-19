@@ -14,6 +14,12 @@ body {
     padding-bottom: 30em;
 }
 
+@media(max-width:768px) {
+    body {
+        height: 75vh;
+    }
+}
+
 #certificate {
     background-color: #fafafa;
     padding: 20px;
@@ -24,6 +30,12 @@ body {
     text-align: center;
     animation: fadeIn 0.5s ease-in-out;
     margin-top: 30em;
+}
+
+@media(max-width:768px) {
+    #certificates {
+        width: 85%;
+    }
 }
 
 #logo-container {
@@ -89,6 +101,7 @@ body {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -113,6 +126,7 @@ body {
     from {
         background-color: #fff;
     }
+
     to {
         background-color: #3498db;
         color: #fff;
