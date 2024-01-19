@@ -592,6 +592,8 @@ fed01150143:'FED01150143.pdf',
       py0122158: "Nellepalli Keerthi.pdf",
       py0122159: "P Sai Srinivas.pdf",
       py0122160: "Dasari Chandra.pdf",
+      py0122161: "MARAKALAKUPPAM SANDEEP.pdf",
+      py0122162: "Dasari Chandra.pdf",
             
       //internships 
       pyi0115001: 'PYI0115001.pdf',
