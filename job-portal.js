@@ -1,5 +1,46 @@
 const jobs = [
   {
+    title: "Software Developer I",
+    image:
+      "https://mc1.airscorp.com/portal-upload/RMPOD1WebDocument/2019/11/clientdata_1138141/20/1005/22c4fae8-37b0-4662-a584-626d262dfb50.png",
+    skills: "Skills:-College or University degree in Computer Science or a related discipline with strong academic performance or equivalent experience",
+    details:
+      "Work with Team on the delivery of projects with high quality on multiple concurrent projects...",
+    openPositions: "Full Time Job",
+    link:
+      "https://recruiting.adp.com/srccar/public/RTI.home?c=1138141&d=BASCareerSite&rb=INDEED&r=5000830051506#/",
+  },{
+    title: "Associate Software Engineer",
+    image:
+      "https://mc1.airscorp.com/portal-upload/RMPOD1WebDocument/2019/11/clientdata_1138141/20/1005/22c4fae8-37b0-4662-a584-626d262dfb50.png",
+    skills: "Skills:-College or University degree in Computer Science or a related discipline with strong academic performance or equivalent experience,Bachelor’s in Engineering/Computer science 0-3 years of total software development experience ",
+    details:
+      "Responsible for designing, coding, enhancing and testing of financial software applications to meet business process requirements in MIS Tech, primarily using Java/J2EE related tech stack Exhibit good problem solving and analytical skills in designing/developing solutions for business requirements ...",
+    openPositions: "Full Time Job",
+    link:
+      "https://career8.successfactors.com/sfcareer/jobreqcareer?jobId=658&company=MoodysProd&codes=MoodysExtCareers",
+  },{
+    title: "UI Engineer (0-3 Years)    ",
+    image:
+      "https://s3-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/547/300/resized/logo_version_Pe-01.png?1617611673",
+    skills: "Skills:-Experience in the fundamentals of web technologies such as JavaScript, AJAX, HTML, CSS and mobile-first web development.",
+    details:
+      "At PhonePe, we take extra care to make sure you give your best at work, Every day! And creating the right environment for you is just one of the things we do....",
+    openPositions: "Full Time Job",
+    link:
+      "https://career8.successfactors.com/sfcareer/jobreqcareer?jobId=658&company=MoodysProd&codes=MoodysExtCareers",
+  },{
+    title: "Front-End Developer",
+    image:
+      "https://s3-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/547/300/resized/logo_version_Pe-01.png?1617611673",
+    skills: "Skills:-HTML,CSS,JS & GIT.",
+    details:
+      "Design and maintain a dynamic websites....",
+    openPositions: "Full Time Job",
+    link:
+      "https://search.jobs.barclays/job/-/-/22545/59498071440?src=JB-12860",
+  },
+  {
     title: "Accenture Associate Software Engineer",
     image: "software-engineer.svg",
     skills: "Skills:C/C++",
@@ -223,7 +264,7 @@ const jobs = [
     openPositions: "full time",
     link:
       "https://accolite.turbohire.co/dashboard?orgId=87045889-670e-45d4-b247-3929714a8abb&type=0",
-  },{
+  }, {
     title: "UI Design Intern (2023-2024)    ",
     image:
       "https://lever-client-logos.s3.us-west-2.amazonaws.com/eb7738e7-d908-42f5-97da-61b28e53ce73-1631634736627.png",
@@ -233,7 +274,7 @@ const jobs = [
     openPositions: "Internship",
     link:
       "https://jobs.lever.co/upstox/b0a2b2aa-59ed-41b5-8220-2421b0215360",
-  },{
+  }, {
     title: "Associate Software Engineer     ",
     image:
       "https://recruiting.ultipro.com/ROP1001ROPER/JobBoard/affe9737-065b-476c-8e45-591a0a0d942a/Styles/GetLargeHeaderLogo?brandId=ce1b0524-4f3e-407c-9a36-d797f3c9f66e&m=638005704041830000",
@@ -243,7 +284,7 @@ const jobs = [
     openPositions: "Full Time Job",
     link:
       "https://recruiting.ultipro.com/ROP1001ROPER/JobBoard/affe9737-065b-476c-8e45-591a0a0d942a/OpportunityDetail?opportunityId=57e2d0c2-c8bb-4ec0-88b9-8d57113055a7",
-  },{
+  }, {
     title: "intel Software Engineer1 ",
     image:
       "https://tbcdn.talentbrew.com/company/599/gst-v1_0/img/logo/logo-intel-blue.svg",
@@ -253,7 +294,7 @@ const jobs = [
     openPositions: "Full Time Job",
     link:
       "https://jobs.intel.com/en/job/bengaluru/soc-design-engineer/41147/58495481216",
-  },{
+  }, {
     title: " Software Engineer    ",
     image:
       "https://alcon.wd5.myworkdayjobs.com/careers_alcon/assets/logo",
