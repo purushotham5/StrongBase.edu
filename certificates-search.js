@@ -429,6 +429,8 @@ fed01150141:'FED01150141.pdf',
 fed01150142:'FED01150142.pdf',
 fed01150143:'FED01150143.pdf',
       
+// WEB DEVELOPMENT course complition certificates 
+
       // Add more mappings as needed
 
 
@@ -742,6 +744,11 @@ pyi01150143:'PYI01150143.pdf',
 pyi01150144:'PYI01150144.pdf',
 pyi01150145:'PYI01150145.pdf',
 pyi01150146:'PYI01150146.pdf',
+
+
+// PYTHON course complition certificates 
+pyc0115007:'ALETIPALLI_VIJAY.pdf',
+
 
 //AWS 
 awsi011001:'AWSI011001.pdf',
