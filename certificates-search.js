@@ -202,6 +202,8 @@ jvi016044:'JVI016044.pdf',
 jvi016045:'JVI016045.pdf',
 jvi016046:'JVI016046.pdf',
 jvi016047:'JVI016047.pdf',
+jvi016047:'JVI016047.pdf',
+jvi016049:'JVI016049.pdf',
 
 
       // front-end 
