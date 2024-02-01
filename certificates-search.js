@@ -744,10 +744,8 @@ pyi01150143:'PYI01150143.pdf',
 pyi01150144:'PYI01150144.pdf',
 pyi01150145:'PYI01150145.pdf',
 pyi01150146:'PYI01150146.pdf',
+pyi01150148:'PYI01150148.pdf',
 
-
-// PYTHON course complition certificates 
-pyc0115007:'PYC0115007.pdf',
 
 
 //AWS 
