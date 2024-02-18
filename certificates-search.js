@@ -752,6 +752,8 @@ pyi01150148:'PYI01150148.pdf',
 pyi01150149:'PYI01150149.pdf',
 pyi01150151:'PYI01150151.pdf',
 pyi01150152:'PYI01150152.pdf',
+pyi01150153:'PYI01150153.pdf',
+pyi01150154:'PYI01150154.pdf',
 
 
 // PYTHON course complition certificates 
