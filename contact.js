@@ -30,8 +30,8 @@ document.getElementById('form')
 
     btn.value = 'Sending...';
 
-    const serviceID = 'service_ofugjwp';
-    const templateID = 'template_cfo98ai';
+    const serviceID = 'service_2pq2gbp';
+    const templateID = 'template_u27c2jj';
 
     emailjs.sendForm(serviceID, templateID, this)
       .then(() => {
