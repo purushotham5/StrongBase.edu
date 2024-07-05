@@ -775,6 +775,9 @@ cci011001:'CCI011001.pdf',
 //EMBEDED SYSTEMS
 esi011001:'ESI011001.pdf',
 
+      // full stack java web development
+      wd0110:'P Sharmila Internship Complition Certificate.pdf',
+      wd01101:'Vadiyamgati keerthi Internship Complition Certificate.pdf',
     };
 
     // Check if the search query has a corresponding destination page
