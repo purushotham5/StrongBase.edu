@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="application.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PROGMASTER PRIVATE LIMITED</title>
+    <link rel="icon" href="https://progmaster.in/another-broucher-logo-removebg-preview.png" type="image/jpg"
+        sizes="16x16">
+</head>
+
+<body>
+    <div class="container">
+        <form id="contact-form">
+            <div class="logo">
+                <img src="https://progmaster.in/logo-homepage.png" alt="">
+            </div>
+            <h4>ProgMaster Pvt Ltd Job Application</h4>
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="text" name="number" placeholder="Mobile Number" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="college name" placeholder="College Name" required>
+
+            <select name="Education" id="" required>
+                <option value="Select Graduation">Select Education Qualification</option>
+                <option value="B.tech">B.tech</option>
+                <option value="Degree">Degree</option>
+            </select>
+
+
+            <select name="PassedOut" id="" required>
+                <option value="Select PassedOut">Select Passed Out Year</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+            </select>
+
+            <select name="Skills" id="" required>
+                <option value="Select Skills">Select Skills</option>
+                <option value="Java">Java</option>
+                <option value="Python">Python</option>
+                <option value="Web Development">Web Development</option>
+            </select>
+            <select name="Course" id="" required>
+                <option value="Select Course">Select Course</option>
+                <option value="CSE">COMPUTER SCIENCE AND ENGINEERING</option>
+                <option value="ECE">ELECTRONICS AND COMMUNICATION ENGINEERING</option>
+                <option value="Mechanical">MECHANICAL ENGINEERING</option>
+                <option value="Mechanical">CIVIL ENGINEERING</option>
+                <option value="Mechanical">ELECTRICAL AND ELECTRONIC ENGINEERING</option>
+                <option value="B.SC COMPUTERS">B.SC COMPUTERS</option>
+                <option value="B.COM">B.COM</option>
+            </select>
+
+            <textarea type="text" name="Resume"
+                placeholder="Share Resume Drive Link, make sure to give the drive link acces to everyone before sharing the link"
+                row="7" required></textarea>
+
+            <p>Apply before July-08 12:00 PM</p>
+
+            <div class="btns">
+                <input type="submit" value="Apply Now" id="submit" class="submit">
+                <input type="button" value="Back" id="clear" class="submit">
+            </div>
+
+        </form>
+
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwRRvPd-BxVcZs4fv5SG3ryL71uDG0KoQm6fj0-rx2PKaGmCPj-dEn80f8RAbWMWKtP/exec'
+        const form = document.getElementById('contact-form')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            const formData = new FormData(form)
+            fetch(scriptURL, { method: 'POST', body: formData })
+                .then(response => alert("Thank you! Your form is submitted successfully."))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+    <script>
+            < script >
+            document.addEventListener('DOMContentLoaded', function () {
+                const backButton = document.getElementById('clear');
+
+                backButton.addEventListener('click', function () {
+                    window.location.href = 'index.html';
+                });
+            });
+    </script>
+
+    </script>
+</body>
+
+</html>
