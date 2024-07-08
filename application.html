@@ -64,6 +64,48 @@
             </div>
 
         </form>
+    </div>
+
+
+    <!-- job postign -->
+
+
+    <div class="job-container">
+        <h1 class="title">About Job</h1>
+        <div class="job-info">
+            <p><strong>Job Title:</strong> JAVA Developer, Python Developer, Web Developer & Database Developer</p>
+            <p><strong>Location:</strong> Remote / Hybrid</p>
+            <p><strong>Contact to:</strong> <a href="mailto:tech@progmaster.in">tech@progmaster.in</a>
+            </p>
+        </div>
+        <h2 class="section-title">Job Overview</h2> <br>
+        <p>We are seeking a seasoned Java Developer or Python Developer or Database Developer or Web Developer with
+            extensive experience in the banking domain to join our dynamic
+            team. The ideal candidate will have a strong background in Java-based application development, coupled with
+            a deep understanding of financial services and banking operations. The role requires a commitment to
+            collaborative problem solving, sophisticated design, and product quality.</p>
+        <h2 class="section-title">Key Responsibilities</h2>
+        <ul>
+            <li>Develop and maintain high-quality Java applications within the banking domain.</li>
+            <li>0 ( Freshers ) to 5+ years of experience in Solution, Design and Development of applications</li>
+            <li>Good Working knowledge of using Java, Python, Database ( SQL / MySql ), Html, Css, Github, RESTful
+                services.</li>
+            <li>Translate complex business requirements into scalable technical solutions.</li>
+            <li>Collaborate with cross-functional teams to define, design, and ship new features.</li>
+            <li>Conduct code reviews, unit tests, and integration testing to ensure application quality.</li>
+            <li>Troubleshoot, debug, and upgrade existing systems as required.</li>
+        </ul>
+        <h2 class="section-title">We can offer you</h2>
+        <ul>
+            <li>A highly competitive compensation and benefits package.</li>
+            <li>Maternity & Paternity leave plans.</li>
+            <li>Extensive training opportunities, focused on skills, substantive knowledge, and personal development.
+            </li>
+            <li>Coaching opportunities with experienced colleagues from our developers and
+                Center of Excellences (CoE) groups.</li>
+            <li>Cutting edge projects</li>
+            <li>A truly diverse, fun-loving, and global work culture.</li>
+        </ul>
 
     </div>
 
@@ -75,8 +117,8 @@
             e.preventDefault()
             const formData = new FormData(form)
             fetch(scriptURL, { method: 'POST', body: formData })
-                .then(response => alert("Thank you! Your form is submitted successfully."))
-                .then(() => { window.location.reload(); })
+                .then(response => alert("Thank you! We received your application"))
+                .then(() => { window.location.href = "https://progmaster.in/"; })
                 .catch(error => console.error('Error!', error.message))
         })
     </script>
@@ -87,12 +129,11 @@
                 const backButton = document.getElementById('clear');
 
                 backButton.addEventListener('click', function () {
-                    window.location.href = 'index.html';
+                    window.location.href = 'https://progmaster.in/';
                 });
             });
     </script>
 
-    </script>
 </body>
 
 </html>
