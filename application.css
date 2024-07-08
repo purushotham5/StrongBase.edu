@@ -26,14 +26,14 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 1000px;
     width: 100%;
     position: relative;
 }
 
 .title {
     text-align: left;
- 
+
     color: #0e1c2b;
     font-size: 25px;
     margin-top: 1em;
@@ -89,6 +89,7 @@ ul li {
     margin: 10px;
     box-shadow: 1px 1px 1px 1px white;
     margin-top: 10px;
+    position: relative;
 }
 
 @media(max-width:768px) {
@@ -198,4 +199,42 @@ form p {
     height: 100px;
     width: 100px;
     align-items: center;
+}
+
+/* social media  */
+
+.social-media {
+    position: absolute;
+    float: right;
+    right: 1em;
+    top: 1em;
+}
+
+.social-media i {
+    border-radius: 50%;
+    color: rgb(0, 0, 0);
+    padding: 5px;
+    font-size: 30px;
+    background: #ffffff;
+}
+
+
+.social-media a {
+    text-decoration: none;
+    margin: 1em;
+}
+
+.social-media i:hover {
+    color: palevioletred;
+}
+@media(max-width:768px) {
+
+    .social-media i {
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    .social-media a {
+        margin: 0em;
+    }
+    
 }
