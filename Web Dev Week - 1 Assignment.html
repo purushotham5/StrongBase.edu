@@ -217,10 +217,35 @@
             display: flex;
             justify-content: space-around;
         }
+        
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        #loader img {
+            width: 200px;
+            /* Adjust as needed */
+            height: 200px;
+        }
     </style>
 </head>
 
 <body>
+
+    <div id="loader">
+        <img id="loader" src="loder.gif" alt="Loading..." style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+    </div>
+
     <div class="container">
         <h2>Assignment Submission</h2>
 
@@ -520,6 +545,9 @@
                 return;
             }
 
+            let loader = document.getElementById("loader"); // Get loader element
+            loader.style.display = "block"; // Show loader
+
             let score = 0;
             let answers = {
                 q1: "Hyper Text Markup Language",
@@ -570,17 +598,20 @@
                 });
 
                 const submitResult = await submitResponse.json();
+                loader.style.display = "none"; // Hide loader after response
 
                 if (submitResult.result === "success") {
                     alert(`Assignment Submitted! Your Score: ${score}`);
                     document.getElementById("assignmentSection").style.display = "none";
                     document.getElementById("rollNumber").disabled = true;
+                    window.location.reload(); // Refresh the page after clicking OK
                 } else {
                     alert("Error submitting assignment.");
                 }
             } catch (error) {
                 console.error("Error:", error);
                 alert("Something went wrong. Please try again.");
+                loader.style.display = "none"; // Hide loader in case of an error
             }
         }
 
