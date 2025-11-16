@@ -1,3 +1,4 @@
+<<<<<<< HEAD
                                                               ::-webkit-scrollbar {
                                                                  width: 0px;
                                                              }
@@ -351,4 +352,359 @@
                                                              
                                                              #welcome-screen {
                                                                  background-image: url('https://www.barrywinbolt.com/wp-content/uploads/2021/02/Personal-growth-jpg-scaled-1-e1680329188347.jpg');
+=======
+                                                              ::-webkit-scrollbar {
+                                                                 width: 0px;
+                                                             }
+                                                             
+                                                             body {
+                                                                 margin: 0;
+                                                                 font-family: Arial, sans-serif;
+                                                                 background-color: #000;
+                                                             }
+                                                             
+                                                             nav {
+                                                                 /* background-color: #333; */
+                                                                 background: rgb(0, 0, 0);
+                                                                 overflow-x: hidden;
+                                                                 display: flex;
+                                                                 align-items: center;
+                                                                 justify-content: space-between;
+                                                             }
+                                                             
+                                                             #admin-login-screen,
+                                                             #login-form {
+                                                                 margin-top: 2em;
+                                                             }
+                                                             
+                                                             #register-form {
+                                                                 margin-bottom: 1em;
+                                                             }
+                                                             
+                                                             .logo img {
+                                                                 height: 100px;
+                                                                 width: 100px;
+                                                                 margin: 10px;
+                                                             }
+                                                             
+                                                             #white-logo {
+                                                                 display: block;
+                                                             }
+                                                             
+                                                             #black-logo {
+                                                                 display: none;
+                                                             }
+                                                             
+                                                             @media(max-width: 768px) {
+                                                                 .logo img {
+                                                                     height: 80px;
+                                                                     width: 80px;
+                                                                     margin: 5px;
+                                                                     /* padding-bottom: 15px; */
+                                                                 }
+                                                             }
+                                                             
+                                                             .user-items {
+                                                                 margin-right: 1em;
+                                                             }
+                                                             
+                                                             .menu-icon {
+                                                                 display: none;
+                                                                 font-size: 24px;
+                                                                 cursor: pointer;
+                                                                 margin-right: 1em;
+                                                                 position: absolute;
+                                                                 float: right;
+                                                                 right: 10px;
+                                                                 top: 30px;
+                                                             }
+                                                             
+                                                             .nav-links {
+                                                                 display: flex;
+                                                                 gap: 1em;
+                                                                 margin-right: 1em;
+                                                             }
+                                                             
+                                                             .nav-link {
+                                                                 background: none;
+                                                                 border: none;
+                                                                 color: #ffffff;
+                                                                 padding: 14px 16px;
+                                                                 text-decoration: none;
+                                                                 font-size: 16px;
+                                                                 cursor: pointer;
+                                                                 padding: 20px auto;
+                                                             }
+                                                             
+                                                             .nav-link:hover {
+                                                                 background-color: #ddd;
+                                                                 color: black;
+                                                                 border-radius: 10px;
+                                                                 width: 100%;
+                                                             }
+                                                             
+                                                             .user-btns {
+                                                                 display: none;
+                                                                 align-items: center;
+                                                                 gap: 0.5em;
+                                                             }
+                                                             
+                                                             .user-btns .user-avatar {
+                                                                 width: 32px;
+                                                                 height: 32px;
+                                                                 background-color: #666;
+                                                                 color: #fff;
+                                                                 border-radius: 50%;
+                                                                 display: flex;
+                                                                 align-items: center;
+                                                                 justify-content: center;
+                                                                 font-weight: bold;
+                                                             }
+                                                             
+                                                             .user-items {
+                                                                 display: flex;
+                                                                 align-items: center;
+                                                                 justify-content: space-between;
+                                                                 padding-bottom: 10px;
+                                                                 gap: 1em;
+                                                             }
+                                                             
+                                                             @media (max-width: 768px) {
+                                                                 nav {
+                                                                     /* background-color: #333; */
+                                                                     background-color: #000000;
+                                                                     overflow-x: hidden;
+                                                                     display: flex;
+                                                                     align-items: center;
+                                                                     justify-content: center;
+                                                                 }
+                                                                 .nav-links {
+                                                                     display: flex;
+                                                                     width: 100%;
+                                                                     background-color: #080708;
+                                                                     position: absolute;
+                                                                     top: 55px;
+                                                                     padding-top: 10px;
+                                                                     left: 0;
+                                                                     margin-top: 1em;
+                                                                     overflow-x: scroll;
+                                                                     border-top: 2px solid #ffffff;
+                                                                     border-bottom: 2px solid #ffffff;
+                                                                 }
+                                                                 .nav-links.active {
+                                                                     display: flex;
+                                                                 }
+                                                                 .nav-link {
+                                                                     color: #ffffff;
+                                                                 }
+                                                                 /* .menu-icon {
+        display: block;
+    } */
+                                                                 .user-items {
+                                                                     display: none;
+                                                                     width: 100%;
+                                                                     background-color: #ffffff;
+                                                                     position: absolute;
+                                                                     top: 60px;
+                                                                     padding-top: 20px;
+                                                                     padding-right: 10px;
+                                                                     padding-left: 10px;
+                                                                     left: 0;
+                                                                     margin-top: 2em;
+                                                                     overflow-x: scroll;
+                                                                     border-top: 1px solid #dda8a8;
+                                                                     border-bottom: 1px solid #dda8a8;
+                                                                 }
+                                                                 .use {
+                                                                     max-width: 100%;
+                                                                 }
+                                                                 #x-a {
+                                                                     padding: 20px auto;
+                                                                 }
+                                                                 #admin-login-screen,
+                                                                 #login-form {
+                                                                     margin-top: 20em;
+                                                                     padding: 60px;
+                                                                     max-width: 357px;
+                                                                 }
+                                                                 #register-form {
+                                                                     margin-top: 6em;
+                                                                     padding: 60px;
+                                                                     max-width: 357px;
+                                                                 }
+                                                                 @media(max-width:768px) {
+                                                                     #admin-login-screen,
+                                                                     #login-form {
+                                                                         margin-top: 11em;
+                                                                         padding: 60px;
+                                                                         max-width: 357px;
+                                                                     }
+                                                                     #register-form {
+                                                                         margin-top: 6em;
+                                                                         padding: 60px;
+                                                                         max-width: 357px;
+                                                                     }
+                                                                 }
+                                                                 #dashboard-screen {
+                                                                     margin-top: 7em;
+                                                                 }
+                                                                 #certificate-screen {
+                                                                     margin-top: 10em;
+                                                                 }
+                                                                 #certificates-screen {
+                                                                     margin-top: 8em;
+                                                                 }
+                                                                 #profile-screen {
+                                                                     margin-top: 8em;
+                                                                 }
+                                                                 #my-account-screen {
+                                                                     margin-top: 8em;
+                                                                 }
+                                                             }
+                                                             
+                                                             .EnrollCourse {
+                                                                 background-color: #ffffff;
+                                                                 border-radius: 10px;
+                                                                 /* Highly recommended for a modern 3D look */
+                                                                 transition: all 0.3s ease;
+                                                                 /* Add subtle rounded corners for a modern look */
+                                                                 border-radius: 12px;
+                                                                 /* Optional: Small border if you want more definition */
+                                                                 /* border: 1px solid #eee; */
+                                                                 color: white;
+                                                                 box-shadow: 0 30px 60px rgba(0, 0, 0, 0.20), /* Larger base shadow on hover */
+                                                                 0 15px 15px rgba(0, 0, 0, 0.15);
+                                                             }
+                                                             
+                                                             .EnrollCourse:hover {
+                                                                 /* Soft, wide shadow for a floating effect */
+                                                                 box-shadow: /* 1. Large, soft shadow for overall glow and depth */
+                                                                 30px 25px 50px rgba(0, 0, 0, 0.15), /* 2. Smaller, sharper shadow for a defined lift */
+                                                                 0px 10px 10px rgba(0, 0, 0, 0.10), /* 3. Even smaller shadow on the bottom for perceived density */
+                                                                 0 3px 5px rgba(0, 0, 0, 0.05), /* 4. Very subtle inner shadow/border to give the card definition */
+                                                                 inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+                                                                 transform: translateY(-5px);
+                                                             }
+                                                             
+                                                             .CompletedCourse {
+                                                                 background-color: #ffffff;
+                                                                 border-radius: 10px;
+                                                                 /* Highly recommended for a modern 3D look */
+                                                                 transition: all 0.3s ease;
+                                                                 /* Add subtle rounded corners for a modern look */
+                                                                 border-radius: 12px;
+                                                                 /* Optional: Small border if you want more definition */
+                                                                 /* border: 1px solid #eee; */
+                                                                 color: white;
+                                                                 box-shadow: 0 30px 60px rgba(0, 0, 0, 0.20), /* Larger base shadow on hover */
+                                                                 0 15px 15px rgba(0, 0, 0, 0.15);
+                                                                 /* Moves the card up slightly */
+                                                             }
+                                                             
+                                                             .CompletedCourse:hover {
+                                                                 /* Soft, wide shadow for a floating effect */
+                                                                 box-shadow: /* 1. Large, soft shadow for overall glow and depth */
+                                                                 30px 25px 50px rgba(0, 0, 0, 0.15), /* 2. Smaller, sharper shadow for a defined lift */
+                                                                 0px 10px 10px rgba(0, 0, 0, 0.10), /* 3. Even smaller shadow on the bottom for perceived density */
+                                                                 0 3px 5px rgba(0, 0, 0, 0.05), /* 4. Very subtle inner shadow/border to give the card definition */
+                                                                 inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+                                                                 transform: translateY(-5px);
+                                                             }
+                                                             
+                                                             .CertificateCourse {
+                                                                 background-color: #ffffff;
+                                                                 border-radius: 10px;
+                                                                 /* Highly recommended for a modern 3D look */
+                                                                 transition: all 0.3s ease;
+                                                                 /* Add subtle rounded corners for a modern look */
+                                                                 border-radius: 12px;
+                                                                 /* Optional: Small border if you want more definition */
+                                                                 /* border: 1px solid #eee; */
+                                                                 color: white;
+                                                                 box-shadow: 0 30px 60px rgba(0, 0, 0, 0.20), /* Larger base shadow on hover */
+                                                                 0 15px 15px rgba(0, 0, 0, 0.15);
+                                                                 /* Moves the card up slightly */
+                                                             }
+                                                             
+                                                             .CertificateCourse:hover {
+                                                                 /* Soft, wide shadow for a floating effect */
+                                                                 box-shadow: /* 1. Large, soft shadow for overall glow and depth */
+                                                                 30px 25px 50px rgba(0, 0, 0, 0.15), /* 2. Smaller, sharper shadow for a defined lift */
+                                                                 0px 10px 10px rgba(0, 0, 0, 0.10), /* 3. Even smaller shadow on the bottom for perceived density */
+                                                                 0 3px 5px rgba(0, 0, 0, 0.05), /* 4. Very subtle inner shadow/border to give the card definition */
+                                                                 inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+                                                                 transform: translateY(-5px);
+                                                             }
+                                                             
+                                                             .text-color {
+                                                                 color: navy;
+                                                             }
+                                                             
+                                                             .course-nav {
+                                                                 display: none;
+                                                                 width: 100%;
+                                                                 background-color: #ffffff;
+                                                                 position: absolute;
+                                                                 top: 60px;
+                                                                 padding-top: 20px;
+                                                                 padding-right: 10px;
+                                                                 padding-left: 10px;
+                                                                 left: 0;
+                                                                 margin-top: 2em;
+                                                                 overflow-x: scroll;
+                                                                 border-top: 1px solid #dda8a8;
+                                                                 border-bottom: 1px solid #dda8a8;
+                                                             }
+                                                             
+                                                             #certificate-screen {
+                                                                 padding-bottom: 2em;
+                                                             }
+                                                             
+                                                             #login-form {
+                                                                 border-radius: 20px;
+                                                                 background-image: /* 1. The linear gradient (applied first, so it's on top) */
+                                                                 linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), /* 2. The original image (applied second, so it's on the bottom) */
+                                                                 url('https://images.unsplash.com/photo-1618044619888-009e412ff12a?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                                                                 background-size: contain;
+                                                                 margin-top: 5rem;
+                                                                 padding: 20px;
+                                                             }
+                                                             
+                                                             #register-form {
+                                                                 border-radius: 20px;
+                                                                 background-image: /* 1. The linear gradient (applied first, so it's on top) */
+                                                                 linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), /* 2. The original image (applied second, so it's on the bottom) */
+                                                                 url('https://images.unsplash.com/photo-1618044619888-009e412ff12a?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+                                                                 /* The rest of the original properties apply to both layers */
+                                                                 background-size: contain;
+                                                                 margin-top: 03rem;
+                                                                 margin-bottom: 1em;
+                                                             }
+                                                             
+                                                             .course-filter {
+                                                                 padding: 10px;
+                                                             }
+                                                             
+                                                             @media(max-width: 768px) {
+                                                                 #login-form {
+                                                                     margin-top: 12rem;
+                                                                 }
+                                                                 #register-form {
+                                                                     margin-top: 6rem;
+                                                                 }
+                                                                 #course-list {
+                                                                     margin-top: 5em;
+                                                                 }
+                                                                 .course-filter {
+                                                                     display: flex;
+                                                                     overflow-x: scroll;
+                                                                     padding-top: 10px;
+                                                                     padding-left: 20px;
+                                                                     padding-right: 20px;
+                                                                 }
+                                                             }
+                                                             
+                                                             #welcome-screen {
+                                                                 background-image: url('https://www.barrywinbolt.com/wp-content/uploads/2021/02/Personal-growth-jpg-scaled-1-e1680329188347.jpg');
+>>>>>>> 3ccda38f1fe309d2d21455dc416775a846d775af
                                                              }
