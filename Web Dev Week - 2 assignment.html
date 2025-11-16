@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Week - 2 Assignment</title>
+
+    <style>
+        /* Import Google Font */
+        
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        /* Global Reset */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+        /* Body Styling */
+        
+        body {
+            background: linear-gradient(135deg, #007bff, #6610f2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            overflow-y: scroll;
+        }
+        /* Main Container */
+        
+        .container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); */
+            width: 100%;
+            max-width: 600px;
+            transition: transform 0.3s ease-in-out;
+        }
+        /* Title Styling */
+        
+        h2,
+        h3 {
+            color: #333;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        /* Input Field */
+        
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+        
+        input[type="text"]:focus {
+            border-color: #007bff;
+            outline: none;
+            /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); */
+        }
+        /* Buttons */
+        
+        button {
+            background: linear-gradient(90deg, #007bff, #6610f2);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-weight: 500;
+            display: block;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        button:hover {
+            background: linear-gradient(90deg, #0056b3, #4b0082);
+            transform: scale(1.05);
+        }
+        /* Assignment Section */
+        
+        #assignmentSection {
+            display: none;
+            margin-top: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+            padding: 15px;
+            border-radius: 8px;
+            background: #f9f9f9;
+            max-width: 1000px;
+            /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+        }
+        /* Question Box */
+        
+        .question {
+            background: #fff;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); */
+        }
+        
+        p {
+            font-size: 1rem;
+            color: #444;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+        /* Radio Buttons */
+        
+        input[type="radio"] {
+            margin-right: 8px;
+            accent-color: #007bff;
+        }
+        /* Animations */
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Responsive Design */
+        
+        @media (max-width: 768px) {
+            .container {
+                width: 100%;
+                padding: 20px;
+            }
+            h2,
+            h3 {
+                font-size: 1.3rem;
+            }
+            button {
+                font-size: 0.9rem;
+            }
+        }
+        /* General styling for the form */
+        
+        form {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); */
+        }
+        
+        @media(max-width:768px) {
+            form {
+                max-width: 1000px;
+            }
+        }
+        /* Styling for questions */
+        
+        p {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        /* Styling for radio button options */
+        
+        label {
+            display: block;
+            padding: 10px;
+            font-size: 16px;
+            /* background: #ffffff;
+            border: 2px solid #ddd; */
+            border-radius: 5px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            font-weight: bolder;
+        }
+        /* Custom radio button */
+        /* Styling the selected radio button */
+        
+        input[type="radio"]:checked+label {
+            background: #4CAF50;
+            color: white;
+            border-color: #4CAF50;
+        }
+        /* Hover effect */
+        
+        label:hover {
+            background: #eaeaea;
+        }
+        
+        .card {
+            margin: 2em;
+            display: flex;
+            align-items: start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 1em;
+        }
+        
+        .card input {
+            margin: 0;
+        }
+        
+        .opt {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        
+        #loader img {
+            width: 200px;
+            /* Adjust as needed */
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="loader">
+        <img id="loader" src="loder.gif" alt="Loading..." style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 1000;">
+    </div>
+
+    <div class="container">
+        <h2>Assignment Submission</h2>
+
+        <label for="rollNumber">Enter Roll Number:</label>
+        <input type="text" id="rollNumber" name="Id" placeholder="PROGTFWD" required>
+        <button onclick="validateRollNumber()">Start Assignment</button>
+
+        <div id="assignmentSection">
+            <h3>Answer the following questions:</h3>
+
+            <form id="assignmentForm">
+
+                <div class="card">
+                    <p>What does HTML stand for?</p>
+                    <input type="radio" name="q1" value="Hyper Transfer Markup Language"> Hyper Transfer Markup Language
+                    <input type="radio" name="q1" value="Hyper Text Markup Language"> Hyper Text Markup Language
+                    <input type="radio" name="q1" value="High Tech Modern Language"> High Tech Modern Language
+                    <input type="radio" name="q1" value="Hyperlink and Text Management Language"> Hyperlink and Text Management Language
+                </div>
+
+                <div class="card">
+                    <p>Which CSS property is used to change the text color of an element?</p>
+                    <input type="radio" name="q4" value="background-color"> background-color
+                    <input type="radio" name="q4" value="color"> color
+                    <input type="radio" name="q4" value="font-color"> font-color
+                    <input type="radio" name="q4" value="text-color"> text-color
+                </div>
+
+                <div class="card">
+                    <p>Which property is used to set the background color in CSS?</p>
+                    <input type="radio" name="q5" value="color"> color
+                    <input type="radio" name="q5" value="background-color"> background-color
+                    <input type="radio" name="q5" value="bg"> bg
+                    <input type="radio" name="q5" value="bg-color"> bg-color
+                </div>
+
+                <div class="card">
+                    <p>Which CSS property controls the text size?</p>
+                    <input type="radio" name="q6" value="font-size"> font-size
+                    <input type="radio" name="q6" value="text-size"> text-size
+                    <input type="radio" name="q6" value="size"> size
+                    <input type="radio" name="q6" value="text-style"> text-style
+                </div>
+
+                <div class="card">
+                    <p>Which CSS property is used to create space inside the border of an element?</p>
+                    <input type="radio" name="q7" value="margin"> margin
+                    <input type="radio" name="q7" value="padding"> padding
+                    <input type="radio" name="q7" value="spacing"> spacing
+                    <input type="radio" name="q7" value="border-spacing"> border-spacing
+                </div>
+
+                <div class="card">
+                    <p>Which CSS property is used to add space outside an element's border?</p>
+                    <input type="radio" name="q8" value="margin"> margin
+                    <input type="radio" name="q8" value="padding"> padding
+                    <input type="radio" name="q8" value="spacing"> spacing
+                    <input type="radio" name="q8" value="border-spacing"> border-spacing
+                </div>
+
+                <div class="card">
+                    <p>What does the 'position: relative' property do in CSS?</p>
+                    <input type="radio" name="q9" value="Positions the element relative to the viewport"> Positions the element relative to the viewport
+                    <input type="radio" name="q9" value="Positions the element relative to its normal position"> Positions the element relative to its normal position
+                    <input type="radio" name="q9" value="Fixes the element at a specific position"> Fixes the element at a specific position
+                    <input type="radio" name="q9" value="Positions the element relative to another element"> Positions the element relative to another element
+                </div>
+
+                <div class="card">
+                    <p>What does 'position: fixed' do in CSS?</p>
+                    <input type="radio" name="q10" value="Fixes the element to its parent"> Fixes the element to its parent
+                    <input type="radio" name="q10" value="Fixes the element relative to the viewport"> Fixes the element relative to the viewport
+                    <input type="radio" name="q10" value="Makes the element sticky"> Makes the element sticky
+                    <input type="radio" name="q10" value="Moves the element randomly"> Moves the element randomly
+                </div>
+
+                <div class="card">
+                    <p>Which CSS property is used to align items in a flex container along the main axis?</p>
+                    <input type="radio" name="q11" value="justify-content"> justify-content
+                    <input type="radio" name="q11" value="align-items"> align-items
+                    <input type="radio" name="q11" value="flex-align"> flex-align
+                    <input type="radio" name="q11" value="content-align"> content-align
+                </div>
+
+                <div class="card">
+                    <p>Which property is used to control the wrapping of items in a flex container?</p>
+                    <input type="radio" name="q12" value="flex-wrap"> flex-wrap
+                    <input type="radio" name="q12" value="wrap-items"> wrap-items
+                    <input type="radio" name="q12" value="item-wrap"> item-wrap
+                    <input type="radio" name="q12" value="container-wrap"> container-wrap
+                </div>
+
+                <div class="card">
+                    <p>Which property is used to specify the order of flex items?</p>
+                    <input type="radio" name="q13" value="flex-order"> flex-order
+                    <input type="radio" name="q13" value="item-order"> item-order
+                    <input type="radio" name="q13" value="order"> order
+                    <input type="radio" name="q13" value="arrange"> arrange
+                </div>
+
+                <!-- The format continues the same for remaining questions until 25. -->
+
+                <div class="card">
+                    <p>Which CSS property controls the space inside an element's border?</p>
+                    <input type="radio" name="q19" value="margin"> margin
+                    <input type="radio" name="q19" value="padding"> padding
+                    <input type="radio" name="q19" value="spacing"> spacing
+                    <input type="radio" name="q19" value="border-spacing"> border-spacing
+                </div>
+
+                <div class="card">
+                    <p>What property is used to control the space outside an element's border?</p>
+                    <input type="radio" name="q20" value="padding"> padding
+                    <input type="radio" name="q20" value="margin"> margin
+                    <input type="radio" name="q20" value="border"> border
+                    <input type="radio" name="q20" value="outline"> outline
+                </div>
+
+                <div class="card">
+                    <p>Which CSS property specifies the alignment of items inside a flex container along the main axis?</p>
+                    <input type="radio" name="q21" value="align-items"> align-items
+                    <input type="radio" name="q21" value="justify-content"> justify-content
+                    <input type="radio" name="q21" value="align-self"> align-self
+                    <input type="radio" name="q21" value="position"> position
+                </div>
+
+                <div class="card">
+                    <p>What value of 'justify-content' aligns items to the center of the flex container?</p>
+                    <input type="radio" name="q22" value="center"> center
+                    <input type="radio" name="q22" value="flex-start"> flex-start
+                    <input type="radio" name="q22" value="flex-end"> flex-end
+                    <input type="radio" name="q22" value="space-between"> space-between
+                </div>
+
+                <div class="card">
+                    <p>Which property defines how a flex item grows relative to others?</p>
+                    <input type="radio" name="q23" value="flex-grow"> flex-grow
+                    <input type="radio" name="q23" value="flex-shrink"> flex-shrink
+                    <input type="radio" name="q23" value="flex-basis"> flex-basis
+                    <input type="radio" name="q23" value="order"> order
+                </div>
+
+                <div class="card">
+                    <p>What does the 'align-items' property do in a flex container?</p>
+                    <input type="radio" name="q24" value="Aligns items horizontally"> Aligns items horizontally
+                    <input type="radio" name="q24" value="Aligns items vertically"> Aligns items vertically
+                    <input type="radio" name="q24" value="Adds margin to items"> Adds margin to items
+                    <input type="radio" name="q24" value="Controls the item growth"> Controls the item growth
+                </div>
+
+                <div class="card">
+                    <p>Which property is used to set the direction of flex items in a flex container?</p>
+                    <input type="radio" name="q25" value="flex-flow"> flex-flow
+                    <input type="radio" name="q25" value="flex-direction"> flex-direction
+                    <input type="radio" name="q25" value="align-content"> align-content
+                    <input type="radio" name="q25" value="justify-content"> justify-content
+                </div>
+                <div class="card">
+                    <p>Which CSS property controls the size of a flex item before the remaining space is distributed?</p>
+                    <input type="radio" name="q26" value="flex-basis"> flex-basis
+                    <input type="radio" name="q26" value="flex-grow"> flex-grow
+                    <input type="radio" name="q26" value="flex-shrink"> flex-shrink
+                    <input type="radio" name="q26" value="justify-content"> justify-content
+                </div>
+
+                <div class="card">
+                    <p>What is the default value of the 'flex-direction' property?</p>
+                    <input type="radio" name="q27" value="row"> row
+                    <input type="radio" name="q27" value="column"> column
+                    <input type="radio" name="q27" value="row-reverse"> row-reverse
+                    <input type="radio" name="q27" value="column-reverse"> column-reverse
+                </div>
+
+                <div class="card">
+                    <p>Which property is used to prevent flex items from shrinking?</p>
+                    <input type="radio" name="q28" value="flex-shrink: 0;"> flex-shrink: 0;
+                    <input type="radio" name="q28" value="flex-grow: 1;"> flex-grow: 1;
+                    <input type="radio" name="q28" value="align-items: stretch;"> align-items: stretch;
+                    <input type="radio" name="q28" value="justify-content: center;"> justify-content: center;
+                </div>
+
+                <div class="card">
+                    <p>What is the purpose of the 'order' property in a flexbox layout?</p>
+                    <input type="radio" name="q29" value="Controls the growth of items"> Controls the growth of items
+                    <input type="radio" name="q29" value="Specifies the arrangement of flex items"> Specifies the arrangement of flex items
+                    <input type="radio" name="q29" value="Aligns items horizontally"> Aligns items horizontally
+                    <input type="radio" name="q29" value="Adds space between items"> Adds space between items
+                </div>
+
+                <div class="card">
+                    <p>Which CSS property is used to align multiple flex lines along the cross axis?</p>
+                    <input type="radio" name="q30" value="align-items"> align-items
+                    <input type="radio" name="q30" value="justify-content"> justify-content
+                    <input type="radio" name="q30" value="align-content"> align-content
+                    <input type="radio" name="q30" value="flex-wrap"> flex-wrap
+                </div>
+
+                <div class="card">
+                    <p>Which value of 'align-items' stretches items to fill the container's height?</p>
+                    <input type="radio" name="q31" value="stretch"> stretch
+                    <input type="radio" name="q31" value="center"> center
+                    <input type="radio" name="q31" value="baseline"> baseline
+                    <input type="radio" name="q31" value="flex-start"> flex-start
+                </div>
+
+                <div class="card">
+                    <p>What is the purpose of the 'flex-wrap' property?</p>
+                    <input type="radio" name="q32" value="It defines the main axis direction"> It defines the main axis direction
+                    <input type="radio" name="q32" value="It determines whether items should wrap to the next line"> It determines whether items should wrap to the next line
+                    <input type="radio" name="q32" value="It controls item alignment on the cross axis"> It controls item alignment on the cross axis
+                    <input type="radio" name="q32" value="It adjusts the space between items"> It adjusts the space between items
+                </div>
+
+            </form>
+            <button type="button" onclick="submitAssignment()">Submit</button>
+
+
+        </div>
+    </div>
+
+    <script>
+        const rollCheckURL = "https://script.google.com/macros/s/AKfycbyBo_nt35y_EED5eQaOV1KbfMzF6AQzUY-Uf6e6XonLpOFz_6hEmC3q5HCYsWmh963uRw/exec";
+        // const rollCheckURL = "https://script.google.com/macros/s/AKfycbxXprhln_vmRTYqHyjBwOaaw9IiRILq234ekPYsdHZTMfJXrzj_fDKNIDM_bFkhjMVaLQ/exec";
+        const submitURL = "https://script.google.com/macros/s/AKfycbz_vHUC_Xn6ejrT46pB8kyMpfnrDuMoNq-NoI1rq8tyDLnbhcTPzQNalKyNTx-kmb_DMQ/exec";
+
+        function formatRollNumber() {
+            let rollNumberInput = document.getElementById("rollNumber");
+            let startButton = document.getElementById("startButton");
+
+            // Convert to uppercase and trim spaces
+            let rollNumber = rollNumberInput.value.trim().toUpperCase();
+            rollNumberInput.value = rollNumber;
+
+            // Match the correct pattern: PROGFTWD + 2-3 digit number
+            let match = rollNumber.match(/^PROGFTWD(\d{2,3})$/);
+
+            if (match) {
+                let serialNumber = parseInt(match[1], 10);
+
+                // Ensure serial number is within valid range 01-999
+                if (serialNumber >= 1 && serialNumber <= 999) {
+                    // Format serial number correctly (no extra leading zeros)
+                    rollNumberInput.value = `PROGFTWD${serialNumber}`;
+                    startButton.disabled = false; // Enable button if valid
+                    startButton.style.cursor = "pointer";
+                    return;
+                }
+            }
+
+            // If invalid, disable button
+            startButton.disabled = true;
+            startButton.style.cursor = "not-allowed";
+        }
+
+        async function validateRollNumber() {
+            let rollNumber = document.getElementById("rollNumber").value.trim();
+
+            if (!rollNumber) {
+                alert("Please enter your Roll Number.");
+                return;
+            }
+
+            // Ensure final validation before checking in the database
+            if (!/^PROGFTWD\d{2,3}$/.test(rollNumber)) {
+                alert("Invalid Training ID. Please enter a valid ID like: PROGFTWD01, PROGFTWD10, or PROGFTWD124.");
+                return;
+            }
+
+            try {
+                const response = await fetch(rollCheckURL);
+                const result = await response.json();
+
+                if (!result || !Array.isArray(result.rollNumbers)) {
+                    throw new Error("Error fetching roll numbers.");
+                }
+
+                let existingRollNumbers = result.rollNumbers.map(num => num.toString());
+
+                if (existingRollNumbers.includes(rollNumber)) {
+                    alert("You have already submitted the assignment. Multiple attempts are not allowed.");
+                } else {
+                    document.getElementById("assignmentSection").style.display = "block";
+                }
+            } catch (error) {
+                console.error("Error fetching roll numbers:", error);
+                alert("Something went wrong. Please try again.");
+            }
+        }
+
+        async function submitAssignment() {
+            let rollNumber = document.getElementById("rollNumber").value.trim();
+            if (!rollNumber) {
+                alert("Please enter your Roll Number.");
+                return;
+            }
+
+            let loader = document.getElementById("loader"); // Get loader element
+            loader.style.display = "block"; // Show loader
+
+            let score = 0;
+            let answers = {
+                q1: "Hyper Text Markup Language",
+                q4: "color",
+                q5: "background-color",
+                q6: "font-size",
+                q7: "padding",
+                q8: "margin",
+                q9: "Positions the element relative to its normal position",
+                q10: "Fixes the element relative to the viewport",
+                q11: "justify-content",
+                q12: "flex-wrap",
+                q13: "order",
+                q19: "padding",
+                q20: "margin",
+                q21: "justify-content",
+                q22: "center",
+                q23: "flex-grow",
+                q24: "Aligns items vertically",
+                q25: "flex-direction",
+                q26: "flex-basis",
+                q27: "row",
+                q28: "flex-shrink: 0;",
+                q29: "Specifies the arrangement of flex items",
+                q30: "align-content",
+                q31: "stretch",
+                q32: "It determines whether items should wrap to the next line"
+
+            };
+
+            Object.keys(answers).forEach(q => {
+                let selected = document.querySelector(`input[name="${q}"]:checked`);
+                if (selected && selected.value === answers[q]) {
+                    score++;
+                }
+            });
+
+            let formData = new URLSearchParams();
+            formData.append("Roll Number", rollNumber);
+            formData.append("Score", score);
+
+            try {
+                const submitResponse = await fetch(submitURL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: formData.toString(),
+                });
+
+                const submitResult = await submitResponse.json();
+                loader.style.display = "none"; // Hide loader after response
+
+                if (submitResult.result === "success") {
+                    alert(`Assignment Submitted! Your Score: ${score}`);
+                    document.getElementById("assignmentSection").style.display = "none";
+                    document.getElementById("rollNumber").disabled = true;
+                    window.location.reload(); // Refresh the page after clicking OK
+                } else {
+                    alert("Error submitting assignment.");
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                alert("Something went wrong. Please try again.");
+                loader.style.display = "none"; // Hide loader in case of an error
+            }
+        }
+
+        document.addEventListener("contextmenu", (event) => event.preventDefault());
+        document.addEventListener("keydown", (event) => {
+            if (event.ctrlKey && (event.key === "u" || event.key === "s" || event.key === "p")) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+    <script>
+        // Disable Right Click
+        document.addEventListener("contextmenu", (event) => event.preventDefault());
+
+        // Disable Keyboard Shortcuts
+        document.addEventListener("keydown", (event) => {
+            if (
+                event.ctrlKey &&
+                (event.key === "u" || event.key === "U" || event.key === "c" || event.key === "C" ||
+                    event.key === "v" || event.key === "V" || event.key === "x" || event.key === "X" ||
+                    event.key === "s" || event.key === "S" || event.key === "i" || event.key === "I") ||
+                event.key === "F12" || ctrlKey.key === "p" || ctrlKey.key === "P"
+            ) {
+                event.preventDefault();
+            }
+        });
+
+        // Disable Copy, Cut, and Paste
+        document.addEventListener("copy", (event) => event.preventDefault());
+        document.addEventListener("cut", (event) => event.preventDefault());
+        document.addEventListener("paste", (event) => event.preventDefault());
+
+        // Block Developer Tools (Extra Layer of Protection)
+        setInterval(() => {
+            if (window.outerHeight - window.innerHeight > 100 || window.outerWidth - window.innerWidth > 100) {
+                document.body.innerHTML = "<h2 style='text-align:center;color:red;'>Inspecting is Blocked!</h2>";
+            }
+        }, 500);
+    </script>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let form = document.getElementById("assignmentForm");
+
+            // Convert questions to an array
+            let cards = Array.from(form.getElementsByClassName("card"));
+
+            // Shuffle function (Fisher-Yates Algorithm)
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    let j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+
+            // Shuffle questions
+            shuffleArray(cards);
+
+            // Shuffle options inside each question
+            cards.forEach(card => {
+                let options = Array.from(card.querySelectorAll("input[type='radio']"));
+                let labels = options.map(input => {
+                    return {
+                        value: input.value,
+                        label: input.nextSibling.nodeValue.trim()
+                    };
+                });
+
+                shuffleArray(labels);
+
+                // Reorder options in the DOM
+                let newHTML = labels.map(option =>
+                    `<input type="radio" name="${options[0].name}" value="${option.value}"> ${option.label}`
+                ).join("<br>");
+
+                card.innerHTML = `<p>${card.querySelector("p").innerText}</p>` + newHTML;
+            });
+
+            // Reinsert shuffled questions into the form
+            form.innerHTML = "";
+            cards.forEach(card => form.appendChild(card));
+        });
+        document.querySelector("button[onclick='submitAssignment()']").style.display = "block";
+    </script>
+</body>
+
+</html>
