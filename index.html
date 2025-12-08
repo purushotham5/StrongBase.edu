@@ -17,7 +17,9 @@
     />
     <link rel="stylesheet" href="j.css">
     <link rel="stylesheet" href="nav.css">
-    <link rel="stylesheet" href="Students-Achivements.css">
+
+
+
 </head>
 
 <body>
@@ -66,10 +68,10 @@
             </div>
             <button onclick="showDashboard()" class="use bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">Dashboard</button>
             <button onclick="showProfile()" id="x-a" class="use bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">My
-                        Courses</button>
+                Courses</button>
             <button onclick="showCertificates()" class="use bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Certificates</button>
             <button onclick="showMyAccount()" class="use bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">My
-                        Account</button>
+                Account</button>
 
             <button onclick="logout()" class="use bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">Logout</button>
 
@@ -89,7 +91,10 @@
     <div id="subscription-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-80 z-50 flex items-center justify-center fade-in">
         <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-11/12 p-8 transform transition-all duration-300 scale-100 relative">
             <button onclick="document.getElementById('subscription-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
             </button>
 
             <div class="text-center">
@@ -100,8 +105,10 @@
                 <div class="bg-indigo-50 p-6 rounded-xl border border-indigo-200 mb-6">
                     <p class="text-5xl font-extrabold text-indigo-900 mb-3">₹1500</p>
                     <div class="flex items-center justify-center space-x-4 text-xl font-medium text-gray-700">
-                        <span class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> All 50 Courses</span>
-                        <span class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> 50 Certificates</span>
+                        <span class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> All 50
+                            Courses</span>
+                        <span class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i> 50
+                            Certificates</span>
                     </div>
                     <p class="text-sm text-red-500 mt-2 font-bold">That's over 50% OFF the combined price!</p>
                 </div>
@@ -114,7 +121,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="overflow-x-hidden">
         <div id="welcome-screen" class="fade-in">
             <section class="hero-gradient text-white py-10 px-4 sm:px-6">
                 <div class="max-w-7xl mx-auto text-center">
@@ -167,45 +174,124 @@
                 </div>
             </section>
 
-            <section class="py-20 bg-gray-50">
+
+
+
+            <section id="how-it-works" class="py-20 bg-white">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6">
                     <div class="text-center mb-16">
-                        <h2 class="text-4xl font-bold text-gray-800 mb-4">Why Choose PROGMASTER PVT LTD?</h2>
-                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Experience the future of online learning with our innovative platform</p>
+                        <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider">Your Journey to
+                            Expertise</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">How Our Learning System Works</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">A simple, 4-step process designed for maximum retention and career impact.</p>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-4 md:gap-8">
-                        <div class="card-hover bg-white p-8 rounded-2xl shadow-lg text-center">
-                            <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                </svg>
+                    <div class="relative flex justify-center">
+                        <div class="hidden md:block absolute top-12 w-full max-w-5xl h-1 bg-indigo-200 z-0"></div>
+
+                        <div class="grid md:grid-cols-4 gap-12 text-center relative z-10">
+
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white">
+                                    1
+                                </div>
+                                <div class="mt-4">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Enroll & Access</h3>
+                                    <p class="text-gray-600 text-sm">Sign up for your chosen course or the All-Access Pass and gain instant access to your Dashboard.</p>
+                                </div>
                             </div>
-                            <h3 class="text-2xl font-semibold mb-4">Industry-Recognized Certificates</h3>
-                            <p class="text-gray-600">Earn certificates that employers value and trust</p>
+
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white">
+                                    2
+                                </div>
+                                <div class="mt-4">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Learn Daily Modules</h3>
+                                    <p class="text-gray-600 text-sm">Follow the structured 10-day curriculum, engage with videos, and work on real-world practical projects.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white">
+                                    3
+                                </div>
+                                <div class="mt-4">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Pass & Submit</h3>
+                                    <p class="text-gray-600 text-sm">Complete all modules and achieve the minimum time requirement to unlock certificate generation.</p>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col items-center">
+                                <div class="w-16 h-16 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white">
+                                    4
+                                </div>
+                                <div class="mt-4">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Claim Certificate</h3>
+                                    <p class="text-gray-600 text-sm">Download your industry-recognized, AICTE-aggregated certificate and boost your career profile.</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="py-20 bg-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                    <div class="text-center mb-16">
+                        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Your Learning
+                            Advantage</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Why Choose PROGMASTER PVT LTD?</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Experience the future of online learning with our innovative platform and commitment to your success.</p>
+                    </div>
+
+                    <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
+
+                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-indigo-500">
+                            <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-infinity fa-2x text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Lifetime Access</h3>
+                            <p class="text-gray-600 text-sm">Enroll once, own the content forever. Includes all future updates.
+                            </p>
                         </div>
 
-                        <div class="card-hover bg-white p-8 rounded-2xl shadow-lg text-center">
-                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z" />
-                                </svg>
+                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-blue-500">
+                            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-award fa-2x text-white"></i>
                             </div>
-                            <h3 class="text-2xl font-semibold mb-4">Expert Instructors</h3>
-                            <p class="text-gray-600">Learn from industry professionals with real-world experience</p>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">AICTE Aggregated</h3>
+                            <p class="text-gray-600 text-sm">Receive a certificate recognized and valued by industry standards.
+                            </p>
                         </div>
 
-                        <div class="card-hover bg-white p-8 rounded-2xl shadow-lg text-center">
-                            <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mx-auto mb-6">
-                                <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
-                                    <path
-                                        d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" />
-                                </svg>
+                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-green-500">
+                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-handshake-angle fa-2x text-white"></i>
                             </div>
-                            <h3 class="text-2xl font-semibold mb-4">Progress Tracking</h3>
-                            <p class="text-gray-600">Monitor your learning journey with detailed analytics</p>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Placement Support</h3>
+                            <p class="text-gray-600 text-sm">Get guidance and resources to help you land your dream job.
+                            </p>
                         </div>
+
+                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-orange-500">
+                            <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-file-code fa-2x text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Real-World Projects</h3>
+                            <p class="text-gray-600 text-sm">Build a professional portfolio with practical, hands-on assignments.
+                            </p>
+                        </div>
+
+                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-red-500">
+                            <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fa-solid fa-tag fa-2x text-white"></i>
+                            </div>
+                            <h3 class="text-xl font-bold mb-2 text-gray-800">Affordable Pricing</h3>
+                            <p class="text-gray-600 text-sm">High-quality education made accessible with low, one-time fees.
+                            </p>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -229,82 +315,301 @@
             </section>
 
 
+            <section id="testimonials" style="background: white;" class="py-20 relative">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <div class="text-center mb-12">
+                        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Trusted
+                            Voices</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">What Our Graduates Say</h2>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Real stories from professionals who advanced their careers with us.</p>
+                    </div>
 
-            <section id="testimonials" class="py-12 bg-white">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 text-center">
-                    <h3 class="text-3xl font-bold mb-4">What our students say</h3>
-                    <p class="text-gray-600 mb-8">Real feedback from learners who advanced their careers</p>
-                    <div class="grid md:grid-cols-3 gap-6" id="testimonials-list">
-                        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-                            <p class="text-gray-700 mb-4">"Great course, practical projects and supportive instructors!"
-                            </p>
-                            <div class="flex items-center gap-3 justify-center">
-                                <div class="w-12 h-12 rounded-full bg-indigo-200 flex items-center justify-center font-semibold">
-                                    A</div>
-                                <div class="text-left">
-                                    <div class="font-bold">Ananya</div>
-                                    <div class="text-sm text-gray-500">Full Stack Grad</div>
+                    <div class="relative overflow-hidden">
+                        <div id="testimonials-track" class="flex transition-transform duration-500 ease-in-out">
+
+                            <div class="flex-shrink-0 w-full p-6">
+                                <div class="bg-white p-10 rounded-3xl shadow-2xl border-l-8 border-indigo-600 relative text-center">
+                                    <i class="fa-solid fa-quote-left text-indigo-200 absolute top-4 left-4 text-4xl opacity-70"></i>
+                                    <p class="text-gray-700 mb-8 text-xl italic max-w-2xl mx-auto">
+                                        "Great course, practical projects and supportive instructors! I landed my first job a month after certification, thanks to the hands-on experience."
+                                    </p>
+                                    <div class="flex items-center gap-4 justify-center">
+                                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                                            A</div>
+                                        <div class="text-left">
+                                            <div class="font-bold text-gray-900 text-lg">Ananya Sharma</div>
+                                            <div class="text-sm text-indigo-600 font-medium">Full Stack Graduate</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-                            <p class="text-gray-700 mb-4">"The certificate helped me get interviews. Highly recommend."
-                            </p>
-                            <div class="flex items-center gap-3 justify-center">
-                                <div class="w-12 h-12 rounded-full bg-green-200 flex items-center justify-center font-semibold">
-                                    R</div>
-                                <div class="text-left">
-                                    <div class="font-bold">Ravi</div>
-                                    <div class="text-sm text-gray-500">Data Analyst</div>
+
+                            <div class="flex-shrink-0 w-full p-6">
+                                <div class="bg-white p-10 rounded-3xl shadow-2xl border-l-8 border-green-600 relative text-center">
+                                    <i class="fa-solid fa-quote-left text-green-200 absolute top-4 left-4 text-4xl opacity-70"></i>
+                                    <p class="text-gray-700 mb-8 text-xl italic max-w-2xl mx-auto">
+                                        "The certificate is industry-recognized and helped me get interviews at top firms. The Data Science track was challenging yet incredibly rewarding."
+                                    </p>
+                                    <div class="flex items-center gap-4 justify-center">
+                                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                                            R</div>
+                                        <div class="text-left">
+                                            <div class="font-bold text-gray-900 text-lg">Ravi Teja</div>
+                                            <div class="text-sm text-green-600 font-medium">Data Analyst</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="bg-gray-50 p-6 rounded-xl shadow-sm">
-                            <p class="text-gray-700 mb-4">"Practical, updated content and friendly community."</p>
-                            <div class="flex items-center gap-3 justify-center">
-                                <div class="w-12 h-12 rounded-full bg-orange-200 flex items-center justify-center font-semibold">
-                                    S</div>
-                                <div class="text-left">
-                                    <div class="font-bold">Sahana</div>
-                                    <div class="text-sm text-gray-500">Mobile Dev</div>
+
+                            <div class="flex-shrink-0 w-full p-6">
+                                <div class="bg-white p-10 rounded-3xl shadow-2xl border-l-8 border-orange-600 relative text-center">
+                                    <i class="fa-solid fa-quote-left text-orange-200 absolute top-4 left-4 text-4xl opacity-70"></i>
+                                    <p class="text-gray-700 mb-8 text-xl italic max-w-2xl mx-auto">
+                                        "Practical, updated content and a friendly community. The support from the instructors was invaluable. I now feel confident in my Mobile Development role."
+                                    </p>
+                                    <div class="flex items-center gap-4 justify-center">
+                                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                                            S</div>
+                                        <div class="text-left">
+                                            <div class="font-bold text-gray-900 text-lg">Sahana K.</div>
+                                            <div class="text-sm text-orange-600 font-medium">Mobile Development Expert
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
+
+                        <button onclick="moveTestimonialSlider(-1)" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-gray-700 hover:bg-gray-200 transition-colors z-10 opacity-75">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button onclick="moveTestimonialSlider(1)" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-gray-700 hover:bg-gray-200 transition-colors z-10 opacity-75">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
                     </div>
                 </div>
             </section>
-            <section id="contact-section" class="py-12 bg-gradient-to-b from-gray-50 to-white">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                    <div class="grid md:grid-cols-2 gap-8 items-center">
-                        <div>
-                            <h3 class="text-3xl font-bold mb-4">Get in touch</h3>
-                            <p class="text-gray-600 mb-6">Have questions? Reach out and our team will respond within 24 hours.
-                            </p>
-                            <ul class="text-gray-700 space-y-3">
-                                <li><strong>Email:</strong> support@edupro.example</li>
-                                <li><strong>Phone:</strong> +91 98765 43210</li>
-                                <li><strong>Address:</strong> 12/4 Tech Park, Hyderabad, India</li>
-                            </ul>
+
+
+            <section id="faq-section" class="py-20 bg-gray-50">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                    <div class="text-center mb-12">
+                        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Quick
+                            Answers</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Frequently Asked Questions</h2>
+                        <p class="text-xl text-gray-600">Find instant answers to questions about access, payments, and certificates.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4" id="faq-accordion">
+
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 accordion-item">
+                            <button class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none" onclick="toggleFaq(this)">
+                                <span>How do I get my certificate after finishing a course?</span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-indigo-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content mt-3 text-gray-600 hidden">
+                                <p>Once you complete all the course modules and meet the minimum learning time (validated by the platform), a "Generate Certificate" button will appear on your dashboard. You can download the high-resolution PNG file instantly.</p>
+                            </div>
                         </div>
-                        <div>
-                            <form id="contact-form" onsubmit="event.preventDefault(); alert('Thanks — we will contact you shortly!'); this.reset();">
-                                <div class="mb-3">
-                                    <input required placeholder="Your name" class="w-full px-3 py-2 border rounded-lg">
+
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 accordion-item">
+                            <button class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none" onclick="toggleFaq(this)">
+                                <span>Is the certificate recognized or aggregated by AICTE?</span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-indigo-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content mt-3 text-gray-600 hidden">
+                                <p>Yes, our certificates are aggregated according to AICTE guidelines. They are designed to be valued by employers and are valid for submission on professional networking sites.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 accordion-item">
+                            <button class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none" onclick="toggleFaq(this)">
+                                <span>What is the All-Access Pass (Subscription)?</span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-indigo-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content mt-3 text-gray-600 hidden">
+                                <p>The All-Access Pass is a one-time payment for ₹1500 that grants you instant, lifetime access to all 50+ courses and all future courses on the platform. It's the best value if you plan to take multiple courses.</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 accordion-item">
+                            <button class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none" onclick="toggleFaq(this)">
+                                <span>Is the course content available offline?</span>
+                                <i
+                                    class="fa-solid fa-chevron-down text-indigo-500 transform transition-transform duration-300"></i>
+                            </button>
+                            <div class="accordion-content mt-3 text-gray-600 hidden">
+                                <p>The current platform requires an internet connection to access the course content and record your progress accurately for certificate validation.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <script>
+                function toggleFaq(button) {
+                    const item = button.closest('.accordion-item');
+                    const content = item.querySelector('.accordion-content');
+                    const icon = button.querySelector('.fa-chevron-down');
+
+                    // Close all other open items
+                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.accordion-content').classList.add('hidden');
+                            otherItem.querySelector('.fa-chevron-down').classList.remove('rotate-180');
+                        }
+                    });
+
+                    // Toggle the clicked item
+                    content.classList.toggle('hidden');
+                    icon.classList.toggle('rotate-180');
+                }
+            </script>
+
+            <section id="contact-section" class="py-20 bg-gradient-to-b from-gray-50 to-white">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                    <div class="text-center mb-12">
+                        <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">24/7 Support</span>
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Connect with Our Team</h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're here to answer all your questions about courses, enrollment, and technical support.</p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8 items-start">
+
+                        <div class="md:col-span-1 bg-white p-8 rounded-2xl shadow-xl border-l-4 border-indigo-600">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fa-solid fa-headset mr-3 text-indigo-600"></i> Direct Channels
+                            </h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start space-x-4">
+                                    <i class="fa-solid fa-envelope text-2xl text-indigo-500 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Email Support</h4>
+                                        <p class="text-gray-600 text-sm">Our primary support channel. Expect a reply within 24 hours.</p>
+                                        <a href="mailto:support@edupro.example" class="text-indigo-600 font-medium hover:underline">support@edupro.example</a>
+                                    </div>
                                 </div>
-                                <div class="mb-3">
-                                    <input required type="email" placeholder="Email" class="w-full px-3 py-2 border rounded-lg">
+
+                                <div class="flex items-start space-x-4">
+                                    <i class="fa-solid fa-phone-volume text-2xl text-indigo-500 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Call Us</h4>
+                                        <p class="text-gray-600 text-sm">For urgent inquiries during business hours (10AM - 6PM IST).</p>
+                                        <a href="tel:+919876543210" class="text-indigo-600 font-medium hover:underline">+91 98765 43210</a>
+                                    </div>
                                 </div>
-                                <div class="mb-3">
-                                    <textarea required placeholder="Message" rows="4" class="w-full px-3 py-2 border rounded-lg"></textarea>
+
+                                <div class="flex items-start space-x-4">
+                                    <i class="fa-solid fa-map-location-dot text-2xl text-indigo-500 mt-1"></i>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Corporate Address</h4>
+                                        <p class="text-gray-600 text-sm">Visit our headquarters (by appointment only).
+                                        </p>
+                                        <address class="not-italic text-indigo-600 font-medium">12/4 Tech Park,
+                                            Hyderabad, India</address>
+                                    </div>
                                 </div>
-                                <button class="bg-indigo-600 text-white px-6 py-2 rounded-lg">Send Message</button>
+                            </div>
+                        </div>
+
+                        <div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-xl">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
+                            <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been received. We will contact you shortly.'); this.reset();" class="space-y-4">
+
+                                <div class="grid sm:grid-cols-2 gap-4">
+                                    <input required placeholder="Your Full Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow">
+                                    <input required type="email" placeholder="Your Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow">
+                                </div>
+
+                                <input type="text" placeholder="Subject (e.g., Enrollment Question)" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow">
+
+                                <textarea required placeholder="Your detailed message..." rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow"></textarea>
+
+                                <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg flex items-center justify-center space-x-2">
+                                    <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
+                                </button>
                             </form>
                         </div>
                     </div>
+
+                    <div class="mt-8 text-center text-gray-500 text-sm">
+                        <p>*Note: For fastest service, please check our <a href="#" class="text-indigo-600 hover:underline">FAQ section</a> before submitting a query.</p>
+                    </div>
                 </div>
             </section>
-        </div>
 
+
+            <footer class="bg-gray-800 text-white py-12">
+                <div class="max-w-7xl mx-auto px-4 sm:px-6">
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-gray-700 pb-8">
+
+                        <div class="col-span-2 md:col-span-1">
+                            <div class="flex items-center space-x-2 mb-4">
+                                <svg class="w-8 h-8 text-indigo-400" fill="currentColor" viewBox="0 0 20 20">
+                                    <path
+                                        d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                                </svg>
+                                <span class="text-xl font-bold text-white">EduPro Academy</span>
+                            </div>
+                            <p class="text-gray-400 text-sm">Empowering professionals with future-ready skills through expert-led, practical courses.</p>
+                            <div class="flex space-x-4 mt-4 text-gray-400">
+                                <i class="fa-brands fa-facebook text-lg hover:text-indigo-400 transition-colors"></i>
+                                <i class="fa-brands fa-twitter text-lg hover:text-indigo-400 transition-colors"></i>
+                                <i class="fa-brands fa-linkedin text-lg hover:text-indigo-400 transition-colors"></i>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4 text-indigo-400">Quick Links</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><button onclick="showWelcomeScreen()" class="text-gray-300 hover:text-indigo-400 transition-colors">Home</button></li>
+                                <li><button onclick="showCourseList()" class="text-gray-300 hover:text-indigo-400 transition-colors">Courses</button>
+                                </li>
+                                <li><button onclick="showDashboard()" class="text-gray-300 hover:text-indigo-400 transition-colors">Dashboard</button>
+                                </li>
+                                <li><button onclick="showCertificates()" class="text-gray-300 hover:text-indigo-400 transition-colors">Certificates</button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4 text-indigo-400">Contact Us</h4>
+                            <ul class="space-y-2 text-sm text-gray-300">
+                                <li><i class="fa-solid fa-envelope mr-2"></i> support@edupro.example</li>
+                                <li><i class="fa-solid fa-phone mr-2"></i> +91 98765 43210</li>
+                                <li><i class="fa-solid fa-location-dot mr-2"></i> 12/4 Tech Park, Hyderabad</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-lg font-semibold mb-4 text-indigo-400">Legal</h4>
+                            <ul class="space-y-2 text-sm">
+                                <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition-colors">Privacy
+                                        Policy</a></li>
+                                <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition-colors">Terms of
+                                        Service</a></li>
+                                <li><a href="#" class="text-gray-300 hover:text-indigo-400 transition-colors">Refund
+                                        Policy</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-8 text-center text-sm text-gray-400">
+                        &copy; <span id="current-year">2025</span> PROGMASTER PVT LTD. All rights reserved.
+                    </div>
+                </div>
+            </footer>
+
+
+        </div>
         <div id="admin-login-screen" class="hidden max-w-md mx-auto p-8 rounded-lg shadow-lg fade-in">
             <h2 class="text-2xl font-bold text-center mb-6 text-red-600">Admin Login</h2>
             <p class="text-center text-sm text-gray-600 mb-4">Use: admin@edupro.com / admin123</p>
@@ -384,82 +689,189 @@
                 </div>
             </div>
         </div>
-        <div id="dashboard-screen" class="hidden fade-in max-w-7xl px-4 sm:px-6 py-8">
-            <div class="mb-8">
-                <h2 class="text-3xl font-bold text-gray-800 mb-2">Welcome back, <span id="dashboard-user-name"></span>!
-                </h2>
-                <p class="text-gray-600">Continue your learning journey</p>
-            </div>
-            <div id="premium-greeting" class="hidden bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-4 rounded-xl shadow-lg mb-6 transform transition-all duration-500 hover:scale-[1.01] flex items-center justify-center space-x-3">
-                <span class="text-3xl">👑</span>
-                <p class="text-xl font-bold">Welcome, Premium Member!</p>
-                <p class="text-sm">Enjoy all 50 courses unlocked.</p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8">
-                <div class="EnrollCourse .shadow-lg bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-6 rounded-2xl">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-indigo-100">Enrolled Courses</p>
-                            <p class="text-3xl font-bold" id="enrolled-count">0</p>
+
+        <div id="dashboard-screen" class="hidden fade-in min-h-screen bg-gray-100">
+            <div class="flex max-w-7xl mx-auto py-8 px-4 sm:px-6 lg:px-8">
+
+                <div class="hidden md:block w-72 mr-8 sticky top-20 self-start space-y-6">
+
+                    <div class="bg-white rounded-2xl shadow-lg p-6 space-y-2">
+                        <h3 class="text-lg font-bold text-gray-900 mb-4 border-b pb-3">LMS Navigation</h3>
+                        <button onclick="showDashboard()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition-colors">
+                            <i class="fa-solid fa-gauge-high"></i> <span class="font-semibold">Dashboard</span>
+                        </button>
+                        <button onclick="showProfile()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+                            <i class="fa-solid fa-book-open"></i> <span>My Courses</span>
+                        </button>
+                        <button onclick="showCertificates()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+                            <i class="fa-solid fa-certificate"></i> <span>Certificates</span>
+                        </button>
+                        <button onclick="showMyAccount()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+                            <i class="fa-solid fa-user-gear"></i> <span>Account Settings</span>
+                        </button>
+                        <div class="pt-4 mt-4 border-t">
+                            <button onclick="logout()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors">
+                                <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
+                            </button>
                         </div>
-                        <div class="text-4xl opacity-80">📚</div>
                     </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3">Quick Actions</h3>
+                        <div class="space-y-3">
+                            <button onclick="showProfile()" class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-list-check"></i> <span>Go to My Courses</span>
+                            </button>
+                            <button onclick="showCourseList()" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-magnifying-glass"></i> <span>Browse All Courses</span>
+                            </button>
+                            <button onclick="showCertificates()" class="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg hover:bg-yellow-600 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-download"></i> <span>Download Certificates</span>
+                            </button>
+                            <button onclick="showMyAccount()" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-gear"></i> <span>Manage Account</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                        <h3 class="text-lg font-bold text-gray-800 mb-4 border-b pb-2">Your Focus Metrics</h3>
+                        <div class="space-y-4">
+
+                            <div class="flex items-center space-x-3">
+                                <div class="text-indigo-600">
+                                    <i class="fa-solid fa-bullseye fa-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xl font-bold" id="sidebar-courses-remaining">0</div>
+                                    <div class="text-xs text-gray-500">Certificates to Achieve</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center space-x-3">
+                                <div class="text-red-600">
+                                    <i class="fa-solid fa-clock-rotate-left fa-lg"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xl font-bold" id="sidebar-last-active">Loading...</div>
+                                    <div class="text-xs text-gray-500">Last Session</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-2xl shadow-lg p-6 mb-6">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4 flex items-center space-x-2">
+                            <i class="fa-solid fa-trophy text-yellow-600"></i>
+                            <span>Top Achievers</span>
+                        </h3>
+                        <div id="leaderboard-list" class="space-y-3">
+                            <p class="text-sm text-gray-500">Loading leaderboard...</p>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="CompletedCourse bg-gradient-to-r from-green-500 to-emerald-600 text-white p-6 rounded-2xl">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-green-100">Completed</p>
-                            <p class="text-3xl font-bold" id="completed-count">0</p>
-                        </div>
-                        <div class="text-4xl opacity-80">🏆</div>
+                <div class="flex-grow">
+                    <div class="mb-8">
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-2">Welcome Back, <span id="dashboard-user-name"></span>!</h2>
+                        <p class="text-gray-600 text-lg">Your central hub for learning progress and quick actions.</p>
                     </div>
-                </div>
 
-                <div class="CertificateCourse bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 rounded-2xl">
-                    <div class="flex items-center justify-between">
-                        <div>
-                            <p class="text-orange-100">Certificates</p>
-                            <p class="text-3xl font-bold" id="certificates-count">0</p>
+                    <div id="premium-greeting" class="hidden bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-4 rounded-xl shadow-lg mb-6 transform transition-all duration-500 hover:scale-[1.01] flex items-center justify-between space-x-3">
+                        <div class="flex items-center space-x-3">
+                            <span class="text-3xl">👑</span>
+                            <p class="text-xl font-bold">Welcome, Premium Member! All 50+ courses are unlocked.</p>
                         </div>
-                        <div class="text-4xl opacity-80">🎓</div>
+                        <button onclick="showCourseList()" class="bg-white text-orange-600 font-semibold px-4 py-2 rounded-lg text-sm hover:shadow-xl">Browse
+                            All</button>
                     </div>
-                </div>
-            </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-8">
-                <div class="lg:col-span-2">
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <h3 class="text-xl font-semibold mb-4">Continue Learning</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-indigo-600 transform transition-transform duration-330 hover:scale-[1.02]">
+                            <p class="text-indigo-600 font-bold mb-1">Enrolled Courses</p>
+                            <p class="text-4xl font-extrabold text-gray-900" id="enrolled-count">0</p>
+                            <div class="flex items-center text-sm text-gray-500 mt-2">
+                                <i class="fa-solid fa-book-reader mr-2"></i> All courses you have access to.
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-green-600 transform transition-transform duration-330 hover:scale-[1.02]">
+                            <p class="text-green-600 font-bold mb-1">Certificates Earned</p>
+                            <p class="text-4xl font-extrabold text-gray-900" id="certificates-count">0</p>
+                            <div class="flex items-center text-sm text-gray-500 mt-2">
+                                <i class="fa-solid fa-trophy mr-2"></i> Industry-recognized achievements.
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-yellow-600 transform transition-transform duration-330 hover:scale-[1.02]">
+                            <p class="text-yellow-600 font-bold mb-1">Global Announcements</p>
+                            <p class="text-4xl font-extrabold text-gray-900">
+                                <button onclick="showNotificationPopup()" class="text-yellow-600 hover:text-yellow-700">
+                                    <span id="notification-badge"
+                                        class="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full absolute top-2 right-2 transform translate-x-1/2 -translate-y-1/2 hidden">New!</span>
+                                    <i class="fa-solid fa-bell"></i>
+                                </button>
+                            </p>
+                            <div class="flex items-center text-sm text-gray-500 mt-2">
+                                <i class="fa-solid fa-bullhorn mr-2"></i> Important updates from the team.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:hidden bg-white rounded-2xl shadow-xl p-6 mb-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3">Quick Actions</h3>
+                        <div class="space-y-3">
+                            <button onclick="showProfile()" class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-list-check"></i> <span>Go to My Courses</span>
+                            </button>
+                            <button onclick="showCourseList()" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-magnifying-glass"></i> <span>Browse All Courses</span>
+                            </button>
+                            <button onclick="showCertificates()" class="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg hover:bg-yellow-600 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-download"></i> <span>Download Certificates</span>
+                            </button>
+                            <button onclick="showMyAccount()" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-gear"></i> <span>Manage Account</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl p-6">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3">Continue Learning</h3>
                         <div id="continue-learning" class="space-y-4">
                         </div>
                     </div>
-                </div>
 
-                <div>
-                    <div class="bg-white rounded-2xl shadow-lg p-6">
-                        <h3 class="text-xl font-semibold mb-4">Quick Actions</h3>
-                        <div class="space-y-3">
-                            <button onclick="showCourseList()" class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors">
-                                Browse Courses
-                            </button>
-                            <button onclick="showProfile()" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors">
-                                My Courses
-                            </button>
-                            <button onclick="showCertificates()" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition-colors">
-                                View Certificates
-                            </button>
-                            <button onclick="showNotificationPopup()" class="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg hover:bg-yellow-600 transition-colors relative">
-                                Global Notification
-                                <span id="notification-badge"
-                                    class="absolute top-0 right-0 transform -translate-y-1/2 translate-x-1/2 bg-red-600 text-white text-xs font-bold px-2 py-0.5 rounded-full hidden">
-                                </span>
-                            </button>
+                    <div class="bg-white rounded-2xl shadow-xl p-6 mt-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3">My Learning Metrics</h3>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                            <div style="height: 350px;">
+                                <canvas id="studentProgressChart"></canvas>
+                            </div>
+
+                            <div style="height: 350px;">
+                                <canvas id="peerComparisonChart"></canvas>
+                            </div>
                         </div>
                     </div>
+
+                    <div class="bg-white rounded-2xl shadow-xl mt-8 w-auto">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3 px-6 sm:px-8 lg:px-10 pt-6">
+                            Weekly Engagement Trend</h3>
+
+                        <div class="px-6 sm:px-8 lg:px-10 pb-6" style="height: 300px;">
+                            <canvas id="weeklyActivityTrendChart"></canvas>
+                        </div>
+                    </div>
+
                 </div>
+
             </div>
         </div>
+
+
 
         <div id="course-list" class="hidden fade-in max-w-7xl mx-auto px-4 sm:px-6 py-8">
             <div class="text-center mb-12">
@@ -718,19 +1130,19 @@
             <div class="hidden md:flex items-center gap-3">
                 <button id="integrated-completion-button" class="bg-gray-300 text-white font-semibold py-2 px-4 rounded-lg transition
                        disabled:opacity-50 disabled:cursor-not-allowed">
-                Loading...
-            </button>
+                    Loading...
+                </button>
 
                 <button onclick="endLearningSession()" class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4
                        rounded-lg transition">
-                ← Dashboard
-            </button>
+                    ← Dashboard
+                </button>
             </div>
 
             <!-- MOBILE MENU BUTTON (3 dots) -->
             <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg border border-white-300 text-white-1000">
-            ⋮
-        </button>
+                ⋮
+            </button>
         </nav>
 
         <!-- MOBILE MENU DROPDOWN -->
@@ -738,13 +1150,13 @@
 
             <button id="integrated-completion-button-mobile" class="bg-gray-300 w-full text-white font-semibold py-2 px-4 rounded-lg transition
                    disabled:opacity-50 disabled:cursor-not-allowed">
-            Loading...
-        </button>
+                Loading...
+            </button>
 
             <button onclick="endLearningSession()" class="bg-indigo-600 hover:bg-indigo-700 w-full text-white font-semibold py-2 px-4
                    rounded-lg transition">
-            ← Dashboard
-        </button>
+                ← Dashboard
+            </button>
         </div>
 
         <!-- IFRAME -->
@@ -763,6 +1175,13 @@
         <i class="fa-solid fa-crown text-2xl"></i>
         <span class="text-lg font-bold hidden sm:inline">All-Access Pass: ₹1500!</span>
     </button>
+
+
+    <a href="https://wa.me/919876543210" target="_blank" style="bottom: 35px;" onclick="document.getElementById('subscription-modal').classList.remove('hidden')" class="fixed bottom-6 left-6 z-40 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-pink-700 transition-all duration-150 transform hover:scale-105 flex items-center space-x-2 animate-bounce"
+        aria-label="Chat with us on WhatsApp">
+        <span class="text-lg font-bold hidden sm:inline">DM To Us!</span>
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
 
     <script>
         // MOBILE MENU TOGGLE
@@ -788,11 +1207,13 @@
             childList: true
         });
     </script>
-
     <script>
+        // **************************************************
+        // *** 0. CORE UTILITY & GLOBAL VARS (DEFINED FIRST) ***
+        // **************************************************
+
         // Application State
         let currentCourse = null;
-        let currentDay = 1;
         let currentUser = null;
         const PAYMENT_LINK = 'https://rzp.io/rzp/MdrDDje';
         const SUBCRIPTION_PAYMENT_LINK = 'https://rzp.io/rzp/MdrDDje';
@@ -805,12 +1226,19 @@
         const RECORDS_PER_PAGE = 20;
         let currentPage = 1;
 
-        // --- NEW INTEGRATION VARIABLES ---
-        const MINIMUM_TIME_SECONDS = 30; // Set to 30 for testing (5 min = 300)
-        let integratedCompletionTimer = null;
+
+        // --- EXTERNAL COURSE INTEGRATION VARIABLES ---
+        const EXTERNAL_COURSE_URL = 'https://articulate.com/your-course-link-placeholder'; // Placeholder for Articulate Link
         let currentLearningUserId = null;
         let currentLearningCourseId = null;
-        // --- END NEW INTEGRATION VARIABLES ---
+
+        // **CRITICAL: Restore Timer Variables**
+        const MINIMUM_TIME_SECONDS = 30; // 30 seconds for testing (5 min = 300)
+        let integratedCompletionTimer = null;
+        // --- END EXTERNAL COURSE INTEGRATION VARIABLES ---
+        // NEW: Real-Time Tracking Variables (MOVED TO GLOBAL SCOPE TO FIX ERROR)
+        let sessionStartTime = null;
+        const ACTIVITY_LOG_PATH = 'edupro_users_activity';
 
         // Sample Data: COURSE IDs must be unique strings 
         let courses = [{
@@ -897,6 +1325,8 @@
             }]
         }];
 
+
+        // Firebase Configuration (Keep this section intact)
         const firebaseConfig = {
             apiKey: "AIzaSyBnQ0s1jFoMH6J7vhKVM7NVC-WNScLdA7E",
             authDomain: "sutherland-6ce2b.firebaseapp.com",
@@ -921,9 +1351,40 @@
 
 
         // **************************************************
-        // *** 0. CORE UTILITY FUNCTIONS (MUST BE DEFINED FIRST) ***
+        // *** REAL-TIME ACTIVE TIME TRACKING UTILITIES (FIX FOR REFERENCE ERROR) ***
         // **************************************************
 
+        function startSessionTimer() {
+            // Start tracking time only if a user is logged in
+            if (currentUserId) {
+                sessionStartTime = Date.now();
+            }
+        }
+
+        async function logSessionDuration() {
+            if (!currentUserId || !sessionStartTime) return;
+
+            const endTime = Date.now();
+            // Calculate duration in minutes (round down)
+            const durationMinutes = Math.floor((endTime - sessionStartTime) / (1000 * 60));
+
+            // Reset the start time
+            sessionStartTime = null;
+
+            if (durationMinutes > 0) {
+                const todayKey = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+                const userActivityRef = firebase.database().ref(`${ACTIVITY_LOG_PATH}/${currentUserId}/${todayKey}`);
+
+                // Use a transaction to safely increment the total minutes for today
+                await userActivityRef.transaction(currentMinutes => {
+                    return (currentMinutes || 0) + durationMinutes;
+                });
+
+                console.log(`Logged ${durationMinutes} minutes for today.`);
+            }
+        }
+
+        // *** CORE UTILITY FUNCTIONS ***
 
         function showLoader() {
             document.getElementById("global-loader").style.display = "flex";
@@ -1015,6 +1476,35 @@
             };
         }
 
+        function timeSince(date) {
+            if (!date) return "N/A";
+            const seconds = Math.floor((new Date() - date) / 1000);
+
+            let interval = seconds / 31536000; // Years
+            if (interval > 1) return Math.floor(interval) + " years ago";
+
+            interval = seconds / 2592000; // Months
+            if (interval > 1) return Math.floor(interval) + " months ago";
+
+            interval = seconds / 86400; // Days
+            if (interval > 1) return Math.floor(interval) + " days ago";
+
+            interval = seconds / 3600; // Hours
+            if (interval > 1) return Math.floor(interval) + " hours ago";
+
+            interval = seconds / 60; // Minutes
+            if (interval > 1) return Math.floor(interval) + " mins ago";
+
+            return "Just now";
+        }
+
+        function getCoursesRemaining() {
+            const totalEnrolled = getEnrolledCourseCount();
+            const userCertificates = certificates.filter(c => c.userId === currentUserId);
+            const totalCertified = userCertificates.length;
+
+            return Math.max(0, totalEnrolled - totalCertified);
+        }
 
         // **************************************************
         // *** 1. SCREEN NAVIGATION FUNCTIONS ***
@@ -1037,7 +1527,6 @@
             const whiteLogo = document.getElementById('white-logo');
 
             // ** FIX 1: NAVBAR VISIBILITY **
-            // This ensures the main navigation bar is always visible, preventing the disappearing issue.
             totalNav.style.display = 'flex';
 
             navButtons.style.display = 'none';
@@ -1046,16 +1535,13 @@
 
             if (isAdmin) {
                 adminNav.style.display = 'flex';
-                totalNav.style.backgroundColor = 'white'; // Admin nav uses white background
+                totalNav.style.backgroundColor = 'white';
             } else if (isLoggedIn) {
-                // ** FIX 2: TYPE ERROR CHECK **
-                // Check if currentUser and currentUser.name exist before attempting split/charAt.
                 if (currentUser && currentUser.name) {
                     document.getElementById('user-name-nav').textContent = currentUser.name.split(' ')[0];
                     document.getElementById('user-avatar').textContent = currentUser.name.charAt(0);
                     updateNotificationBadge();
                 } else if (currentUser) {
-                    // Fallback if user is logged in but name is missing in database
                     document.getElementById('user-name-nav').textContent = "User";
                     document.getElementById('user-avatar').textContent = "U";
                     updateNotificationBadge();
@@ -1065,18 +1551,16 @@
                 blackLogo.style.display = 'block';
                 whiteLogo.style.display = 'none';
                 totalNav.style.backgroundColor = 'white';
-                // Note: The welcome screen is hidden, and dashboard shown when logged in
                 document.getElementById('welcome-screen').style.display = 'none';
                 showDashboard();
             } else {
                 navButtons.style.display = 'flex';
                 blackLogo.style.display = 'none';
                 whiteLogo.style.display = 'block';
-                totalNav.style.backgroundColor = 'black'; // Welcome screen uses transparent/dark background
-                // showWelcomeScreen(); // This is called by initializeUI after auth state is determined
+                totalNav.style.backgroundColor = 'black';
             }
         }
-        // FIX: Moved Admin Login Functions Here
+
         function showAdminLogin() {
             hideAllScreens();
             document.getElementById('admin-login-screen').style.display = 'block';
@@ -1144,12 +1628,16 @@
 
         function showProfile() {
             if (!currentUserId) return showLogin();
+
+            // Wait for data to be fetched before proceeding
             fetchUserData().then(() => {
                 hideAllScreens();
                 document.getElementById('profile-screen').style.display = 'block';
-                renderProfileCourses(); // Defined below
+                // Now run the renderer after data is confirmed available
+                renderProfileCourses();
             });
         }
+
         async function showMyAccount() {
             if (!currentUserId) return showLogin();
             await fetchUserData();
@@ -1206,6 +1694,7 @@
             await fetchUserData();
             renderAdminDashboard(); // Defined below
         }
+
 
         // *** INTEGRATED COURSE LEARNING FUNCTIONS ***
 
@@ -1390,6 +1879,8 @@
         // *** END SCREEN NAVIGATION ***
 
 
+
+
         // **************************************************
         // *** 2. CORE CERTIFICATE LOGIC ***
         // **************************************************
@@ -1457,39 +1948,45 @@
                 const userToCertify = users.find(u => u.uid === uid);
 
                 if (!userToCertify) {
-                    hideLoader(); // Essential fix: hide loader on error
+                    hideLoader();
                     console.error("CERT GENERATION ERROR: User data not found locally after refresh for UID:", uid);
                     throw new Error("User data is unavailable for certificate generation.");
                 }
 
-                // Check 2: Final critical check (Prevents race condition duplicates)
                 const existingCert = certificates.find(c => c.userId === uid && c.courseId === courseId);
 
                 if (existingCert) {
-                    hideLoader(); // Essential fix: hide loader before alert
+                    hideLoader();
                     alert(`Certificate for ${existingCert.courseTitle} already exists. Redirecting to Certificates page.`);
                     await fetchUserData();
-                    showCertificates();
+                    // --- FIX 2: If cert exists, show the existing certificate screen ---
+                    showCertificateScreen(existingCert);
                     return;
                 }
 
                 // Proceed with generation only if it doesn't exist
                 const certObj = await generateAndSaveCertificate(uid, courseId);
 
-                // ... existing logic to set day and fetch data ...
+                // Update user's progress (set day to total for completion)
                 const total = certObj.totalModules;
                 await database.ref(`edupro_users/${uid}/enrolled_courses/${courseId}/day`).set(total);
 
+                // Re-fetch ALL data including the newly created certificate
                 await fetchUserData();
 
-                hideLoader(); // <<< IMPORTANT: HIDE GLOBAL LOADER AFTER SUCCESSFUL PROCESS
+                hideLoader();
                 alert(`Congratulations! Certificate ${certObj.refNo} generated for ${certObj.courseTitle}.`);
-                showCertificates();
+
+                // --- CRITICAL FIX 3: Pass the certificate object to the final screen ---
+                // We use the object from the local 'certificates' array now that it's updated
+                const newCert = certificates.find(c => c.refNo === certObj.refNo);
+                showCertificateScreen(newCert);
+                // ---------------------------------------------------------------------
 
             } catch (error) {
                 console.error("Certificate Generation/Redirect Failed at final step:", error);
 
-                hideLoader(); // <<< IMPORTANT: HIDE GLOBAL LOADER ON CRITICAL ERROR
+                hideLoader();
                 alert("CRITICAL ERROR: Certificate failed to generate or save. Please check console for details. Redirecting to dashboard.");
                 showDashboard();
             }
@@ -1600,6 +2097,7 @@
             `;
         }
 
+
         // **************************************************
         // *** 3. CORE APPLICATION LOGIC ***
         // **************************************************
@@ -1615,10 +2113,14 @@
 
         function initializeUI() {
             fetchUserData(true).then(() => {
+                // --- CRITICAL FIX: Add event listeners to log time on close/navigate ---
+                window.addEventListener('beforeunload', logSessionDuration);
+
                 auth.onAuthStateChanged((user) => {
                     if (user) {
                         if (user.email === ADMIN_EMAIL && user.uid === 'admin-mock-uid') {} else {
                             currentUserId = user.uid;
+                            startSessionTimer(); // <-- START TIMER HERE
                             fetchUserData().then(() => {
                                 updateNav(true, false);
                                 if (document.getElementById('welcome-screen').style.display !== 'none' ||
@@ -1635,6 +2137,7 @@
                     } else {
                         currentUserId = null;
                         currentUser = null;
+                        logSessionDuration(); // <-- LOG DURATION ON LOGOUT
                         updateNav(false, isAdminLoggedIn);
                         if (!isAdminLoggedIn) {
                             if (document.getElementById('dashboard-screen').style.display === 'block' ||
@@ -1787,10 +2290,10 @@
             if (currentUserId) {
                 database.ref(`edupro_users/${currentUserId}/last_active`).set(Date.now());
             }
+            logSessionDuration(); // <-- LOG DURATION ON LOGOUT BUTTON CLICK
             auth.signOut();
             showWelcomeScreen();
         }
-
 
         // Existing initiatePayment function (for single courses)
         async function initiatePayment(courseId) {
@@ -2240,6 +2743,7 @@
             });
         }
 
+
         function renderCertificates() {
             const container = document.getElementById('certificates-container');
             container.innerHTML = '';
@@ -2270,155 +2774,186 @@
         }
 
         // **************************************************
-// *** 5. RENDER FUNCTIONS (STUDENT) - MODIFIED ***
-// **************************************************
+        // *** 5. RENDER FUNCTIONS (STUDENT) - MODIFIED ***
+        // **************************************************
 
-function renderProfileScreen() {
-    if (!currentUser || !currentUser.enrolled_courses) return showLogin();
-    hideAllScreens();
-    document.getElementById('profile-screen').style.display = 'block';
-    document.body.style.backgroundColor = '#f3f4f6';
+        function renderProfileScreen() {
+            if (!currentUser || !currentUser.enrolled_courses) return showLogin();
+            hideAllScreens();
+            document.getElementById('profile-screen').style.display = 'block';
+            document.body.style.backgroundColor = '#f3f4f6';
 
-    const container = document.getElementById('enrolled-courses');
-    container.innerHTML = '';
+            const container = document.getElementById('enrolled-courses');
+            container.innerHTML = '';
 
-    const enrolledCourses = currentUser.enrolled_courses || {};
-    const activeEnrollments = Object.keys(enrolledCourses).filter(courseId => enrolledCourses[courseId].status !== 'REVOKED' && enrolledCourses[courseId].status !== 'DELETED');
-    const userCertificates = certificates.filter(c => c.userId === currentUserId);
+            const enrolledCourses = currentUser.enrolled_courses || {};
+            const activeEnrollments = Object.keys(enrolledCourses).filter(courseId => enrolledCourses[courseId].status !== 'REVOKED' && enrolledCourses[courseId].status !== 'DELETED');
+            const userCertificates = certificates.filter(c => c.userId === currentUserId);
 
-    if (activeEnrollments.length === 0) {
-        container.innerHTML = `<p class="text-gray-500 py-8">You are not currently enrolled in any courses. <button onclick="showCourseList()" class="text-indigo-600 hover:underline font-semibold">Browse courses</button> to get started!</p>`;
-        return;
-    }
-
-    activeEnrollments.forEach(courseId => {
-        const course = courses.find(c => c.id === courseId);
-        const enrollment = enrolledCourses[courseId];
-
-        if (course && enrollment) {
-            const isEnrolled = enrollment.status === true;
-            const isPending = enrollment.status === false;
-            let actionButton;
-            let statusTag;
-            let cardClasses = 'border-t-4';
-            const hasCertificate = userCertificates.some(c => c.courseId === courseId);
-            const totalDays = course.curriculum ? course.curriculum.length : 10;
-            
-            // *** PROGRESS BAR REPLACEMENT LOGIC ***
-
-            if (hasCertificate) {
-                const certData = userCertificates.find(c => c.courseId === courseId);
-                cardClasses += ' border-yellow-500';
-                statusTag = `<span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">COMPLETE</span>`; // <<-- CHANGED TO COMPLETE
-                actionButton = `<button onclick="showCertificateScreen(certificates.find(c => c.id === '${certData.id}'))" class="w-full bg-yellow-500 text-gray-900 py-2 rounded-lg hover:bg-yellow-600 transition-colors font-semibold">View Certificate</button>`;
-            } else if (isEnrolled) {
-                // If enrolled and no certificate -> INCOMPLETE
-                cardClasses += ' border-green-500';
-                actionButton = `<button onclick="secureStartLearning('${courseId}')" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors font-semibold">Continue Learning</button>`;
-                statusTag = `<span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">INCOMPLETE</span>`; // <<-- CHANGED TO INCOMPLETE
-            } else if (isPending) {
-                cardClasses += ' border-orange-500';
-                statusTag = `<span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">Pending Payment</span>`;
-                actionButton = `<button onclick="initiatePayment('${courseId}')" class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-colors font-semibold">Complete Payment</button>`;
-            } else {
-                return; // Should not happen for active enrollment
+            if (activeEnrollments.length === 0) {
+                container.innerHTML = `<p class="text-gray-500 py-8">You are not currently enrolled in any courses. <button onclick="showCourseList()" class="text-indigo-600 hover:underline font-semibold">Browse courses</button> to get started!</p>`;
+                return;
             }
 
-            // Progress Bar HTML is removed by setting it to an empty string.
-            const progressHTML = ``; // <<-- REMOVED PROGRESS BAR HTML
+            activeEnrollments.forEach(courseId => {
+                const course = courses.find(c => c.id === courseId);
+                const enrollment = enrolledCourses[courseId];
 
-            container.innerHTML += `
-                <div class="${cardClasses} course-card p-6 rounded-xl shadow-lg w-full md:w-80">
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-xl font-bold text-gray-800">${course.title}</h3>
-                        ${statusTag}
-                    </div>
-                    <p class="text-gray-600 mb-4">${course.shortDescription}</p>
-                    <div class="text-sm text-gray-500 mb-4">
-                        <span class="font-medium">${totalDays} Days | ${course.language}</span>
-                    </div>
-                    ${progressHTML}
-                    <div class="mt-4">
-                        ${actionButton}
-                    </div>
-                </div>
-            `;
+                if (course && enrollment) {
+                    const isEnrolled = enrollment.status === true;
+                    const isPending = enrollment.status === false;
+                    let actionButton;
+                    let statusTag;
+                    let cardClasses = 'border-t-4';
+                    const hasCertificate = userCertificates.some(c => c.courseId === courseId);
+                    const totalDays = course.curriculum ? course.curriculum.length : 10;
+
+                    // *** PROGRESS BAR REPLACEMENT LOGIC ***
+
+                    if (hasCertificate) {
+                        const certData = userCertificates.find(c => c.courseId === courseId);
+                        cardClasses += ' border-yellow-500';
+                        statusTag = `<span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full">COMPLETE</span>`; // <<-- CHANGED TO COMPLETE
+                        actionButton = `<button onclick="showCertificateScreen(certificates.find(c => c.id === '${certData.id}'))" class="w-full bg-yellow-500 text-gray-900 py-2 rounded-lg hover:bg-yellow-600 transition-colors font-semibold">View Certificate</button>`;
+                    } else if (isEnrolled) {
+                        // If enrolled and no certificate -> INCOMPLETE
+                        cardClasses += ' border-green-500';
+                        actionButton = `<button onclick="secureStartLearning('${courseId}')" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition-colors font-semibold">Continue Learning</button>`;
+                        statusTag = `<span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">INCOMPLETE</span>`; // <<-- CHANGED TO INCOMPLETE
+                    } else if (isPending) {
+                        cardClasses += ' border-orange-500';
+                        statusTag = `<span class="bg-orange-100 text-orange-800 text-xs font-semibold px-3 py-1 rounded-full">Pending Payment</span>`;
+                        actionButton = `<button onclick="initiatePayment('${courseId}')" class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition-colors font-semibold">Complete Payment</button>`;
+                    } else {
+                        return; // Should not happen for active enrollment
+                    }
+
+                    // Progress Bar HTML is removed by setting it to an empty string.
+                    const progressHTML = ``; // <<-- REMOVED PROGRESS BAR HTML
+
+                    container.innerHTML += `
+                        <div class="card-hover bg-white p-6 rounded-xl shadow-lg w-full md:w-80">
+                            <div class="flex justify-between items-start mb-3">
+                                <div class="text-3xl">${course.icon}</div>
+                                ${statusTag}
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">${course.title}</h3>
+                            <p class="text-gray-600 mb-4">${course.description}</p>
+                            <div class="text-sm text-gray-500 mb-4">
+                                <span class="font-medium">${course.duration || 'N/A'} | ${course.level || 'N/A'}</span>
+                            </div>
+                            ${progressHTML}
+                            <div class="mt-4">
+                                ${actionButton}
+                            </div>
+                        </div>
+                    `;
+                }
+            });
         }
-    });
-}
-function hasActiveSubscription() {
-    if (!currentUser || !currentUser.enrolled_courses) return false;
+        function hasActiveSubscription() {
+            if (!currentUser || !currentUser.enrolled_courses) return false;
 
-    const sub = currentUser.enrolled_courses["SUBSCRIPTION"];
-    return sub && sub.status === true;
-}
-function getEnrolledCourseCount() {
-    if (!currentUser || !currentUser.enrolled_courses) return 0;
+            const sub = currentUser.enrolled_courses["SUBSCRIPTION"];
+            return sub && sub.status === true;
+        }
+        function getEnrolledCourseCount() {
+            if (!currentUser || !currentUser.enrolled_courses) return 0;
 
-    return Object.keys(currentUser.enrolled_courses)
-        .filter(id => id !== "SUBSCRIPTION")  // exclude subscription
-        .length;
-}
+            return Object.keys(currentUser.enrolled_courses)
+                .filter(id => id !== "SUBSCRIPTION")  // exclude subscription
+                .length;
+        }
 
 
-function renderDashboard() {
-    if (!currentUser) return;
-    document.getElementById('dashboard-user-name').textContent = currentUser.name.split(' ')[0];
+        function renderDashboard() {
+            if (!currentUser) return;
+            document.getElementById('dashboard-user-name').textContent = currentUser.name.split(' ')[0];
 
-// FEATURE #1: Show Premium Greeting
-    const isSubscriber = hasActiveSubscription();
-    const premiumGreeting = document.getElementById('premium-greeting');
-    if (isSubscriber) {
-        premiumGreeting.classList.remove('hidden');
-    } else {
-        premiumGreeting.classList.add('hidden');
-    }
+            // FEATURE #1: Show Premium Greeting
+            const isSubscriber = hasActiveSubscription();
+            const premiumGreeting = document.getElementById('premium-greeting');
+            if (isSubscriber) {
+                premiumGreeting.classList.remove('hidden');
+            } else {
+                premiumGreeting.classList.add('hidden');
+            }
 
-    const userCertificates = certificates.filter(c => c.userId === currentUserId);
-const enrolledCount = getEnrolledCourseCount();
-    const completedCount = userCertificates.length;
 
-    document.getElementById('enrolled-count').textContent = enrolledCount;
-    document.getElementById('completed-count').textContent = completedCount;
-    document.getElementById('certificates-count').textContent = completedCount;
+            const userCertificates = certificates.filter(c => c.userId === currentUserId);
+            const enrolledCount = getEnrolledCourseCount();
+            const completedCount = userCertificates.length;
 
-    const enrolledCourses = currentUser.enrolled_courses || {};
-    const activeEnrollments = Object.keys(enrolledCourses).filter(courseId => enrolledCourses[courseId].status === true);
+            // --- Dashboard Metrics Update (Top Cards) ---
+            document.getElementById('enrolled-count').textContent = enrolledCount;
+            document.getElementById('certificates-count').textContent = completedCount;
 
-    const continueLearningContainer = document.getElementById('continue-learning');
-    continueLearningContainer.innerHTML = ''; // Clear previous content
+            // --- FIX & UPDATE: Sidebar Widget Metrics Update (Focus Metrics) ---
+            const sidebarCoursesRemaining = document.getElementById('sidebar-courses-remaining');
+            const sidebarLastActive = document.getElementById('sidebar-last-active');
 
-    if (activeEnrollments.length === 0) {
-        continueLearningContainer.innerHTML = `<p class="text-gray-500 py-8 text-center w-full">You are not currently enrolled in any active courses. <button onclick="showCourseList()" class="text-indigo-600 hover:underline font-semibold">Browse courses</button> to get started!</p>`;
-    } else {
-        // Show courses that are active but not yet certified
-        activeEnrollments.forEach(courseId => {
-            const course = courses.find(c => c.id === courseId);
-            const enrollment = enrolledCourses[courseId];
-            if (course && enrollment && !userCertificates.some(c => c.courseId === courseId)) {
-                // const currentDay = enrollment.day || 1; // Not needed
-                // const totalDays = course.curriculum ? course.curriculum.length : 10; // Not needed
-                // const progress = Math.round((currentDay / totalDays) * 100); // <<-- REMOVED
+            // Calculate new metrics
+            const remaining = getCoursesRemaining();
+            // Use timeSince utility function for display
+            const lastActiveTime = currentUser.last_active ? timeSince(currentUser.last_active) : "N/A";
 
-                continueLearningContainer.innerHTML += `
+            // Update the sidebar widget elements
+            if (sidebarCoursesRemaining) sidebarCoursesRemaining.textContent = remaining;
+            if (sidebarLastActive) sidebarLastActive.textContent = lastActiveTime;
+            // ------------------------------------------
+
+
+            const enrolledCourses = currentUser.enrolled_courses || {};
+            const activeEnrollments = Object.keys(enrolledCourses).filter(courseId => enrolledCourses[courseId].status === true);
+
+            const continueLearningContainer = document.getElementById('continue-learning');
+            continueLearningContainer.innerHTML = '';
+
+            const coursesToContinue = [];
+
+            // Filter: Find courses that are active but NOT yet certified.
+            activeEnrollments.forEach(courseId => {
+                const course = courses.find(c => c.id === courseId);
+                const enrollment = enrolledCourses[courseId];
+
+                if (course && enrollment && !userCertificates.some(c => c.courseId === courseId)) {
+                    coursesToContinue.push({ course, enrollment });
+                }
+            });
+
+
+            if (coursesToContinue.length === 0) {
+                if (activeEnrollments.length === 0) {
+                    continueLearningContainer.innerHTML = `<p class="text-gray-500 py-8 text-center w-full">You are not currently enrolled in any active courses. <button onclick="showCourseList()" class="text-indigo-600 hover:underline font-semibold">Browse courses</button> to get started!</p>`;
+                } else {
+                    continueLearningContainer.innerHTML = `<p class="text-gray-500 py-8 text-center w-full">You have completed and certified all active courses! View your <button onclick="showCertificates()" class="text-yellow-600 hover:underline font-semibold">certificates</button> or <button onclick="showCourseList()" class="text-indigo-600 hover:underline font-semibold">browse new courses</button>.</p>`;
+                }
+            } else {
+                coursesToContinue.forEach(item => {
+                    const { course } = item;
+
+                    continueLearningContainer.innerHTML += `
                     <div class="p-4 border rounded-xl bg-gray-50 flex items-center justify-between hover:shadow-md transition-shadow">
                         <div class="flex-grow mr-4">
                             <h4 class="font-semibold text-gray-800">${course.title}</h4>
                             <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full">INCOMPLETE</span>
                         </div>
-                        <button onclick="secureStartLearning('${courseId}')" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors flex-shrink-0">
+                        <button onclick="secureStartLearning('${course.id}')" class="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors flex-shrink-0">
                             Continue
                         </button>
                     </div>`;
+                });
             }
-        });
 
-        if (continueLearningContainer.innerHTML === '') {
-            continueLearningContainer.innerHTML = `<p class="text-gray-500 py-8 text-center w-full">You have completed all active courses. View your <button onclick="showCertificates()" class="text-yellow-600 hover:underline font-semibold">certificates</button>!</p>`;
+            // --- FINAL INTEGRATION: Render all three dynamic graphs ---
+            renderStudentDashboardGraph();
+            renderPeerComparisonGraph();
+            renderWeeklyActivityTrend();
+            // --- NEW: Render the Leaderboard ---
+            renderLeaderboard();
+            // --------------------------------------------------------
         }
-    }
-}
-        
+
         function renderMyAccount() {
             const container = document.getElementById('my-account-details-container');
             container.innerHTML = '';
@@ -2436,7 +2971,7 @@ const enrolledCount = getEnrolledCourseCount();
             `;
 
             const userCertificates = certificates.filter(c => c.userId === currentUserId);
-const enrolledCount = getEnrolledCourseCount();
+            const enrolledCount = getEnrolledCourseCount();
             const completedCount = userCertificates.length;
             const status = currentUser.disabled ? 'Disabled by Admin' : 'Active';
 
@@ -2457,7 +2992,7 @@ const enrolledCount = getEnrolledCourseCount();
         // **************************************************
         // *** 6. ADMIN DASHBOARD UTILITIES ***
         // **************************************************
- async function toggleCourseStatus(userId, courseId, currentStatus) {
+        async function toggleCourseStatus(userId, courseId, currentStatus) {
             if (!isAdminLoggedIn) return;
 
             const newStatus = currentStatus === 'false' ? true : false;
@@ -2469,18 +3004,18 @@ const enrolledCount = getEnrolledCourseCount();
                     // REQUIRED STEP: When admin click APROVE then all course acces set to true
                     const allCourseIds = courses.map(c => c.id);
                     const updates = {};
-                    
+
                     // 1. Set the Subscription record status to true
                     updates[`edupro_users/${userId}/enrolled_courses/${SUBSCRIPTION_ID}/status`] = true;
-                    
+
                     // 2. Set all other individual courses to active (status: true)
                     allCourseIds.forEach(id => {
-                         updates[`edupro_users/${userId}/enrolled_courses/${id}`] = {
+                        updates[`edupro_users/${userId}/enrolled_courses/${id}`] = {
                             courseName: getCourseTitle(id),
                             status: true,
                             enrollDate: new Date().toISOString().split('T')[0],
                             day: 1,
-                            isSubscriptionAccess: true 
+                            isSubscriptionAccess: true
                         };
                     });
 
@@ -2491,10 +3026,10 @@ const enrolledCount = getEnrolledCourseCount();
                     await database.ref(`edupro_users/${userId}/enrolled_courses/${courseId}/status`).set(newStatus);
                     alert(`Status for ${getCourseTitle(courseId)} for user ${users.find(u => u.uid === userId)?.name} updated to ${newStatus ? 'TRUE (ACTIVE)' : 'FALSE (PENDING/REVOKED)'}`);
                 }
-                
+
                 await fetchUserData();
                 renderAdminDashboard();
-                
+
             } catch (error) {
                 console.error("Error toggling course status:", error);
                 alert(`Failed to update status: ${error.message}`);
@@ -2822,7 +3357,6 @@ const enrolledCount = getEnrolledCourseCount();
                 });
             }
         }
-
         // Add this function inside your existing <script> tags:
 
         async function downloadCurrentCertificate(format) {
@@ -2887,7 +3421,394 @@ const enrolledCount = getEnrolledCourseCount();
 
         initializeUI();
     </script>
+    <script>
+        // --- TESTIMONIAL SLIDER LOGIC ---
+        let currentTestimonialIndex = 0;
+        const testimonialsTrack = document.getElementById('testimonials-track');
+        // Get the total number of testimonial slides in the track
+        const totalTestimonials = testimonialsTrack ? testimonialsTrack.children.length : 0;
+        let autoSlideInterval;
+        const slideDuration = 5000; // Slide every 5 seconds (5000 milliseconds)
 
+        function moveTestimonialSlider(direction) {
+            if (!testimonialsTrack || totalTestimonials === 0) return;
+
+            // Clear the automatic interval whenever a manual button is pressed
+            if (direction !== 'auto') {
+                clearInterval(autoSlideInterval);
+            }
+
+            // Calculate the new index
+            let newIndex = currentTestimonialIndex;
+
+            if (direction === 1 || direction === 'auto') {
+                newIndex++;
+            } else if (direction === -1) {
+                newIndex--;
+            }
+
+            // Handle wrapping (looping)
+            if (newIndex >= totalTestimonials) {
+                newIndex = 0; // Wrap to the first slide
+            } else if (newIndex < 0) {
+                newIndex = totalTestimonials - 1; // Wrap to the last slide
+            }
+
+            // Update the current index
+            currentTestimonialIndex = newIndex;
+
+            // Calculate the required horizontal shift (percentage)
+            const offset = currentTestimonialIndex * 100;
+
+            // Apply the transform to the track element
+            testimonialsTrack.style.transform = `translateX(-${offset}%)`;
+
+            // Restart the automatic interval after a manual move
+            if (direction !== 'auto') {
+                startAutoSlide();
+            }
+        }
+
+        function startAutoSlide() {
+            // Only start if the track exists and there's more than one slide
+            if (testimonialsTrack && totalTestimonials > 1) {
+                // Clear any existing interval first to prevent overlaps
+                if (autoSlideInterval) {
+                    clearInterval(autoSlideInterval);
+                }
+                // Set the new interval
+                autoSlideInterval = setInterval(() => {
+                    moveTestimonialSlider('auto');
+                }, slideDuration);
+            }
+        }
+
+        // Initialize the automatic slider movement when the page loads
+        document.addEventListener('DOMContentLoaded', startAutoSlide);
+        // --- END TESTIMONIAL SLIDER LOGIC ---
+    </script>
+
+    <script>
+        let studentProgressChartInstance = null;
+
+        function renderStudentDashboardGraph() {
+            if (!currentUser || !currentUser.enrolled_courses) return;
+
+            const enrolledCourses = currentUser.enrolled_courses;
+            const userCertificates = certificates.filter(c => c.userId === currentUserId);
+
+            // --- CRITICAL: Tracking based on total courses ---
+            const totalEnrolled = getEnrolledCourseCount();
+            const totalCertified = userCertificates.length;
+            const totalIncomplete = totalEnrolled - totalCertified;
+
+            // 1. Determine Data Points (The required metrics)
+            const coursesRegistered = totalEnrolled;
+            const coursesCompleted = totalCertified;
+            const coursesPendingOrActive = totalIncomplete;
+
+            const labels = ['Incomplete (Active/Pending)', 'Completed (Certified)'];
+            const dataPoints = [coursesPendingOrActive, coursesCompleted];
+            const backgroundColors = ['#f59e0b', '#10b981']; // Amber (Incomplete), Green (Certified)
+
+            const ctx = document.getElementById('studentProgressChart') ? .getContext('2d');
+
+            if (!ctx) return;
+
+            if (studentProgressChartInstance) {
+                studentProgressChartInstance.destroy();
+            }
+
+            studentProgressChartInstance = new Chart(ctx, {
+                type: 'doughnut', // Use a simple Donut chart for categorical data
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Course Status',
+                        data: dataPoints,
+                        backgroundColor: backgroundColors,
+                        hoverOffset: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20
+                            }
+                        },
+                        title: {
+                            display: true,
+                            text: `Overall Course Status (Total Registered: ${coursesRegistered})`
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+
+    <script>
+        let peerComparisonChartInstance = null;
+
+        function renderPeerComparisonGraph() {
+            if (!currentUser || !currentUser.enrolled_courses) return;
+
+            const userCertificates = certificates.filter(c => c.userId === currentUserId);
+            const totalEnrolled = getEnrolledCourseCount();
+            const totalCertified = userCertificates.length;
+
+            // Calculate User Completion Rate
+            const userCompletionRate = totalEnrolled > 0 ?
+                Math.round((totalCertified / totalEnrolled) * 100) : 0;
+
+            // --- Simulated Platform Average ---
+            // In a real app, this would come from the Admin dashboard data.
+            // Using a constant for now.
+            const platformAverageRate = 65;
+            // ----------------------------------
+
+            const labels = ['You', 'Platform Average'];
+            const dataPoints = [userCompletionRate, platformAverageRate];
+
+            const backgroundColors = [
+                userCompletionRate >= platformAverageRate ? '#10b981' : '#f59e0b', // Green if better/equal, Amber if lower
+                '#6366f1' // Indigo for comparison
+            ];
+
+            const ctx = document.getElementById('peerComparisonChart') ? .getContext('2d');
+
+            if (!ctx) return;
+
+            if (peerComparisonChartInstance) {
+                peerComparisonChartInstance.destroy();
+            }
+
+            peerComparisonChartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Completion Rate (%)',
+                        data: dataPoints,
+                        backgroundColor: backgroundColors,
+                        borderRadius: 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y', // Make it a horizontal bar chart
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        title: {
+                            display: true,
+                            text: 'Peer Certification Comparison'
+                        }
+                    },
+                    scales: {
+                        x: {
+                            min: 0,
+                            max: 100,
+                            title: {
+                                display: true,
+                                text: 'Completion Percentage'
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+    <script>
+        let weeklyActivityTrendChartInstance = null;
+
+        async function renderWeeklyActivityTrend() {
+            if (!currentUserId) return;
+
+            const days = [];
+            const dataMinutes = [];
+            const simulatedAvg = 35; // Keep the motivational goal line
+
+            const now = new Date();
+            const logDates = [];
+
+            // 1. Generate the last 7 dates for the X-axis and DB keys
+            for (let i = 6; i >= 0; i--) {
+                const d = new Date(now);
+                d.setDate(now.getDate() - i);
+
+                // Format for chart label (e.g., 'Wed 15')
+                const label = d.toLocaleString('en-US', {
+                    weekday: 'short',
+                    day: 'numeric'
+                });
+                days.push(label);
+
+                // Format for database key (e.g., '2025-11-17')
+                logDates.push(d.toISOString().split('T')[0]);
+            }
+
+            // 2. Fetch Real-Time Data from Firebase
+            const snapshot = await firebase.database().ref(`${ACTIVITY_LOG_PATH}/${currentUserId}`).once('value');
+            const userActivity = snapshot.val() || {};
+
+            // 3. Map the fetched data to the graph array
+            logDates.forEach(dateKey => {
+                const minutes = userActivity[dateKey] || 0;
+                dataMinutes.push(minutes);
+            });
+
+            const ctx = document.getElementById('weeklyActivityTrendChart') ? .getContext('2d');
+
+            if (!ctx) return;
+
+            if (weeklyActivityTrendChartInstance) {
+                weeklyActivityTrendChartInstance.destroy();
+            }
+
+            weeklyActivityTrendChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: days,
+                    datasets: [{
+                        label: 'Minutes Studied',
+                        data: dataMinutes,
+                        borderColor: '#4f46e5', // Indigo
+                        backgroundColor: 'rgba(79, 70, 229, 0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointRadius: 5,
+                        pointBackgroundColor: '#4f46e5',
+                    }, {
+                        label: 'Your Weekly Goal',
+                        data: Array(7).fill(simulatedAvg), // Horizontal line at 35 minutes
+                        borderColor: '#f59e0b', // Amber
+                        backgroundColor: 'transparent',
+                        borderDash: [5, 5],
+                        pointRadius: 0,
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        },
+                        title: {
+                            display: true,
+                            text: 'Minutes Spent Active on Platform (Last 7 Days)'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Minutes'
+                            },
+                            // --- CRITICAL FIX: Custom Y-Axis Label Callback ---
+                            ticks: {
+                                callback: function(value, index, values) {
+                                    if (value < 60) {
+                                        return value + ' mins';
+                                    } else {
+                                        const hours = Math.floor(value / 60);
+                                        const remainingMins = value % 60;
+                                        if (remainingMins === 0) {
+                                            return hours + ' hrs';
+                                        }
+                                        return hours + 'h ' + remainingMins + 'm';
+                                    }
+                                }
+                            }
+                            // ----------------------------------------------------
+                        }
+                    }
+                }
+            });
+        }
+    </script>
+
+
+    <!-- LEADERBOARD -->
+
+    <script>
+        function getCertificatesByUser(userId) {
+            return certificates.filter(c => c.userId === userId).length;
+        }
+
+        function getLeaderboardData() {
+            // Map all users to their certificate count and filter out users with 0 certs
+            const leaderboard = users
+                .map(user => ({
+                    uid: user.uid,
+                    name: user.name,
+                    certCount: getCertificatesByUser(user.uid)
+                }))
+                .filter(user => user.certCount > 0);
+
+            // Sort by certificate count (descending)
+            leaderboard.sort((a, b) => b.certCount - a.certCount);
+
+            return leaderboard.slice(0, 5); // Return Top 5
+        }
+
+        function renderLeaderboard() {
+            const container = document.getElementById('leaderboard-list');
+            const topAchievers = getLeaderboardData();
+
+            if (topAchievers.length === 0) {
+                container.innerHTML = `<p class="text-gray-500 text-sm py-2 text-center">No certificates issued yet to form a leaderboard.</p>`;
+                return;
+            }
+
+            container.innerHTML = topAchievers.map((user, index) => {
+                const rank = index + 1;
+                const initials = user.name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+                let badgeHTML = '';
+                let rankClass = 'bg-gray-50 text-gray-700';
+
+                if (rank === 1) {
+                    badgeHTML = `<span class="text-4xl" style="color:#FFD700;">🥇</span>`;
+                    rankClass = 'bg-yellow-50/70 border-l-4 border-yellow-500 shadow-sm';
+                } else if (rank === 2) {
+                    badgeHTML = `<span class="text-4xl" style="color:#C0C0C0;">🥈</span>`;
+                    rankClass = 'bg-gray-100 border-l-4 border-gray-400 shadow-sm';
+                } else if (rank === 3) {
+                    badgeHTML = `<span class="text-4xl" style="color:#CD7F32;">🥉</span>`;
+                    rankClass = 'bg-orange-50/70 border-l-4 border-orange-400 shadow-sm';
+                } else {
+                    badgeHTML = `<span class="text-lg font-bold text-gray-500">#${rank}</span>`;
+                }
+
+                return `
+                    <div class="flex items-center justify-between p-3 rounded-xl ${rankClass}">
+                        <div class="flex items-center space-x-3">
+                            <div class="w-10 h-10 flex items-center justify-center text-xl font-extrabold" style="width:30px;text-align:center;">
+                                ${badgeHTML}
+                            </div>
+                            <div class="w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white text-sm font-semibold flex-shrink-0">
+                                ${initials}
+                            </div>
+                            <span class="text-sm font-medium text-gray-800 truncate">${user.name}</span>
+                        </div>
+                        <div class="flex items-center space-x-1 text-red-500 font-bold flex-shrink-0">
+                            <i class="fa-solid fa-certificate"></i>
+                            <span>${user.certCount}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+    </script>
 </body>
 
 </html>
