@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,11 +14,17 @@
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-storage-compat.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2/dist/chart.umd.min.js"></script>
+<<<<<<< HEAD
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"
     />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 
+=======
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
     <link rel="stylesheet" href="j.css">
     <link rel="stylesheet" href="nav.css">
 
@@ -369,7 +376,8 @@
             </div>
             <div>
                 <p>Authenticating — Please Wait</p>
-                <p style="font-size:12px;color:#6b7280;margin-top:4px">Logging in or registering your account securely...
+                <p style="font-size:12px;color:#6b7280;margin-top:4px">Logging in or registering your account
+                    securely...
                 </p>
             </div>
         </div>
@@ -409,11 +417,13 @@
 
         <div id="user-nav" class="user-items hidden">
             <div class="flex items-center space-x-1 bg-white rounded-full px-4 py-2 shadow-md">
-                <div class="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
+                <div
+                    class="w-8 h-8 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center">
                     <span class="text-white text-sm font-semibold" id="user-avatar"></span>
                 </div>
                 <span class="text-gray-700 font-medium" id="user-name-nav"></span>
             </div>
+<<<<<<< HEAD
 
             <div class="hidden md:flex items-center mr-4 bg-orange-50 px-3 py-1 rounded-full border border-orange-200" title="Daily Learning Streak">
                 <i class="fa-solid fa-fire text-orange-500 mr-2 animate-pulse"></i>
@@ -429,15 +439,31 @@
                 Offer Letters
             </button>
             <button onclick="showMyAccount()" class="use bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">My
+=======
+            <button onclick="showDashboard()"
+                class="use bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition-colors">Dashboard</button>
+            <button onclick="showProfile()" id="x-a"
+                class="use bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition-colors">My
+                Courses</button>
+            <button onclick="showCertificates()"
+                class="use bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors">Certificates</button>
+            <button onclick="showMyAccount()"
+                class="use bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">My
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                 Account</button>
             <button onclick="showInternships()" class="use bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-colors">
                 Internships
             </button>
 
+<<<<<<< HEAD
             <button onclick="showForum()" class="bg-teal-600 text-white px-4 py-2 rounded-lg hover:bg-teal-700 transition-colors ml-2">
                 <i class="fa-solid fa-users-rectangle mr-1"></i> Forum
             </button>
             <button onclick="logout()" class="use bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">Logout</button>
+=======
+            <button onclick="logout()"
+                class="use bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">Logout</button>
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
 
             <div class="menu-icon" id="menu-close">
                 <i class="fa-solid fa-x"></i>
@@ -445,6 +471,7 @@
         </div>
 
 
+<<<<<<< HEAD
         <div id="admin-nav" class="hidden items-center gap-2">
             <span class="text-sm font-bold text-red-600 hidden md:inline">Admin Mode</span>
 
@@ -538,6 +565,23 @@
     <div id="subscription-modal" class="hidden fixed inset-0 bg-gray-900 bg-opacity-80 z-50 flex items-center justify-center fade-in">
         <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-11/12 p-8 transform transition-all duration-300 scale-100 relative">
             <button onclick="document.getElementById('subscription-modal').classList.add('hidden')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+=======
+        <div id="admin-nav" class="hidden items-center space-x-2">
+            <span class="text-sm font-bold text-red-600">Admin Mode</span>
+            <button onclick="showAdminDashboard()"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">Dashboard</button>
+            <button onclick="adminLogout()"
+                class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition-colors">Logout</button>
+        </div>
+    </nav>
+
+    <div id="subscription-modal"
+        class="hidden fixed inset-0 bg-gray-900 bg-opacity-80 z-50 flex items-center justify-center fade-in">
+        <div
+            class="bg-white rounded-3xl shadow-2xl max-w-lg w-11/12 p-8 transform transition-all duration-300 scale-100 relative">
+            <button onclick="document.getElementById('subscription-modal').classList.add('hidden')"
+                class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                     </path>
@@ -560,7 +604,8 @@
                     <p class="text-sm text-red-500 mt-2 font-bold">That's over 50% OFF the combined price!</p>
                 </div>
 
-                <button onclick="initiateSubscriptionPayment()" class="w-full bg-red-600 text-white py-4 rounded-xl text-xl font-bold hover:bg-red-700 transition-colors shadow-lg pulse-glow">
+                <button onclick="initiateSubscriptionPayment()"
+                    class="w-full bg-red-600 text-white py-4 rounded-xl text-xl font-bold hover:bg-red-700 transition-colors shadow-lg pulse-glow">
                     Get All Access for ₹1500!
                 </button>
                 <p class="text-sm text-gray-500 mt-3">One-time payment. Instant access upon admin approval.</p>
@@ -580,6 +625,7 @@
                     <div class="inline-block p-4 mb-8 rounded-full bg-indigo-50 border border-indigo-100 shadow-sm animate-bounce">
                         <i class="fa-solid fa-code text-4xl text-indigo-600"></i>
                     </div>
+<<<<<<< HEAD
 
                     <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-indigo-950 slide-in">
                         Master the Language of <br>
@@ -595,6 +641,24 @@
                             Start Learning Now
                         </button>
                         <button onclick="showCourseList()" class="bg-white border-2 border-indigo-700 text-indigo-700 px-10 py-4 rounded-full text-lg font-bold hover:bg-indigo-50 transition-all duration-300 shadow-sm">
+=======
+                    <h1 class="text-5xl md:text-7xl font-bold mb-6 slide-in">
+                        Transform Your
+                        <span
+                            class="bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">Career</span>
+                    </h1>
+                    <p class="text-xl md:text-2xl mb-8 text-white text-opacity-90 max-w-3xl mx-auto slide-in">
+                        Join thousands of professionals mastering cutting-edge skills with our expert-designed courses.
+                        Learn at your own pace, earn certificates, and advance your career.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 slide-in">
+                        <button onclick="showRegister()"
+                            class="pulse-glow bg-white text-indigo-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300">
+                            Start Learning Today
+                        </button>
+                        <button onclick="showCourseList()"
+                            class="border-2 border-white text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-indigo-600 transition-all duration-300">
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                             Explore Courses
                         </button>
                     </div>
@@ -630,7 +694,8 @@
                         <span class="text-purple-600 font-semibold text-sm uppercase tracking-wider">Your Journey to
                             Expertise</span>
                         <h2 class="text-4xl font-extrabold text-gray-900 mb-4">How Our Learning System Works</h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">A simple, 4-step process designed for maximum retention and career impact.</p>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">A simple, 4-step process designed for maximum
+                            retention and career impact.</p>
                     </div>
 
                     <div class="relative flex justify-center">
@@ -639,42 +704,66 @@
                         <div class="grid md:grid-cols-4 gap-12 text-center relative z-10">
 
                             <div class="flex flex-col items-center">
+<<<<<<< HEAD
                                 <div class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white mt-3 mr-2">
+=======
+                                <div
+                                    class="w-16 h-16 bg-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white">
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                     1
                                 </div>
                                 <div class="mt-4">
                                     <h3 class="text-xl font-bold text-gray-800 mb-2">Enroll & Access</h3>
-                                    <p class="text-gray-600 text-sm">Sign up for your chosen course or the All-Access Pass and gain instant access to your Dashboard.</p>
+                                    <p class="text-gray-600 text-sm">Sign up for your chosen course or the All-Access
+                                        Pass and gain instant access to your Dashboard.</p>
                                 </div>
                             </div>
 
                             <div class="flex flex-col items-center">
+<<<<<<< HEAD
                                 <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white mt-3">
+=======
+                                <div
+                                    class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white">
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                     2
                                 </div>
                                 <div class="mt-4">
                                     <h3 class="text-xl font-bold text-gray-800 mb-2">Learn Daily Modules</h3>
-                                    <p class="text-gray-600 text-sm">Follow the structured 10-day curriculum, engage with videos, and work on real-world practical projects.</p>
+                                    <p class="text-gray-600 text-sm">Follow the structured 10-day curriculum, engage
+                                        with videos, and work on real-world practical projects.</p>
                                 </div>
                             </div>
 
                             <div class="flex flex-col items-center">
+<<<<<<< HEAD
                                 <div class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white mt-3">
+=======
+                                <div
+                                    class="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white">
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                     3
                                 </div>
                                 <div class="mt-4">
                                     <h3 class="text-xl font-bold text-gray-800 mb-2">Pass & Submit</h3>
-                                    <p class="text-gray-600 text-sm">Complete all modules and achieve the minimum time requirement to unlock certificate generation.</p>
+                                    <p class="text-gray-600 text-sm">Complete all modules and achieve the minimum time
+                                        requirement to unlock certificate generation.</p>
                                 </div>
                             </div>
 
                             <div class="flex flex-col items-center">
+<<<<<<< HEAD
                                 <div class="w-16 h-16 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white mt-3 ml-2">
+=======
+                                <div
+                                    class="w-16 h-16 bg-yellow-600 text-white rounded-full flex items-center justify-center font-bold text-2xl shadow-xl border-4 border-white">
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                     4
                                 </div>
                                 <div class="mt-4">
                                     <h3 class="text-xl font-bold text-gray-800 mb-2">Claim Certificate</h3>
-                                    <p class="text-gray-600 text-sm">Download your industry-recognized, AICTE-aggregated certificate and boost your career profile.</p>
+                                    <p class="text-gray-600 text-sm">Download your industry-recognized, AICTE-aggregated
+                                        certificate and boost your career profile.</p>
                                 </div>
                             </div>
 
@@ -689,31 +778,38 @@
                         <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Your Learning
                             Advantage</span>
                         <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Why Choose PROGMASTER PVT LTD?</h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Experience the future of online learning with our innovative platform and commitment to your success.</p>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">Experience the future of online learning with
+                            our innovative platform and commitment to your success.</p>
                     </div>
 
                     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8">
 
-                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-indigo-500">
-                            <div class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-indigo-500">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="fa-solid fa-infinity fa-2x text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Lifetime Access</h3>
-                            <p class="text-gray-600 text-sm">Enroll once, own the content forever. Includes all future updates.
-                            </p>
+                            <p class="text-gray-600 text-sm">Enroll once, own the content forever. Includes all future
+                                updates.</p>
                         </div>
 
-                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-blue-500">
-                            <div class="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-blue-500">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-r from-blue-500 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="fa-solid fa-award fa-2x text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">AICTE Aggregated</h3>
-                            <p class="text-gray-600 text-sm">Receive a certificate recognized and valued by industry standards.
-                            </p>
+                            <p class="text-gray-600 text-sm">Receive a certificate recognized and valued by industry
+                                standards.</p>
                         </div>
 
-                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-green-500">
-                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-green-500">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="fa-solid fa-handshake-angle fa-2x text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Placement Support</h3>
@@ -721,22 +817,26 @@
                             </p>
                         </div>
 
-                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-orange-500">
-                            <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-orange-500">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-r from-orange-500 to-amber-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="fa-solid fa-file-code fa-2x text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Real-World Projects</h3>
-                            <p class="text-gray-600 text-sm">Build a professional portfolio with practical, hands-on assignments.
-                            </p>
+                            <p class="text-gray-600 text-sm">Build a professional portfolio with practical, hands-on
+                                assignments.</p>
                         </div>
 
-                        <div class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-red-500">
-                            <div class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div
+                            class="card-hover bg-gray-50 p-6 rounded-2xl shadow-lg text-center border-t-4 border-red-500">
+                            <div
+                                class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <i class="fa-solid fa-tag fa-2x text-white"></i>
                             </div>
                             <h3 class="text-xl font-bold mb-2 text-gray-800">Affordable Pricing</h3>
-                            <p class="text-gray-600 text-sm">High-quality education made accessible with low, one-time fees.
-                            </p>
+                            <p class="text-gray-600 text-sm">High-quality education made accessible with low, one-time
+                                fees.</p>
                         </div>
 
                     </div>
@@ -754,7 +854,8 @@
                     </div>
 
                     <div class="text-center mt-12">
-                        <button onclick="showCourseList()" class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300">
+                        <button onclick="showCourseList()"
+                            class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transition-all duration-300">
                             View All Courses
                         </button>
                     </div>
@@ -767,20 +868,30 @@
                         <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Trusted
                             Voices</span>
                         <h2 class="text-4xl font-extrabold text-gray-900 mb-4">What Our Graduates Say</h2>
-                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Real stories from professionals who advanced their careers with us.</p>
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">Real stories from professionals who advanced
+                            their careers with us.</p>
                     </div>
 
                     <div class="relative overflow-hidden">
                         <div id="testimonials-track" class="flex transition-transform duration-500 ease-in-out">
 
                             <div class="flex-shrink-0 w-full p-6">
+<<<<<<< HEAD
                                 <div class="bg-white p-10 rounded-3xl border-l-8 border-indigo-600 relative text-center">
                                     <i class="fa-solid fa-quote-left text-indigo-200 absolute top-4 left-4 text-4xl opacity-70"></i>
+=======
+                                <div
+                                    class="bg-white p-10 rounded-3xl shadow-2xl border-l-8 border-indigo-600 relative text-center">
+                                    <i
+                                        class="fa-solid fa-quote-left text-indigo-200 absolute top-4 left-4 text-4xl opacity-70"></i>
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                     <p class="text-gray-700 mb-8 text-xl italic max-w-2xl mx-auto">
-                                        "Great course, practical projects and supportive instructors! I landed my first job a month after certification, thanks to the hands-on experience."
+                                        "Great course, practical projects and supportive instructors! I landed my first
+                                        job a month after certification, thanks to the hands-on experience."
                                     </p>
                                     <div class="flex items-center gap-4 justify-center">
-                                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                                        <div
+                                            class="w-16 h-16 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                                             A</div>
                                         <div class="text-left">
                                             <div class="font-bold text-gray-900 text-lg">Ananya Sharma</div>
@@ -791,13 +902,22 @@
                             </div>
 
                             <div class="flex-shrink-0 w-full p-6">
+<<<<<<< HEAD
                                 <div class="bg-white p-10 rounded-3xl border-l-8 border-green-600 relative text-center">
                                     <i class="fa-solid fa-quote-left text-green-200 absolute top-4 left-4 text-4xl opacity-70"></i>
+=======
+                                <div
+                                    class="bg-white p-10 rounded-3xl shadow-2xl border-l-8 border-green-600 relative text-center">
+                                    <i
+                                        class="fa-solid fa-quote-left text-green-200 absolute top-4 left-4 text-4xl opacity-70"></i>
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                     <p class="text-gray-700 mb-8 text-xl italic max-w-2xl mx-auto">
-                                        "The certificate is industry-recognized and helped me get interviews at top firms. The Data Science track was challenging yet incredibly rewarding."
+                                        "The certificate is industry-recognized and helped me get interviews at top
+                                        firms. The Data Science track was challenging yet incredibly rewarding."
                                     </p>
                                     <div class="flex items-center gap-4 justify-center">
-                                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                                        <div
+                                            class="w-16 h-16 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                                             R</div>
                                         <div class="text-left">
                                             <div class="font-bold text-gray-900 text-lg">Ravi Teja</div>
@@ -808,13 +928,22 @@
                             </div>
 
                             <div class="flex-shrink-0 w-full p-6">
+<<<<<<< HEAD
                                 <div class="bg-white p-10 rounded-3xl border-l-8 border-orange-600 relative text-center">
                                     <i class="fa-solid fa-quote-left text-orange-200 absolute top-4 left-4 text-4xl opacity-70"></i>
+=======
+                                <div
+                                    class="bg-white p-10 rounded-3xl shadow-2xl border-l-8 border-orange-600 relative text-center">
+                                    <i
+                                        class="fa-solid fa-quote-left text-orange-200 absolute top-4 left-4 text-4xl opacity-70"></i>
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                     <p class="text-gray-700 mb-8 text-xl italic max-w-2xl mx-auto">
-                                        "Practical, updated content and a friendly community. The support from the instructors was invaluable. I now feel confident in my Mobile Development role."
+                                        "Practical, updated content and a friendly community. The support from the
+                                        instructors was invaluable. I now feel confident in my Mobile Development role."
                                     </p>
                                     <div class="flex items-center gap-4 justify-center">
-                                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                                        <div
+                                            class="w-16 h-16 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                                             S</div>
                                         <div class="text-left">
                                             <div class="font-bold text-gray-900 text-lg">Sahana K.</div>
@@ -827,10 +956,12 @@
 
                         </div>
 
-                        <button onclick="moveTestimonialSlider(-1)" class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-gray-700 hover:bg-gray-200 transition-colors z-10 opacity-75">
+                        <button onclick="moveTestimonialSlider(-1)"
+                            class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-gray-700 hover:bg-gray-200 transition-colors z-10 opacity-75">
                             <i class="fa-solid fa-chevron-left"></i>
                         </button>
-                        <button onclick="moveTestimonialSlider(1)" class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-gray-700 hover:bg-gray-200 transition-colors z-10 opacity-75">
+                        <button onclick="moveTestimonialSlider(1)"
+                            class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white p-3 rounded-full shadow-lg text-gray-700 hover:bg-gray-200 transition-colors z-10 opacity-75">
                             <i class="fa-solid fa-chevron-right"></i>
                         </button>
                     </div>
@@ -844,54 +975,68 @@
                         <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">Quick
                             Answers</span>
                         <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Frequently Asked Questions</h2>
-                        <p class="text-xl text-gray-600">Find instant answers to questions about access, payments, and certificates.
-                        </p>
+                        <p class="text-xl text-gray-600">Find instant answers to questions about access, payments, and
+                            certificates.</p>
                     </div>
 
                     <div class="space-y-4" id="faq-accordion">
 
                         <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 accordion-item">
-                            <button class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none" onclick="toggleFaq(this)">
+                            <button
+                                class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none"
+                                onclick="toggleFaq(this)">
                                 <span>How do I get my certificate after finishing a course?</span>
                                 <i
                                     class="fa-solid fa-chevron-down text-indigo-500 transform transition-transform duration-300"></i>
                             </button>
                             <div class="accordion-content mt-3 text-gray-600 hidden">
-                                <p>Once you complete all the course modules and meet the minimum learning time (validated by the platform), a "Generate Certificate" button will appear on your dashboard. You can download the high-resolution PNG file instantly.</p>
+                                <p>Once you complete all the course modules and meet the minimum learning time
+                                    (validated by the platform), a "Generate Certificate" button will appear on your
+                                    dashboard. You can download the high-resolution PNG file instantly.</p>
                             </div>
                         </div>
 
                         <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 accordion-item">
-                            <button class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none" onclick="toggleFaq(this)">
+                            <button
+                                class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none"
+                                onclick="toggleFaq(this)">
                                 <span>Is the certificate recognized or aggregated by AICTE?</span>
                                 <i
                                     class="fa-solid fa-chevron-down text-indigo-500 transform transition-transform duration-300"></i>
                             </button>
                             <div class="accordion-content mt-3 text-gray-600 hidden">
-                                <p>Yes, our certificates are aggregated according to AICTE guidelines. They are designed to be valued by employers and are valid for submission on professional networking sites.
-                                </p>
+                                <p>Yes, our certificates are aggregated according to AICTE guidelines. They are designed
+                                    to be valued by employers and are valid for submission on professional networking
+                                    sites.</p>
                             </div>
                         </div>
 
                         <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 accordion-item">
-                            <button class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none" onclick="toggleFaq(this)">
+                            <button
+                                class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none"
+                                onclick="toggleFaq(this)">
                                 <span>What is the All-Access Pass (Subscription)?</span>
                                 <i
                                     class="fa-solid fa-chevron-down text-indigo-500 transform transition-transform duration-300"></i>
                             </button>
                             <div class="accordion-content mt-3 text-gray-600 hidden">
-                                <p>The All-Access Pass is a one-time payment for ₹1500 that grants you instant, lifetime access to all 50+ courses and all future courses on the platform. It's the best value if you plan to take multiple courses.</p>
+                                <p>The All-Access Pass is a one-time payment for ₹1500 that grants you instant, lifetime
+                                    access to all 50+ courses and all future courses on the platform. It's the best
+                                    value if you plan to take multiple courses.</p>
                             </div>
                         </div>
 
                         <div class="bg-white p-6 rounded-xl shadow-lg border-l-4 border-indigo-500 accordion-item">
-                            <button class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none" onclick="toggleFaq(this)">
+                            <button
+                                class="flex justify-between items-center w-full text-left font-bold text-lg text-gray-800 focus:outline-none"
+                                onclick="toggleFaq(this)">
                                 <span>Is the course content available offline?</span>
                                 <i
                                     class="fa-solid fa-chevron-down text-indigo-500 transform transition-transform duration-300"></i>
                             </button>
                             <div class="accordion-content mt-3 text-gray-600 hidden">
-                                <p>The current platform requires an internet connection to access the course content and record your progress accurately for certificate validation.</p>
+                                <p>The current platform requires an internet connection to access the course content and
+                                    record your progress accurately for certificate validation.</p>
                             </div>
                         </div>
 
@@ -904,7 +1049,8 @@
                     <div class="text-center mb-12">
                         <span class="text-indigo-600 font-semibold text-sm uppercase tracking-wider">24/7 Support</span>
                         <h2 class="text-4xl font-extrabold text-gray-900 mb-4">Connect with Our Team</h2>
-                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're here to answer all your questions about courses, enrollment, and technical support.</p>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're here to answer all your questions about
+                            courses, enrollment, and technical support.</p>
                     </div>
 
                     <div class="grid md:grid-cols-3 gap-8 items-start">
@@ -918,8 +1064,10 @@
                                     <i class="fa-solid fa-envelope text-2xl text-indigo-500 mt-1"></i>
                                     <div>
                                         <h4 class="font-semibold text-gray-900">Email Support</h4>
-                                        <p class="text-gray-600 text-sm">Our primary support channel. Expect a reply within 24 hours.</p>
-                                        <a href="mailto:support@edupro.example" class="text-indigo-600 font-medium hover:underline">support@edupro.example</a>
+                                        <p class="text-gray-600 text-sm">Our primary support channel. Expect a reply
+                                            within 24 hours.</p>
+                                        <a href="mailto:support@edupro.example"
+                                            class="text-indigo-600 font-medium hover:underline">support@edupro.example</a>
                                     </div>
                                 </div>
 
@@ -927,8 +1075,10 @@
                                     <i class="fa-solid fa-phone-volume text-2xl text-indigo-500 mt-1"></i>
                                     <div>
                                         <h4 class="font-semibold text-gray-900">Call Us</h4>
-                                        <p class="text-gray-600 text-sm">For urgent inquiries during business hours (10AM - 6PM IST).</p>
-                                        <a href="tel:+919876543210" class="text-indigo-600 font-medium hover:underline">+91 98765 43210</a>
+                                        <p class="text-gray-600 text-sm">For urgent inquiries during business hours
+                                            (10AM - 6PM IST).</p>
+                                        <a href="tel:+919876543210"
+                                            class="text-indigo-600 font-medium hover:underline">+91 98765 43210</a>
                                     </div>
                                 </div>
 
@@ -947,18 +1097,25 @@
 
                         <div class="md:col-span-2 bg-white p-8 rounded-2xl shadow-xl">
                             <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Us a Message</h3>
-                            <form id="contact-form" onsubmit="event.preventDefault(); alert('Thank you! Your message has been received. We will contact you shortly.'); this.reset();" class="space-y-4">
+                            <form id="contact-form"
+                                onsubmit="event.preventDefault(); alert('Thank you! Your message has been received. We will contact you shortly.'); this.reset();"
+                                class="space-y-4">
 
                                 <div class="grid sm:grid-cols-2 gap-4">
-                                    <input required placeholder="Your Full Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow">
-                                    <input required type="email" placeholder="Your Email Address" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow">
+                                    <input required placeholder="Your Full Name"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow">
+                                    <input required type="email" placeholder="Your Email Address"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow">
                                 </div>
 
-                                <input type="text" placeholder="Subject (e.g., Enrollment Question)" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow">
+                                <input type="text" placeholder="Subject (e.g., Enrollment Question)"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow">
 
-                                <textarea required placeholder="Your detailed message..." rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow"></textarea>
+                                <textarea required placeholder="Your detailed message..." rows="6"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-shadow"></textarea>
 
-                                <button type="submit" class="w-full bg-indigo-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg flex items-center justify-center space-x-2">
+                                <button type="submit"
+                                    class="w-full bg-indigo-600 text-white py-3 rounded-lg text-lg font-semibold hover:bg-indigo-700 transition-colors shadow-lg flex items-center justify-center space-x-2">
                                     <span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>
                                 </button>
                             </form>
@@ -966,7 +1123,8 @@
                     </div>
 
                     <div class="mt-8 text-center text-gray-500 text-sm">
-                        <p>*Note: For fastest service, please check our <a href="#" class="text-indigo-600 hover:underline">FAQ section</a> before submitting a query.</p>
+                        <p>*Note: For fastest service, please check our <a href="#"
+                                class="text-indigo-600 hover:underline">FAQ section</a> before submitting a query.</p>
                     </div>
                 </div>
             </section>
@@ -984,7 +1142,8 @@
                                 </svg>
                                 <span class="text-xl font-bold text-white">EduPro Academy</span>
                             </div>
-                            <p class="text-gray-400 text-sm">Empowering professionals with future-ready skills through expert-led, practical courses.</p>
+                            <p class="text-gray-400 text-sm">Empowering professionals with future-ready skills through
+                                expert-led, practical courses.</p>
                             <div class="flex space-x-4 mt-4 text-gray-400">
                                 <i class="fa-brands fa-facebook text-lg hover:text-indigo-400 transition-colors"></i>
                                 <i class="fa-brands fa-twitter text-lg hover:text-indigo-400 transition-colors"></i>
@@ -995,12 +1154,16 @@
                         <div>
                             <h4 class="text-lg font-semibold mb-4 text-indigo-400">Quick Links</h4>
                             <ul class="space-y-2 text-sm">
-                                <li><button onclick="showWelcomeScreen()" class="text-gray-300 hover:text-indigo-400 transition-colors">Home</button></li>
-                                <li><button onclick="showCourseList()" class="text-gray-300 hover:text-indigo-400 transition-colors">Courses</button>
+                                <li><button onclick="showWelcomeScreen()"
+                                        class="text-gray-300 hover:text-indigo-400 transition-colors">Home</button></li>
+                                <li><button onclick="showCourseList()"
+                                        class="text-gray-300 hover:text-indigo-400 transition-colors">Courses</button>
                                 </li>
-                                <li><button onclick="showDashboard()" class="text-gray-300 hover:text-indigo-400 transition-colors">Dashboard</button>
+                                <li><button onclick="showDashboard()"
+                                        class="text-gray-300 hover:text-indigo-400 transition-colors">Dashboard</button>
                                 </li>
-                                <li><button onclick="showCertificates()" class="text-gray-300 hover:text-indigo-400 transition-colors">Certificates</button>
+                                <li><button onclick="showCertificates()"
+                                        class="text-gray-300 hover:text-indigo-400 transition-colors">Certificates</button>
                                 </li>
                             </ul>
                         </div>
@@ -1042,11 +1205,15 @@
             <form onsubmit="handleAdminLogin(event)">
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Admin Email</label>
-                    <input type="email" id="admin-email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-red-500" value="admin@edupro.com" required>
+                    <input type="email" id="admin-email"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-red-500"
+                        value="admin@edupro.com" required>
                 </div>
                 <div class="mb-6">
                     <label class="block text-gray-700 text-sm font-bold mb-2">Admin Password</label>
-                    <input type="password" id="admin-password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-red-500" value="admin123" required>
+                    <input type="password" id="admin-password"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-red-500"
+                        value="admin123" required>
                 </div>
                 <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">Login as
                     Admin</button>
@@ -1060,14 +1227,26 @@
             <h2 class="text-2xl font-bold text-center mb-6 text-red-600">Login</h2>
             <form onsubmit="handleLogin(event)">
                 <div class="mb-4">
+<<<<<<< HEAD
                     <label class="block text-black-400 text-md font-bold mb-2">Email</label>
                     <input type="email" id="login-email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-indigo-500" required>
                 </div>
                 <div class="mb-6">
                     <label class="block text-black text-md font-bold mb-2">Password</label>
                     <input type="password" id="login-password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-indigo-500" required>
+=======
+                    <label class="block text-white text-md font-bold mb-2">Email</label>
+                    <input type="email" id="login-email"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-indigo-500" required>
                 </div>
-                <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">Login</button>
+                <div class="mb-6">
+                    <label class="block text-white text-md font-bold mb-2">Password</label>
+                    <input type="password" id="login-password"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-indigo-500" required>
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
+                </div>
+                <button type="submit"
+                    class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">Login</button>
             </form>
             <p class="text-center text-md text-black mt-4">
                 Don't have an account?
@@ -1080,22 +1259,28 @@
             <form onsubmit="handleRegister(event)">
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2">Full Name (Used for Certificate)</label>
-                    <input type="text" id="register-name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
-                    <p class="text-red-500 text-xs mt-1 font-semibold">⚠️ WARNING: Double-check this name! It cannot be changed and will appear on your official certificate.</p>
+                    <input type="text" id="register-name"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
+                    <p class="text-red-500 text-xs mt-1 font-semibold">⚠️ WARNING: Double-check this name! It cannot be
+                        changed and will appear on your official certificate.</p>
                 </div>
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2">Email</label>
-                    <input type="email" id="register-email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
+                    <input type="email" id="register-email"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
                 </div>
                 <div class="mb-4">
                     <label class="block text-white text-sm font-bold mb-2">Phone Number (10 Digits)</label>
-                    <input type="tel" id="register-phone" pattern="[0-9]{10}" maxlength="10" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
+                    <input type="tel" id="register-phone" pattern="[0-9]{10}" maxlength="10"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
                 </div>
                 <div class="mb-6">
                     <label class="block text-white text-sm font-bold mb-2">Password</label>
-                    <input type="password" id="register-password" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
+                    <input type="password" id="register-password"
+                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-green-500" required>
                 </div>
-                <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">Register</button>
+                <button type="submit"
+                    class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">Register</button>
             </form>
             <p class="text-center text-white mt-4">
                 Already have an account?
@@ -1123,20 +1308,25 @@
 
                     <div class="bg-white rounded-2xl shadow-lg p-6 space-y-2">
                         <h3 class="text-lg font-bold text-gray-900 mb-4 border-b pb-3">LMS Navigation</h3>
-                        <button onclick="showDashboard()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition-colors">
+                        <button onclick="showDashboard()"
+                            class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition-colors">
                             <i class="fa-solid fa-gauge-high"></i> <span class="font-semibold">Dashboard</span>
                         </button>
-                        <button onclick="showProfile()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+                        <button onclick="showProfile()"
+                            class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
                             <i class="fa-solid fa-book-open"></i> <span>My Courses</span>
                         </button>
-                        <button onclick="showCertificates()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+                        <button onclick="showCertificates()"
+                            class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
                             <i class="fa-solid fa-certificate"></i> <span>Certificates</span>
                         </button>
-                        <button onclick="showMyAccount()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
+                        <button onclick="showMyAccount()"
+                            class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors">
                             <i class="fa-solid fa-user-gear"></i> <span>Account Settings</span>
                         </button>
                         <div class="pt-4 mt-4 border-t">
-                            <button onclick="logout()" class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors">
+                            <button onclick="logout()"
+                                class="w-full text-left flex items-center space-x-3 p-3 rounded-lg text-red-600 hover:bg-red-50 transition-colors">
                                 <i class="fa-solid fa-right-from-bracket"></i> <span>Logout</span>
                             </button>
                         </div>
@@ -1145,7 +1335,11 @@
                     <div class="bg-white rounded-2xl shadow-xl p-6">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3">AI TOOLS</h3>
                         <div class="space-y-3">
+<<<<<<< HEAD
                             <!-- <button onclick="showProfile()"
+=======
+                            <button onclick="showProfile()"
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                 class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-list-check"></i> <span>Go to My Courses</span>
                             </button> -->
@@ -1161,14 +1355,23 @@
                             <button onclick="openInterviewSetup()" class="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-3 rounded-lg hover:shadow-lg transition-all flex items-center justify-center space-x-2 transform hover:scale-[1.02]">
                                 <i class="fa-solid fa-user-tie"></i> <span>Start AI Mock Interview</span>
                             </button>
-                            <button onclick="showCourseList()" class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center space-x-2">
+                            <button onclick="showCourseList()"
+                                class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-magnifying-glass"></i> <span>Browse All Courses</span>
                             </button>
+<<<<<<< HEAD
                             <!-- <button onclick="showCertificates()"
                                 class="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg hover:bg-yellow-600 transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-download"></i> <span>Download Certificates</span>
                             </button> -->
                             <!-- <button onclick="showMyAccount()"
+=======
+                            <button onclick="showCertificates()"
+                                class="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg hover:bg-yellow-600 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-download"></i> <span>Download Certificates</span>
+                            </button>
+                            <button onclick="showMyAccount()"
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                 class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-gear"></i> <span>Manage Account</span>
                             </button> -->
@@ -1216,21 +1419,25 @@
 
                 <div class="flex-grow">
                     <div class="mb-8">
-                        <h2 class="text-4xl font-extrabold text-gray-900 mb-2">Welcome Back, <span id="dashboard-user-name"></span>!</h2>
+                        <h2 class="text-4xl font-extrabold text-gray-900 mb-2">Welcome Back, <span
+                                id="dashboard-user-name"></span>!</h2>
                         <p class="text-gray-600 text-lg">Your central hub for learning progress and quick actions.</p>
                     </div>
 
-                    <div id="premium-greeting" class="hidden bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-4 rounded-xl shadow-lg mb-6 transform transition-all duration-500 hover:scale-[1.01] flex items-center justify-between space-x-3">
+                    <div id="premium-greeting"
+                        class="hidden bg-gradient-to-r from-yellow-400 to-orange-500 text-white p-4 rounded-xl shadow-lg mb-6 transform transition-all duration-500 hover:scale-[1.01] flex items-center justify-between space-x-3">
                         <div class="flex items-center space-x-3">
                             <span class="text-3xl">👑</span>
                             <p class="text-xl font-bold">Welcome, Premium Member! All 50+ courses are unlocked.</p>
                         </div>
-                        <button onclick="showCourseList()" class="bg-white text-orange-600 font-semibold px-4 py-2 rounded-lg text-sm hover:shadow-xl">Browse
+                        <button onclick="showCourseList()"
+                            class="bg-white text-orange-600 font-semibold px-4 py-2 rounded-lg text-sm hover:shadow-xl">Browse
                             All</button>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-8">
-                        <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-indigo-600 transform transition-transform duration-330 hover:scale-[1.02]">
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-indigo-600 transform transition-transform duration-330 hover:scale-[1.02]">
                             <p class="text-indigo-600 font-bold mb-1">Enrolled Courses</p>
                             <p class="text-4xl font-extrabold text-gray-900" id="enrolled-count">0</p>
                             <div class="flex items-center text-sm text-gray-500 mt-2">
@@ -1238,7 +1445,8 @@
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-green-600 transform transition-transform duration-330 hover:scale-[1.02]">
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-green-600 transform transition-transform duration-330 hover:scale-[1.02]">
                             <p class="text-green-600 font-bold mb-1">Certificates Earned</p>
                             <p class="text-4xl font-extrabold text-gray-900" id="certificates-count">0</p>
                             <div class="flex items-center text-sm text-gray-500 mt-2">
@@ -1246,7 +1454,8 @@
                             </div>
                         </div>
 
-                        <div class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-yellow-600 transform transition-transform duration-330 hover:scale-[1.02]">
+                        <div
+                            class="bg-white p-6 rounded-2xl shadow-lg border-b-4 border-yellow-600 transform transition-transform duration-330 hover:scale-[1.02]">
                             <p class="text-yellow-600 font-bold mb-1">Global Announcements</p>
                             <p class="text-4xl font-extrabold text-gray-900">
                                 <button onclick="showNotificationPopup()" class="text-yellow-600 hover:text-yellow-700">
@@ -1264,14 +1473,19 @@
                     <div class="md:hidden bg-white rounded-2xl shadow-xl p-6 mb-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6 border-b pb-3">AI TOOLS</h3>
                         <div class="space-y-3">
+<<<<<<< HEAD
 
                             <!-- <button onclick="showProfile()"
+=======
+                            <button onclick="showProfile()"
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                 class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-list-check"></i> <span>Go to My Courses</span>
                             </button> -->
                             <button onclick="openQuizSetupModal()" class="w-full bg-gradient-to-r from-violet-600 to-fuchsia-600 text-white py-3 rounded-lg hover:shadow-lg transition-all flex items-center justify-center space-x-2 transform hover:scale-[1.02]">
                                 <i class="fa-solid fa-brain"></i> <span>Test My Knowledge (AI)</span>
                             </button>
+<<<<<<< HEAD
                             <button onclick="openProjectArchitect()" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 rounded-lg hover:shadow-lg transition-all flex items-center justify-center space-x-2 transform hover:scale-[1.02] mt-2">
                                 <i class="fa-solid fa-laptop-code"></i> <span>Generate Project Idea</span>
                             </button>
@@ -1290,6 +1504,17 @@
                                 <i class="fa-solid fa-download"></i> <span>Download Certificates</span>
                             </button> -->
                             <!-- <button onclick="showMyAccount()"
+=======
+                            <button onclick="showCourseList()"
+                                class="w-full bg-purple-600 text-white py-3 rounded-lg hover:bg-purple-700 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-magnifying-glass"></i> <span>Browse All Courses</span>
+                            </button>
+                            <button onclick="showCertificates()"
+                                class="w-full bg-yellow-500 text-gray-900 py-3 rounded-lg hover:bg-yellow-600 transition-colors flex items-center justify-center space-x-2">
+                                <i class="fa-solid fa-download"></i> <span>Download Certificates</span>
+                            </button>
+                            <button onclick="showMyAccount()"
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                 class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center space-x-2">
                                 <i class="fa-solid fa-gear"></i> <span>Manage Account</span>
                             </button> -->
@@ -1671,11 +1896,16 @@
 
             <div class="mb-8 flex justify-center">
                 <div class="course-filter bg-white rounded-full shadow-lg">
-                    <button onclick="filterCourses('all')" class="language-filter active px-6 py-2 rounded-full transition-all">All</button>
-                    <button onclick="filterCourses('programming')" class="language-filter px-6 py-2 rounded-full transition-all">Programming</button>
-                    <button onclick="filterCourses('design')" class="language-filter px-6 py-2 rounded-full transition-all">Design</button>
-                    <button onclick="filterCourses('business')" class="language-filter px-6 py-2 rounded-full transition-all">Business</button>
-                    <button onclick="filterCourses('data')" class="language-filter px-6 py-2 rounded-full transition-all">Data
+                    <button onclick="filterCourses('all')"
+                        class="language-filter active px-6 py-2 rounded-full transition-all">All</button>
+                    <button onclick="filterCourses('programming')"
+                        class="language-filter px-6 py-2 rounded-full transition-all">Programming</button>
+                    <button onclick="filterCourses('design')"
+                        class="language-filter px-6 py-2 rounded-full transition-all">Design</button>
+                    <button onclick="filterCourses('business')"
+                        class="language-filter px-6 py-2 rounded-full transition-all">Business</button>
+                    <button onclick="filterCourses('data')"
+                        class="language-filter px-6 py-2 rounded-full transition-all">Data
                         Science</button>
                 </div>
             </div>
@@ -1693,9 +1923,15 @@
         </div>
 
         <div id="course-detail" class="hidden fade-in">
+<<<<<<< HEAD
             <!-- <button onclick="showCourseList()"
                 class="mb-4  ml-1 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700">←
                 Back to Courses</button> -->
+=======
+            <button onclick="showCourseList()"
+                class="mb-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700">←
+                Back to Courses</button>
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
             <div id="course-detail-content"></div>
         </div>
 
@@ -1707,7 +1943,8 @@
 
         <div id="certificate-screen" class="hidden fade-in">
             <div class="max-w-4xl mx-auto">
-                <button onclick="showProfile()" class="mb-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700">←
+                <button onclick="showProfile()"
+                    class="mb-4 bg-gray-600 text-white px-4 py-2 rounded-lg hover:bg-gray-700">←
                     Back to My
                     Courses</button>
 
@@ -1717,6 +1954,7 @@
 
                     </div>
                 </div>
+<<<<<<< HEAD
 
                 <div class="text-center bg-red-100 border-2 border-red-500 text-red-700 p-4 rounded-lg shadow-md mb-6 mt-6 animate-pulse">
                     <div class="flex items-center justify-center space-x-3">
@@ -1732,6 +1970,11 @@
                 </div>
                 <div class="text-center">
                     <button onclick="downloadCurrentCertificate('png')" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 text-lg">Download
+=======
+                <div class="text-center mt-6">
+                    <button onclick="downloadCurrentCertificate('png')"
+                        class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 text-lg">Download
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                         Certificate (PNG)</button>
                 </div>
             </div>
@@ -1744,12 +1987,14 @@
                     <div class="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8 flex justify-between items-center">
                         <h1 class="text-3xl font-bold text-gray-900 slide-in">Admin Enrollment Dashboard 🔑</h1>
                         <div class="text-sm text-gray-500">
-                            Last Refreshed: <span id="last-updated" class="font-semibold text-blue-600">Loading...</span>
+                            Last Refreshed: <span id="last-updated"
+                                class="font-semibold text-blue-600">Loading...</span>
                         </div>
                     </div>
 
                 </header>
                 <main class="flex-1 p-4 sm:p-6 lg:p-8 max-w-7xl mx-auto w-full">
+<<<<<<< HEAD
                     <div id="admin-stats-view">
 
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
@@ -1874,11 +2119,100 @@
                                     <button onclick="handlePagination('next')" class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm hover:bg-gray-300 transition-colors hidden" id="next-page-btn">→</button>
                                 </div>
                                 <span class="text-sm text-gray-600" id="pagination-info">Displaying 0 records</span>
+=======
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                        <div id="card-total-students"
+                            class="card-animation bg-white p-6 rounded-xl shadow-lg border-l-4 border-blue-600">
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-medium text-gray-500">Total Student Accounts</div>
+                                <svg class="h-6 w-6 text-blue-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-4h-5v4zm0 0l-1.336-1.336m1.336 1.336H3m3-4H2m3 4v-4m3 4v-4m3 4v-4m3 4v-4m3 4v-4m-3 4V4m3 16V4m-3 0h5m-5 0H3m3 0h12" />
+                                </svg>
+                            </div>
+                            <p class="text-4xl font-extrabold text-gray-900 mt-1"><span
+                                    id="metric-total-students">0</span>
+                            </p>
+                        </div>
+                        <div id="card-total-active-users"
+                            class="card-animation bg-white p-6 rounded-xl shadow-lg border-l-4 border-red-600">
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-medium text-gray-500">Total Active Users</div>
+                                <svg class="h-6 w-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                </svg>
+                            </div>
+                            <p class="text-4xl font-extrabold text-gray-900 mt-1"><span
+                                    id="metric-total-active-users">0</span></p>
+                        </div>
+                        <div id="card-total-certificates"
+                            class="card-animation bg-white p-6 rounded-xl shadow-lg border-l-4 border-green-600">
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm font-medium text-gray-500">Courses Completed (Certified)</div>
+                                <svg class="h-6 w-6 text-green-400" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.01 12.01 0 002.5 14c0 1.491.31 2.923.863 4.264m18.774-11.28A12.01 12.01 0 0021.5 14c0 1.491-.31 2.923-.863 4.264M18 18h-4.264l-.5-1.5-.5 1.5H6m12 0a2 2 0 100 4 2 2 0 000-4z" />
+                                </svg>
+                            </div>
+                            <p class="text-4xl font-extrabold text-gray-900 mt-1"><span
+                                    id="metric-total-certificates">0</span></p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 gap-6 mb-8">
+                        <div class="bg-white p-6 rounded-xl shadow-lg card-animation w-full">
+                            <h2 class="text-xl font-semibold text-gray-800 mb-4">Course Enrollment Distribution (Live
+                                Data)
+                            </h2>
+                            <div style="height: 300px;">
+                                <canvas id="courseChart"></canvas>
+                            </div>
+                        </div>
+                        <div
+                            class="bg-white p-6 rounded-xl shadow-lg card-animation w-full grid grid-cols-1 md:grid-cols-4 gap-4">
+                            <div>
+                                <label for="admin-student-search" class="block text-sm font-medium text-gray-700">Search
+                                    Name/Email/Phone</label>
+                                <input type="text" id="admin-student-search" placeholder="E.g., Alice Johnson"
+                                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-blue-500 focus:border-blue-500 filter-transition">
+                            </div>
+                            <div>
+                                <label for="admin-course-filter" class="block text-sm font-medium text-gray-700">Filter
+                                    by Course</label>
+                                <select id="admin-course-filter"
+                                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-blue-500 focus:border-blue-500 filter-transition bg-white">
+                                    <option value="all">All Courses</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="admin-status-filter" class="block text-sm font-medium text-gray-700">Filter
+                                    by Enrollment Status</label>
+                                <select id="admin-status-filter"
+                                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-blue-500 focus:border-blue-500 filter-transition bg-white">
+                                    <option value="all">Any Status</option>
+                                    <option value="true">Active (True)</option>
+                                    <option value="false">Pending (False)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="admin-online-filter" class="block text-sm font-medium text-gray-700">Filter
+                                    by Online Status</label>
+                                <select id="admin-online-filter"
+                                    class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm py-2 px-3 focus:ring-blue-500 focus:border-blue-500 filter-transition bg-white">
+                                    <option value="all">All</option>
+                                    <option value="online">Online</option>
+                                    <option value="offline">Offline</option>
+                                </select>
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                             </div>
                         </div>
 
                     </div>
 
+<<<<<<< HEAD
                     <div id="admin-jobs-view" class="hidden fade-in space-y-6">
 
                         <div class="flex justify-between items-center bg-white p-6 rounded-xl shadow-sm border border-gray-200">
@@ -1908,13 +2242,56 @@
                                             Link</th>
                                         <th class="px-6 py-3 text-left text-xs font-bold text-gray-500 uppercase tracking-wider">
                                             Actions</th>
+=======
+                    <div class="bg-white p-6 rounded-xl shadow-lg card-animation">
+                        <h2 class="text-xl font-semibold text-gray-800 mb-4">
+                            Student Enrollment Records
+                            <span id="approval-metrics" class="ml-4 text-sm font-normal text-gray-600">
+                                (Active: <span id="metric-approvals" class="font-semibold text-green-600">0</span> /
+                                Pending: <span id="metric-revokes" class="font-semibold text-orange-600">0</span>)
+                            </span>
+                        </h2>
+                        <div class="overflow-x-auto">
+                            <table class="min-w-full divide-y divide-gray-200">
+                                <thead>
+                                    <tr class="bg-gray-50">
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Student Name</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Email</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Course Title</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Status</th>
+                                        <th
+                                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                            Action</th>
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                                     </tr>
                                 </thead>
                                 <tbody id="admin-jobs-table-body" class="bg-white divide-y divide-gray-200">
                                 </tbody>
                             </table>
+<<<<<<< HEAD
                             <div id="admin-no-jobs-msg" class="hidden text-center py-10">
                                 <p class="text-gray-500 text-lg">No jobs posted yet.</p>
+=======
+                            <div id="admin-no-results" class="hidden text-center py-8 text-gray-500">No enrollment
+                                records found matching the criteria.</div>
+                        </div>
+                        <div class="flex justify-between items-center mt-4">
+                            <div class="flex space-x-2">
+                                <button onclick="handlePagination('prev')"
+                                    class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm hover:bg-gray-300 transition-colors hidden"
+                                    id="prev-page-btn">←</button>
+                                <button onclick="handlePagination('next')"
+                                    class="bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm hover:bg-gray-300 transition-colors hidden"
+                                    id="next-page-btn">→</button>
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                             </div>
                         </div>
                     </div>
@@ -2151,7 +2528,8 @@
         <div class="modal-content w-full max-w-xl admin-profile-card">
             <div class="flex justify-between items-center pb-4 mb-4 border-b border-indigo-200">
                 <h2 class="text-3xl font-extrabold text-indigo-900" id="modal-user-name">Student Details</h2>
-                <button onclick="closeAdminUserDetails()" class="text-gray-500 hover:text-red-700 p-2 rounded-full hover:bg-red-50">
+                <button onclick="closeAdminUserDetails()"
+                    class="text-gray-500 hover:text-red-700 p-2 rounded-full hover:bg-red-50">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
                         </path>
@@ -2163,14 +2541,19 @@
             </div>
 
             <div class="mt-6 flex justify-between space-x-3 pt-4">
-                <button id="disable-user-btn" onclick="toggleUserDisableStatus(document.getElementById('admin-user-details-modal').getAttribute('data-user-id'))" class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg text-sm hover:bg-yellow-600 transition-colors flex-1 shadow-md">Disable
+                <button id="disable-user-btn"
+                    onclick="toggleUserDisableStatus(document.getElementById('admin-user-details-modal').getAttribute('data-user-id'))"
+                    class="bg-yellow-500 text-gray-900 px-4 py-2 rounded-lg text-sm hover:bg-yellow-600 transition-colors flex-1 shadow-md">Disable
                     User</button>
-                <button id="delete-user-btn" onclick="deleteUserPermanently(document.getElementById('admin-user-details-modal').getAttribute('data-user-id'))" class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 transition-colors flex-1 shadow-md">Delete
+                <button id="delete-user-btn"
+                    onclick="deleteUserPermanently(document.getElementById('admin-user-details-modal').getAttribute('data-user-id'))"
+                    class="bg-red-600 text-white px-4 py-2 rounded-lg text-sm hover:bg-red-700 transition-colors flex-1 shadow-md">Delete
                     User Permanently</button>
             </div>
             <div class="mt-8">
                 <h3 class="text-xl font-bold text-gray-800 border-b pb-2 mb-4 flex items-center">
-                    <span class="mr-2 text-indigo-600">📚</span> Enrolled Courses (<span id="modal-enrolled-count">0</span>)
+                    <span class="mr-2 text-indigo-600">📚</span> Enrolled Courses (<span
+                        id="modal-enrolled-count">0</span>)
                 </h3>
                 <div id="modal-course-list" class="space-y-3">
                 </div>
@@ -2229,7 +2612,8 @@
         </nav>
 
         <!-- MOBILE MENU DROPDOWN -->
-        <div id="mobile-menu" class="hidden md:hidden absolute right-4 top-16 bg-white shadow-lg rounded-lg border p-3 space-y-2 z-[9999]">
+        <div id="mobile-menu"
+            class="hidden md:hidden absolute right-4 top-16 bg-white shadow-lg rounded-lg border p-3 space-y-2 z-[9999]">
 
             <button id="integrated-completion-button-mobile" class="bg-gray-300 w-full text-white font-semibold py-2 px-4 rounded-lg transition
                    disabled:opacity-50 disabled:cursor-not-allowed">
@@ -2254,13 +2638,16 @@
         </div>
     </div>
 
-    <button onclick="document.getElementById('subscription-modal').classList.remove('hidden')" class="fixed bottom-6 right-6 z-40 bg-pink-600 text-white p-4 rounded-full shadow-2xl hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 animate-bounce">
+    <button onclick="document.getElementById('subscription-modal').classList.remove('hidden')"
+        class="fixed bottom-6 right-6 z-40 bg-pink-600 text-white p-4 rounded-full shadow-2xl hover:bg-pink-700 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 animate-bounce">
         <i class="fa-solid fa-crown text-2xl"></i>
         <span class="text-lg font-bold hidden sm:inline">All-Access Pass: ₹1500!</span>
     </button>
 
 
-    <a href="https://wa.me/919876543210" target="_blank" style="bottom: 35px;" onclick="document.getElementById('subscription-modal').classList.remove('hidden')" class="fixed bottom-6 left-6 z-40 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-pink-700 transition-all duration-150 transform hover:scale-105 flex items-center space-x-2 animate-bounce"
+    <a href="https://wa.me/919876543210" target="_blank" style="bottom: 35px;"
+        onclick="document.getElementById('subscription-modal').classList.remove('hidden')"
+        class="fixed bottom-6 left-6 z-40 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-pink-700 transition-all duration-150 transform hover:scale-105 flex items-center space-x-2 animate-bounce"
         aria-label="Chat with us on WhatsApp">
         <span class="text-lg font-bold hidden sm:inline">DM To Us!</span>
         <i class="fa-brands fa-whatsapp text-3xl"></i>
@@ -3087,9 +3474,95 @@
         let sessionStartTime = null;
         const ACTIVITY_LOG_PATH = 'edupro_users_activity';
         // Sample Data: COURSE IDs must be unique strings 
+<<<<<<< HEAD
         // ==========================================
         // 1. COURSE DATABASE (Updated with Unique Prices & Images)
         // ==========================================
+=======
+        let courses = [{
+            id: "web_dev",
+            title: "Full Stack Web Development",
+            description: "Master modern web development with React, Node.js, and databases",
+            duration: "10 days",
+            level: "Beginner",
+            icon: "💻",
+            category: "programming",
+            rating: 4.9,
+            students: 2847,
+            curriculum: [{
+                title: "HTML",
+                day: 1
+            }, {
+                title: "CSS",
+                day: 2
+            }, {
+                title: "JS",
+                day: 3
+            }, {
+                title: "React",
+                day: 4
+            }, {
+                title: "Node",
+                day: 5
+            }, {
+                title: "Express",
+                day: 6
+            }, {
+                title: "DB",
+                day: 7
+            }, {
+                title: "API",
+                day: 8
+            }, {
+                title: "Auth",
+                day: 9
+            }, {
+                title: "Deploy",
+                day: 10
+            }]
+        }, {
+            id: "Amazon Web Services (AWS)",
+            title: "Cloud Computing with AWS",
+            description: "Master Amazon Web Services and cloud architecture",
+            duration: "10 days",
+            level: "Intermediate",
+            icon: "☁️",
+            category: "programming",
+            rating: 4.8,
+            students: 2156,
+            curriculum: [{
+                title: "Cloud Funda",
+                day: 1
+            }, {
+                title: "EC2",
+                day: 2
+            }, {
+                title: "S3",
+                day: 3
+            }, {
+                title: "RDS",
+                day: 4
+            }, {
+                title: "Lambda",
+                day: 5
+            }, {
+                title: "CF",
+                day: 6
+            }, {
+                title: "IAM",
+                day: 7
+            }, {
+                title: "Monitor",
+                day: 8
+            }, {
+                title: "DevOps",
+                day: 9
+            }, {
+                title: "Cert Prep",
+                day: 10
+            }]
+        }];
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
 
 
 
@@ -3735,7 +4208,7 @@
             completionButton.classList.remove('bg-gray-400');
             completionButton.classList.add('bg-green-600', 'hover:bg-green-700');
 
-            completionButton.onclick = async() => {
+            completionButton.onclick = async () => {
                 // *** CRITICAL FIX 1: IMMEDIATELY DISABLE THE BUTTON UPON FIRST CLICK ***
                 completionButton.disabled = true;
                 completionButton.textContent = "Processing...";
@@ -3840,7 +4313,7 @@
                     totalModules: total,
                     refNo: refNo,
                     dateIssued: dateIssued.toISOString(),
-                    dateDisplay: (function(d) {
+                    dateDisplay: (function (d) {
                         const dd = String(d.getDate()).padStart(2, '0');
                         const mm = String(d.getMonth() + 1).padStart(2, '0');
                         return dd + '.' + mm + '.' + d.getFullYear();
@@ -4104,6 +4577,7 @@
                 // REPLACE YOUR AUTH LISTENER WITH THIS ROBUST VERSION
                 auth.onAuthStateChanged((user) => {
                     if (user) {
+<<<<<<< HEAD
                         currentUserId = user.uid;
                         startSessionTimer();
                         fetchUserData(true).then(() => {
@@ -4121,6 +4595,24 @@
                             console.error(e);
                             hideLoader(); // Safety catch
                         });
+=======
+                        if (user.email === ADMIN_EMAIL && user.uid === 'admin-mock-uid') { } else {
+                            currentUserId = user.uid;
+                            startSessionTimer(); // <-- START TIMER HERE
+                            fetchUserData().then(() => {
+                                updateNav(true, false);
+                                if (document.getElementById('welcome-screen').style.display !== 'none' ||
+                                    document.getElementById('login-form').style.display !== 'none' ||
+                                    document.getElementById('register-form').style.display !== 'none'
+                                ) {
+                                    if (document.getElementById('certificate-screen').style.display === 'none') {
+                                        hideLoader();
+                                        showDashboard();
+                                    }
+                                }
+                            });
+                        }
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                     } else {
                         currentUserId = null;
                         currentUser = null;
@@ -4417,7 +4909,7 @@
                 try {
                     await database.ref(`edupro_users/${userId}`).remove();
 
-                    certificates.filter(c => c.userId === userId).forEach(async(cert) => {
+                    certificates.filter(c => c.userId === userId).forEach(async (cert) => {
                         await database.ref(`certificates/${cert.id}`).remove();
                     });
 
@@ -4957,9 +5449,10 @@
             }
 
             activeEnrollments.forEach(courseId => {
-                        const course = courses.find(c => c.id === courseId);
-                        const enrollment = enrolledCourses[courseId];
+                const course = courses.find(c => c.id === courseId);
+                const enrollment = enrolledCourses[courseId];
 
+<<<<<<< HEAD
                         // --- Consistency FIX: Use the helper function ---
                         const cardData = getCourseCardData(courseId);
                         const imageURL = cardData.imageURL;
@@ -5011,6 +5504,71 @@
                         <img src="${imageURL}" alt="${course.title} Instructor" class="w-full h-full object-cover opacity-70">
                         <div class="absolute bottom-0 left-0 bg-black bg-opacity-50 text-gray-400 p-1 text-xs">
                             Instructor: ${instructorName}
+=======
+                if (course && enrollment) {
+                    const isEnrolled = enrollment.status === true;
+                    const isPending = enrollment.status === false;
+
+                    let actionButton;
+                    let statusTag;
+                    let cardClasses = 'border-t-4';
+                    const hasCertificate = userCertificates.some(c => c.courseId === courseId);
+                    const totalDays = course.curriculum ? course.curriculum.length : 10;
+
+
+                    if (hasCertificate) {
+                        const certData = userCertificates.find(c => c.courseId === courseId);
+                        cardClasses += ' border-yellow-500';
+                        statusTag = `<span class="bg-yellow-100 text-yellow-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Certified</span>`;
+
+                        // Action buttons for completed course
+                        actionButton = `<div class="space-y-2">
+                                <button onclick="showCertificateScreen(certificates.find(c => c.courseId === '${courseId}' && c.userId === currentUserId))" class="w-full bg-yellow-600 text-white py-2 rounded-lg hover:bg-yellow-700">View Certificate 🏆</button>
+                                <button onclick="startLearning('${courseId}')" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">Open Course</button>
+                            </div>`;
+
+                    } else if (isEnrolled) {
+                        const progress = Math.round((enrollment.day / totalDays) * 100);
+                        const isComplete = progress === 100;
+
+                        cardClasses += ' border-green-500';
+                        statusTag = `<span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Active</span>`;
+
+                        if (isComplete) {
+                            actionButton = `<button onclick="alert('Course completed! Contact admin for certificate issue.')" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700">Finished - Get Certificate 🎓</button>`;
+                        } else {
+                            actionButton = `<button onclick="startLearning('${courseId}')" class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700">Continue Learning (Day ${enrollment.day})</button>`;
+                        }
+                    } else if (isPending) {
+                        cardClasses += ' border-orange-500';
+                        statusTag = `<span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full">Pending Confirmation</span>`;
+                        actionButton = `<button onclick="showCourseDetail('${courseId}')" class="w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700">View Status</button>`;
+                    }
+
+
+                    container.innerHTML += `
+                        <div class="card-hover bg-white p-6 rounded-xl shadow-lg w-full sm:w-80 ${cardClasses}">
+                            <div class="flex justify-between items-center mb-2">
+                                <div class="text-3xl">${course.icon}</div>
+                                ${statusTag}
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">${course.title}</h3>
+                            <p class="text-sm text-gray-600 mb-4">${course.description}</p>
+
+                            ${isEnrolled && !hasCertificate ? `
+                                <div class="mb-4">
+                                    <div class="flex justify-between text-sm font-medium text-gray-700">
+                                        <span>Progress:</span>
+                                        <span>${Math.round((enrollment.day / totalDays) * 100)}%</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2.5 mt-1">
+                                        <div class="progress-bar bg-green-500 h-2.5 rounded-full" style="width: ${Math.round((enrollment.day / totalDays) * 100)}%"></div>
+                                    </div>
+                                </div>
+                            ` : `<div class="h-10 mb-4"></div>`}
+
+                            ${actionButton}
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
                         </div>
                         <div class="absolute top-2 right-2">
                            ${statusTag}
@@ -5848,7 +6406,31 @@
         // 📊 CHART 1: STUDENT PROGRESS (COURSES ONLY)
         // ==========================================
         function renderStudentDashboardGraph() {
+<<<<<<< HEAD
             const ctx = document.getElementById('studentProgressChart') ? .getContext('2d');
+=======
+            if (!currentUser || !currentUser.enrolled_courses) return;
+
+            const enrolledCourses = currentUser.enrolled_courses;
+            const userCertificates = certificates.filter(c => c.userId === currentUserId);
+
+            // --- CRITICAL: Tracking based on total courses ---
+            const totalEnrolled = getEnrolledCourseCount();
+            const totalCertified = userCertificates.length;
+            const totalIncomplete = totalEnrolled - totalCertified;
+
+            // 1. Determine Data Points (The required metrics)
+            const coursesRegistered = totalEnrolled;
+            const coursesCompleted = totalCertified;
+            const coursesPendingOrActive = totalIncomplete;
+
+            const labels = ['Incomplete (Active/Pending)', 'Completed (Certified)'];
+            const dataPoints = [coursesPendingOrActive, coursesCompleted];
+            const backgroundColors = ['#f59e0b', '#10b981']; // Amber (Incomplete), Green (Certified)
+
+            const ctx = document.getElementById('studentProgressChart')?.getContext('2d');
+
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
             if (!ctx) return;
 
             // 1. Get Active Course Count (from enrolled_courses)
@@ -5943,7 +6525,7 @@
                 '#6366f1' // Indigo for comparison
             ];
 
-            const ctx = document.getElementById('peerComparisonChart') ? .getContext('2d');
+            const ctx = document.getElementById('peerComparisonChart')?.getContext('2d');
 
             if (!ctx) return;
 
@@ -5967,9 +6549,7 @@
                     maintainAspectRatio: false,
                     indexAxis: 'y', // Make it a horizontal bar chart
                     plugins: {
-                        legend: {
-                            display: false
-                        },
+                        legend: { display: false },
                         title: {
                             display: true,
                             text: 'Peer Certification Comparison'
@@ -6091,10 +6671,7 @@
                 d.setDate(now.getDate() - i);
 
                 // Format for chart label (e.g., 'Wed 15')
-                const label = d.toLocaleString('en-US', {
-                    weekday: 'short',
-                    day: 'numeric'
-                });
+                const label = d.toLocaleString('en-US', { weekday: 'short', day: 'numeric' });
                 days.push(label);
 
                 // Format for database key (e.g., '2025-11-17')
@@ -6111,7 +6688,7 @@
                 dataMinutes.push(minutes);
             });
 
-            const ctx = document.getElementById('weeklyActivityTrendChart') ? .getContext('2d');
+            const ctx = document.getElementById('weeklyActivityTrendChart')?.getContext('2d');
 
             if (!ctx) return;
 
@@ -6132,7 +6709,8 @@
                         tension: 0.3,
                         pointRadius: 5,
                         pointBackgroundColor: '#4f46e5',
-                    }, {
+                    },
+                    {
                         label: 'Your Weekly Goal',
                         data: Array(7).fill(simulatedAvg), // Horizontal line at 35 minutes
                         borderColor: '#f59e0b', // Amber
@@ -6145,9 +6723,7 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: {
-                            position: 'top'
-                        },
+                        legend: { position: 'top' },
                         title: {
                             display: true,
                             text: 'Minutes Spent Active on Platform (Last 7 Days)'
@@ -6162,7 +6738,7 @@
                             },
                             // --- CRITICAL FIX: Custom Y-Axis Label Callback ---
                             ticks: {
-                                callback: function(value, index, values) {
+                                callback: function (value, index, values) {
                                     if (value < 60) {
                                         return value + ' mins';
                                     } else {
@@ -6205,10 +6781,13 @@
             // Return TOP 50 so scrolling is possible
             return leaderboard.slice(0, 50);
         }
+<<<<<<< HEAD
 
         // ==========================================
         // 🏆 RENDER LEADERBOARD (FIXED LAYOUT & SCROLL)
         // ==========================================
+=======
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
         function renderLeaderboard() {
             const container = document.getElementById('leaderboard-list');
             const topAchievers = getLeaderboardData();
@@ -11225,8 +11804,11 @@
 </body>
 
 </html>
+<<<<<<< HEAD
 
 <!-- latest -->
 
 
 <!-- <div style="font-size: 20px; color: #777; margin-bottom: 5x;">Accredited By</div> -->
+=======
+>>>>>>> bf3ac403dc0f5fcc4a6067003a987637c4203ae6
