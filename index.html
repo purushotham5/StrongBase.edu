@@ -3428,6 +3428,8 @@
             // Reset filters and render
             renderCourseList(courses);
             resetFilterButtons('all');
+
+
         }
 
         // --- 2. SHOW DASHBOARD ---
@@ -4795,7 +4797,7 @@
                 </button>
                 <div class="mt-4 space-y-3 text-sm text-gray-600">
                     <div class="flex items-center gap-3"><i class="fa-solid fa-infinity text-indigo-500"></i> Full Lifetime Access</div>
-                    <div class="flex items-center gap-3"><i class="fa-solid fa-mobile-screen text-indigo-500"></i> Access on Mobile & TV</div>
+                    <div class="flex items-center gap-3"><i class="fa-solid fa-mobile-screen text-indigo-500"></i> Practice Questions</div>
                     <div class="flex items-center gap-3"><i class="fa-solid fa-certificate text-indigo-500"></i> Certificate of Completion</div>
                 </div>
             </div>`;
@@ -4804,6 +4806,8 @@
             // 4. Generate Curriculum List
             const curriculumHTML = (course.curriculum || []).map((item, index) => {
                 const day = index + 1;
+                const duration = Math.floor(Math.random() * 9) + 21;
+
                 // Determine status: Locked, Active, or Completed
                 let statusClass = "border-gray-200 bg-white opacity-60"; // Default Locked
                 let icon = `<i class="fa-solid fa-lock text-gray-400"></i>`;
@@ -4831,12 +4835,12 @@
                     ${icon}
                 </div>
                 <div class="flex-grow">
-                    <h4 class="font-bold text-gray-800 text-sm md:text-base">Day ${day}: ${item.title} ${label}</h4>
-                    <p class="text-xs text-gray-500 mt-1">Video Module • Practical Assignment</p>
+                    <h4 class="font-bold text-gray-800 text-sm md:text-base">Module ${day}: ${item.title} ${label}</h4>
+                    <p class="text-xs text-gray-500 mt-1">Theory Module • Practical Assignment</p>
                 </div>
-                <div class="text-xs text-gray-400 font-medium">
-                    1h 20m
-                </div>
+               <div class="text-xs text-gray-400 font-medium">
+    ${duration} min
+</div>
             </div>
         `;
             }).join('');
@@ -4897,23 +4901,22 @@
                             </div>
                         </div>
 
-                        <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                 
+                    </div>
+
+                    <div class="lg:col-span-1">
+                        <div class="sticky top-24 space-y-6">
+                            ${sidebarAction}
+                                               </div>
+
+
+                               <div class="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
                             <h3 class="text-xl font-bold text-gray-900 mb-4">Requirements</h3>
                             <ul class="list-disc list-inside text-gray-600 text-sm space-y-2 ml-2">
                                 <li>No prior experience required (for beginner courses).</li>
                                 <li>A computer with internet access.</li>
                                 <li>Desire to learn and practice coding daily.</li>
                             </ul>
-                        </div>
-                    </div>
-
-                    <div class="lg:col-span-1">
-                        <div class="sticky top-24 space-y-6">
-                            ${sidebarAction}
-                            
-                            // <div class="flex items-center justify-center gap-2 text-gray-400 text-xs font-medium">
-                            //     <i class="fa-solid fa-shield-halved"></i> 30-Day Money-Back Guarantee
-                            // </div>
                         </div>
                     </div>
 
@@ -7904,7 +7907,7 @@
                 description: document.getElementById('course-desc').value,
                 rating: 4.8, // Default starting rating
                 reviewCount: "New",
-                instructor: "EduPro Team", // Default
+                instructor: "ProgMaster Team", // Default
                 curriculum: curriculum
             };
 
