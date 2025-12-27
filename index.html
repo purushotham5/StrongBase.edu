@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduPro Academy - Professional Learning Platform</title>
+    <title>ProgMaster Academy - Professional Learning Platform</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
@@ -1054,8 +1054,8 @@
                                         <h4 class="font-semibold text-gray-900">Email Support</h4>
                                         <p class="text-gray-600 text-sm">Our primary support channel. Expect a reply
                                             within 24 hours.</p>
-                                        <a href="mailto:support@edupro.example"
-                                            class="text-indigo-600 font-medium hover:underline">support@edupro.example</a>
+                                        <a href="mailto:tech@progmaster.in"
+                                            class="text-indigo-600 font-medium hover:underline">tech@progmaster.in</a>
                                     </div>
                                 </div>
 
@@ -1128,7 +1128,7 @@
                                     <path
                                         d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                                 </svg>
-                                <span class="text-xl font-bold text-white">EduPro Academy</span>
+                                <span class="text-xl font-bold text-white">ProgMaster Academy</span>
                             </div>
                             <p class="text-gray-400 text-sm">Empowering professionals with future-ready skills through
                                 expert-led, practical courses.</p>
@@ -1159,9 +1159,9 @@
                         <div>
                             <h4 class="text-lg font-semibold mb-4 text-indigo-400">Contact Us</h4>
                             <ul class="space-y-2 text-sm text-gray-300">
-                                <li><i class="fa-solid fa-envelope mr-2"></i> support@edupro.example</li>
-                                <li><i class="fa-solid fa-phone mr-2"></i> +91 98765 43210</li>
-                                <li><i class="fa-solid fa-location-dot mr-2"></i> 12/4 Tech Park, Hyderabad</li>
+                                <li><i class="fa-solid fa-envelope mr-2"></i> tech@progmaster.in</li>
+                                <li><i class="fa-solid fa-phone mr-2"></i> +91 7993854229</li>
+                                <li><i class="fa-solid fa-location-dot mr-2"></i> Remote</li>
                             </ul>
                         </div>
 
@@ -1187,30 +1187,7 @@
 
 
         </div>
-        <div id="admin-login-screen" class="hidden max-w-md mx-auto p-8 rounded-lg shadow-lg fade-in">
-            <h2 class="text-2xl font-bold text-center mb-6 text-red-600">Admin Login</h2>
-            <p class="text-center text-sm text-gray-600 mb-4">Use: admin@edupro.com / admin123</p>
-            <form onsubmit="handleAdminLogin(event)">
-                <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2">Admin Email</label>
-                    <input type="email" id="admin-email"
-                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-red-500"
-                        value="admin@edupro.com" required>
-                </div>
-                <div class="mb-6">
-                    <label class="block text-gray-700 text-sm font-bold mb-2">Admin Password</label>
-                    <input type="password" id="admin-password"
-                        class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:border-red-500"
-                        value="admin123" required>
-                </div>
-                <button type="submit" class="w-full bg-red-600 text-white py-2 rounded-lg hover:bg-red-700">Login as
-                    Admin</button>
-            </form>
-            <p class="text-center mt-4">
-                <button onclick="showWelcomeScreen()" class="text-gray-600 hover:underline">← Back to Main Page</button>
-            </p>
-        </div>
-
+        
         <div id="login-form" class="hidden max-w-md mx-auto rounded-lg fade-in">
             <h2 class="text-2xl font-bold text-center mb-6 text-red-600">Login</h2>
             <form onsubmit="handleLogin(event)">
@@ -2779,7 +2756,7 @@
                                             class="w-10 h-10 bg-indigo-700 rounded-full flex items-center justify-center text-xl">
                                             🤖</div>
                                         <div>
-                                            <h3 class="font-bold text-lg">EduPro AI Mentor</h3>
+                                            <h3 class="font-bold text-lg">ProgMaster AI Mentor</h3>
                                             <p class="text-xs text-indigo-300">I can explain concepts or give code
                                                 hints!
                                             </p>
@@ -3499,8 +3476,8 @@
         };
         const SUBSCRIPTION_PAYMENT_LINK = 'https://rzp.io/rzp/MdrDDje';
         let isAdminLoggedIn = false;
-        const ADMIN_EMAIL = 'admin@edupro.com';
-        const ADMIN_PASSWORD = 'admin123';
+        // const ADMIN_EMAIL = 'admin@edupro.com';
+        // const ADMIN_PASSWORD = 'admin123';
         let courseChartInstance = null;
 
         // Pagination state
@@ -3537,15 +3514,8 @@
 
         const courseEnhancements = {
             // ID from Admin Panel  :  UI Details
-            "web_dev": {
-                thumbnail: "https://images.unsplash.com/photo-1593720213428-28a5b9e94613?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                price: "₹499",
-                originalPrice: "₹2999",
-                rating: 4.9,
-                reviewCount: "2.4k",
-                category: "programming"
-            },
-            "aws_cloud": {
+
+            "amazon_web_services_(aws)": {
                 thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
                 price: "₹699",
                 originalPrice: "₹3499",
@@ -3560,6 +3530,27 @@
                 rating: 4.7,
                 reviewCount: "1.8k",
                 category: "programming"
+            }, "android_app_development_with_java-kotlin": {
+                thumbnail: "https://www.pankajkumarseo.com/wp-content/uploads/2022/06/Android-App-Development-Course.png",
+                price: "₹50",
+                originalPrice: "₹499",
+                rating: 4.7,
+                reviewCount: "2k",
+                category: "Cloud"
+            }, "api_testing_with_postman": {
+                thumbnail: "https://stadsolution1.graphy.com/s/store/courses/6606b37fe498fc72c59a7c1c/cover.jpg?v=1",
+                price: "₹50",
+                originalPrice: "₹499",
+                rating: 4.7,
+                reviewCount: "1.2k",
+                category: "Testing"
+            }, "azure_mastery_for_enterprise_it_professionals": {
+                thumbnail: "https://www.apponix.com/storage/programimage/OMPC6Th8gg4lXXPJ3EgMR1p3Z9DlmcRdDNnySO6b.png",
+                price: "₹50",
+                originalPrice: "₹499",
+                rating: 4.1,
+                reviewCount: "2k",
+                category: "Cloud"
             },
             // Add more mappings here as you add courses in Admin
             // Example:
