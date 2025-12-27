@@ -11668,68 +11668,7 @@
         }
     </script>
 
-    <script>
-        (function () {
-
-            // Disable right click
-            document.addEventListener('contextmenu', function (e) {
-                e.preventDefault();
-                return false;
-            });
-
-            // Disable drag (optional)
-            document.addEventListener('dragstart', e => e.preventDefault());
-
-            // Disable text selection (optional)
-            document.addEventListener('selectstart', e => e.preventDefault());
-
-            // Disable keyboard shortcuts
-            document.addEventListener('keydown', function (e) {
-
-                // Block F12
-                if (e.key === "F12") {
-                    e.preventDefault();
-                    return false;
-                }
-
-                // Block Ctrl / Cmd combinations
-                if (e.ctrlKey || e.metaKey) {
-
-                    const blockedKeys = [
-                        'u', // view source
-                        's', // save
-                        'p', // print
-                        'c', // copy
-                        'x', // cut
-                        'v', // paste
-                        'a', // select all
-                        'i', // devtools
-                        'j'  // devtools console
-                    ];
-
-                    if (blockedKeys.includes(e.key.toLowerCase())) {
-                        e.preventDefault();
-                        return false;
-                    }
-                }
-
-                // Block Ctrl + Shift combinations
-                if (e.ctrlKey && e.shiftKey) {
-                    e.preventDefault();
-                    return false;
-                }
-
-            });
-
-            // Extra protection: block print via browser menu
-            window.onbeforeprint = function () {
-                alert("Printing is disabled on this website.");
-                return false;
-            };
-
-        })();
-    </script>
-
+    
 </body>
 
 </html>
