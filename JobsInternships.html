@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Job Portal</title>
+    <script src="/_sdk/element_sdk.js"></script>
+    <script src="/_sdk/data_sdk.js"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100%;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .main-wrapper {
+            width: 100%;
+            min-height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 2rem 1rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header-section {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo-container {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+        }
+        
+        .logo-icon {
+            font-size: 2.5rem;
+        }
+        
+        .portal-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+        }
+        
+        .portal-tagline {
+            font-size: 1.125rem;
+            color: #4a5568;
+            font-weight: 400;
+        }
+        
+        .job-banner {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .job-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        
+        .company-logo {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(245, 87, 108, 0.2);
+        }
+        
+        .job-info {
+            flex: 1;
+        }
+        
+        .company-name {
+            font-size: 1rem;
+            color: #667eea;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .job-title {
+            font-size: 1.875rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.75rem;
+        }
+        
+        .job-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            font-size: 0.95rem;
+            color: #4a5568;
+        }
+        
+        .job-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .job-description {
+            font-size: 1rem;
+            color: #2d3748;
+            line-height: 1.7;
+        }
+        
+        .requirements-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px dashed #e2e8f0;
+        }
+        
+        .requirements-title {
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        
+        .application-form {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+        
+        .required {
+            color: #e53e3e;
+        }
+        
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            font-size: 1rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 10px;
+            background: white;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .submit-button {
+            width: 100%;
+            padding: 1rem 2rem;
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+        }
+        
+        .submit-button:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 24px rgba(102, 126, 234, 0.4);
+        }
+        
+        .submit-button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .success-message {
+            background: #c6f6d5;
+            color: #22543d;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-weight: 600;
+            display: none;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .main-wrapper {
+                padding: 1rem 0.5rem;
+            }
+            .portal-title {
+                font-size: 2rem;
+            }
+            .job-title {
+                font-size: 1.5rem;
+            }
+            .job-header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            .header-section,
+            .job-banner,
+            .application-form {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+    <style>
+        @view-transition {
+            navigation: auto;
+        }
+    </style>
+    <script src="https://cdn.tailwindcss.com" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="container">
+
+            <div class="job-banner">
+                <div class="job-header">
+                    <div class="company-logo"><span>🚀</span>
+                    </div>
+                    <div class="job-info">
+                        <div class="company-name" id="companyName">
+                            PROGMASTER PVT LTD
+                        </div>
+                        <h2 class="job-title" id="jobTitle">Software Engineering Intern</h2>
+                        <div class="job-meta">
+                            <div class="job-meta-item"><span>📍</span> <span id="jobLocation">Remote</span>
+                            </div>
+                            <div class="job-meta-item"><span>💼</span> <span id="jobTypeLabel">Internship</span>
+                            </div>
+                            <div class="job-meta-item"><span>⏰</span> <span>Full-time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="job-description" id="jobDescription">Join our team and work on cutting-edge projects that impact millions of users. We're looking for talented students who are passionate about technology and eager to learn. You'll collaborate with experienced engineers, contribute to real
+                    products, and gain valuable industry experience.</p>
+
+                <div class="requirements-section">
+                    <span class="requirements-title">Requirements:</span>
+                    <ul class="job-description" style="list-style-type: disc; margin-left: 1.5rem;">
+                        <li>Any graduate</li>
+                        <li>Basics of HTML, CSS, JS, REACTJS, PYTHON, SQL basic knowledge is required</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="application-form">
+                <div class="success-message" id="successMessage">
+                    ✓ Application submitted successfully! We'll be in touch soon.
+                </div>
+                <h3 class="form-title">Apply Now</h3>
+                <form id="applicationForm">
+                    <div class="form-row">
+                        <div class="form-group"><label for="fullName" class="form-label"> Full Name <span class="required">*</span> </label> <input type="text" id="fullName" name="fullName" class="form-input" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group"><label for="email" class="form-label"> Email Address <span class="required">*</span> </label> <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone" class="form-label"> Phone Number <span class="required">*</span> </label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="10-digit mobile number" required pattern="[0-9]{10}" title="Please enter exactly 10 digits">
+                        </div>
+                        <div class="form-group"><label for="education" class="form-label"> Education Level <span class="required">*</span> </label> <select id="education" name="education" class="form-select" required> <option value="">Select...</option>  <option value="Bachelor's Degree">Bachelor's Degree</option> <option value="Master's Degree">Master's Degree</option> <option value="Degree">Degree</option> </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group"><label for="major" class="form-label"> Major/Field of Study <span class="required">*</span> </label> <input type="text" id="major" name="major" class="form-input" placeholder="Computer Science" required>
+                        </div>
+                        <div class="form-group"><label for="graduationYear" class="form-label"> Expected Graduation <span class="required">*</span> </label> <input type="text" id="graduationYear" name="graduationYear" class="form-input" placeholder="2025" required>
+                        </div>
+                    </div>
+                    <div class="form-group"><label for="resumeLink" class="form-label"> Resume/CV Link <span class="required">*</span> </label> <input type="url" id="resumeLink" name="resumeLink" class="form-input" placeholder="https://drive.google.com/..." required>
+                    </div>
+                    <div class="form-group"><label for="jobType" class="form-label"> Position Type <span class="required">*</span> </label> <select id="jobType" name="jobType" class="form-select" required> <option value="">Select...</option> <option value="Internship">Internship</option></select>
+                    </div>
+                    <button type="submit" class="submit-button" id="submitBtn"> <span id="submitButtonText">Submit Application</span> </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Configuration for the original Job Portal
+        const defaultConfig = {
+            portal_title: "Student Job Portal",
+            portal_tagline: "Find your dream job or internship",
+            company_name: "PROGMASTER PVT LTD",
+            job_title: "Software Engineering Intern",
+            job_location: "Remote",
+            job_type_label: "Internship",
+            job_description: "Join our team and work on cutting-edge projects that impact millions of users. We're looking for talented students who are passionate about technology and eager to learn. You'll collaborate with experienced engineers, contribute to real products, and gain valuable industry experience.",
+            submit_button_text: "Submit Application",
+            background_color: "#667eea",
+            surface_color: "#ffffff",
+            text_color: "#1a202c",
+            primary_action_color: "#667eea",
+            secondary_text_color: "#4a5568"
+        };
+
+        // --- GOOGLE SHEETS LOGIC START ---
+        const scriptURL = "https://script.google.com/macros/s/AKfycbzH1ISVeDyj9OxQn3AKpxMnMEJXyhU9nv-boW5Z5iTWvaDfgsRMUOtOrtAJhocS1gdBxg/exec";
+
+        async function onConfigChange(config) {
+            const safeConfig = config || defaultConfig;
+            const elements = {
+                companyName: document.getElementById('companyName'),
+                jobTitle: document.getElementById('jobTitle'),
+                jobLocation: document.getElementById('jobLocation'),
+                jobTypeLabel: document.getElementById('jobTypeLabel'),
+                jobDescription: document.getElementById('jobDescription'),
+                submitBtnText: document.getElementById('submitButtonText')
+            };
+
+            if (elements.companyName) elements.companyName.textContent = safeConfig.company_name;
+            if (elements.jobTitle) elements.jobTitle.textContent = safeConfig.job_title;
+            if (elements.jobLocation) elements.jobLocation.textContent = safeConfig.job_location;
+            if (elements.jobTypeLabel) elements.jobTypeLabel.textContent = safeConfig.job_type_label;
+            // Note: Description is manually updated in HTML for this version to include requirements
+            if (elements.submitBtnText) elements.submitBtnText.textContent = safeConfig.submit_button_text;
+
+            const bgColor = safeConfig.background_color;
+            const primaryColor = safeConfig.primary_action_color;
+
+            document.querySelector('.main-wrapper').style.background = `linear-gradient(135deg, ${bgColor} 0%, ${primaryColor} 100%)`;
+            document.querySelector('.submit-button').style.background = `linear-gradient(135deg, ${primaryColor} 0%, ${bgColor} 100%)`;
+        }
+
+        async function initializeApp() {
+            await onConfigChange(defaultConfig);
+
+            const form = document.getElementById('applicationForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const successMessage = document.getElementById('successMessage');
+
+            form.addEventListener('submit', async(e) => {
+                e.preventDefault();
+
+                submitBtn.disabled = true;
+                const originalBtnText = document.getElementById('submitButtonText').textContent;
+                document.getElementById('submitButtonText').textContent = 'Submitting...';
+
+                const formData = new FormData(form);
+                formData.append("timestamp", new Date().toISOString());
+
+                try {
+                    const response = await fetch(scriptURL, {
+                        method: "POST",
+                        body: formData
+                    });
+
+                    if (response.ok) {
+                        successMessage.classList.add('show');
+                        form.reset();
+                        setTimeout(() => {
+                            successMessage.classList.remove('show');
+                        }, 5000);
+                    } else {
+                        throw new Error("Submission failed");
+                    }
+                } catch (error) {
+                    console.error("Error submitting form:", error);
+                    const errorDiv = document.createElement('div');
+                    errorDiv.style.cssText = 'background: #fed7d7; color: #742a2a; padding: 1rem; border-radius: 10px; margin-bottom: 1.5rem; text-align: center; font-weight: 600;';
+                    errorDiv.textContent = 'Failed to submit application. Please try again.';
+                    form.insertBefore(errorDiv, form.firstChild);
+                    setTimeout(() => errorDiv.remove(), 5000);
+                } finally {
+                    submitBtn.disabled = false;
+                    document.getElementById('submitButtonText').textContent = originalBtnText;
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeApp);
+    </script>
+</body>
+
+</html>
