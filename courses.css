@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s linear;
+}
+
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar-corner {
+  color: yellow;
+  background: yellow;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+  height: 10px;
+  color: blue;
+  background: transparent;
+}
+
+::-webkit-scrollbar-button {
+  color: beige;
+}
+
+::-webkit-scrollbar-thumb {
+  color: #000;
+  background: rgba(111, 175, 111, 0.5);
+  width: 1px;
+  border-radius: 20px;
+}
+
+.course-section .container {
+  /* background: linear-gradient(45deg, blueviolet, lightgreen); */
+  background: #fff;
+  padding-bottom: 100px;
+  padding: 15px 30px;
+  min-width: 100%;
+  overflow-x: hidden;
+}
+
+.course-section .container .heading {
+  text-align: center;
+  padding-bottom: 15px;
+  color: #000;
+  text-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  font-size: 50px;
+}
+
+.course-section .container .box-container {
+
+  gap: 15px;
+  background: #fff;
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  padding: 10px;
+}
+
+.course-section .container .box-container .box {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  padding: 30px 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+  min-height: 300px;
+  min-width: 400px;
+  margin-top: 10px;
+
+}
+
+.pay-know {
+  display: flex;
+}
+
+.container .box-container .box img {
+  height: 80px;
+}
+
+.container .box-container .box h3 {
+  color: #444;
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+.container .box-container .box p {
+  color: #777;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.container .box-container .box:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+
+  @media (max-width: 300px) {
+    .container {
+      padding-left: 0px;
+    }
+  }
+}
+
+.pay-know .btn {
+  margin-top: 2.2em;
+  background: #000;
+  height: 36px;
+  border-radius: 1px;
+  text-align: center;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 2.2%;
+  font-weight: 400;
+  padding-bottom: 0px;
+  border-radius: 2px;
+}
+
+.pay-know .btn:hover {
+  border-radius: 20px;
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  background: rgb(3, 67, 67);
+  color: white;
+}
+
+.course-details {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  background: rebeccapurple;
+  overflow: hidden;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 1em;
+}
+
+.pay-know {
+  height: 50px;
+  margin-bottom: 1.5em;
+}
+
+.course-details h5,
+h6 {
+  font-size: 15px;
+}
+
+.rate {
+  margin-top: 1em;
+}
+
+.rate span {
+  font-size: 25px;
+  margin: 1px;
+}
+
+.razorpay-embed-btn {
+  margin-top: 1em;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}

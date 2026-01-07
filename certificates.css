@@ -1,0 +1,241 @@
+<<<<<<< HEAD
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+body {
+  background: #000000;
+}
+h1 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 1000;
+  font-variant: small-caps;
+  font-size: 70px;
+}
+.header {
+  background-image: linear-gradient(
+      rgba(225, 225, 225, 0.9),
+      rgba(225, 225, 225, 0.8)
+    ),
+    url("students certificate.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
+.logo {
+  height: 200px;
+  width: 200px;
+}
+h2 {
+  /* color: rgb(0, 0, 0); */
+color: deeppink;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 1000;
+  font-variant: small-caps;
+  font-size: 70px;
+}
+.certificates-container {
+  min-height: 100vh;
+  max-width: 100%;
+  background: #022524;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.certificates-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  max-width: 200px;
+  margin: 10px;
+  background: rgb(12, 19, 19);
+  padding: 10px;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  position: relative;
+}
+.certificates-card:hover {
+  transform: scale(1.02);
+  background: #000;
+  box-shadow: -4px 0.5px 1px 0px white;
+}
+.certificates-container img {
+  position: relative;
+  height: 150px;
+  top: -10px;
+  min-width: 150px;
+}
+.nav-links ul li a {
+  font-weight: 1000;
+  font-size: 15 px;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .nav-links ul li a {
+    color: white;
+  }
+}
+input {
+  width: 0px;
+  padding: 0px;
+  font-size: 0px;
+  background-color: darksalmon;
+  border: none;
+}
+nav .fa {
+  color: #000;font-size:30px;
+}
+@media (max-width: 768px) {
+  nav .fa {
+    color: rgb(249, 163, 4);
+  }
+}
+input:focus {
+  outline: none;
+}
+#text {
+  margin-right: 2em;
+  color: black;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  #text {
+    font-size: 41px;
+  }
+}
+=======
+* {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}
+body {
+  background: #000000;
+}
+h1 {
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 1000;
+  font-variant: small-caps;
+  font-size: 70px;
+}
+.header {
+  background-image: linear-gradient(
+      rgba(225, 225, 225, 0.9),
+      rgba(225, 225, 225, 0.8)
+    ),
+    url("students certificate.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+}
+.logo {
+  height: 200px;
+  width: 200px;
+}
+h2 {
+  /* color: rgb(0, 0, 0); */
+color: deeppink;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 1000;
+  font-variant: small-caps;
+  font-size: 70px;
+}
+.certificates-container {
+  min-height: 100vh;
+  max-width: 100%;
+  background: #022524;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.certificates-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
+  max-width: 200px;
+  margin: 10px;
+  background: rgb(12, 19, 19);
+  padding: 10px;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.5s ease-in-out;
+  position: relative;
+}
+.certificates-card:hover {
+  transform: scale(1.02);
+  background: #000;
+  box-shadow: -4px 0.5px 1px 0px white;
+}
+.certificates-container img {
+  position: relative;
+  height: 150px;
+  top: -10px;
+  min-width: 150px;
+}
+.nav-links ul li a {
+  font-weight: 1000;
+  font-size: 15 px;
+  color: #000000;
+}
+
+@media (max-width: 768px) {
+  .nav-links ul li a {
+    color: white;
+  }
+}
+input {
+  width: 0px;
+  padding: 0px;
+  font-size: 0px;
+  background-color: darksalmon;
+  border: none;
+}
+nav .fa {
+  color: #000;font-size:30px;
+}
+@media (max-width: 768px) {
+  nav .fa {
+    color: rgb(249, 163, 4);
+  }
+}
+input:focus {
+  outline: none;
+}
+#text {
+  margin-right: 2em;
+  color: black;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  #text {
+    font-size: 41px;
+  }
+}
+>>>>>>> 3ccda38f1fe309d2d21455dc416775a846d775af

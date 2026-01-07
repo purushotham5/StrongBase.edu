@@ -1,0 +1,613 @@
+/* Update your existing <style> block, or add this new section */
+
+
+/* --- Certificate Design Improvements --- */
+
+.certificate-container {
+    position: relative;
+    padding: 1px;
+    /* Padding for the inner border space */
+    /* background: linear-gradient(180deg, #fff, #fcf9f8); */
+    background: rgb(234 179 8 / var(--tw-bg-opacity, 1));
+    border-radius: 12px;
+}
+
+
+/* 1. Watermark Style */
+
+.watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    opacity: 0.08;
+    /* Low opacity */
+    z-index: 0;
+}
+
+.watermark::before {
+    content: "PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD PROMASTER PVT LTD";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    font-size: 80px;
+    font-weight: 800;
+    color: #6a1b1b;
+    /* Border color for watermark */
+    transform: rotate(-45deg);
+    /* Diagonal pattern */
+    line-height: 1.5;
+    letter-spacing: 5px;
+    word-break: break-all;
+    white-space: pre-wrap;
+}
+
+
+/* 2. Professional Border Wrapper */
+
+.certificate-border-wrapper {
+    position: relative;
+    /* This color is #6a1b1b */
+    /* border: 10px solid #6a1b1b; */
+    padding: 7px;
+    /* Space for the inner line */
+    /* Add inner shadow for depth if desired */
+    box-shadow: inset 0 0 0 0px #a64b4b;
+    border-radius: 15px;
+}
+
+
+/* Add this to your existing <style> block */
+
+.content-container table {
+    /* ... existing styles ... */
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* 移动端平滑滚动 */
+    display: block;
+    width: 100%;
+}
+
+.table-wrapper table {
+    min-width: 600px;
+    /* 或者根据表格内容设置 */
+    border-collapse: collapse;
+}
+
+
+/* Add this to your existing <style> block */
+
+.content-container table {
+    /* Ensure the table itself respects its parent's width */
+    max-width: 100%;
+    /* Set a reasonable minimum width to prevent cells from collapsing too much */
+    min-width: 300px;
+    width: 100%;
+}
+
+
+/* CRITICAL FIX: Wrap the table in a div with overflow-x-auto in the editor OR */
+
+
+/* Apply this rule to make the entire content area scrollable for tables: */
+
+.content-container {
+    /* Existing styles here... */
+    overflow-x: auto;
+    /* Makes the entire content block horizontally scrollable if needed */
+}
+
+
+/* Or, more precisely, target the table's direct container for overflow control */
+
+.table-responsive-wrapper {
+    overflow-x: auto;
+    width: 100%;
+    /* Apply styles for responsive table display */
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.slide-in {
+    animation: slideIn 0.6s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.hero-gradient {
+    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+             */
+    background: #000;
+}
+
+@media (max-width: 768px) {
+    .hero-gradient {
+        /* background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%); */
+        margin-top: 3em;
+    }
+}
+
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.progress-bar {
+    transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.locked {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.certificate-bg {
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #667eea 100%);
+    border: 12px solid #ffd700;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4);
+}
+
+.nav-glass {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.stats-counter {
+    animation: countUp 2s ease-out;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.pulse-glow {
+    animation: pulseGlow 2s infinite;
+}
+
+@keyframes pulseGlow {
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(102, 126, 234, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 30px rgba(102, 126, 234, 0.8);
+    }
+}
+
+.language-filter.active {
+    background-color: #4f46e5;
+    color: white;
+}
+
+.language-filter {
+    color: #6b7280;
+}
+
+
+/* Modal Styles */
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+.modal-content {
+    background-color: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    max-width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+
+/* ENHANCED ADMIN PROFILE CARD STYLING */
+
+.admin-profile-card {
+    border-radius: 1.5rem;
+    background: #ffffff;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.detail-row {
+    padding: 0.5rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.course-item-admin {
+    transition: all 0.2s;
+}
+
+.course-item-admin:hover {
+    background-color: #eef2ff;
+}
+
+
+/* ************************************************* */
+
+
+/* ******* NEW: ATTRACTIVE CONTENT STYLES ******* */
+
+
+/* ************************************************* */
+
+
+/* Basic cleanup for rendered HTML */
+
+.content-container {
+    font-family: inherit;
+}
+
+.content-container h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #4f46e5;
+    /* Indigo 600 */
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid #eef2ff;
+    animation: slideIn 0.5s ease-out;
+}
+
+.content-container h5 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1f2937;
+    /* Gray 800 */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #a78bfa;
+    /* Purple 400 */
+    padding-left: 0.75rem;
+}
+
+.content-container p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #4b5563;
+    /* Gray 600 */
+    margin-bottom: 1rem;
+}
+
+.content-container ul,
+.content-container ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+    list-style: disc;
+}
+
+.content-container ol {
+    list-style: decimal;
+}
+
+.content-container ul li,
+.content-container ol li {
+    margin-bottom: 0.5rem;
+    color: #374151;
+    /* Gray 700 */
+    line-height: 1.5;
+}
+
+
+/* Use Tailwind Classes for Rich Text inside contenteditable */
+
+.content-container strong,
+.content-container b {
+    color: #ef4444;
+    /* Red 500 */
+    font-weight: 800;
+    padding: 2px 4px;
+    background-color: #fee2e2;
+    /* Red 100 */
+    border-radius: 4px;
+}
+
+.content-container em,
+.content-container i {
+    font-style: italic;
+    color: #2563eb;
+    /* Blue 600 */
+}
+
+.content-container u {
+    text-decoration: underline;
+    text-decoration-color: #f59e0b;
+    /* Amber 500 */
+}
+
+.content-container code,
+.content-container pre {
+    background-color: #1f2937;
+    /* Dark background for code */
+    color: #e5e7eb;
+    /* Light text */
+    /* padding: 1rem; */
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    font-family: 'Consolas', 'Monaco', monospace;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 5px solid #6366f1;
+    /* Indigo border */
+    animation: fade-in 0.6s ease-out;
+}
+
+.content-container blockquote {
+    border-left: 5px solid #f97316;
+    /* Orange border for quotes */
+    background-color: #fff7ed;
+    /* Light orange background */
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    color: #9a3412;
+    /* Darker orange text */
+    font-style: italic;
+    border-radius: 0.5rem;
+}
+
+
+/* Admin Content Editor Styling */
+
+.content-editor {
+    border: 1px solid #ccc;
+    min-height: 100px;
+    padding: 10px;
+    outline: none;
+    cursor: text;
+}
+
+.block-type-selector {
+    width: 120px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Reenie+Beanie&display=swap");
+
+/* Loader overlay */
+
+#global-loader {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    backdrop-filter: blur(3px);
+}
+
+.loader-box {
+    background: white;
+    padding: 24px 28px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.35);
+    min-width: 260px;
+}
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border: 4px solid #4f46e5;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #4f46e5 transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#global-loader p {
+    margin: 0;
+    font-weight: 600;
+    color: #0f172a;
+}
+
+
+/* --- NEW STYLES FOR REDESIGNED DARK COURSE CARDS (j.css) --- */
+
+
+/* Override the old generic 'card-hover' for the new specific look */
+
+.card-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Keep the original transition for movement and scale */
+}
+
+
+/* Add a specific dark card hover effect */
+
+.bg-gray-900.card-hover:hover {
+    /* Subtle change on hover for the dark background */
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5), 0 0 10px rgba(100, 100, 100, 0.2);
+    /* Add a colored glow/border effect on the new hover scale for a premium feel */
+    outline: 2px solid rgba(79, 70, 229, 0.5);
+    /* Light indigo glow */
+    outline-offset: -2px;
+}
+
+
+/* Ensure filter buttons style correctly when used inside the dark card style */
+
+.language-filter.active {
+    background-color: #4f46e5;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+}
+
+.language-filter {
+    color: #6b7280;
+    transition: background-color 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+
+/* TOAST MESAAGES */
+
+
+/* Toast Container */
+
+
+/* TOAST NOTIFICATION STYLES */
+
+#toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.toast {
+    min-width: 300px;
+    background: white;
+    border-left: 6px solid;
+    padding: 16px 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    animation: slideInRight 0.4s ease-out forwards;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+.toast-success {
+    border-color: #10B981;
+    background: #ECFDF5;
+}
+
+.toast-error {
+    border-color: #EF4444;
+    background: #FEF2F2;
+}
+
+.toast-info {
+    border-color: #3B82F6;
+    background: #EFF6FF;
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
