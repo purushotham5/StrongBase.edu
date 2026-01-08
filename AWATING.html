@@ -1986,7 +1986,7 @@
                                     <div>
                                         <label class="block text-sm font-bold text-gray-700 mb-1">Price
                                             (Display)</label>
-                                        <input type="text" id="course-price" required placeholder="₹499" class="w-full px-4 py-2 border rounded-lg outline-none">
+                                        <input type="text" id="course-price" required placeholder="₹50" class="w-full px-4 py-2 border rounded-lg outline-none">
                                     </div>
                                     <div>
                                         <label class="block text-sm font-bold text-gray-700 mb-1">Original Price</label>
@@ -3088,16 +3088,16 @@
 
             "amazon_web_services_(aws)": {
                 thumbnail: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-                price: "₹699",
+                price: "₹50",
                 originalPrice: "₹3499",
                 rating: 4.7,
                 reviewCount: "1.8k",
-                category: "programming"
+                category: "Cloud"
             },
             "net_full_stack_development": {
                 thumbnail: "https://learning.360-bytes.com/wp-content/uploads/2023/12/NET-FULL-STACK.jpg",
                 price: "₹50",
-                originalPrice: "₹499",
+                originalPrice: "₹50",
                 rating: 4.7,
                 reviewCount: "1.8k",
                 category: "programming"
@@ -3105,15 +3105,15 @@
             "android_app_development_with_java-kotlin": {
                 thumbnail: "https://www.pankajkumarseo.com/wp-content/uploads/2022/06/Android-App-Development-Course.png",
                 price: "₹50",
-                originalPrice: "₹499",
+                originalPrice: "₹50",
                 rating: 4.7,
                 reviewCount: "2k",
-                category: "Cloud"
+                category: "Programming"
             },
             "api_testing_with_postman": {
                 thumbnail: "https://stadsolution1.graphy.com/s/store/courses/6606b37fe498fc72c59a7c1c/cover.jpg?v=1",
                 price: "₹50",
-                originalPrice: "₹499",
+                originalPrice: "₹50",
                 rating: 4.7,
                 reviewCount: "1.2k",
                 category: "Testing"
@@ -3121,7 +3121,7 @@
             "azure_mastery_for_enterprise_it_professionals": {
                 thumbnail: "https://www.apponix.com/storage/programimage/OMPC6Th8gg4lXXPJ3EgMR1p3Z9DlmcRdDNnySO6b.png",
                 price: "₹50",
-                originalPrice: "₹499",
+                originalPrice: "₹50",
                 rating: 4.1,
                 reviewCount: "2k",
                 category: "Cloud"
@@ -3477,32 +3477,54 @@
             renderCertificates();
         }
 
+        // REPLACE your existing showProfile function with this logic
         function showProfile() {
             hideAllScreens();
             const screen = document.getElementById('profile-screen');
-            const container = document.getElementById('enrolled-courses-container'); // Ensure this ID exists in your HTML
+            const container = document.getElementById('enrolled-courses-container');
             screen.style.display = 'block';
 
-            if (!currentUser || !currentUser.enrolled_courses) {
-                container.innerHTML = '<p class="text-center text-gray-500 py-10">You haven\'t enrolled in any courses yet.</p>';
+            if (!currentUser || !currentUser.enrolled_courses || Object.keys(currentUser.enrolled_courses).length === 0) {
+                container.innerHTML = `
+            <div class="text-center py-20 bg-gray-50 rounded-3xl border-2 border-dashed border-gray-200">
+                <i class="fa-solid fa-book-open-reader text-5xl text-gray-300 mb-4"></i>
+                <p class="text-xl text-gray-500 font-medium">No courses found in your account.</p>
+                <button onclick="showCourseList()" class="mt-4 text-indigo-600 font-bold underline">Explore Catalog</button>
+            </div>`;
                 return;
             }
 
-            container.innerHTML = ''; // Clear previous content
+            container.innerHTML = ''; // Clear container
 
-            // Filter courses that are in the user's enrolled_courses list and have status true
-            const enrolledIds = Object.keys(currentUser.enrolled_courses).filter(id => currentUser.enrolled_courses[id].status === true);
-            const myCourses = courses.filter(c => enrolledIds.includes(c.id));
+            // Loop through ALL enrolled courses (Pending or Active)
+            Object.keys(currentUser.enrolled_courses).forEach(courseId => {
+                        const enrollment = currentUser.enrolled_courses[courseId];
+                        const course = courses.find(c => c.id === courseId);
 
-            if (myCourses.length === 0) {
-                container.innerHTML = '<p class="text-center text-gray-500 py-10">No active enrollments found. Enrollment may be pending admin approval.</p>';
-                return;
-            }
-
-            myCourses.forEach(course => {
-                container.innerHTML += renderCourseCard(course); // Reuse your card renderer
-            });
+                        if (course) {
+                            const cardHtml = `
+                <div class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col">
+                    <div class="relative h-40">
+                        <img src="${course.thumbnail}" class="w-full h-full object-cover">
+                        <div class="absolute top-2 right-2">
+                            ${enrollment.status 
+                                ? '<span class="bg-green-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">ACTIVE</span>' 
+                                : '<span class="bg-orange-500 text-white text-[10px] font-bold px-2 py-1 rounded-full shadow-sm">AWAITING</span>'}
+                        </div>
+                    </div>
+                    <div class="p-4 flex-grow flex flex-col justify-between">
+                        <h3 class="font-bold text-gray-800 mb-4">${course.title}</h3>
+                        ${enrollment.status 
+                            ? `<button onclick="secureStartLearning('${courseId}')" class="w-full bg-indigo-600 text-white py-2 rounded-lg text-sm font-bold">Continue Learning</button>`
+                            : `<button onclick="showCourseDetail('${courseId}')" class="w-full bg-gray-100 text-gray-700 py-2 rounded-lg text-sm font-bold hover:bg-gray-200">View Status / Pay</button>`
+                        }
+                    </div>
+                </div>
+            `;
+            container.innerHTML += cardHtml;
         }
+    });
+}
         // --- MY ACCOUNT TAB ---
         async function showMyAccount() {
             if (!currentUserId) return showLogin();
@@ -4334,6 +4356,8 @@
         }
 
         // Existing initiatePayment function (for single courses)
+        // Replace your existing initiatePayment function with this:
+        // REPLACE your existing initiatePayment function with this one
         async function initiatePayment(courseId) {
             if (!currentUserId) return showLogin();
             if (!currentUser) await fetchUserData();
@@ -4341,15 +4365,16 @@
             const course = courses.find(c => c.id === courseId);
             const userEnrollment = currentUser.enrolled_courses ? currentUser.enrolled_courses[courseId] : null;
 
-            // Keep the check for already ACTIVE courses to prevent double buying
+            // Block only if already ACTIVE
             if (userEnrollment && userEnrollment.status === true) {
-                alert(`You are already enrolled and the ${course.title} course is ACTIVE!`);
+                showToast(`You are already enrolled and the ${course.title} course is ACTIVE!`, 'info');
                 return;
             }
 
             try {
                 showLoader('Initiating enrollment...');
-                // Always ensure a record exists as PENDING (false)
+
+                // Update/Set status to PENDING (false) in Firebase
                 await database.ref(`edupro_users/${currentUserId}/enrolled_courses/${courseId}`).set({
                     courseName: course.title,
                     status: false,
@@ -4357,14 +4382,16 @@
                     day: 1
                 });
 
-                // Always redirect to the payment link, allowing N number of clicks
+                // Always allow opening the payment link
                 window.open(PAYMENT_LINK, '_blank');
-                showToast(`Redirecting to payment for ${course.title}...`, 'info');
+
+                showToast(`Redirecting to payment for ${course.title}...`, 'success');
 
                 await fetchUserData();
+                // Refresh the detail screen to show the updated "Awaiting" UI with the payment button
                 showCourseDetail(courseId);
             } catch (error) {
-                alert(`Failed to initiate enrollment: ${error.message}`);
+                showToast(`Failed to initiate enrollment: ${error.message}`, 'error');
             } finally {
                 hideLoader();
             }
