@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PROGMASTER PVT LTD Internship & Job Portal</title>
+    <title>Student Job Portal</title>
     <script src="/_sdk/element_sdk.js"></script>
     <script src="/_sdk/data_sdk.js"></script>
     <style>
@@ -331,9 +331,11 @@
                 <h3 class="form-title">Apply Now</h3>
                 <form id="applicationForm">
                     <div class="form-row">
-                        <div class="form-group"><label for="fullName" class="form-label"> Full Name <span class="required">*</span> </label> <input type="text" id="fullName" name="fullName" class="form-input" placeholder="John Doe" required>
+                        <div class="form-group"><label for="fullName" class="form-label"> Full Name <span
+                                    class="required">*</span> </label> <input type="text" id="fullName" name="fullName" class="form-input" placeholder="John Doe" required>
                         </div>
-                        <div class="form-group"><label for="email" class="form-label"> Email Address <span class="required">*</span> </label> <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+                        <div class="form-group"><label for="email" class="form-label"> Email Address <span
+                                    class="required">*</span> </label> <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
                         </div>
                     </div>
                     <div class="form-row">
@@ -341,20 +343,39 @@
                             <label for="phone" class="form-label"> Phone Number <span class="required">*</span> </label>
                             <input type="tel" id="phone" name="phone" class="form-input" placeholder="10-digit mobile number" required pattern="[0-9]{10}" title="Please enter exactly 10 digits">
                         </div>
-                        <div class="form-group"><label for="education" class="form-label"> Education Level <span class="required">*</span> </label> <select id="education" name="education" class="form-select" required> <option value="">Select...</option>  <option value="Bachelor's Degree">Bachelor's Degree</option> <option value="Master's Degree">Master's Degree</option> <option value="Degree">Degree</option> </select>
+                        <div class="form-group"><label for="education" class="form-label"> Education Level <span
+                                    class="required">*</span> </label> <select id="education" name="education" class="form-select" required>
+                                <option value="">Select...</option>
+                                <option value="Bachelor's Degree">Bachelor's Degree</option>
+                                <option value="Master's Degree">Master's Degree</option>
+                                <option value="Degree">Degree</option>
+                            </select>
                         </div>
                     </div>
                     <div class="form-row">
-                        <div class="form-group"><label for="major" class="form-label"> Major/Field of Study <span class="required">*</span> </label> <input type="text" id="major" name="major" class="form-input" placeholder="Computer Science" required>
+                        <div class="form-group"><label for="major" class="form-label"> Major/Field of Study <span
+                                    class="required">*</span> </label> <input type="text" id="major" name="major" class="form-input" placeholder="Computer Science" required>
                         </div>
-                        <div class="form-group"><label for="graduationYear" class="form-label"> Expected Graduation <span class="required">*</span> </label> <input type="text" id="graduationYear" name="graduationYear" class="form-input" placeholder="2025" required>
+                        <div class="form-group"><label for="graduationYear" class="form-label"> Expected Graduation
+                                <span class="required">*</span> </label> <input type="text" id="graduationYear" name="graduationYear" class="form-input" placeholder="2025" required>
                         </div>
                     </div>
-                    <div class="form-group"><label for="resumeLink" class="form-label"> Resume/CV Link <span class="required">*</span> </label> <input type="url" id="resumeLink" name="resumeLink" class="form-input" placeholder="https://drive.google.com/..." required>
+                    <div class="form-group"><label for="resumeLink" class="form-label"> Resume/CV Link <span
+                                class="required">*</span> </label> <input type="url" id="resumeLink" name="resumeLink" class="form-input" placeholder="https://drive.google.com/..." required>
                     </div>
-                    <div class="form-group"><label for="jobType" class="form-label"> Position Type <span class="required">*</span> </label> <select id="jobType" name="jobType" class="form-select" required> <option value="">Select...</option> <option value="Internship">Internship</option></select>
+
+                    <div class="form-group"><label for="college" class="form-label"> College Name <span
+                                    class="required">*</span> </label> <input type="text" id="collegeName" name="collegeName" class="form-input" placeholder="JNTUA" required>
                     </div>
-                    <button type="submit" class="submit-button" id="submitBtn"> <span id="submitButtonText">Submit Application</span> </button>
+
+                    <div class="form-group"><label for="jobType" class="form-label"> Position Type <span
+                                class="required">*</span> </label> <select id="jobType" name="jobType" class="form-select" required>
+                            <option value="">Select...</option>
+                            <option value="Internship">Internship</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="submit-button" id="submitBtn"> <span id="submitButtonText">Submit
+                            Application</span> </button>
                 </form>
             </div>
         </div>
@@ -378,7 +399,7 @@
         };
 
         // --- GOOGLE SHEETS LOGIC START ---
-        const scriptURL = "https://script.google.com/macros/s/AKfycbzH1ISVeDyj9OxQn3AKpxMnMEJXyhU9nv-boW5Z5iTWvaDfgsRMUOtOrtAJhocS1gdBxg/exec";
+        const scriptURL = "https://script.google.com/macros/s/AKfycbyGDLv_3Bu5Up7ooEl37uo5J1fW4lAGNKYg41Vt2xISxxv2Snqb_L-v-SbN945zvsJQ-w/exec";
 
         async function onConfigChange(config) {
             const safeConfig = config || defaultConfig;
