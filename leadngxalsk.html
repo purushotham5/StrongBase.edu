@@ -1,0 +1,4119 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProgMaster • Emp/Intern Team Leads Leaderboard</title>
+
+    <style>
+         :root {
+            --bg1: #f6f8ff;
+            --bg2: #eef2ff;
+            --card: rgba(255, 255, 255, .92);
+            --stroke: rgba(15, 23, 42, .10);
+            --text: rgba(15, 23, 42, .92);
+            --muted: rgba(15, 23, 42, .62);
+            --shadow: 0 18px 55px rgba(15, 23, 42, .10);
+            --radius: 22px;
+            --green: #16a34a;
+            --red: #ef4444;
+            --indigo: #6366f1;
+            --emerald: #10b981;
+            --gold: #f59e0b;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        html,
+        body {
+            height: 100%;
+        }
+        
+        body {
+            margin: 0;
+            font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+            color: var(--text);
+            background: radial-gradient(900px 520px at 10% 8%, rgba(99, 102, 241, .20), transparent 60%), radial-gradient(980px 520px at 85% 15%, rgba(16, 185, 129, .16), transparent 60%), radial-gradient(900px 520px at 60% 92%, rgba(245, 158, 11, .10), transparent 62%), linear-gradient(180deg, var(--bg1), var(--bg2));
+            overflow-x: hidden;
+        }
+        
+        .wrap {
+            width: min(1220px, 92vw);
+            margin: 26px auto 80px;
+        }
+        /* top bar */
+        
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 14px;
+        }
+        
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 14px;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .9), transparent 55%), linear-gradient(135deg, rgba(99, 102, 241, .85), rgba(16, 185, 129, .65));
+            border: 1px solid rgba(0, 0, 0, .06);
+            box-shadow: 0 14px 28px rgba(15, 23, 42, .12);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .logo:after {
+            content: "";
+            position: absolute;
+            inset: -60%;
+            background: conic-gradient(from 210deg, transparent, rgba(255, 255, 255, .25), transparent);
+            animation: spin 6s linear infinite;
+        }
+        
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        .brand h1 {
+            margin: 0;
+            font-size: 14px;
+            letter-spacing: .7px;
+            text-transform: uppercase;
+        }
+        
+        .brand p {
+            margin: 3px 0 0;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        
+        .pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .78);
+            color: var(--muted);
+            font-size: 12px;
+            box-shadow: 0 12px 22px rgba(15, 23, 42, .07);
+        }
+        
+        .btn {
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .84);
+            color: var(--text);
+            padding: 10px 14px;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: transform .14s ease, background .14s ease, border-color .14s ease, box-shadow .14s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 14px 28px rgba(15, 23, 42, .10);
+            user-select: none;
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            background: rgba(255, 255, 255, .96);
+        }
+        
+        .btn:active {
+            transform: translateY(0) scale(.99);
+        }
+        
+        .btn.primary {
+            background: linear-gradient(135deg, rgba(99, 102, 241, .95), rgba(16, 185, 129, .88));
+            color: #fff;
+            border-color: rgba(0, 0, 0, .05);
+        }
+        
+        .btn.primary:hover {
+            filter: brightness(1.03);
+        }
+        
+        .btn.ghost {
+            background: rgba(255, 255, 255, .62);
+        }
+        
+        .btn.danger {
+            border-color: rgba(239, 68, 68, .25);
+        }
+        
+        .btn.danger:hover {
+            border-color: rgba(239, 68, 68, .45);
+        }
+        
+        .card {
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: var(--card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .screen {
+            display: none;
+            animation: fadeUp .26s ease both;
+        }
+        
+        .screen.active {
+            display: block;
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* WELCOME (like your 3rd image) */
+        
+        .hero {
+            padding: 22px;
+            display: grid;
+            grid-template-columns: 1.25fr .75fr;
+            gap: 16px;
+            align-items: stretch;
+        }
+        
+        .heroLeft {
+            padding: 18px;
+            border-radius: 22px;
+            border: 1px solid rgba(0, 0, 0, .06);
+            background: rgba(255, 255, 255, .90);
+            box-shadow: 0 18px 50px rgba(15, 23, 42, .10);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 360px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .heroLeft:before {
+            content: "";
+            position: absolute;
+            inset: -20%;
+            background: radial-gradient(circle at 15% 20%, rgba(99, 102, 241, .12), transparent 45%), radial-gradient(circle at 70% 30%, rgba(16, 185, 129, .10), transparent 46%), radial-gradient(circle at 40% 90%, rgba(245, 158, 11, .08), transparent 55%);
+            pointer-events: none;
+            filter: blur(0px);
+        }
+        
+        .heroLeftInner {
+            position: relative;
+        }
+        
+        .companyTag {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 16px;
+            background: rgba(15, 23, 42, .03);
+            border: 1px solid rgba(15, 23, 42, .06);
+            width: fit-content;
+            box-shadow: 0 12px 24px rgba(15, 23, 42, .05);
+        }
+        /*         
+        .companyDot {
+            width: 32px;
+            height: 32px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(99, 102, 241, .95), rgba(16, 185, 129, .85));
+            box-shadow: 0 10px 20px rgba(15, 23, 42, .12);
+        }
+         */
+        
+        .companyTag b {
+            font-size: 13px;
+            letter-spacing: .2px;
+        }
+        
+        .heroTitle {
+            margin: 16px 0 0;
+            font-size: 44px;
+            letter-spacing: -1px;
+            line-height: 1.05;
+        }
+        
+        .heroTitle span {
+            background: linear-gradient(90deg, rgba(99, 102, 241, .95), rgba(16, 185, 129, .90));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .heroDesc {
+            margin: 12px 0 0;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.7;
+            max-width: 560px;
+        }
+        
+        .featureList {
+            margin-top: 18px;
+            display: grid;
+            gap: 12px;
+            max-width: 560px;
+        }
+        
+        .feature {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            padding: 12px;
+            border-radius: 18px;
+            border: 1px solid rgba(15, 23, 42, .06);
+            background: rgba(255, 255, 255, .75);
+            box-shadow: 0 12px 22px rgba(15, 23, 42, .06);
+            transition: transform .18s ease;
+        }
+        
+        .feature:hover {
+            transform: translateY(-1px);
+        }
+        
+        .fIcon {
+            width: 38px;
+            height: 38px;
+            border-radius: 14px;
+            display: grid;
+            place-items: center;
+            background: rgba(99, 102, 241, .12);
+            border: 1px solid rgba(99, 102, 241, .18);
+            flex: 0 0 auto;
+        }
+        
+        .feature:nth-child(2) .fIcon {
+            background: rgba(16, 185, 129, .12);
+            border-color: rgba(16, 185, 129, .18);
+        }
+        
+        .feature:nth-child(3) .fIcon {
+            background: rgba(245, 158, 11, .10);
+            border-color: rgba(245, 158, 11, .16);
+        }
+        
+        .fText b {
+            display: block;
+            font-size: 14px;
+        }
+        
+        .fText span {
+            display: block;
+            margin-top: 4px;
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.5;
+        }
+        
+        .heroBtns {
+            margin-top: 18px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .heroRight {
+            padding: 18px;
+            border-radius: 22px;
+            border: 1px solid rgba(0, 0, 0, .06);
+            background: rgba(255, 255, 255, .90);
+            box-shadow: 0 18px 50px rgba(15, 23, 42, .10);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            min-height: 360px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .liveTag {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .85);
+            border: 1px solid rgba(0, 0, 0, .08);
+            font-size: 12px;
+            color: var(--muted);
+            box-shadow: 0 12px 22px rgba(15, 23, 42, .08);
+            z-index: 2;
+        }
+        
+        .liveBox {
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, .07);
+            background: linear-gradient(180deg, rgba(99, 102, 241, .06), rgba(16, 185, 129, .04));
+            height: 230px;
+            overflow: hidden;
+            position: relative;
+        }
+        /* animated SVG look */
+        
+        .liveSvg {
+            position: absolute;
+            inset: 0;
+            opacity: .92;
+            filter: saturate(1.05);
+            animation: floaty 4.2s ease-in-out infinite;
+        }
+        
+        @keyframes floaty {
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-6px);
+            }
+        }
+        
+        .glowBlob {
+            position: absolute;
+            inset: -30%;
+            background: radial-gradient(circle at 30% 35%, rgba(99, 102, 241, .22), transparent 45%), radial-gradient(circle at 70% 35%, rgba(16, 185, 129, .18), transparent 48%), radial-gradient(circle at 55% 90%, rgba(245, 158, 11, .14), transparent 55%);
+            filter: blur(18px);
+            animation: blob 6.5s ease-in-out infinite;
+            opacity: .9;
+        }
+        
+        @keyframes blob {
+            0%,
+            100% {
+                transform: translate(0, 0) scale(1);
+            }
+            50% {
+                transform: translate(-12px, 8px) scale(1.06);
+            }
+        }
+        
+        .miniStats {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .stat {
+            flex: 1;
+            min-width: 150px;
+            border: 1px solid rgba(0, 0, 0, .06);
+            background: rgba(255, 255, 255, .75);
+            border-radius: 18px;
+            padding: 12px;
+            box-shadow: 0 12px 22px rgba(15, 23, 42, .06);
+        }
+        
+        .stat b {
+            font-size: 18px;
+        }
+        
+        .stat div {
+            margin-top: 4px;
+            font-size: 12px;
+            color: var(--muted);
+        }
+        
+        @media (max-width: 980px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+            .heroTitle {
+                font-size: 34px;
+            }
+        }
+        /* Managers */
+        
+        .pad {
+            padding: 18px;
+        }
+        
+        .sectionTitle {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+        
+        .sectionTitle h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .sectionTitle p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+        
+        .managerGrid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 14px;
+        }
+        
+        .mCard {
+            grid-column: span 6;
+            border: 1px solid rgba(0, 0, 0, .07);
+            background: rgba(255, 255, 255, .86);
+            border-radius: 20px;
+            padding: 14px;
+            cursor: pointer;
+            box-shadow: 0 14px 30px rgba(15, 23, 42, .08);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            transition: transform .18s ease, background .18s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .mCard:before {
+            content: "";
+            position: absolute;
+            inset: -60%;
+            background: radial-gradient(circle at 15% 20%, rgba(99, 102, 241, .10), transparent 40%);
+            opacity: .9;
+            pointer-events: none;
+        }
+        
+        .mCard:hover {
+            transform: translateY(-2px);
+            background: rgba(255, 255, 255, .95);
+        }
+        
+        .mLeft {
+            position: relative;
+        }
+        
+        .mLeft strong {
+            display: block;
+            font-size: 14px;
+            letter-spacing: .2px;
+        }
+        
+        .mLeft span {
+            display: block;
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+        
+        .metaRow {
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 14px 26px rgba(15, 23, 42, .10);
+            flex: 0 0 auto;
+            position: relative;
+        }
+        
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        @media (max-width: 900px) {
+            .mCard {
+                grid-column: span 12;
+            }
+        }
+        /* Board + tabs */
+        
+        .boardHead {
+            padding: 18px 18px 0;
+            display: flex;
+            justify-content: space-between;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+        
+        .boardTitle h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .boardTitle p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            font-size: 13px;
+        }
+        
+        .controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .78);
+            border-radius: 16px;
+            padding: 6px;
+            box-shadow: 0 12px 22px rgba(15, 23, 42, .08);
+        }
+        
+        .tabBtn {
+            border: 0;
+            background: transparent;
+            padding: 9px 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 800;
+            font-size: 12px;
+            color: rgba(15, 23, 42, .70);
+            transition: background .14s ease, transform .14s ease;
+        }
+        
+        .tabBtn:hover {
+            transform: translateY(-1px);
+        }
+        
+        .tabBtn.active {
+            background: linear-gradient(135deg, rgba(99, 102, 241, .18), rgba(16, 185, 129, .14));
+            color: rgba(15, 23, 42, .92);
+        }
+        
+        .search {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .80);
+            border-radius: 14px;
+            padding: 10px 12px;
+            min-width: 240px;
+            box-shadow: 0 12px 22px rgba(15, 23, 42, .08);
+        }
+        
+        .search input {
+            width: 100%;
+            outline: none;
+            border: none;
+            background: transparent;
+            color: var(--text);
+            font-size: 13px;
+        }
+        
+        .search input::placeholder {
+            color: rgba(15, 23, 42, .45);
+        }
+        /* podium */
+        
+        .podiumWrap {
+            padding: 14px 18px 6px;
+        }
+        
+        .podiumCard {
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .86);
+            border-radius: 20px;
+            padding: 16px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            gap: 14px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, .08);
+        }
+        
+        .pod {
+            width: 230px;
+            border-radius: 20px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .92);
+            padding: 14px 14px 12px;
+            position: relative;
+            box-shadow: 0 16px 36px rgba(15, 23, 42, .10);
+            animation: pop .22s ease both;
+        }
+        
+        @keyframes pop {
+            from {
+                opacity: 0;
+                transform: translateY(10px) scale(.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        
+        .pod.center {
+            width: 280px;
+            background: linear-gradient(180deg, rgba(245, 158, 11, .35), rgba(255, 255, 255, .94));
+            transform: translateY(-6px);
+        }
+        
+        .pod .crown {
+            position: absolute;
+            top: -12px;
+            right: 14px;
+            font-size: 18px;
+        }
+        
+        .rankTag {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            font-weight: 900;
+            margin-bottom: 10px;
+        }
+        
+        .chip {
+            width: 30px;
+            height: 30px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .85);
+            display: grid;
+            place-items: center;
+        }
+        
+        .pod .name {
+            font-weight: 900;
+            font-size: 14px;
+            margin: 0 0 4px;
+        }
+        
+        .pod .id {
+            margin: 0 0 8px;
+            color: var(--muted);
+            font-size: 12px;
+        }
+        
+        .scoreLine {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            font-size: 12px;
+            color: rgba(15, 23, 42, .70);
+        }
+        
+        .miniBar {
+            height: 10px;
+            flex: 1;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, .06);
+            border: 1px solid rgba(15, 23, 42, .06);
+            overflow: hidden;
+        }
+        
+        .miniBar i {
+            display: block;
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, rgba(99, 102, 241, .92), rgba(16, 185, 129, .85));
+            border-radius: 999px;
+            transition: width .25s ease;
+        }
+        /* table */
+        
+        .tableWrap {
+            padding: 10px 18px 20px;
+        }
+        
+        .tableScroller {
+            overflow: auto;
+            padding-bottom: 8px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0 10px;
+        }
+        
+        thead th {
+            text-align: left;
+            font-size: 12px;
+            color: rgba(15, 23, 42, .60);
+            font-weight: 800;
+            padding: 0 10px 6px;
+            white-space: nowrap;
+        }
+        
+        tbody tr {
+            background: rgba(255, 255, 255, .90);
+            border: 1px solid rgba(0, 0, 0, .07);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 12px 24px rgba(15, 23, 42, .06);
+        }
+        
+        tbody td {
+            padding: 12px 10px;
+            border-top: 1px solid rgba(0, 0, 0, .05);
+            border-bottom: 1px solid rgba(0, 0, 0, .05);
+            font-size: 13px;
+            vertical-align: middle;
+            white-space: nowrap;
+        }
+        
+        tbody td:first-child {
+            border-left: 1px solid rgba(0, 0, 0, .05);
+            border-top-left-radius: 16px;
+            border-bottom-left-radius: 16px;
+            width: 62px;
+        }
+        
+        tbody td:last-child {
+            border-right: 1px solid rgba(0, 0, 0, .05);
+            border-top-right-radius: 16px;
+            border-bottom-right-radius: 16px;
+            width: 170px;
+        }
+        
+        .rank {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 900;
+        }
+        
+        .badge {
+            width: 28px;
+            height: 28px;
+            border-radius: 10px;
+            display: grid;
+            place-items: center;
+            font-size: 12px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .88);
+        }
+        
+        .nameCell {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 220px;
+        }
+        
+        .nameCell strong {
+            font-size: 13px;
+        }
+        
+        .nameCell span {
+            font-size: 11px;
+            color: var(--muted);
+        }
+        
+        .scoreInput {
+            width: 84px;
+            padding: 9px 10px;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 0, 0, .10);
+            background: rgba(255, 255, 255, .95);
+            color: var(--text);
+            outline: none;
+            font-weight: 900;
+            transition: border-color .15s ease, transform .15s ease, opacity .15s ease;
+        }
+        
+        .scoreInput:focus {
+            border-color: rgba(99, 102, 241, .55);
+            transform: translateY(-1px);
+        }
+        
+        .scoreInput[disabled] {
+            opacity: .55;
+            cursor: not-allowed;
+            transform: none !important;
+        }
+        
+        .avgBox {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 10px;
+            font-weight: 900;
+        }
+        
+        .bar {
+            height: 10px;
+            width: 74px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, .06);
+            border: 1px solid rgba(15, 23, 42, .06);
+            overflow: hidden;
+        }
+        
+        .bar i {
+            display: block;
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, rgba(99, 102, 241, .92), rgba(16, 185, 129, .85));
+            border-radius: 999px;
+            transition: width .25s ease;
+        }
+        
+        .delta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            font-weight: 900;
+            padding: 6px 8px;
+            border-radius: 999px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .80);
+            box-shadow: 0 10px 18px rgba(15, 23, 42, .06);
+        }
+        
+        .delta.up {
+            color: var(--green);
+            border-color: rgba(22, 163, 74, .20);
+            background: rgba(22, 163, 74, .06);
+        }
+        
+        .delta.down {
+            color: var(--red);
+            border-color: rgba(239, 68, 68, .20);
+            background: rgba(239, 68, 68, .06);
+        }
+        
+        .delta.flat {
+            color: rgba(15, 23, 42, .55);
+            background: rgba(15, 23, 42, .03);
+        }
+        /* Top 5 row colors */
+        
+        .top1 {
+            background: linear-gradient(90deg, rgba(245, 158, 11, .35), rgba(255, 255, 255, .90));
+        }
+        
+        .top2 {
+            background: linear-gradient(90deg, rgba(210, 220, 235, .55), rgba(255, 255, 255, .90));
+        }
+        
+        .top3 {
+            background: linear-gradient(90deg, rgba(255, 180, 140, .50), rgba(255, 255, 255, .90));
+        }
+        
+        .top4 {
+            background: linear-gradient(90deg, rgba(99, 102, 241, .16), rgba(255, 255, 255, .90));
+        }
+        
+        .top5 {
+            background: linear-gradient(90deg, rgba(16, 185, 129, .14), rgba(255, 255, 255, .90));
+        }
+        /* Analytics view */
+        
+        .analyticsWrap {
+            padding: 14px 18px 20px;
+            display: none;
+        }
+        
+        .analyticsWrap.active {
+            display: block;
+            animation: fadeUp .26s ease both;
+        }
+        
+        .analyticsGrid {
+            display: grid;
+            grid-template-columns: 1.4fr .6fr;
+            gap: 14px;
+            align-items: stretch;
+        }
+        
+        .aCard {
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: rgba(255, 255, 255, .88);
+            border-radius: 20px;
+            box-shadow: 0 16px 40px rgba(15, 23, 42, .08);
+            padding: 14px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .aTitle {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+        }
+        
+        .aTitle h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .aTitle p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .chartBox {
+            border-radius: 18px;
+            border: 1px solid rgba(0, 0, 0, .08);
+            background: linear-gradient(180deg, rgba(99, 102, 241, .05), rgba(16, 185, 129, .03));
+            padding: 10px;
+            height: 320px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        #lineCanvas {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        .chartHint {
+            position: absolute;
+            right: 12px;
+            top: 12px;
+            font-size: 12px;
+            color: rgba(15, 23, 42, .60);
+            background: rgba(255, 255, 255, .86);
+            border: 1px solid rgba(0, 0, 0, .08);
+            padding: 6px 10px;
+            border-radius: 999px;
+            box-shadow: 0 12px 22px rgba(15, 23, 42, .08);
+        }
+        
+        .tooltip {
+            position: absolute;
+            pointer-events: none;
+            padding: 8px 10px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, .95);
+            border: 1px solid rgba(0, 0, 0, .10);
+            box-shadow: 0 14px 28px rgba(15, 23, 42, .12);
+            font-size: 12px;
+            color: rgba(15, 23, 42, .86);
+            opacity: 0;
+            transform: translateY(6px);
+            transition: opacity .12s ease, transform .12s ease;
+            white-space: nowrap;
+        }
+        
+        .tooltip.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .listItem {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
+            padding: 10px 12px;
+            border-radius: 16px;
+            border: 1px solid rgba(0, 0, 0, .06);
+            background: rgba(255, 255, 255, .80);
+            box-shadow: 0 12px 22px rgba(15, 23, 42, .06);
+            margin-top: 10px;
+        }
+        
+        .listItem b {
+            font-size: 13px;
+        }
+        
+        .listItem span {
+            font-size: 12px;
+            color: var(--muted);
+        }
+        
+        @media (max-width: 980px) {
+            .analyticsGrid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* toast */
+        
+        .toast {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, .92);
+            border: 1px solid rgba(0, 0, 0, .10);
+            box-shadow: 0 14px 40px rgba(15, 23, 42, .18);
+            color: rgba(15, 23, 42, .85);
+            font-size: 12px;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity .2s ease, transform .2s ease;
+            pointer-events: none;
+            z-index: 50;
+        }
+        
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+        /* modal */
+        
+        .modalOverlay {
+            position: fixed;
+            inset: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            background: rgba(15, 23, 42, .45);
+            backdrop-filter: blur(8px);
+            z-index: 100;
+            padding: 18px;
+        }
+        
+        .modalOverlay.show {
+            display: flex;
+        }
+        
+        .modal {
+            width: min(520px, 96vw);
+            border-radius: 22px;
+            border: 1px solid rgba(0, 0, 0, .10);
+            background: rgba(255, 255, 255, .95);
+            box-shadow: 0 30px 90px rgba(15, 23, 42, .25);
+            overflow: hidden;
+        }
+        
+        .modalHeader {
+            padding: 16px 16px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        
+        .modalHeader h4 {
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .modalHeader p {
+            margin: 6px 0 0;
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .modalBody {
+            padding: 16px;
+            display: grid;
+            gap: 12px;
+        }
+        
+        .field {
+            display: grid;
+            gap: 6px;
+        }
+        
+        .field label {
+            font-size: 12px;
+            color: rgba(15, 23, 42, .75);
+            font-weight: 900;
+        }
+        
+        .field input {
+            width: 100%;
+            padding: 12px 12px;
+            border-radius: 14px;
+            border: 1px solid rgba(0, 0, 0, .12);
+            background: rgba(255, 255, 255, .98);
+            color: var(--text);
+            outline: none;
+            font-size: 13px;
+        }
+        
+        .modalFooter {
+            padding: 0 16px 16px;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+        }
+        
+        .error {
+            color: rgba(239, 68, 68, .95);
+            font-size: 12px;
+            margin-top: -4px;
+            display: none;
+        }
+        
+        .error.show {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+
+        <!-- TOP BAR -->
+        <div class="topbar">
+            <div class="brand">
+
+                <div>
+                    <h1>PROGMASTER • LEADERBOARD</h1>
+                    <p id="projectNameLine">Project: RealTechWorld</p>
+                </div>
+            </div>
+
+            <div style="display:flex; gap:10px; align-items:center; flex-wrap:wrap;">
+                <span class="pill" id="pillStatus">Welcome</span>
+                <span class="pill" id="pillMode">👀 View mode</span>
+
+                <button class="btn" id="btnAdminLogin">🔐 Admin Login</button>
+                <button class="btn" id="btnAdminLogout" style="display:none;">🚪 Logout</button>
+            </div>
+        </div>
+
+        <!-- WELCOME SCREEN -->
+        <section class="card screen active" id="screenWelcome">
+            <div class="hero">
+                <div class="heroLeft">
+                    <div class="heroLeftInner">
+                        <div class="companyTag">
+                            <div class="companyLogo">
+                                <img src="https://media.licdn.com/dms/image/v2/D560BAQGwt8ZORHimIA/company-logo_200_200/company-logo_200_200/0/1701485206679?e=2147483647&v=beta&t=JP5ehe_YiZn5teYFkG5vWzm_rVMGG_la88mDFklR9sM" alt="compnay-logo">
+                            </div>
+                            <div>
+                                <b>ProgMaster Private Limited</b><br>
+                                <span style="font-size:12px;color:var(--muted);">Emp/Intern Team Leads Portal</span>
+                            </div>
+                        </div>
+
+                        <h2 class="heroTitle">Welcome to the <span>Leaderboard Portal</span></h2>
+                        <p class="heroDesc">
+                            This leaderboard helps intern team leads track their performance, understand their team’s overall contribution, and see how they compare with others. It promotes continuous improvement, and transparency across all teams. Results are updated every Sunday
+                            night based on weekly performance and team contributions, helping everyone stay focused on growth and excellence. </p>
+
+                        <div class="featureList">
+                            <div class="feature">
+                                <div class="fIcon">👥</div>
+                                <div class="fText">
+                                    <b>Team Leaderboard</b>
+                                    <span>Pick your manager and view ranked Intern Team Leads with Top 3 podium and Top 5 highlights.</span>
+                                </div>
+                            </div>
+
+                            <div class="feature">
+                                <div class="fIcon">📈</div>
+                                <div class="fText">
+                                    <b>Performance Analytics</b>
+                                    <span>Stock line graph, top performers, most improved, and dropped scores—all in one place.</span>
+                                </div>
+                            </div>
+
+                            <div class="feature">
+                                <div class="fIcon">🛡️</div>
+                                <div class="fText">
+                                    <b>Performance Standards</b>
+                                    <span>Your ranking reflects consistency, effort, and improvement.
+
+Focus on building strong communication, reliable delivery, and professional behavior.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="heroBtns">
+                            <button class="btn primary" id="btnSee">📍 See where you are</button>
+                            <span class="pill">Project: <b id="projectNameBadge">AI RESTAURANT CMS TOOL</b></span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="heroRight">
+                    <div class="liveTag">Live Analytics (visual)</div>
+
+                    <div class="liveBox">
+                        <div class="glowBlob"></div>
+
+                        <!-- Inline animated SVG (no external gif) -->
+                        <svg class="liveSvg" viewBox="0 0 900 420" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="rgba(99,102,241,.95)"/>
+                  <stop offset="1" stop-color="rgba(16,185,129,.90)"/>
+                </linearGradient>
+                <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="rgba(245,158,11,.65)"/>
+                  <stop offset="1" stop-color="rgba(99,102,241,.35)"/>
+                </linearGradient>
+                <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+                  <feGaussianBlur stdDeviation="2.2" />
+                </filter>
+              </defs>
+
+              <!-- grid -->
+              <g opacity=".22">
+                <path d="M60 70H860M60 130H860M60 190H860M60 250H860M60 310H860M60 370H860" stroke="rgba(15,23,42,.35)" stroke-width="1"/>
+                <path d="M120 50V390M220 50V390M320 50V390M420 50V390M520 50V390M620 50V390M720 50V390M820 50V390"
+                      stroke="rgba(15,23,42,.28)" stroke-width="1"/>
+              </g>
+
+              <!-- moving line -->
+              <path id="pulseLine"
+                    d="M70 320 C 140 280, 180 260, 250 290 C 320 320, 360 210, 440 230 C 520 250, 580 120, 660 160 C 740 200, 790 120, 860 90"
+                    fill="none" stroke="url(#g1)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"
+                    filter="url(#soft)"/>
+              <path
+                    d="M70 320 C 140 280, 180 260, 250 290 C 320 320, 360 210, 440 230 C 520 250, 580 120, 660 160 C 740 200, 790 120, 860 90"
+                    fill="none" stroke="rgba(255,255,255,.85)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <!-- glow dots -->
+              <g>
+                <circle cx="250" cy="290" r="10" fill="url(#g2)" opacity=".9"/>
+                <circle cx="440" cy="230" r="12" fill="url(#g2)" opacity=".9"/>
+                <circle cx="660" cy="160" r="12" fill="url(#g2)" opacity=".9"/>
+                <circle cx="860" cy="90" r="14" fill="url(#g2)" opacity=".95"/>
+              </g>
+            </svg>
+                    </div>
+
+                    <div class="miniStats">
+                        <div class="stat">
+                            <b id="statManagers">0</b>
+                            <div>Managers active</div>
+                        </div>
+                        <div class="stat">
+                            <b id="statLeads">0</b>
+                            <div>Intern Team Leads</div>
+                        </div>
+                    </div>
+
+                    <div class="miniStats">
+                        <div class="stat">
+                            <b id="statBest">0.00</b>
+                            <div>Best Avg (overall)</div>
+                        </div>
+                        <div class="stat">
+                            <b id="statUpdated">—</b>
+                            <div>Last updated</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- MANAGERS SCREEN -->
+        <section class="card screen" id="screenManagers">
+            <div class="pad">
+                <div class="sectionTitle">
+                    <div>
+                        <h3>Select a Manager</h3>
+                        <p>Choose your manager to open that team’s leaderboard (Intern Team Leads).</p>
+                    </div>
+                    <div style="display:flex; gap:10px; flex-wrap:wrap;">
+                        <button class="btn" id="btnManagersBack">← Back</button>
+                    </div>
+                </div>
+
+                <div class="managerGrid" id="managerGrid"></div>
+            </div>
+        </section>
+
+        <!-- LEADERBOARD SCREEN -->
+        <section class="card screen" id="screenBoard">
+            <div class="boardHead">
+                <div class="boardTitle">
+                    <h3 id="boardHeading">TEAM LEADS LEADERBOARD</h3>
+                    <p id="boardSub">Manager: —</p>
+                </div>
+
+                <div class="controls">
+                    <div class="tabs" aria-label="tabs">
+                        <button class="tabBtn active" id="tabLeaderboard">🏆 Leaderboard</button>
+                        <button class="tabBtn" id="tabAnalytics">📈 Analytics</button>
+                    </div>
+
+                    <div class="search" id="searchWrap">
+                        🔎
+                        <input id="searchInput" placeholder="Search by name or ID..." />
+                    </div>
+
+                    <button class="btn" id="btnBackToManagers">← Managers</button>
+
+                    <!-- Admin-only submit controls -->
+                    <button class="btn primary" id="btnSubmit" style="display:none;">✅ Submit</button>
+                    <button class="btn danger" id="btnDiscard" style="display:none;">✖ Discard</button>
+                </div>
+            </div>
+
+            <!-- Leaderboard view -->
+            <div id="leaderboardView">
+                <div class="podiumWrap">
+                    <div class="podiumCard" id="podiumCard"></div>
+                </div>
+
+                <div class="tableWrap">
+                    <div class="tableScroller">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Rank</th>
+                                    <th>Intern ID</th>
+                                    <th>Intern Team Lead</th>
+
+                                    <th>Communication</th>
+                                    <th>Module Development</th>
+                                    <th>Following Policy</th>
+                                    <th>Login / Logout</th>
+                                    <th>Break Rules</th>
+                                    <th>Attendance</th>
+                                    <th>Punctuality</th>
+                                    <th>Teamwork</th>
+
+                                    <th style="text-align:right;">Avg / Change</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics view -->
+            <div class="analyticsWrap" id="analyticsView">
+                <div class="analyticsGrid">
+                    <div class="aCard">
+                        <div class="aTitle">
+                            <div>
+                                <h4>Performance Trend</h4>
+                                <p>Line chart shows Avg Score by rank (Top 1 → Bottom). Hover to see details.</p>
+                            </div>
+                            <span class="pill">Live-Updates</span>
+                        </div>
+
+                        <div class="chartBox" id="chartBox">
+                            <div class="chartHint">Hover on the line</div>
+                            <canvas id="lineCanvas"></canvas>
+                            <div class="tooltip" id="tip"></div>
+                        </div>
+                    </div>
+
+                    <div class="aCard">
+                        <div class="aTitle">
+                            <div>
+                                <h4>Highlights</h4>
+                                <p>Quick insights for this manager’s team.</p>
+                            </div>
+                        </div>
+
+                        <div class="listItem" id="hiTop">
+                            <div>
+                                <b>Top Performer</b><br>
+                                <span id="hiTopSub">—</span>
+                            </div>
+                            <span class="pill" id="hiTopVal">—</span>
+                        </div>
+
+                        <div class="listItem" id="hiImprove">
+                            <div>
+                                <b>Most Improved</b><br>
+                                <span id="hiImproveSub">—</span>
+                            </div>
+                            <span class="pill" id="hiImproveVal">—</span>
+                        </div>
+
+                        <div class="listItem" id="hiDrop">
+                            <div>
+                                <b>Most Dropped</b><br>
+                                <span id="hiDropSub">—</span>
+                            </div>
+                            <span class="pill" id="hiDropVal">—</span>
+                        </div>
+
+                        <div class="listItem">
+                            <div>
+                                <b>Team Average</b><br>
+                                <span>Overall avg of all Intern Team Leads</span>
+                            </div>
+                            <span class="pill" id="hiTeamAvg">—</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- ADMIN LOGIN MODAL -->
+    <div class="modalOverlay" id="modalOverlay" role="dialog" aria-modal="true">
+        <div class="modal">
+            <div class="modalHeader">
+                <div>
+                    <h4>Admin Login</h4>
+                    <p>Only admin can edit scores. Everyone else is read-only.</p>
+                </div>
+                <button class="btn" id="btnCloseModal">✖</button>
+            </div>
+
+            <div class="modalBody">
+                <div class="field">
+                    <label>Username</label>
+                    <input id="adminUser" placeholder="Enter username" autocomplete="username" />
+                </div>
+                <div class="field">
+                    <label>Password</label>
+                    <input id="adminPass" type="password" placeholder="Enter password" autocomplete="current-password" />
+                </div>
+                <div class="error" id="loginError">Invalid username or password.</div>
+            </div>
+
+            <div class="modalFooter">
+                <button class="btn primary" id="btnLogin">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">Saved</div>
+
+    <script>
+        /***********************
+         * IMPORTANT NOTE (kid friendly):
+         * 1) Copy this full code
+         * 2) Save as: leaderboard.html
+         * 3) Double click it -> it opens in Chrome
+         ***********************/
+
+        /***********************
+         * STATIC ADMIN AUTH (UI-GUARD)
+         * Everyone can view without login.
+         * Only Admin can edit + Submit.
+         ***********************/
+        const LS_KEY = "pm_leaderboard_portal_v1";
+        const LS_ADMIN = "pm_leaderboard_admin_v1";
+
+        // ✅ Change these credentials anytime
+        const ADMIN_USERNAME = "admin";
+        const ADMIN_PASSWORD = "pm@12345";
+
+        const PROJECT_NAME = "AI RESTAURANT CMS TOOL";
+
+        let isAdmin = (sessionStorage.getItem(LS_ADMIN) === "true");
+
+
+        // ✅ Managers (SRIHARI removed)
+        const managersDefault = [{
+            id: "m1",
+            name: "PURUSHOTHAM KANDHERI",
+            role: "Project Manager",
+            teamsLabel: "25 Intern Team Leads",
+            photo: "MYPRODIKE.jpeg"
+        }, {
+            id: "m2",
+            name: "Ishan Dey",
+            role: "Team Manager",
+            teamsLabel: "25 Intern Team Leads",
+            photo: "MYPRODIKE.jpeg"
+
+        }, {
+            id: "m3",
+            name: "Fahad Khalique",
+            role: "Team Manager",
+            teamsLabel: "25 Intern Team Leads",
+            photo: "MYPRODIKE.jpeg"
+
+        }, {
+            id: "m4",
+            name: "Dolphin Kurmeti",
+            role: "Team Manager",
+            teamsLabel: "25 Intern Team Leads",
+            photo: "MYPRODIKE.jpeg"
+
+        }];
+
+        function seededRand(seed) {
+            let t = seed % 2147483647;
+            if (t <= 0) t += 2147483646;
+            return function() {
+                t = t * 16807 % 2147483647;
+                return (t - 1) / 2147483646;
+            }
+        }
+
+        // ✅ Intern ID rule: PROG + first3(firstname) + first2(lastname)  => PROGKANPU
+        function buildInternIdFromName(name) {
+            const parts = name.trim().toUpperCase().split(/\s+/);
+
+            // If 2 names exist
+            if (parts.length >= 2) {
+                const first = parts[0].slice(0, 3).padEnd(3, "X");
+                const second = parts[1].slice(0, 2).padEnd(2, "X");
+                return "PROG" + first + second;
+            }
+
+            // If only 1 name
+            const single = parts[0].slice(0, 5).padEnd(5, "X");
+            return "PROG" + single;
+        }
+
+
+        function makeSampleInterns(managerId) {
+            const internsByManager = {
+                m1: [{
+                        internId: "PROGPRGAN",
+                        name: "PRANEETH GANITHALA",
+                        communication: 7,
+                        moduleDevelopment: 8,
+                        followingPolicy: 6,
+                        prevAvg: 5,
+                        loginLogout: 4,
+                        breakRules: 7,
+                        attendance: 7,
+                        punctuality: 6,
+                        teamwork: 10,
+                        updatedAt: Date.now()
+                    }, {
+                        internId: "PROGSNEVA",
+                        name: "SNEHA VANITHA",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGWAHUS",
+                        name: "A WASEEM HUSSAIN",
+                        communication: 8,
+                        moduleDevelopment: 9,
+                        followingPolicy: 8,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 8,
+                        punctuality: 9,
+                        teamwork: 8,
+                        prevAvg: 8.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGDISH",
+                        name: "DIVYA SHARMA",
+                        communication: 9,
+                        moduleDevelopment: 10,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 10,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9.3,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSVENU",
+                        name: "S VENU",
+                        communication: 9,
+                        moduleDevelopment: 10,
+                        followingPolicy: 9.8,
+                        loginLogout: 9.5,
+                        breakRules: 9.4,
+                        attendance: 10,
+                        punctuality: 9.8,
+                        teamwork: 9.2,
+                        prevAvg: 8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPRNA",
+                        name: "PRIYA NAIDU",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGKIVA",
+                        name: "KIRAN VARMA",
+                        communication: 7,
+                        moduleDevelopment: 8,
+                        followingPolicy: 7,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 7,
+                        punctuality: 8,
+                        teamwork: 7,
+                        prevAvg: 7.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPOGU",
+                        name: "POOJA GUPTA",
+                        communication: 9,
+                        moduleDevelopment: 8,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 9,
+                        punctuality: 8,
+                        teamwork: 9,
+                        prevAvg: 8.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGMABAL",
+                        name: "MALLELA BALAKRISHNA",
+                        communication: 9.6,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9.4,
+                        loginLogout: 9.8,
+                        breakRules: 9.5,
+                        attendance: 9,
+                        punctuality: 9.8,
+                        teamwork: 9.2,
+                        prevAvg: 9.2,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGANRA",
+                        name: "ANITA RAO",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSAND",
+                        name: "SANDEEP",
+                        communication: 8,
+                        moduleDevelopment: 7,
+                        followingPolicy: 8,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 8,
+                        punctuality: 7,
+                        teamwork: 8,
+                        prevAvg: 7.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGVIKA",
+                        name: "VIKAS",
+                        communication: 8,
+                        moduleDevelopment: 9,
+                        followingPolicy: 8,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 8,
+                        punctuality: 9,
+                        teamwork: 8,
+                        prevAvg: 8.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGTEJA",
+                        name: "TEJA",
+                        communication: 9,
+                        moduleDevelopment: 8,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 9,
+                        punctuality: 8,
+                        teamwork: 9,
+                        prevAvg: 8.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGRAME",
+                        name: "RAMESH",
+                        communication: 7,
+                        moduleDevelopment: 7,
+                        followingPolicy: 8,
+                        loginLogout: 7,
+                        breakRules: 8,
+                        attendance: 7,
+                        punctuality: 7,
+                        teamwork: 8,
+                        prevAvg: 7.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSOWM",
+                        name: "SOWMYA",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 8,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 8,
+                        prevAvg: 8.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGHARI",
+                        name: "HARISH",
+                        communication: 8,
+                        moduleDevelopment: 8,
+                        followingPolicy: 8,
+                        loginLogout: 8,
+                        breakRules: 8,
+                        attendance: 8,
+                        punctuality: 8,
+                        teamwork: 8,
+                        prevAvg: 8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGKAVY",
+                        name: "KAVYA",
+                        communication: 9,
+                        moduleDevelopment: 10,
+                        followingPolicy: 9,
+                        loginLogout: 10,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 10,
+                        teamwork: 9,
+                        prevAvg: 9.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGTARU",
+                        name: "TARUN",
+                        communication: 7,
+                        moduleDevelopment: 8,
+                        followingPolicy: 7,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 7,
+                        punctuality: 8,
+                        teamwork: 7,
+                        prevAvg: 7.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPRAS",
+                        name: "PRASAD",
+                        communication: 8,
+                        moduleDevelopment: 8,
+                        followingPolicy: 8,
+                        loginLogout: 8,
+                        breakRules: 8,
+                        attendance: 8,
+                        punctuality: 8,
+                        teamwork: 8,
+                        prevAvg: 8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSANGE",
+                        name: "SANGEETHA",
+                        communication: 10,
+                        moduleDevelopment: 9,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 9,
+                        attendance: 10,
+                        punctuality: 9,
+                        teamwork: 10,
+                        prevAvg: 9.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGMOHA",
+                        name: "MOHAN",
+                        communication: 7,
+                        moduleDevelopment: 7,
+                        followingPolicy: 7,
+                        loginLogout: 7,
+                        breakRules: 7,
+                        attendance: 7,
+                        punctuality: 7,
+                        teamwork: 7,
+                        prevAvg: 7,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGAJAY",
+                        name: "AJAY",
+                        communication: 8,
+                        moduleDevelopment: 7,
+                        followingPolicy: 8,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 8,
+                        punctuality: 7,
+                        teamwork: 8,
+                        prevAvg: 7.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPALL",
+                        name: "PALLAVI",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGNIKH",
+                        name: "NIKHIL",
+                        communication: 8,
+                        moduleDevelopment: 8,
+                        followingPolicy: 7,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 8,
+                        punctuality: 8,
+                        teamwork: 7,
+                        prevAvg: 7.8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSHRE",
+                        name: "SHREYA",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    }
+                ],
+
+                m2: [
+
+                    {
+                        internId: "PROGADKUM",
+                        name: "ADITYA KUMAR",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGROSH",
+                        name: "ROHAN SHARMA",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPRVER",
+                        name: "PRAVEEN VERMA",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSASIN",
+                        name: "SASI KIRAN",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGMORED",
+                        name: "MOHAN REDDY",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGANNAI",
+                        name: "ANAND IYER",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGVIRAJ",
+                        name: "VIKRAM RAJ",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGCHSAI",
+                        name: "CHANDU SAI",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGKIRAM",
+                        name: "KIRAN AMAR",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSUMIT",
+                        name: "SUMIT GUPTA",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGAKRAJ",
+                        name: "AKASH RAJ",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGDEKUM",
+                        name: "DEEPAK KUMAR",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGRAANI",
+                        name: "RAHUL NAIK",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGTHRED",
+                        name: "THARUN REDDY",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSAPAT",
+                        name: "SANTOSH PATEL",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGAMJOS",
+                        name: "AMIT JOSHI",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGNECHA",
+                        name: "NEERAJ CHAUHAN",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGKAMES",
+                        name: "KAMESH VARMA",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGLOHIT",
+                        name: "LOHIT MENON",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGANSHU",
+                        name: "ANSHUL MEHTA",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSAHAR",
+                        name: "SAHIL ARORA",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPREYA",
+                        name: "PREETI YADAV",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGKUNAL",
+                        name: "KUNAL SINGH",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGRISHI",
+                        name: "RISHIKA MALHOTRA",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGVARUN",
+                        name: "VARUN KHANNA",
+                        communication: 10,
+                        moduleDevelopment: 10,
+                        followingPolicy: 10,
+                        loginLogout: 10,
+                        breakRules: 10,
+                        attendance: 10,
+                        punctuality: 10,
+                        teamwork: 10,
+                        prevAvg: 10,
+                        updatedAt: Date.now()
+                    }
+                ],
+
+                m3: [
+
+                    {
+                        internId: "PROGAMPA",
+                        name: "AMAR PATEL",
+                        communication: 9,
+                        moduleDevelopment: 8,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 9,
+                        punctuality: 8,
+                        teamwork: 9,
+                        prevAvg: 8.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGROSH",
+                        name: "ROHIT SHARMA",
+                        communication: 10,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 10,
+                        breakRules: 9,
+                        attendance: 10,
+                        punctuality: 9,
+                        teamwork: 10,
+                        prevAvg: 9.5,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGMEVE",
+                        name: "MEENA VERMA",
+                        communication: 8,
+                        moduleDevelopment: 8,
+                        followingPolicy: 8,
+                        loginLogout: 8,
+                        breakRules: 8,
+                        attendance: 8,
+                        punctuality: 8,
+                        teamwork: 8,
+                        prevAvg: 8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSAMA",
+                        name: "SANJAY MALIK",
+                        communication: 7,
+                        moduleDevelopment: 8,
+                        followingPolicy: 7,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 7,
+                        punctuality: 8,
+                        teamwork: 7,
+                        prevAvg: 7.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGNEGO",
+                        name: "NEEL GOSWAMI",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGKARP",
+                        name: "KARTHIK PRASAD",
+                        communication: 8,
+                        moduleDevelopment: 9,
+                        followingPolicy: 8,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 8,
+                        punctuality: 9,
+                        teamwork: 8,
+                        prevAvg: 8.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSUNI",
+                        name: "SUNIL IYER",
+                        communication: 7,
+                        moduleDevelopment: 7,
+                        followingPolicy: 8,
+                        loginLogout: 7,
+                        breakRules: 8,
+                        attendance: 7,
+                        punctuality: 7,
+                        teamwork: 8,
+                        prevAvg: 7.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPOAN",
+                        name: "POONAM ANAND",
+                        communication: 9,
+                        moduleDevelopment: 8,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 9,
+                        punctuality: 8,
+                        teamwork: 9,
+                        prevAvg: 8.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGRASH",
+                        name: "RAVI SHETTY",
+                        communication: 8,
+                        moduleDevelopment: 7,
+                        followingPolicy: 8,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 8,
+                        punctuality: 7,
+                        teamwork: 8,
+                        prevAvg: 7.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGTASO",
+                        name: "TANVI SOMAN",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGDESE",
+                        name: "DEEPAK SEN",
+                        communication: 7,
+                        moduleDevelopment: 8,
+                        followingPolicy: 7,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 7,
+                        punctuality: 8,
+                        teamwork: 7,
+                        prevAvg: 7.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGANCH",
+                        name: "ANJALI CHOPRA",
+                        communication: 9,
+                        moduleDevelopment: 8,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 9,
+                        punctuality: 8,
+                        teamwork: 9,
+                        prevAvg: 8.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGMOBA",
+                        name: "MOHIT BANSAL",
+                        communication: 8,
+                        moduleDevelopment: 9,
+                        followingPolicy: 8,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 8,
+                        punctuality: 9,
+                        teamwork: 8,
+                        prevAvg: 8.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGNIPO",
+                        name: "NISHA PODDAR",
+                        communication: 7,
+                        moduleDevelopment: 7,
+                        followingPolicy: 7,
+                        loginLogout: 7,
+                        breakRules: 7,
+                        attendance: 7,
+                        punctuality: 7,
+                        teamwork: 7,
+                        prevAvg: 7,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGVIJA",
+                        name: "VIJAY JAIN",
+                        communication: 8,
+                        moduleDevelopment: 8,
+                        followingPolicy: 8,
+                        loginLogout: 8,
+                        breakRules: 8,
+                        attendance: 8,
+                        punctuality: 8,
+                        teamwork: 8,
+                        prevAvg: 8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGKAME",
+                        name: "KAVITA MEHRA",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGRAMA",
+                        name: "RAJESH MALHOTRA",
+                        communication: 8,
+                        moduleDevelopment: 8,
+                        followingPolicy: 9,
+                        loginLogout: 8,
+                        breakRules: 9,
+                        attendance: 8,
+                        punctuality: 8,
+                        teamwork: 9,
+                        prevAvg: 8.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSHPA",
+                        name: "SHIVANI PANDEY",
+                        communication: 9,
+                        moduleDevelopment: 8,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 9,
+                        punctuality: 8,
+                        teamwork: 9,
+                        prevAvg: 8.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGADEV",
+                        name: "ADITYA DEV",
+                        communication: 7,
+                        moduleDevelopment: 8,
+                        followingPolicy: 7,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 7,
+                        punctuality: 8,
+                        teamwork: 7,
+                        prevAvg: 7.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPEAR",
+                        name: "PALLAVI ARORA",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSABH",
+                        name: "SACHIN BHATT",
+                        communication: 8,
+                        moduleDevelopment: 8,
+                        followingPolicy: 8,
+                        loginLogout: 8,
+                        breakRules: 8,
+                        attendance: 8,
+                        punctuality: 8,
+                        teamwork: 8,
+                        prevAvg: 8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGMIKO",
+                        name: "MITHUN KOLI",
+                        communication: 7,
+                        moduleDevelopment: 7,
+                        followingPolicy: 7,
+                        loginLogout: 7,
+                        breakRules: 7,
+                        attendance: 7,
+                        punctuality: 7,
+                        teamwork: 7,
+                        prevAvg: 7,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGJYKU",
+                        name: "JYOTI KUMARI",
+                        communication: 9,
+                        moduleDevelopment: 8,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 8,
+                        attendance: 9,
+                        punctuality: 8,
+                        teamwork: 9,
+                        prevAvg: 8.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGLOTH",
+                        name: "LOHIT THAKUR",
+                        communication: 8,
+                        moduleDevelopment: 7,
+                        followingPolicy: 8,
+                        loginLogout: 8,
+                        breakRules: 7,
+                        attendance: 8,
+                        punctuality: 7,
+                        teamwork: 8,
+                        prevAvg: 7.6,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSUMA",
+                        name: "SUMAN AGARWAL",
+                        communication: 9,
+                        moduleDevelopment: 9,
+                        followingPolicy: 9,
+                        loginLogout: 9,
+                        breakRules: 9,
+                        attendance: 9,
+                        punctuality: 9,
+                        teamwork: 9,
+                        prevAvg: 9,
+                        updatedAt: Date.now()
+                    }
+
+                ],
+
+
+                m4: [
+
+                    {
+                        internId: "PROGABRA",
+                        name: "ABHINAV RAO",
+                        communication: 9.1,
+                        moduleDevelopment: 8.9,
+                        followingPolicy: 9.0,
+                        loginLogout: 9.2,
+                        breakRules: 8.8,
+                        attendance: 9.3,
+                        punctuality: 9.0,
+                        teamwork: 9.1,
+                        prevAvg: 9.0,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGNKUM",
+                        name: "NIKHIL KUMAR",
+                        communication: 8.7,
+                        moduleDevelopment: 9.1,
+                        followingPolicy: 8.9,
+                        loginLogout: 8.8,
+                        breakRules: 9.0,
+                        attendance: 9.2,
+                        punctuality: 8.9,
+                        teamwork: 9.1,
+                        prevAvg: 8.9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSYAD",
+                        name: "SANJAY YADAV",
+                        communication: 9.3,
+                        moduleDevelopment: 9.0,
+                        followingPolicy: 9.2,
+                        loginLogout: 9.1,
+                        breakRules: 9.0,
+                        attendance: 9.4,
+                        punctuality: 9.2,
+                        teamwork: 9.3,
+                        prevAvg: 9.2,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPMEH",
+                        name: "PRIYA MEHRA",
+                        communication: 9.5,
+                        moduleDevelopment: 9.3,
+                        followingPolicy: 9.4,
+                        loginLogout: 9.2,
+                        breakRules: 9.1,
+                        attendance: 9.6,
+                        punctuality: 9.3,
+                        teamwork: 9.4,
+                        prevAvg: 9.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGAKHA",
+                        name: "AKHIL SHARMA",
+                        communication: 8.9,
+                        moduleDevelopment: 8.8,
+                        followingPolicy: 9.0,
+                        loginLogout: 8.7,
+                        breakRules: 8.9,
+                        attendance: 9.1,
+                        punctuality: 8.8,
+                        teamwork: 9.0,
+                        prevAvg: 8.9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGVMEN",
+                        name: "VIVEK MENON",
+                        communication: 9.2,
+                        moduleDevelopment: 9.1,
+                        followingPolicy: 9.0,
+                        loginLogout: 9.3,
+                        breakRules: 9.1,
+                        attendance: 9.4,
+                        punctuality: 9.2,
+                        teamwork: 9.3,
+                        prevAvg: 9.2,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGRPAT",
+                        name: "ROHIT PATEL",
+                        communication: 8.8,
+                        moduleDevelopment: 9.0,
+                        followingPolicy: 8.7,
+                        loginLogout: 8.9,
+                        breakRules: 8.6,
+                        attendance: 9.1,
+                        punctuality: 8.8,
+                        teamwork: 9.0,
+                        prevAvg: 8.9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSKAP",
+                        name: "SHREYA KAPOOR",
+                        communication: 9.4,
+                        moduleDevelopment: 9.2,
+                        followingPolicy: 9.3,
+                        loginLogout: 9.1,
+                        breakRules: 9.0,
+                        attendance: 9.5,
+                        punctuality: 9.3,
+                        teamwork: 9.4,
+                        prevAvg: 9.3,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGDMIS",
+                        name: "DINESH MISHRA",
+                        communication: 8.6,
+                        moduleDevelopment: 8.9,
+                        followingPolicy: 8.8,
+                        loginLogout: 8.7,
+                        breakRules: 8.5,
+                        attendance: 9.0,
+                        punctuality: 8.7,
+                        teamwork: 8.9,
+                        prevAvg: 8.8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGATRI",
+                        name: "ANITA TRIPATHI",
+                        communication: 9.1,
+                        moduleDevelopment: 9.0,
+                        followingPolicy: 9.2,
+                        loginLogout: 9.3,
+                        breakRules: 9.1,
+                        attendance: 9.4,
+                        punctuality: 9.2,
+                        teamwork: 9.3,
+                        prevAvg: 9.2,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGKSAX",
+                        name: "KARAN SAXENA",
+                        communication: 8.9,
+                        moduleDevelopment: 8.8,
+                        followingPolicy: 9.0,
+                        loginLogout: 8.7,
+                        breakRules: 8.9,
+                        attendance: 9.1,
+                        punctuality: 8.8,
+                        teamwork: 9.0,
+                        prevAvg: 8.9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSMON",
+                        name: "SOMYA MONDAL",
+                        communication: 9.3,
+                        moduleDevelopment: 9.1,
+                        followingPolicy: 9.2,
+                        loginLogout: 9.0,
+                        breakRules: 9.1,
+                        attendance: 9.4,
+                        punctuality: 9.2,
+                        teamwork: 9.3,
+                        prevAvg: 9.2,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGJPRA",
+                        name: "JAY PRAKASH",
+                        communication: 8.7,
+                        moduleDevelopment: 8.9,
+                        followingPolicy: 8.8,
+                        loginLogout: 8.6,
+                        breakRules: 8.7,
+                        attendance: 9.0,
+                        punctuality: 8.8,
+                        teamwork: 8.9,
+                        prevAvg: 8.8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGNJOS",
+                        name: "NEELAM JOSHI",
+                        communication: 9.4,
+                        moduleDevelopment: 9.3,
+                        followingPolicy: 9.5,
+                        loginLogout: 9.2,
+                        breakRules: 9.1,
+                        attendance: 9.6,
+                        punctuality: 9.3,
+                        teamwork: 9.4,
+                        prevAvg: 9.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGTMAL",
+                        name: "TARUN MALIK",
+                        communication: 8.8,
+                        moduleDevelopment: 9.0,
+                        followingPolicy: 8.9,
+                        loginLogout: 8.7,
+                        breakRules: 8.8,
+                        attendance: 9.1,
+                        punctuality: 8.9,
+                        teamwork: 9.0,
+                        prevAvg: 8.9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSRAY",
+                        name: "SONAL RAY",
+                        communication: 9.2,
+                        moduleDevelopment: 9.1,
+                        followingPolicy: 9.3,
+                        loginLogout: 9.0,
+                        breakRules: 9.1,
+                        attendance: 9.4,
+                        punctuality: 9.2,
+                        teamwork: 9.3,
+                        prevAvg: 9.2,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGMMOH",
+                        name: "MANISH MOHANTY",
+                        communication: 8.9,
+                        moduleDevelopment: 8.8,
+                        followingPolicy: 9.0,
+                        loginLogout: 8.7,
+                        breakRules: 8.9,
+                        attendance: 9.1,
+                        punctuality: 8.8,
+                        teamwork: 9.0,
+                        prevAvg: 8.9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGAKUL",
+                        name: "ANIL KULKARNI",
+                        communication: 9.3,
+                        moduleDevelopment: 9.1,
+                        followingPolicy: 9.2,
+                        loginLogout: 9.0,
+                        breakRules: 9.1,
+                        attendance: 9.4,
+                        punctuality: 9.2,
+                        teamwork: 9.3,
+                        prevAvg: 9.2,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGRBIS",
+                        name: "RITIKA BISWAS",
+                        communication: 9.5,
+                        moduleDevelopment: 9.3,
+                        followingPolicy: 9.4,
+                        loginLogout: 9.2,
+                        breakRules: 9.1,
+                        attendance: 9.6,
+                        punctuality: 9.3,
+                        teamwork: 9.4,
+                        prevAvg: 9.4,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGPCHA",
+                        name: "PRATIK CHAUHAN",
+                        communication: 8.7,
+                        moduleDevelopment: 8.9,
+                        followingPolicy: 8.8,
+                        loginLogout: 8.6,
+                        breakRules: 8.7,
+                        attendance: 9.0,
+                        punctuality: 8.8,
+                        teamwork: 8.9,
+                        prevAvg: 8.8,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGHPAN",
+                        name: "HARSH PANDEY",
+                        communication: 9.1,
+                        moduleDevelopment: 9.0,
+                        followingPolicy: 9.2,
+                        loginLogout: 9.3,
+                        breakRules: 9.1,
+                        attendance: 9.4,
+                        punctuality: 9.2,
+                        teamwork: 9.3,
+                        prevAvg: 9.2,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGRKON",
+                        name: "RIYA KONDAL",
+                        communication: 8.9,
+                        moduleDevelopment: 8.8,
+                        followingPolicy: 9.0,
+                        loginLogout: 8.7,
+                        breakRules: 8.9,
+                        attendance: 9.1,
+                        punctuality: 8.8,
+                        teamwork: 9.0,
+                        prevAvg: 8.9,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGSRAW",
+                        name: "SHUBHAM RAWAT",
+                        communication: 9.3,
+                        moduleDevelopment: 9.1,
+                        followingPolicy: 9.2,
+                        loginLogout: 9.0,
+                        breakRules: 9.1,
+                        attendance: 9.4,
+                        punctuality: 9.2,
+                        teamwork: 9.3,
+                        prevAvg: 9.2,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGDMUK",
+                        name: "DIVYA MUKHERJEE",
+                        communication: 9.4,
+                        moduleDevelopment: 9.2,
+                        followingPolicy: 9.3,
+                        loginLogout: 9.1,
+                        breakRules: 9.0,
+                        attendance: 9.5,
+                        punctuality: 9.3,
+                        teamwork: 9.4,
+                        prevAvg: 9.3,
+                        updatedAt: Date.now()
+                    },
+
+                    {
+                        internId: "PROGVSEN",
+                        name: "VISHAL SEN",
+                        communication: 8.8,
+                        moduleDevelopment: 9.0,
+                        followingPolicy: 8.9,
+                        loginLogout: 8.7,
+                        breakRules: 8.8,
+                        attendance: 9.1,
+                        punctuality: 8.9,
+                        teamwork: 9.0,
+                        prevAvg: 8.9,
+                        updatedAt: Date.now()
+                    }
+
+                ],
+
+            };
+
+            return internsByManager[managerId] || [];
+        }
+
+
+        function defaultState() {
+            const managers = managersDefault.map(m => ({
+                ...m,
+                interns: makeSampleInterns(m.id),
+                updatedAt: Date.now()
+            }));
+            return {
+                managers,
+                lastOpenedManagerId: null
+            };
+        }
+
+        function loadState() {
+            try {
+                const raw = localStorage.getItem(LS_KEY);
+                if (!raw) return defaultState();
+                const parsed = JSON.parse(raw);
+                if (!parsed || !parsed.managers) return defaultState();
+                return parsed;
+            } catch (e) {
+                return defaultState();
+            }
+        }
+
+        let state = loadState();
+
+        function saveState() {
+            localStorage.setItem(LS_KEY, JSON.stringify(state));
+            showToast("Saved ✓");
+        }
+
+        /***************
+         * DRAFT EDITING
+         * - While admin types: no re-sort + no podium change
+         * - Only after Submit: apply drafts, then re-sort and update analytics
+         ***************/
+        let drafts = {}; // { internId: { communication, moduleDevelopment, followingPolicy } }
+        let hasPendingChanges = false;
+
+        function getDraftValue(intern, field) {
+            if (drafts[intern.internId] && drafts[intern.internId][field] !== undefined) {
+                return drafts[intern.internId][field];
+            }
+            return (intern[field] !== undefined && intern[field] !== null) ? intern[field] : 0;
+        }
+
+
+        function normalizeScore(val) {
+            let n = Number(val);
+            if (Number.isNaN(n)) n = 0;
+            n = Math.max(0, Math.min(10, n));
+            return Math.round(n * 10) / 10;
+        }
+
+        function avgScore(intern) {
+            const a = Number(intern.communication || 0);
+            const b = Number(intern.moduleDevelopment || 0);
+            const c = Number(intern.followingPolicy || 0);
+            const d = Number(intern.loginLogout || 0);
+            const e = Number(intern.breakRules || 0);
+            const f = Number(intern.attendance || 0);
+            const g = Number(intern.punctuality || 0);
+            const h = Number(intern.teamwork || 0);
+
+
+            return (a + b + c + d + e + f + g + h) / 8;
+        }
+
+
+        function deltaFor(intern) {
+            const now = Number(avgScore(intern).toFixed(2));
+
+            // Check if prevAvg exists, otherwise use 'now'
+            const prev = (intern.prevAvg !== undefined && intern.prevAvg !== null) ?
+                Number(intern.prevAvg) :
+                now;
+
+            return Number((now - prev).toFixed(2));
+        }
+
+        /***************
+         * DOM
+         ***************/
+        const projectNameLine = document.getElementById("projectNameLine");
+        const projectNameBadge = document.getElementById("projectNameBadge");
+        projectNameLine.textContent = `Project: ${PROJECT_NAME}`;
+        projectNameBadge.textContent = PROJECT_NAME;
+
+        const screenWelcome = document.getElementById("screenWelcome");
+        const screenManagers = document.getElementById("screenManagers");
+        const screenBoard = document.getElementById("screenBoard");
+
+        const pillStatus = document.getElementById("pillStatus");
+        const pillMode = document.getElementById("pillMode");
+
+        const btnSee = document.getElementById("btnSee");
+        const btnManagersBack = document.getElementById("btnManagersBack");
+        const btnBackToManagers = document.getElementById("btnBackToManagers");
+
+        const managerGrid = document.getElementById("managerGrid");
+
+        const boardSub = document.getElementById("boardSub");
+        const searchWrap = document.getElementById("searchWrap");
+        const searchInput = document.getElementById("searchInput");
+        const tbody = document.getElementById("tbody");
+        const podiumCard = document.getElementById("podiumCard");
+
+        const btnSubmit = document.getElementById("btnSubmit");
+        const btnDiscard = document.getElementById("btnDiscard");
+
+        const statManagers = document.getElementById("statManagers");
+        const statLeads = document.getElementById("statLeads");
+        const statBest = document.getElementById("statBest");
+        const statUpdated = document.getElementById("statUpdated");
+
+        // tabs
+        const tabLeaderboard = document.getElementById("tabLeaderboard");
+        const tabAnalytics = document.getElementById("tabAnalytics");
+        const leaderboardView = document.getElementById("leaderboardView");
+        const analyticsView = document.getElementById("analyticsView");
+
+        // analytics elements
+        const hiTopSub = document.getElementById("hiTopSub");
+        const hiTopVal = document.getElementById("hiTopVal");
+        const hiImproveSub = document.getElementById("hiImproveSub");
+        const hiImproveVal = document.getElementById("hiImproveVal");
+        const hiDropSub = document.getElementById("hiDropSub");
+        const hiDropVal = document.getElementById("hiDropVal");
+        const hiTeamAvg = document.getElementById("hiTeamAvg");
+
+        // chart
+        const chartBox = document.getElementById("chartBox");
+        const lineCanvas = document.getElementById("lineCanvas");
+        const tip = document.getElementById("tip");
+        const ctx = lineCanvas.getContext("2d");
+
+        // Admin buttons
+        const btnAdminLogin = document.getElementById("btnAdminLogin");
+        const btnAdminLogout = document.getElementById("btnAdminLogout");
+
+        // Modal
+        const modalOverlay = document.getElementById("modalOverlay");
+        const btnCloseModal = document.getElementById("btnCloseModal");
+        const btnLogin = document.getElementById("btnLogin");
+        const adminUser = document.getElementById("adminUser");
+        const adminPass = document.getElementById("adminPass");
+        const loginError = document.getElementById("loginError");
+
+        // Toast
+        const toast = document.getElementById("toast");
+        let toastTimer = null;
+
+        let currentManagerId = null;
+
+        function showToast(text) {
+            toast.textContent = text;
+            toast.classList.add("show");
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove("show"), 1200);
+        }
+
+        function switchScreen(which) {
+            screenWelcome.classList.remove("active");
+            screenManagers.classList.remove("active");
+            screenBoard.classList.remove("active");
+
+            if (which === "welcome") {
+                screenWelcome.classList.add("active");
+                pillStatus.textContent = "Welcome";
+            } else if (which === "managers") {
+                screenManagers.classList.add("active");
+                pillStatus.textContent = "Managers";
+            } else {
+                screenBoard.classList.add("active");
+                pillStatus.textContent = "Leaderboard";
+            }
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        }
+
+        function setAdminMode(flag) {
+            isAdmin = flag;
+            sessionStorage.setItem(LS_ADMIN, flag ? "true" : "false");
+
+
+            pillMode.textContent = flag ? "🛡️ Admin mode" : "👀 View mode";
+            btnAdminLogin.style.display = flag ? "none" : "inline-flex";
+            btnAdminLogout.style.display = flag ? "inline-flex" : "none";
+
+            updateSubmitUI();
+            if (currentManagerId) renderBoard(); // re-render to enable/disable inputs
+        }
+
+        function updateSubmitUI() {
+            const show = isAdmin && hasPendingChanges;
+            btnSubmit.style.display = show ? "inline-flex" : "none";
+            btnDiscard.style.display = show ? "inline-flex" : "none";
+        }
+
+        function openModal() {
+            loginError.classList.remove("show");
+            adminUser.value = "";
+            adminPass.value = "";
+            modalOverlay.classList.add("show");
+            setTimeout(() => adminUser.focus(), 40);
+        }
+
+        function closeModal() {
+            modalOverlay.classList.remove("show");
+        }
+
+        function tryLogin() {
+            const u = (adminUser.value || "").trim();
+            const p = (adminPass.value || "").trim();
+            if (u === ADMIN_USERNAME && p === ADMIN_PASSWORD) {
+                loginError.classList.remove("show");
+                closeModal();
+                setAdminMode(true);
+                showToast("Admin access enabled ✓");
+            } else {
+                loginError.classList.add("show");
+            }
+        }
+
+        /***************
+         * DATA HELPERS
+         ***************/
+        function getManager(managerId) {
+            return state.managers.find(m => m.id === managerId);
+        }
+
+        function getSortedInterns(m) {
+            const arr = [...m.interns];
+            arr.sort((a, b) => avgScore(b) - avgScore(a));
+            return arr;
+        }
+
+        function filteredInterns(m) {
+            const q = (searchInput.value || "").trim().toLowerCase();
+            const arr = getSortedInterns(m);
+            if (!q) return arr;
+            return arr.filter(x =>
+                x.internId.toLowerCase().includes(q) ||
+                x.name.toLowerCase().includes(q)
+            );
+        }
+
+        function trophyForRank(rank) {
+            if (rank === 1) return "🏆";
+            if (rank === 2) return "🥈";
+            if (rank === 3) return "🥉";
+            if (rank === 4) return "⭐";
+            if (rank === 5) return "🔥";
+            return "•";
+        }
+
+        function rowClass(rank) {
+            if (rank === 1) return "top1";
+            if (rank === 2) return "top2";
+            if (rank === 3) return "top3";
+            if (rank === 4) return "top4";
+            if (rank === 5) return "top5";
+            return "";
+        }
+
+        function fmtTime(ts) {
+            try {
+                const d = new Date(ts);
+                return d.toLocaleString();
+            } catch (e) {
+                return "—";
+            }
+        }
+
+        /***************
+         * WELCOME STATS
+         ***************/
+        function calcOverallStats() {
+            const mCount = state.managers.length;
+            const totalLeads = state.managers.reduce((sum, m) => sum + (Array.isArray(m.interns) ? m.interns.length : 0), 0);
+
+            let best = 0;
+            let lastTs = 0;
+            state.managers.forEach(m => {
+                (m.interns || []).forEach(i => {
+                    best = Math.max(best, avgScore(i));
+                    lastTs = Math.max(lastTs, i.updatedAt || 0);
+                });
+                lastTs = Math.max(lastTs, m.updatedAt || 0);
+            });
+
+            statManagers.textContent = mCount;
+            statLeads.textContent = totalLeads;
+            statBest.textContent = best.toFixed(2);
+            statUpdated.textContent = lastTs ? fmtTime(lastTs) : "—";
+        }
+
+        /***************
+         * RENDER: MANAGERS
+         ***************/
+        function renderManagers() {
+            managerGrid.innerHTML = "";
+            state.managers.forEach(m => {
+                const sorted = getSortedInterns(m);
+                const best = sorted[0] ? avgScore(sorted[0]).toFixed(2) : "0.00";
+
+                const card = document.createElement("div");
+                card.className = "mCard";
+                card.innerHTML = `
+          <div class="mLeft">
+            <strong>${m.name}</strong>
+            <span>${m.role} • ${m.teamsLabel}</span>
+            <div class="metaRow">
+              <span class="pill">📈 Best Avg: <b style="color:rgba(15,23,42,.92)">${best}</b></span>
+              <span class="pill">👥 Leads: <b style="color:rgba(15,23,42,.92)">${m.interns.length}</b></span>
+            </div>
+          </div>
+          <div class="avatar"><img src="${m.photo}" alt="${m.name}"></div>
+        `;
+                card.addEventListener("click", () => openManager(m.id));
+                managerGrid.appendChild(card);
+            });
+        }
+
+        /***************
+         * RENDER: PODIUM
+         ***************/
+        function renderPodium(sortedList) {
+            const top = sortedList.slice(0, 3);
+            const pick = (i) => top[i] || {
+                internId: "—",
+                name: "No data",
+                communication: 0,
+                moduleDevelopment: 0,
+                followingPolicy: 0,
+                prevAvg: 0
+            };
+
+            const p1 = pick(0),
+                p2 = pick(1),
+                p3 = pick(2);
+
+            const pct = (x) => Math.max(0, Math.min(100, (avgScore(x) / 10) * 100));
+            const fmt = (x) => avgScore(x).toFixed(2);
+
+            const d1 = deltaFor(p1),
+                d2 = deltaFor(p2),
+                d3 = deltaFor(p3);
+
+            const deltaBadge = (d) => {
+                const cls = d > 0 ? "up" : d < 0 ? "down" : "flat";
+                const icon = d > 0 ? "▲" : d < 0 ? "▼" : "•";
+                const sign = d > 0 ? "+" : "";
+                return `<span class="delta ${cls}">${icon} ${sign}${d.toFixed(2)}</span>`;
+            };
+
+            podiumCard.innerHTML = `
+        <div class="pod">
+          <div class="rankTag"><span class="chip">🥈</span> #2</div>
+          <p class="name">${p2.name}</p>
+          <p class="id">${p2.internId}</p>
+          <div class="scoreLine">
+            <span>Avg</span>
+            <div class="miniBar"><i style="width:${pct(p2)}%"></i></div>
+            <b>${fmt(p2)}</b>
+          </div>
+          <div style="margin-top:10px; display:flex; justify-content:flex-end;">
+            ${deltaBadge(d2)}
+          </div>
+        </div>
+
+        <div class="pod center">
+          <div class="crown">👑</div>
+          <div class="rankTag"><span class="chip">🏆</span> #1</div>
+          <p class="name">${p1.name}</p>
+          <p class="id">${p1.internId}</p>
+          <div class="scoreLine">
+            <span>Avg</span>
+            <div class="miniBar"><i style="width:${pct(p1)}%"></i></div>
+            <b>${fmt(p1)}</b>
+          </div>
+          <div style="margin-top:10px; display:flex; justify-content:flex-end;">
+            ${deltaBadge(d1)}
+          </div>
+        </div>
+
+        <div class="pod">
+          <div class="rankTag"><span class="chip">🥉</span> #3</div>
+          <p class="name">${p3.name}</p>
+          <p class="id">${p3.internId}</p>
+          <div class="scoreLine">
+            <span>Avg</span>
+            <div class="miniBar"><i style="width:${pct(p3)}%"></i></div>
+            <b>${fmt(p3)}</b>
+          </div>
+          <div style="margin-top:10px; display:flex; justify-content:flex-end;">
+            ${deltaBadge(d3)}
+          </div>
+        </div>
+      `;
+        }
+
+        /***************
+         * RENDER: TABLE
+         ***************/
+        function renderTable(list, managerName) {
+            tbody.innerHTML = "";
+
+            list.forEach((intern, idx) => {
+                const rank = idx + 1;
+                const avg = avgScore(intern);
+                const avgFixed = avg.toFixed(2);
+                const barPct = Math.max(0, Math.min(100, (avg / 10) * 100));
+
+                const d = deltaFor(intern);
+                const dCls = d > 0 ? "up" : d < 0 ? "down" : "flat";
+                const dIcon = d > 0 ? "▲" : d < 0 ? "▼" : "•";
+                const dSign = d > 0 ? "+" : "";
+
+                const tr = document.createElement("tr");
+                tr.className = rowClass(rank);
+
+                tr.innerHTML = `
+          <td>
+            <div class="rank">
+              <span class="badge">${trophyForRank(rank)}</span>
+              <span>#${rank}</span>
+            </div>
+          </td>
+
+          <td style="color:rgba(15,23,42,.62); font-size:12px;">${intern.internId}</td>
+
+          <td>
+            <div class="nameCell">
+              <strong>${intern.name}</strong>
+            </div>
+          </td>
+
+          <td>
+            <input class="scoreInput" type="number" step="0.1" min="0" max="10"
+              data-field="communication" value="${getDraftValue(intern,'communication')}">
+          </td>
+
+          <td>
+            <input class="scoreInput" type="number" step="0.1" min="0" max="10"
+              data-field="moduleDevelopment" value="${getDraftValue(intern,'moduleDevelopment')}">
+          </td>
+
+       
+<td>
+  <input class="scoreInput" type="number" min="0" max="10" step="0.1"
+    data-field="loginLogout"
+    value="${getDraftValue(intern,'loginLogout')}">
+</td>
+
+<td>
+  <input class="scoreInput" type="number" min="0" max="10" step="0.1"
+    data-field="breakRules"
+    value="${getDraftValue(intern,'breakRules')}">
+</td>
+
+<td>
+  <input class="scoreInput" type="number" min="0" max="10" step="0.1"
+    data-field="attendance"
+    value="${getDraftValue(intern,'attendance')}">
+</td>
+
+<td>
+  <input class="scoreInput" type="number" min="0" max="10" step="0.1"
+    data-field="punctuality"
+    value="${getDraftValue(intern,'punctuality')}">
+</td>
+
+<td>
+  <input class="scoreInput" type="number" min="0" max="10" step="0.1"
+    data-field="teamwork"
+    value="${getDraftValue(intern,'teamwork')}">
+</td>   <td>
+            <input class="scoreInput" type="number" step="0.1" min="0" max="10"
+              data-field="followingPolicy" value="${getDraftValue(intern,'followingPolicy')}">
+          </td>
+
+          <td>
+            <div class="avgBox">
+              <div style="display:flex; flex-direction:column; align-items:flex-end; gap:8px;">
+                <div style="display:flex; align-items:center; gap:10px;">
+                  <div class="bar"><i style="width:${barPct}%"></i></div>
+                  <span style="min-width:44px; text-align:right;">${avgFixed}</span>
+                </div>
+                <span class="delta ${dCls}">${dIcon} ${dSign}${d.toFixed(2)}</span>
+              </div>
+            </div>
+          </td>
+        `;
+
+                tr.querySelectorAll(".scoreInput").forEach(inp => {
+                    inp.disabled = !isAdmin;
+
+                    if (isAdmin) {
+                        inp.addEventListener("input", (e) => {
+                            const field = e.target.dataset.field;
+                            if (!drafts[intern.internId]) drafts[intern.internId] = {};
+                            drafts[intern.internId][field] = normalizeScore(e.target.value);
+
+                            hasPendingChanges = true;
+                            updateSubmitUI();
+                            // ✅ NO re-render here -> no row jumping while typing
+                        });
+
+                        inp.addEventListener("blur", (e) => {
+                            e.target.value = normalizeScore(e.target.value);
+                        });
+                    }
+                });
+
+                tbody.appendChild(tr);
+            });
+        }
+
+        /***************
+         * ANALYTICS
+         ***************/
+        function resizeCanvas() {
+            const r = chartBox.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+            lineCanvas.width = Math.floor(r.width * dpr);
+            lineCanvas.height = Math.floor(r.height * dpr);
+            lineCanvas.style.width = r.width + "px";
+            lineCanvas.style.height = r.height + "px";
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        }
+
+        function drawLineChart(points, animT = 1) {
+            // points: [{x(rankIndex), y(avg), name, id}]
+            resizeCanvas();
+
+            const w = chartBox.clientWidth;
+            const h = chartBox.clientHeight;
+
+            ctx.clearRect(0, 0, w, h);
+
+            // padding
+            const padL = 44,
+                padR = 18,
+                padT = 18,
+                padB = 30;
+            const cw = w - padL - padR;
+            const ch = h - padT - padB;
+
+            // grid + axis labels (y: 0..10)
+            ctx.globalAlpha = 1;
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = "rgba(15,23,42,.10)";
+            ctx.fillStyle = "rgba(15,23,42,.55)";
+            ctx.font = "12px ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto";
+
+            for (let i = 0; i <= 5; i++) {
+                const y = padT + (ch * (i / 5));
+                ctx.beginPath();
+                ctx.moveTo(padL, y);
+                ctx.lineTo(padL + cw, y);
+                ctx.stroke();
+
+                const val = (10 - (10 * (i / 5))).toFixed(0);
+                ctx.fillText(val, 12, y + 4);
+            }
+
+            // x baseline
+            ctx.strokeStyle = "rgba(15,23,42,.14)";
+            ctx.beginPath();
+            ctx.moveTo(padL, padT + ch);
+            ctx.lineTo(padL + cw, padT + ch);
+            ctx.stroke();
+
+            if (points.length < 2) return;
+
+            // map
+            const minY = 0,
+                maxY = 10;
+            const stepX = cw / (points.length - 1);
+            const mapX = (i) => padL + i * stepX;
+            const mapY = (v) => padT + (1 - (v - minY) / (maxY - minY)) * ch;
+
+            // line path
+            const maxIndex = Math.max(1, Math.floor((points.length - 1) * animT));
+
+            // gradient stroke
+            const grad = ctx.createLinearGradient(padL, padT, padL + cw, padT);
+            grad.addColorStop(0, "rgba(99,102,241,.95)");
+            grad.addColorStop(1, "rgba(16,185,129,.90)");
+
+            // subtle glow
+            ctx.save();
+            ctx.lineWidth = 10;
+            ctx.strokeStyle = "rgba(99,102,241,.18)";
+            ctx.beginPath();
+            for (let i = 0; i <= maxIndex; i++) {
+                const px = mapX(i);
+                const py = mapY(points[i].y);
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            }
+            ctx.stroke();
+            ctx.restore();
+
+            // main line
+            ctx.lineWidth = 4;
+            ctx.strokeStyle = grad;
+            ctx.beginPath();
+            for (let i = 0; i <= maxIndex; i++) {
+                const px = mapX(i);
+                const py = mapY(points[i].y);
+                if (i === 0) ctx.moveTo(px, py);
+                else ctx.lineTo(px, py);
+            }
+            ctx.stroke();
+
+            // points
+            for (let i = 0; i <= maxIndex; i++) {
+                const px = mapX(i);
+                const py = mapY(points[i].y);
+
+                ctx.fillStyle = "rgba(255,255,255,.95)";
+                ctx.beginPath();
+                ctx.arc(px, py, 5, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.strokeStyle = "rgba(15,23,42,.12)";
+                ctx.lineWidth = 1;
+                ctx.stroke();
+
+                ctx.fillStyle = i === 0 ? "rgba(245,158,11,.95)" : "rgba(16,185,129,.95)";
+                ctx.beginPath();
+                ctx.arc(px, py, 2.6, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        let chartPoints = [];
+        let chartAnim = null;
+
+        function playChart(points) {
+            chartPoints = points;
+            const start = performance.now();
+            const dur = 650;
+            cancelAnimationFrame(chartAnim);
+
+            function tick(now) {
+                const t = Math.min(1, (now - start) / dur);
+                drawLineChart(points, t);
+                if (t < 1) chartAnim = requestAnimationFrame(tick);
+            }
+            chartAnim = requestAnimationFrame(tick);
+        }
+
+        function updateHighlights(m) {
+            const sorted = getSortedInterns(m);
+            const top = sorted[0];
+
+            // most improved / dropped based on delta (avg - prevAvg)
+            let bestUp = null,
+                bestDown = null;
+            sorted.forEach(i => {
+                const d = deltaFor(i);
+                if (!bestUp || d > deltaFor(bestUp)) bestUp = i;
+                if (!bestDown || d < deltaFor(bestDown)) bestDown = i;
+            });
+
+            const teamAvg = (sorted.reduce((s, i) => s + avgScore(i), 0) / Math.max(1, sorted.length)).toFixed(2);
+
+            hiTopSub.textContent = top ? `${top.name} • ${top.internId}` : "—";
+            hiTopVal.textContent = top ? avgScore(top).toFixed(2) : "—";
+
+            // improved
+            if (bestUp) {
+                const d = deltaFor(bestUp);
+                hiImproveSub.textContent = `${bestUp.name} • ${bestUp.internId}`;
+                hiImproveVal.textContent = (d > 0 ? `+${d.toFixed(2)}` : d.toFixed(2));
+            } else {
+                hiImproveSub.textContent = "—";
+                hiImproveVal.textContent = "—";
+            }
+
+            // dropped
+            if (bestDown) {
+                const d = deltaFor(bestDown);
+                hiDropSub.textContent = `${bestDown.name} • ${bestDown.internId}`;
+                hiDropVal.textContent = (d > 0 ? `+${d.toFixed(2)}` : d.toFixed(2));
+            } else {
+                hiDropSub.textContent = "—";
+                hiDropVal.textContent = "—";
+            }
+
+            hiTeamAvg.textContent = teamAvg;
+        }
+
+        function buildChartPointsForManager(m) {
+            const sorted = getSortedInterns(m);
+            return sorted.map((i, idx) => ({
+                x: idx + 1,
+                y: +avgScore(i).toFixed(2),
+                name: i.name,
+                id: i.internId
+            }));
+        }
+
+        function onChartHover(e) {
+            if (!chartPoints.length) return;
+
+            const rect = lineCanvas.getBoundingClientRect();
+            const mx = e.clientX - rect.left;
+            const my = e.clientY - rect.top;
+
+            // same padding as draw
+            const padL = 44,
+                padR = 18,
+                padT = 18,
+                padB = 30;
+            const cw = rect.width - padL - padR;
+            const ch = rect.height - padT - padB;
+
+            if (mx < padL || mx > padL + cw || my < padT || my > padT + ch) {
+                tip.classList.remove("show");
+                return;
+            }
+
+            const stepX = cw / Math.max(1, chartPoints.length - 1);
+            const idx = Math.round((mx - padL) / stepX);
+            const clamped = Math.max(0, Math.min(chartPoints.length - 1, idx));
+            const p = chartPoints[clamped];
+
+            tip.innerHTML = `<b>#${clamped+1}</b> • ${p.name}<br><span style="color:rgba(15,23,42,.65)">${p.id} • Avg ${p.y.toFixed(2)}</span>`;
+            tip.style.left = Math.min(rect.width - 180, mx + 12) + "px";
+            tip.style.top = Math.max(10, my - 10) + "px";
+            tip.classList.add("show");
+        }
+
+        function onChartLeave() {
+            tip.classList.remove("show");
+        }
+
+        /***************
+         * RENDER: BOARD (leaderboard + analytics)
+         ***************/
+        function renderBoard() {
+            const m = getManager(currentManagerId);
+            if (!m) return;
+
+            // podium always from current saved data (not drafts)
+            const sortedAll = getSortedInterns(m);
+            renderPodium(sortedAll);
+
+            // table list can be filtered
+            const list = filteredInterns(m);
+            renderTable(list, m.name.split(" ")[0]);
+
+            // analytics
+            updateHighlights(m);
+            playChart(buildChartPointsForManager(m));
+        }
+
+        function openManager(managerId) {
+            currentManagerId = managerId;
+
+            // reset drafts when opening manager
+            drafts = {};
+            hasPendingChanges = false;
+            updateSubmitUI();
+
+            // open leaderboard tab by default
+            setTab("leaderboard");
+
+            const m = getManager(managerId);
+            boardSub.textContent = `Manager: ${m.name} (${m.role})`;
+
+            searchInput.value = "";
+            renderBoard();
+            switchScreen("board");
+        }
+
+        /***************
+         * TAB SWITCH
+         ***************/
+        function setTab(which) {
+            if (which === "leaderboard") {
+                tabLeaderboard.classList.add("active");
+                tabAnalytics.classList.remove("active");
+
+                leaderboardView.style.display = "block";
+                analyticsView.classList.remove("active");
+
+                searchWrap.style.display = "flex";
+            } else {
+                tabAnalytics.classList.add("active");
+                tabLeaderboard.classList.remove("active");
+
+                leaderboardView.style.display = "none";
+                analyticsView.classList.add("active");
+
+                searchWrap.style.display = "none";
+                // redraw chart (important for correct size)
+                const m = getManager(currentManagerId);
+                if (m) playChart(buildChartPointsForManager(m));
+            }
+        }
+
+        /***************
+         * EVENTS
+         ***************/
+        btnSee.addEventListener("click", () => {
+            renderManagers();
+            switchScreen("managers");
+        });
+        btnManagersBack.addEventListener("click", () => switchScreen("welcome"));
+        btnBackToManagers.addEventListener("click", () => {
+            currentManagerId = null;
+            drafts = {};
+            hasPendingChanges = false;
+            updateSubmitUI();
+            switchScreen("managers");
+        });
+
+        searchInput.addEventListener("input", () => renderBoard());
+
+        // tabs
+        tabLeaderboard.addEventListener("click", () => setTab("leaderboard"));
+        tabAnalytics.addEventListener("click", () => setTab("analytics"));
+
+        // Admin login/logout
+        btnAdminLogin.addEventListener("click", openModal);
+        btnAdminLogout.addEventListener("click", () => {
+            setAdminMode(false);
+            showToast("Logged out ✓");
+        });
+
+        // modal events
+        btnCloseModal.addEventListener("click", closeModal);
+        modalOverlay.addEventListener("click", (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape") closeModal();
+        });
+        btnLogin.addEventListener("click", tryLogin);
+        adminPass.addEventListener("keydown", (e) => {
+            if (e.key === "Enter") tryLogin();
+        });
+
+        // Submit / Discard
+        btnSubmit.addEventListener("click", () => {
+            if (!isAdmin) return;
+            const m = getManager(currentManagerId);
+            if (!m) return;
+
+            // apply drafts safely + set prevAvg BEFORE changing scores
+            m.interns.forEach(intern => {
+                const d = drafts[intern.internId];
+                if (!d) return;
+
+                // store previous avg for delta indicator
+                intern.prevAvg = +avgScore(intern).toFixed(2);
+
+                if (d.communication !== undefined) intern.communication = d.communication;
+                if (d.moduleDevelopment !== undefined) intern.moduleDevelopment = d.moduleDevelopment;
+                if (d.followingPolicy !== undefined) intern.followingPolicy = d.followingPolicy;
+                if (d.loginLogout !== undefined) intern.loginLogout = d.loginLogout;
+                if (d.breakRules !== undefined) intern.breakRules = d.breakRules;
+                if (d.attendance !== undefined) intern.attendance = d.attendance;
+                if (d.punctuality !== undefined) intern.punctuality = d.punctuality;
+                if (d.teamwork !== undefined) intern.teamwork = d.teamwork;
+
+                intern.updatedAt = Date.now();
+            });
+
+            m.updatedAt = Date.now();
+
+            drafts = {};
+            hasPendingChanges = false;
+            saveState();
+            calcOverallStats();
+            renderBoard();
+            updateSubmitUI();
+            showToast("Submitted ✓");
+        });
+
+        btnDiscard.addEventListener("click", () => {
+            drafts = {};
+            hasPendingChanges = false;
+            updateSubmitUI();
+            renderBoard();
+            showToast("Discarded ✓");
+        });
+
+        // chart hover
+        lineCanvas.addEventListener("mousemove", onChartHover);
+        lineCanvas.addEventListener("mouseleave", onChartLeave);
+        window.addEventListener("resize", () => {
+            const m = getManager(currentManagerId);
+            if (m && analyticsView.classList.contains("active")) playChart(buildChartPointsForManager(m));
+        });
+
+        /***************
+         * INIT
+         ***************/
+        function init() {
+            // ensure project name in UI
+            calcOverallStats();
+
+            // render welcome + managers
+            renderManagers();
+
+            // admin state
+            setAdminMode(isAdmin);
+
+            // open welcome
+            switchScreen("welcome");
+        }
+
+        init();
+    </script>
+
+    <!-- <script>
+        /* ===============================
+                                   BASIC WEBSITE PROTECTION
+                                   Blocks right-click, inspect,
+                                   copy, print, shortcuts
+                                ================================ */
+
+        (function() {
+
+            // Disable Right Click
+            document.addEventListener("contextmenu", e => {
+                e.preventDefault();
+                alert("Right click disabled!");
+            });
+
+            // Disable Text Selection
+            document.addEventListener("selectstart", e => e.preventDefault());
+
+            // Disable Drag
+            document.addEventListener("dragstart", e => e.preventDefault());
+
+            // Block Shortcuts
+            document.addEventListener("keydown", function(e) {
+
+                // F12
+                if (e.keyCode === 123) {
+                    e.preventDefault();
+                    alert("Blocked!");
+                }
+
+                // Ctrl+Shift+I / J / C
+                if (e.ctrlKey && e.shiftKey &&
+                    (e.keyCode === 73 || e.keyCode === 74 || e.keyCode === 67)) {
+                    e.preventDefault();
+                    alert("Blocked!");
+                }
+
+                // Ctrl+U (view source)
+                if (e.ctrlKey && e.keyCode === 85) {
+                    e.preventDefault();
+                    alert("Blocked!");
+                }
+
+                // Ctrl+S (save)
+                if (e.ctrlKey && e.keyCode === 83) {
+                    e.preventDefault();
+                    alert("Blocked!");
+                }
+
+                // Ctrl+P (print)
+                if (e.ctrlKey && e.keyCode === 80) {
+                    e.preventDefault();
+                    alert("Print disabled!");
+                }
+
+                // Ctrl+A (select all)
+                if (e.ctrlKey && e.keyCode === 65) {
+                    e.preventDefault();
+                }
+
+                // Ctrl+C / Ctrl+V / Ctrl+X
+                if (e.ctrlKey &&
+                    (e.keyCode === 67 || e.keyCode === 86 || e.keyCode === 88)) {
+                    e.preventDefault();
+                    alert("Copy/Paste disabled!");
+                }
+
+            });
+
+            // Disable DevTools Open (basic trick)
+            setInterval(function() {
+                if (window.outerWidth - window.innerWidth > 200 ||
+                    window.outerHeight - window.innerHeight > 200) {
+                    document.body.innerHTML =
+                        "<h2 style='text-align:center;margin-top:20%'>Access Blocked</h2>";
+                }
+            }, 1000);
+
+        })();
+    </script> -->
+
+</body>
+
+</html>
