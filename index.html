@@ -9053,32 +9053,29 @@
         // ==========================================
         // 💼 OPEN MODAL (CURRENT YEAR RESTRICTION)
         // ==========================================
+
+
+        // ==========================================
+        // 💼 OPEN MODAL (ALLOW ANY YEAR / ANY MONTH)
+        // ==========================================
         function registerForInternship(domainKey) {
             pendingDomainKey = domainKey;
 
             const modal = document.getElementById('internship-apply-modal');
             const dateInput = document.getElementById('int-start-date');
 
-            // --- DATE LOGIC ---
+            // ✅ Allow selecting ANY year/month by removing current-year min/max
+            dateInput.removeAttribute('min');
+            dateInput.removeAttribute('max');
+
+            // Optional: keep a default value (today)
             const today = new Date();
-            const currentYear = today.getFullYear();
-
-            // 1. Set MIN Date to JAN 1st of CURRENT YEAR 
-            // (Allows selecting past dates within this year)
-            const minDate = `${currentYear}-01-01`;
-
-            // 2. Set MAX Date to DEC 31 of CURRENT YEAR 
-            // (Prevents selecting future years like 2026)
-            const maxDate = `${currentYear}-12-31`;
-
-            dateInput.min = minDate;
-            dateInput.max = maxDate;
-
-            // Default value set to today for convenience
             dateInput.value = today.toISOString().split('T')[0];
 
             modal.classList.remove('hidden');
         }
+
+
         // ==========================================
         // 💼 CONFIRM & PAY (DYNAMIC PRICING)
         // ==========================================
@@ -9096,13 +9093,8 @@
 
             // --- VALIDATION CHECK ---
             const selectedDate = new Date(startDateVal);
-            const today = new Date();
-            const currentYear = today.getFullYear();
-
-            // 1. Strict Year Check
-            // Start date MUST be in the current year (e.g., 2025)
-            if (selectedDate.getFullYear() !== currentYear) {
-                alert(`Start date must be within the current year (${currentYear}).`);
+            if (isNaN(selectedDate.getTime())) {
+                alert("Please select a valid start date.");
                 return;
             }
 
