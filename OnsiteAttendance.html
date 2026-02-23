@@ -157,7 +157,7 @@
 
 <script>
   /*********** SET YOUR APPS SCRIPT WEB APP URL ***********/
-  const API_URL = "https://script.google.com/macros/s/AKfycbxuCeXepwnQ6PrNBykeTg0CWtV4QXcBGNd0Y5XdGyrW8_AbVxvN_KP4k9ZrQ47lBeboFw/exec"; // .../exec
+  const API_URL = "https://script.google.com/macros/s/AKfycbxN_KnTBpqBPVwN2CTlhxfklecUn1Iv5qeIcpxzLXUeUFF7K4TGcM7ra_vuB0bd0j2uyg/exec"; // .../exec
 
   /*********** MODELS PATH ***********
    * You must host face-api models in /models folder on same website.
@@ -351,6 +351,22 @@
       toast("Network/API error");
     }
   }
+
+  function loadInternsJSONP(apiUrl) {
+  return new Promise((resolve, reject) => {
+    const cb = "cb_" + Math.random().toString(36).slice(2);
+    window[cb] = (data) => {
+      delete window[cb];
+      script.remove();
+      resolve(data);
+    };
+
+    const script = document.createElement("script");
+    script.src = apiUrl + "?action=interns&callback=" + cb;
+    script.onerror = () => reject(new Error("JSONP load failed"));
+    document.body.appendChild(script);
+  });
+}
 </script>
 </body>
 </html>
