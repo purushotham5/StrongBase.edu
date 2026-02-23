@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>PROGMASTER • Face Attendance</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+
+  <style>
+    :root{
+      --bg:#070A12; --text:#EAF0FF; --muted:#95A3C3; --line:rgba(255,255,255,.08);
+      --good:#23C55E; --warn:#F59E0B; --brand:#3B82F6; --brand2:#8B5CF6;
+      --shadow: 0 20px 70px rgba(0,0,0,.55);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,Arial; color:var(--text);
+      background: radial-gradient(1200px 600px at 20% 10%, rgba(59,130,246,.25), transparent 60%),
+                  radial-gradient(900px 500px at 80% 20%, rgba(139,92,246,.20), transparent 60%),
+                  var(--bg);
+      min-height:100vh; display:flex; align-items:center; justify-content:center; padding:24px;
+    }
+    .wrap{width:min(1200px,100%); display:grid; grid-template-columns:1.2fr .8fr; gap:18px;}
+    .topbar{
+      grid-column:1/-1; display:flex; justify-content:space-between; align-items:center;
+      padding:14px 16px; border:1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border-radius:18px; box-shadow:var(--shadow); backdrop-filter: blur(10px);
+    }
+    .brand{display:flex; gap:10px; align-items:center;}
+    .logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,var(--brand),var(--brand2));}
+    .brand h1{font-size:16px;margin:0}
+    .brand p{font-size:12px;margin:0;color:var(--muted)}
+    .pill{font-size:12px;padding:8px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted)}
+    .panel{border:1px solid var(--line); border-radius:18px; background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02)); box-shadow:var(--shadow); overflow:hidden;}
+    .panelHead{padding:14px 16px;border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:center;}
+    .panelHead h2{font-size:14px;margin:0}
+    .panelHead span{font-size:12px;color:var(--muted)}
+    .cameraArea{padding:16px; display:grid; gap:12px;}
+    video{width:100%; border-radius:16px; background:#000; border:1px solid var(--line); aspect-ratio:16/9; object-fit:cover;}
+    .card{padding:16px; display:grid; gap:12px;}
+    .profile{
+      display:flex; gap:14px; align-items:center; padding:14px; border-radius:18px;
+      background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.15)); border:1px solid var(--line);
+    }
+    .avatar{
+      width:72px;height:72px;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid var(--line);
+      overflow:hidden; display:flex; align-items:center; justify-content:center; flex:0 0 auto;
+    }
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    .avatar .fallback{color:var(--muted);font-weight:700}
+    .meta h3{margin:0;font-size:16px}
+    .meta p{margin:4px 0 0;color:var(--muted);font-size:12px}
+    .grid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+    .kv{padding:12px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03);}
+    .kv .k{font-size:11px;color:var(--muted)}
+    .kv .v{margin-top:6px;font-weight:700}
+    .status{
+      padding:12px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03);
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+    }
+    .badge{font-size:12px;padding:7px 10px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--muted);display:inline-flex;align-items:center;gap:8px;}
+    .dot{width:10px;height:10px;border-radius:999px;background:var(--warn); box-shadow:0 0 0 6px rgba(245,158,11,.15);}
+    .dot.good{background:var(--good); box-shadow:0 0 0 6px rgba(34,197,94,.15);}
+    .toast{
+      position:fixed; right:18px; bottom:18px; padding:14px 16px; border-radius:16px; border:1px solid var(--line);
+      background:rgba(10,14,28,.85); backdrop-filter: blur(10px); box-shadow:var(--shadow); display:none; max-width:360px;
+    }
+    .toast.show{display:block; animation:pop .25s ease}
+    @keyframes pop{from{transform:translateY(8px);opacity:.5}to{transform:translateY(0);opacity:1}}
+
+    /* One-time start overlay (browser requirement) */
+    .overlay{
+      position:fixed; inset:0; display:flex; align-items:center; justify-content:center;
+      background:rgba(0,0,0,.55); backdrop-filter: blur(10px); z-index:9999;
+    }
+    .overlayCard{
+      width:min(520px,92%); border:1px solid var(--line); border-radius:18px; padding:18px;
+      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow:var(--shadow);
+    }
+    .overlayCard h2{margin:0 0 6px}
+    .overlayCard p{margin:0 0 14px; color:var(--muted); font-size:13px; line-height:1.4}
+    .overlayCard button{
+      width:100%; padding:14px 16px; border-radius:14px; border:0; cursor:pointer; font-weight:700; color:var(--text);
+      background:linear-gradient(135deg,var(--brand),var(--brand2));
+    }
+
+    @media (max-width: 920px){ .wrap{grid-template-columns:1fr;} }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>PROGMASTER • Face Attendance</h1>
+          <p>Auto face scan → auto attendance</p>
+        </div>
+      </div>
+      <div class="pill" id="clock">--:--:--</div>
+    </div>
+
+    <div class="panel">
+      <div class="panelHead">
+        <h2>Camera</h2>
+        <span id="camStatus">Loading models…</span>
+      </div>
+      <div class="cameraArea">
+        <video id="video" autoplay playsinline muted></video>
+      </div>
+    </div>
+
+    <div class="panel">
+      <div class="panelHead">
+        <h2>Detected Intern</h2>
+        <span id="subtitle">Waiting for scan…</span>
+      </div>
+
+      <div class="card">
+        <div class="profile">
+          <div class="avatar" id="avatar"><div class="fallback">PM</div></div>
+          <div class="meta">
+            <h3 id="name">—</h3>
+            <p id="id">Intern ID: —</p>
+            <p id="photoInfo">Photo: —</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="kv"><div class="k">Date</div><div class="v" id="date">—</div></div>
+          <div class="kv"><div class="k">Time</div><div class="v" id="time">—</div></div>
+        </div>
+
+        <div class="status">
+          <div class="badge"><span class="dot" id="dot"></span><span id="statusText">Not marked</span></div>
+          <div class="badge" id="lateText">Late: —</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <div class="overlay" id="overlay">
+    <div class="overlayCard">
+      <h2>Start Face Attendance</h2>
+      <p>Browser security needs one click to enable camera. After this, scanning and attendance will happen automatically.</p>
+      <button onclick="startSystem()">Tap to Start</button>
+    </div>
+  </div>
+
+<script>
+  /*********** SET YOUR APPS SCRIPT WEB APP URL ***********/
+  const API_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE"; // .../exec
+
+  /*********** MODELS PATH ***********
+   * You must host face-api models in /models folder on same website.
+   * Download models from face-api.js repo and place here:
+   * /models/tiny_face_detector_model-weights_manifest.json
+   * /models/face_landmark_68_model-weights_manifest.json
+   * /models/face_recognition_model-weights_manifest.json
+   */
+  const MODELS_URL = "/models";
+
+  const video = document.getElementById("video");
+  const camStatus = document.getElementById("camStatus");
+  const overlay = document.getElementById("overlay");
+
+  let labeledFaceMatcher = null;
+  let internsCache = [];
+  let lastMarked = { internId: "", at: 0 }; // prevent continuous re-mark
+
+  function tickClock(){
+    const now = new Date();
+    document.getElementById("clock").textContent = now.toLocaleTimeString();
+    document.getElementById("date").textContent = now.toLocaleDateString();
+    document.getElementById("time").textContent = now.toLocaleTimeString();
+  }
+  setInterval(tickClock, 1000); tickClock();
+
+  function toast(msg){
+    const t = document.getElementById("toast");
+    t.textContent = msg;
+    t.classList.add("show");
+    setTimeout(()=>t.classList.remove("show"), 2600);
+  }
+
+  function setAvatar(url){
+    const avatar = document.getElementById("avatar");
+    avatar.innerHTML = "";
+    if(!url){
+      avatar.innerHTML = '<div class="fallback">PM</div>';
+      document.getElementById("photoInfo").textContent = "Photo: —";
+      return;
+    }
+    const img = new Image();
+    img.src = url;
+    img.onload = () => {
+      avatar.innerHTML = "";
+      avatar.appendChild(img);
+      document.getElementById("photoInfo").textContent = "Photo: Loaded ✅";
+    };
+    img.onerror = () => {
+      avatar.innerHTML = '<div class="fallback">No Photo</div>';
+      document.getElementById("photoInfo").textContent = "Photo: Not found ⚠️";
+    };
+  }
+
+  async function startSystem(){
+    try{
+      overlay.style.display = "none";
+      camStatus.textContent = "Loading models…";
+
+      // 1) Load face-api models
+      await Promise.all([
+        faceapi.nets.tinyFaceDetector.loadFromUri(MODELS_URL),
+        faceapi.nets.faceLandmark68Net.loadFromUri(MODELS_URL),
+        faceapi.nets.faceRecognitionNet.loadFromUri(MODELS_URL),
+      ]);
+
+      // 2) Load interns from your Sheet
+      camStatus.textContent = "Loading interns…";
+      const internsRes = await fetch(API_URL + "?action=interns");
+      const internsJson = await internsRes.json();
+      if(!internsJson.ok) throw new Error(internsJson.error || "Failed to load interns");
+      internsCache = internsJson.interns || [];
+      if(internsCache.length === 0) throw new Error("No interns found in Interns sheet");
+
+      // 3) Build face descriptors from intern photos (one-time)
+      camStatus.textContent = "Building face database… (first time takes 1–3 min)";
+      const labeledDescriptors = await buildLabeledDescriptors_(internsCache);
+
+      labeledFaceMatcher = new faceapi.FaceMatcher(labeledDescriptors, 0.55); // threshold
+      camStatus.textContent = "Starting camera…";
+
+      // 4) Start camera (must be allowed)
+      const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: "user" }, audio: false });
+      video.srcObject = stream;
+
+      camStatus.textContent = "Scanning…";
+      toast("Scanning started ✅");
+
+      // 5) Start recognition loop
+      startRecognitionLoop_();
+
+    }catch(err){
+      console.error(err);
+      overlay.style.display = "flex";
+      toast("Setup error: " + err.message);
+      camStatus.textContent = "Error";
+    }
+  }
+
+  async function buildLabeledDescriptors_(interns){
+    const labeled = [];
+
+    for(const p of interns){
+      const label = p.internId;
+      const photoUrl = p.photoUrl;
+
+      if(!photoUrl) continue;
+
+      try{
+        const img = await faceapi.fetchImage(photoUrl);
+        const det = await faceapi
+          .detectSingleFace(img, new faceapi.TinyFaceDetectorOptions({ inputSize: 320, scoreThreshold: 0.5 }))
+          .withFaceLandmarks()
+          .withFaceDescriptor();
+
+        if(!det){
+          console.warn("No face found in photo for:", label);
+          continue;
+        }
+
+        labeled.push(new faceapi.LabeledFaceDescriptors(label, [det.descriptor]));
+      }catch(e){
+        console.warn("Failed to process photo for:", label, e);
+      }
+    }
+
+    if(labeled.length === 0){
+      throw new Error("No usable faces found in Interns photos. Ensure each photo has a clear front face.");
+    }
+
+    return labeled;
+  }
+
+  function startRecognitionLoop_(){
+    const options = new faceapi.TinyFaceDetectorOptions({ inputSize: 320, scoreThreshold: 0.5 });
+
+    setInterval(async () => {
+      if(!labeledFaceMatcher) return;
+
+      const det = await faceapi
+        .detectSingleFace(video, options)
+        .withFaceLandmarks()
+        .withFaceDescriptor();
+
+      if(!det) return;
+
+      const best = labeledFaceMatcher.findBestMatch(det.descriptor);
+      if(best.label === "unknown") return;
+
+      const now = Date.now();
+
+      // prevent marking repeatedly every second
+      if(lastMarked.internId === best.label && (now - lastMarked.at) < 30_000) return;
+
+      lastMarked = { internId: best.label, at: now };
+
+      // Update UI immediately
+      const intern = internsCache.find(x => x.internId === best.label);
+      document.getElementById("subtitle").textContent = "Detected ✅ Auto marking...";
+      document.getElementById("name").textContent = intern?.internName || "—";
+      document.getElementById("id").textContent = "Intern ID: " + best.label;
+      setAvatar(intern?.photoUrl || "");
+
+      // Mark attendance
+      await markAttendance_(best.label);
+
+    }, 900);
+  }
+
+  async function markAttendance_(internId){
+    try{
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type":"application/json" },
+        body: JSON.stringify({ internId, timestamp: new Date().toISOString() })
+      });
+      const data = await res.json();
+
+      if(data.ok){
+        document.getElementById("dot").classList.add("good");
+        document.getElementById("statusText").textContent = "Attendance marked ✅";
+        document.getElementById("lateText").textContent = "Late: " + (data.late || "No");
+        document.getElementById("subtitle").textContent = "Attendance marked ✅ (" + data.sheet + ")";
+        toast("Marked ✅ " + (data.internName || internId));
+      } else {
+        document.getElementById("subtitle").textContent = "Error: " + (data.error || "Unknown");
+        toast("Not marked: " + (data.error || "Unknown"));
+      }
+    }catch(e){
+      console.error(e);
+      toast("Network/API error");
+    }
+  }
+</script>
+</body>
+</html>
