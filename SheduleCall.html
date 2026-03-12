@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0d59f2",
+                        "background-light": "#f5f6f8",
+                        "background-dark": "#101622",
+                    },
+                    fontFamily: {
+                        "display": ["Inter"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .glow-button {
+            box-shadow: 0 0 20px rgba(13, 89, 242, 0.4);
+        }
+        
+        .bg-mesh {
+            background-color: #101622;
+            background-image: radial-gradient(at 0% 0%, rgba(13, 89, 242, 0.15) 0px, transparent 50%), radial-gradient(at 100% 100%, rgba(13, 89, 242, 0.1) 0px, transparent 50%);
+        }
+    </style>
+</head>
+
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+    <div class="relative flex h-auto min-h-screen w-full flex-col bg-mesh overflow-x-hidden">
+        <!-- Navigation -->
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200/10 px-6 md:px-20 py-4 glass-card sticky top-0 z-50">
+            <div class="flex items-center gap-3">
+                <div class="size-8 text-primary">
+                    <svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+                </div>
+                <h2 class="text-slate-100 text-lg font-bold leading-tight tracking-tight">ProgMaster</h2>
+            </div>
+            <div class="hidden md:flex flex-1 justify-end gap-8">
+                <nav class="flex items-center gap-8">
+                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Services</a>
+                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Solutions</a>
+                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">Case Studies</a>
+                    <a class="text-slate-300 hover:text-primary transition-colors text-sm font-medium" href="#">About</a>
+                </nav>
+                <button class="bg-primary hover:bg-primary/90 text-white text-sm font-bold px-6 py-2 rounded-lg transition-all">
+                Contact Us
+            </button>
+            </div>
+            <div class="md:hidden text-slate-100">
+                <span class="material-symbols-outlined">menu</span>
+            </div>
+        </header>
+        <main class="flex-1 flex flex-col items-center justify-center p-6 md:p-12">
+            <div class="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Content Left -->
+                <div class="flex flex-col gap-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 w-fit">
+                        <span class="size-2 rounded-full bg-primary animate-pulse"></span>
+                        <span class="text-primary text-xs font-bold uppercase tracking-wider">Expert Consultation</span>
+                    </div>
+                    <h1 class="text-slate-100 text-4xl md:text-5xl font-black leading-tight tracking-tight">
+                        Ready to Accelerate Your <span class="text-primary">Digital Transformation?</span>
+                    </h1>
+                    <p class="text-slate-400 text-lg leading-relaxed max-w-lg">
+                        Book a 1-on-1 strategy session with our senior architects to discuss your specific business challenges and technology roadmap.
+                    </p>
+                    <div class="flex flex-col gap-4 pt-4">
+                        <div class="flex items-center gap-4 text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-sm font-medium">Custom Architectural Assessment</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-sm font-medium">Scalability &amp; Security Roadmap</span>
+                        </div>
+                        <div class="flex items-center gap-4 text-slate-300">
+                            <span class="material-symbols-outlined text-primary">check_circle</span>
+                            <span class="text-sm font-medium">Direct Senior Architect Access</span>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-6 mt-6">
+                        <div class="flex -space-x-3">
+                            <img class="size-10 rounded-full border-2 border-background-dark" data-alt="Senior software architect professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9GVCP0swE-pW1fZ4g-phoxsznEvbloe0j56AtqKbSoCIT3yV7lO2D7K_OWl-Pj1HkLIipRLlrCCkn4jDffJ7z_TkEiV89AJ4AcW6483oPaAjALFfShXBqmfarXQkWXEHx2U6KoB4TVOOMWjfLEkYmLp0Gr7SunlHYCvZLX-BSBOiLulRhtGZo2lYO-C6_toy65_L1rsYY9f9kwYn7Om91EZXzLK6fZYXO7TfFfWyIrcAe0hQrOc_0XXd5XoiF3sM-Ypzl2unwqu5Z"
+                            />
+                            <img class="size-10 rounded-full border-2 border-background-dark" data-alt="Technical director professional headshot" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRLdNtM2bbQg1nLVJQVTHlmv0i4P9eMPfCh15iXnd76iLjNEXZgx6FUyqXXZCcZeXJzOOALKii5zKlC4eAp6aydSSE4oXxMdoYvy-oCyK0awvMU8XB3ss0t5whbdXrjyLpjcp-jXQ6-JGHlA3snH_lEKag7i2VwJmC5dVORuv336aiXqURAE-xtEL2QO0zosZHlT5WebezCp6OxeDNN7N3Js0JQ5qrYZ5Hw-cD1i4V1ey7nQ0PpP2LmMJd7hHb7nIq1l3eTARhvP2i"
+                            />
+                            <img class="size-10 rounded-full border-2 border-background-dark" data-alt="System architect professional portrait" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNl9BN2e68RnPcOfAeVAwxj-kQBPIvTIvdkkI8jZAA9XsyxTBMbwXAUqCMcD8zwwx3g3pKo6uQ7io3eul8_dohj8kpqhDTwjdJvU0xirQW7jgisX17Jkt6wu1lNJqR_p326VYWeLVnVKxxurWnMz4RFTkXm-DtHbQQeYvzfXt6kCa_J9g3bafs9FTpzcXfiVa88tesmGnJLdJyJbXw_B4R-GjvceVyjUoDgtb4YDnoW4DIxKGQ6kwLsMmVxevMq6YKDPwxz2tvvgda"
+                            />
+                        </div>
+                        <p class="text-sm text-slate-400 font-medium">Trusted by 200+ global enterprises</p>
+                    </div>
+                </div>
+                <!-- Consultation Card Right -->
+                <div class="glass-card rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-4 opacity-10">
+                        <span class="material-symbols-outlined text-6xl text-white">event_available</span>
+                    </div>
+                    <form class="flex flex-col gap-5 relative z-10">
+                        <div>
+                            <label class="block text-slate-300 text-sm font-semibold mb-2">Full Name</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xl">person</span>
+                                <input class="w-full bg-slate-800/50 border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-slate-100 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-slate-600" placeholder="John Doe" type="text"
+                                />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-slate-300 text-sm font-semibold mb-2">Business Email</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xl">mail</span>
+                                <input class="w-full bg-slate-800/50 border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-slate-100 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-slate-600" placeholder="john@company.com"
+                                    type="email" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-slate-300 text-sm font-semibold mb-2">Company Name</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xl">corporate_fare</span>
+                                <input class="w-full bg-slate-800/50 border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-slate-100 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all placeholder:text-slate-600" placeholder="Enterprise Ltd."
+                                    type="text" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-slate-300 text-sm font-semibold mb-2">Service Interest</label>
+                            <div class="relative">
+                                <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xl">hub</span>
+                                <select class="w-full bg-slate-800/50 border border-slate-700 rounded-lg py-3 pl-10 pr-4 text-slate-100 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all appearance-none cursor-pointer">
+<option disabled="" selected="" value="">Select a service</option>
+<option>Cloud Modernization</option>
+<option>Enterprise AI Integration</option>
+<option>Cybersecurity Audit</option>
+<option>DevOps Transformation</option>
+<option>Custom Software Development</option>
+</select>
+                                <span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 pointer-events-none">expand_more</span>
+                            </div>
+                        </div>
+                        <button class="glow-button bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg transition-all mt-2 flex items-center justify-center gap-2" type="submit">
+<span>Book My Session</span>
+<span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+                        <div class="relative flex items-center py-2">
+                            <div class="flex-grow border-t border-slate-700"></div>
+                            <span class="flex-shrink mx-4 text-slate-500 text-xs font-bold uppercase tracking-widest">or</span>
+                            <div class="flex-grow border-t border-slate-700"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-slate-800/50 border border-slate-700 hover:bg-slate-700/50 text-slate-300 text-sm font-semibold transition-all" type="button">
+<span class="material-symbols-outlined text-lg">forum</span>
+                            Talk to an Expert
+                        </button>
+                            <a class="flex items-center justify-center gap-2 py-3 px-4 rounded-lg bg-slate-800/50 border border-slate-700 hover:bg-slate-700/50 text-slate-300 text-sm font-semibold transition-all" href="tel:+1800PROGMASTER">
+                                <span class="material-symbols-outlined text-lg">call</span> Call Direct
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <!-- Footer Stats -->
+        <footer class="w-full px-6 md:px-20 py-10 border-t border-slate-200/10">
+            <div class="max-w-5xl mx-auto flex flex-wrap justify-between gap-8 opacity-60 grayscale transition-all hover:grayscale-0">
+                <div class="flex flex-col">
+                    <span class="text-slate-100 text-2xl font-bold">150+</span>
+                    <span class="text-slate-400 text-xs font-medium uppercase tracking-wider">Engineers</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-slate-100 text-2xl font-bold">15+</span>
+                    <span class="text-slate-400 text-xs font-medium uppercase tracking-wider">Years Exp</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-slate-100 text-2xl font-bold">99%</span>
+                    <span class="text-slate-400 text-xs font-medium uppercase tracking-wider">Client Success</span>
+                </div>
+                <div class="flex flex-col">
+                    <span class="text-slate-100 text-2xl font-bold">24/7</span>
+                    <span class="text-slate-400 text-xs font-medium uppercase tracking-wider">Expert Support</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
