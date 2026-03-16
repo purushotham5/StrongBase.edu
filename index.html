@@ -56,6 +56,47 @@
                 transform: translateY(-15px);
             }
         }
+        /* GLOBAL OPERATIONS SECTION */
+        
+        .global-title {
+            font-size: 72px;
+            font-weight: 900;
+            text-align: center;
+            background: linear-gradient( 90deg, #ffffff, #60a5fa, #3b82f6, #ffffff);
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientMove 6s linear infinite;
+            text-shadow: 0 0 20px rgba(59, 130, 246, 0.5), 0 0 40px rgba(59, 130, 246, 0.4);
+        }
+        
+        .global-sub {
+            text-align: center;
+            font-size: 20px;
+            color: #cbd5f5;
+            margin-top: 10px;
+        }
+        /* gradient animation */
+        
+        @keyframes gradientMove {
+            0% {
+                background-position: 0%
+            }
+            100% {
+                background-position: 300%
+            }
+        }
+        /* floating shapes brighter */
+        
+        .floating-shape {
+            opacity: 0.25;
+            filter: blur(0.3px);
+        }
+        /* subtle glow background */
+        
+        .global-section {
+            background: radial-gradient( circle at center, rgba(59, 130, 246, 0.15), rgba(2, 6, 23, 1) 60%);
+        }
         
         @keyframes fadeInUp {
             from {
@@ -76,6 +117,17 @@
             50% {
                 box-shadow: 0 0 35px rgba(13, 89, 242, 0.7);
             }
+        }
+        
+        .global-title::after {
+            content: "";
+            display: block;
+            width: 200px;
+            height: 4px;
+            margin: 20px auto 0;
+            background: linear-gradient( 90deg, transparent, #3b82f6, transparent);
+            border-radius: 4px;
+            box-shadow: 0 0 20px #3b82f6;
         }
         
         .animate-float {
@@ -155,38 +207,50 @@
         </div>
     </div>
     <!-- Hero Section -->
-    <header class="relative pt-40 pb-20 px-6 overflow-hidden stripe-gradient">
-        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-            <div class="flex flex-col gap-8">
-                <div class="inline-flex items-center gap-2 bg-primary/10 border border-primary/20 text-primary px-4 py-1.5 rounded-full w-fit animate-fade-in-up">
-                    <span class="material-symbols-outlined text-sm">auto_awesome</span>
-                    <span class="text-xs font-bold uppercase tracking-wider">Trusted by Fortune 500</span>
-                </div>
-                <h1 class="text-5xl lg:text-7xl font-black leading-[1.1] tracking-tight animate-fade-in-up" style="animation-delay: 0.15s;">
-                    Architecting the <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">Future</span> of Enterprise Technology
-                </h1>
-                <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed animate-fade-in-up" style="animation-delay: 0.3s;">
-                    Empowering global enterprises with cutting-edge software solutions, scalable cloud architecture, and next-gen intelligence. We don't just build software; we engineer growth.
-                </p>
-                <div class="flex flex-wrap gap-4 animate-fade-in-up" style="animation-delay: 0.45s;">
-                    <button class="bg-primary text-white h-14 px-8 rounded-xl font-bold text-lg hover:scale-105 transition-transform flex items-center gap-2 animate-pulse-glow">
-                        Start Your Transformation
-                        <span class="material-symbols-outlined">arrow_forward</span>
-</button>
-                    <button class="glass h-14 px-8 rounded-xl font-bold text-lg hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
-                        View Our Work
-                    </button>
-                </div>
+    <!-- Hero Section -->
+    <header class="relative h-screen w-full overflow-hidden flex items-center justify-center text-center">
+
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover">
+        <source src="https://www.shutterstock.com/shutterstock/videos/3839489887/preview/stock-footage-global-bitcoin-blockchain-network-animation-cryptocurrency-world-map-digital-finance-data-flow.webm" type="video/webm">
+    </video>
+
+        <!-- Dark Overlay -->
+        <div class="absolute inset-0 bg-black/65"></div>
+
+        <!-- Hero Content -->
+        <div class="relative max-w-5xl mx-auto px-6 flex flex-col items-center justify-center">
+
+            <div class="mb-6 bg-white/10 border border-white/20 px-5 py-2 rounded-full text-white text-sm font-semibold tracking-wider">
+                THE ENTERPRISE STANDARD
             </div>
-            <div class="relative">
-                <div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full"></div>
-                <div class="relative glass rounded-2xl p-4 overflow-hidden shadow-2xl animate-float">
-                    <img class="rounded-xl w-full h-[500px] object-cover opacity-80" data-alt="Modern high-tech command center interface with data analytics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8ZDZIHoeue4deVGrPfUjlS6aZR7p6Y4YC3iDMTW8SiJqKEEYafa4qeluQvPl4ANhX4hLAi2CGa7SiFWE0C02fPJBT8qzPFhRYrC1nKlHnEUg8r0CS2e0dGAY4ifQvX9CV0gNZTRnOzoz6SYzvIm7oDicwJuAeGu9D4AviIYwbcmSvAosdrdLZa0JOxm5qHdSnmT9OKh8_mp0CZRDwoo5f2RfSyOICv5vZqBu1l4lFbRmziCEcc2VwD2Q6CkWIdUpWSvvCq38t3tHL"
-                    />
-                </div>
+
+            <h1 class="text-6xl lg:text-8xl font-extrabold leading-tight text-white mb-6">
+                Engineering Scalable
+                <span class="block text-transparent bg-clip-text bg-gradient-to-r from-primary to-blue-400">
+                Digital Ecosystems
+            </span>
+            </h1>
+
+            <p class="text-xl text-slate-200 max-w-3xl mb-10">
+                We architect high-performance SaaS platforms and intelligent technology solutions that drive digital transformation at scale for global enterprises.
+            </p>
+
+            <div class="flex gap-6 flex-wrap justify-center">
+                <a href="#" class="bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition">
+                CONSULT AN ARCHITECT
+            </a>
+
+                <a href="#services" class="glass px-8 py-4 rounded-xl font-bold text-lg text-white hover:bg-white/10 transition">
+                EXPLORE SOLUTIONS
+            </a>
             </div>
+
         </div>
+
     </header>
+
+
     <!-- Business Statistics -->
     <section class="py-20 px-6 bg-slate-50 dark:bg-slate-900/50">
         <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -351,7 +415,7 @@
     <section class="py-24 px-6 border-y border-slate-200 dark:border-slate-800 bg-slate-50/50 dark:bg-slate-900/20">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Our Global Presence</h2>
+                <h2 class="text-2xl font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">Our Presence</h2>
                 <div class="flex flex-wrap justify-center items-center gap-8 lg:gap-16 opacity-40 grayscale">
                     <span class="text-xl font-black italic">TECHNOVA</span>
                     <span class="text-xl font-black italic">GLOBALX</span>
@@ -374,8 +438,14 @@
 </svg>
                 <div class="absolute inset-0 flex items-center justify-center">
                     <div class="text-center space-y-2">
-                        <p class="text-4xl lg:text-5xl font-black text-primary">Global Operations</p>
-                        <p class="text-slate-500 font-medium">Strategically located to serve enterprise needs across 20+ countries</p>
+                        <h2 class="global-title">
+                            Global Operations
+                        </h2>
+
+                        <p class="global-sub">
+                            Strategically located to serve enterprise needs across 3+ countries
+                        </p>
+
                     </div>
                 </div>
             </div>
